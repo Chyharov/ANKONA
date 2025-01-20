@@ -1,12 +1,12 @@
-import header from 'components/header/header';
-import componentForMainPage from 'components/componentForMainPage/componentForMainPage';
+import Header from 'components/Header/Header';
+import ComponentForMainPage from 'components/ComponentForMainPage/ComponentForMainPage';
 
 const MainPage = () => {
   return (
     <>
-      <header />
+      <Header />
         <main>
-        <componentForMainPage />      
+        <ComponentForMainPage />      
       </main>
     </>
   );

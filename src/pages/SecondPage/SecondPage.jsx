@@ -1,14 +1,14 @@
-import header from 'components/header/header';
-import secondPageComponent from 'components/secondPageComponent/secondPageComponent';
+import Header from 'components/Header/Header';
+import SecondPageComponent from 'components/ComponentForMainPage/ComponentForMainPage';
 
 
 
 const SecondPage = () => {
   return (
     <>
-        <header />
+        <Header />
     <main>
-        <secondPageComponent />
+        <SecondPageComponent />
     </main>
     </>
   );
