@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import s from './componentForMainPage.module.scss';
+import s from './ComponentForMainPage.module.scss';
 
 
 const componentForMainPage = () => {

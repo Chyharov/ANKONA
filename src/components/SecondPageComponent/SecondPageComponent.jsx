@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import s from './secondPageComponent.module.scss';
+import s from './SecondPageComponent.module.scss';
 
 
 const secondPageComponent = () => {
