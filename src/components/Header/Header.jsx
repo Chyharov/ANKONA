@@ -12,7 +12,7 @@ const header = () => {
 
         <div className={s.navigation__container}>
           <img className={s.searchIcon} src={searchIcon} alt="searchIcon" />
-          <select name="" id="">
+          <select className={s.languageSelect} name="" id="">
             <option value="">УКР</option>
             <option value="">ENG</option>
           </select>
