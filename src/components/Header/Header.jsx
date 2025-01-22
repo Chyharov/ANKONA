@@ -1,6 +1,6 @@
 import logo from 'images/header/logo.svg';
 import searchIcon from 'images/header/searchIcon.svg';
-import burgerMenu from 'images/header/burgerMenu.svg';
+import NavBar from 'components/NavBar/NavBar';
 import s from './Header.module.scss';
 
 const header = () => {
@@ -10,15 +10,15 @@ const header = () => {
 
         <img className={s.logo} src={logo} alt="logo" />
 
-        <div className={s.navigation__container}>
+        <nav className={s.navigation__container}>
           <img className={s.searchIcon} src={searchIcon} alt="searchIcon" />
           <select className={s.languageSelect} name="" id="">
-            <option value="">УКР</option>
-            <option value="">ENG</option>
+            <option className={s.languageSelectOption} value="">УКР</option>
+            <option className={s.languageSelectOption} value="">ENG</option>
           </select>
 
-          <img className={s.burgerMenu} src={burgerMenu} alt="burgerMenu" />
-        </div>
+          <NavBar />
+        </nav>
         
       </div>
     </header>
