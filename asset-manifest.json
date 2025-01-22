@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.8f4bf2d7.css",
-    "main.js": "/ANKONA/static/js/main.433d8c6c.js",
-    "static/css/852.bf7cd4ec.chunk.css": "/ANKONA/static/css/852.bf7cd4ec.chunk.css",
-    "static/js/852.a25af4ed.chunk.js": "/ANKONA/static/js/852.a25af4ed.chunk.js",
-    "static/css/222.bf7cd4ec.chunk.css": "/ANKONA/static/css/222.bf7cd4ec.chunk.css",
-    "static/js/222.058e9292.chunk.js": "/ANKONA/static/js/222.058e9292.chunk.js",
+    "main.js": "/ANKONA/static/js/main.00773b99.js",
+    "static/css/852.cb1f91d5.chunk.css": "/ANKONA/static/css/852.cb1f91d5.chunk.css",
+    "static/js/852.038dd860.chunk.js": "/ANKONA/static/js/852.038dd860.chunk.js",
+    "static/css/222.cb1f91d5.chunk.css": "/ANKONA/static/css/222.cb1f91d5.chunk.css",
+    "static/js/222.87b5a2da.chunk.js": "/ANKONA/static/js/222.87b5a2da.chunk.js",
+    "static/js/203.46848ae0.chunk.js": "/ANKONA/static/js/203.46848ae0.chunk.js",
     "static/media/Poppins-Regular.ttf": "/ANKONA/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/Poppins-Medium.ttf": "/ANKONA/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
     "static/media/Poppins-SemiBold.ttf": "/ANKONA/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
@@ -13,16 +14,18 @@
     "static/media/searchIcon.svg": "/ANKONA/static/media/searchIcon.8663b9aac198f3260439a974878d9a6c.svg",
     "index.html": "/ANKONA/index.html",
     "static/media/logo.svg": "/ANKONA/static/media/logo.c53f85794aada7f8d7dfb577eb3c1543.svg",
+    "static/media/burgerMenuClose.svg": "/ANKONA/static/media/burgerMenuClose.a4ca55899d89e648e17a5e85032ae584.svg",
     "static/media/burgerMenu.svg": "/ANKONA/static/media/burgerMenu.a0126a8fc4403527ad28731f97366787.svg",
     "main.8f4bf2d7.css.map": "/ANKONA/static/css/main.8f4bf2d7.css.map",
-    "main.433d8c6c.js.map": "/ANKONA/static/js/main.433d8c6c.js.map",
-    "852.bf7cd4ec.chunk.css.map": "/ANKONA/static/css/852.bf7cd4ec.chunk.css.map",
-    "852.a25af4ed.chunk.js.map": "/ANKONA/static/js/852.a25af4ed.chunk.js.map",
-    "222.bf7cd4ec.chunk.css.map": "/ANKONA/static/css/222.bf7cd4ec.chunk.css.map",
-    "222.058e9292.chunk.js.map": "/ANKONA/static/js/222.058e9292.chunk.js.map"
+    "main.00773b99.js.map": "/ANKONA/static/js/main.00773b99.js.map",
+    "852.cb1f91d5.chunk.css.map": "/ANKONA/static/css/852.cb1f91d5.chunk.css.map",
+    "852.038dd860.chunk.js.map": "/ANKONA/static/js/852.038dd860.chunk.js.map",
+    "222.cb1f91d5.chunk.css.map": "/ANKONA/static/css/222.cb1f91d5.chunk.css.map",
+    "222.87b5a2da.chunk.js.map": "/ANKONA/static/js/222.87b5a2da.chunk.js.map",
+    "203.46848ae0.chunk.js.map": "/ANKONA/static/js/203.46848ae0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8f4bf2d7.css",
-    "static/js/main.433d8c6c.js"
+    "static/js/main.00773b99.js"
   ]
 }
