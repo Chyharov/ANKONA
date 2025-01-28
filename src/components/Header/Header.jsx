@@ -1,5 +1,5 @@
 import logo from 'images/header/logo.svg';
-import searchIcon from 'images/header/searchIcon.svg';
+import NavSearch from 'components/NavSearch/NavSearch'
 import NavBar from 'components/NavBar/NavBar';
 import s from './Header.module.scss';
 
@@ -11,7 +11,7 @@ const header = () => {
         <img className={s.logo} src={logo} alt="logo" />
 
         <nav className={s.navigation__container}>
-          <img className={s.searchIcon} src={searchIcon} alt="searchIcon" />
+          <NavSearch />
           <select className={s.languageSelect} name="" id="">
             <option className={s.languageSelectOption} value="">УКР</option>
             <option className={s.languageSelectOption} value="">ENG</option>
