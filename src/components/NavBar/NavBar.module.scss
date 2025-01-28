@@ -20,9 +20,15 @@
 }
 
 .menu__list_link {
-  font-family: Open Sans Regular;
-  font-size: 16px;
-  color: var(--primaryTextColorDark);
+  width: 160px;
+  display: flex;
+  transform: none;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  background-color: var(--eggShellWhite);
+  box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
 
   @include mq(desk) {
     width: auto;
@@ -30,14 +36,22 @@
   }
 }
 
+.menu__list_link:last-child {
+  margin-bottom: 0px;
+}
+
 .menu__list_item {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  font-family: 'Poppins Regular';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--richSoilBrown);
 
   @include mq(mob-only) {
-    border-bottom: 1px solid white;
-    padding: 8px;
+    padding: 12px;
   }
 
   @include mq(tab) {
@@ -112,10 +126,9 @@
   padding-bottom: 16px;
   width: 360px;
   position: absolute;
-  top: 254px;
+  top: 336px;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--backgroundColorDark);
 
   @include mq(tab) {
     width: 840px;
