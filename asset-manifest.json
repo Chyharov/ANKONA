@@ -1,31 +1,34 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.8f4bf2d7.css",
-    "main.js": "/ANKONA/static/js/main.e5eaf816.js",
-    "static/css/852.2496d7da.chunk.css": "/ANKONA/static/css/852.2496d7da.chunk.css",
-    "static/js/852.408bc9ac.chunk.js": "/ANKONA/static/js/852.408bc9ac.chunk.js",
-    "static/css/222.2496d7da.chunk.css": "/ANKONA/static/css/222.2496d7da.chunk.css",
-    "static/js/222.ab566460.chunk.js": "/ANKONA/static/js/222.ab566460.chunk.js",
+    "main.js": "/ANKONA/static/js/main.deb087ec.js",
+    "static/css/270.03c29786.chunk.css": "/ANKONA/static/css/270.03c29786.chunk.css",
+    "static/js/270.f3d0cba3.chunk.js": "/ANKONA/static/js/270.f3d0cba3.chunk.js",
+    "static/css/581.03c29786.chunk.css": "/ANKONA/static/css/581.03c29786.chunk.css",
+    "static/js/581.65439ff4.chunk.js": "/ANKONA/static/js/581.65439ff4.chunk.js",
     "static/js/203.46848ae0.chunk.js": "/ANKONA/static/js/203.46848ae0.chunk.js",
+    "static/js/837.4f2f4cbc.chunk.js": "/ANKONA/static/js/837.4f2f4cbc.chunk.js",
     "static/media/Poppins-Regular.ttf": "/ANKONA/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/Poppins-Medium.ttf": "/ANKONA/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
     "static/media/Poppins-SemiBold.ttf": "/ANKONA/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
     "static/media/Alata-Regular.ttf": "/ANKONA/static/media/Alata-Regular.a90e0970a7aca7d36f95.ttf",
     "static/media/searchIcon.svg": "/ANKONA/static/media/searchIcon.8663b9aac198f3260439a974878d9a6c.svg",
+    "static/media/searchIconInput.svg": "/ANKONA/static/media/searchIconInput.be226e16ef6c98953446669cc5d07bf7.svg",
     "index.html": "/ANKONA/index.html",
     "static/media/logo.svg": "/ANKONA/static/media/logo.c53f85794aada7f8d7dfb577eb3c1543.svg",
     "static/media/burgerMenuClose.svg": "/ANKONA/static/media/burgerMenuClose.a4ca55899d89e648e17a5e85032ae584.svg",
     "static/media/burgerMenu.svg": "/ANKONA/static/media/burgerMenu.a0126a8fc4403527ad28731f97366787.svg",
     "main.8f4bf2d7.css.map": "/ANKONA/static/css/main.8f4bf2d7.css.map",
-    "main.e5eaf816.js.map": "/ANKONA/static/js/main.e5eaf816.js.map",
-    "852.2496d7da.chunk.css.map": "/ANKONA/static/css/852.2496d7da.chunk.css.map",
-    "852.408bc9ac.chunk.js.map": "/ANKONA/static/js/852.408bc9ac.chunk.js.map",
-    "222.2496d7da.chunk.css.map": "/ANKONA/static/css/222.2496d7da.chunk.css.map",
-    "222.ab566460.chunk.js.map": "/ANKONA/static/js/222.ab566460.chunk.js.map",
-    "203.46848ae0.chunk.js.map": "/ANKONA/static/js/203.46848ae0.chunk.js.map"
+    "main.deb087ec.js.map": "/ANKONA/static/js/main.deb087ec.js.map",
+    "270.03c29786.chunk.css.map": "/ANKONA/static/css/270.03c29786.chunk.css.map",
+    "270.f3d0cba3.chunk.js.map": "/ANKONA/static/js/270.f3d0cba3.chunk.js.map",
+    "581.03c29786.chunk.css.map": "/ANKONA/static/css/581.03c29786.chunk.css.map",
+    "581.65439ff4.chunk.js.map": "/ANKONA/static/js/581.65439ff4.chunk.js.map",
+    "203.46848ae0.chunk.js.map": "/ANKONA/static/js/203.46848ae0.chunk.js.map",
+    "837.4f2f4cbc.chunk.js.map": "/ANKONA/static/js/837.4f2f4cbc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8f4bf2d7.css",
-    "static/js/main.e5eaf816.js"
+    "static/js/main.deb087ec.js"
   ]
 }
