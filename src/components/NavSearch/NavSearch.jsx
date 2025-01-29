@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import searchIcon from 'images/header/searchIcon.svg';
+import searchIconInput from 'images/header/searchIconInput.svg';
 import s from './NavSearch.module.scss';
 
 const NavSearch = () => {
@@ -32,11 +33,16 @@ const NavSearch = () => {
 
       {isSearchOpen && (
         <div className={s.bgShadow} onClick={handleOutsideClick}>
-          <input
-            type="text"
-            className={s.searchInput}
-            placeholder="Type to search..."
-          />
+          <div className={`container ${s.searchContainer}`}>
+            <div className={s.inputContainer}>
+              <input
+                type="text"
+                className={s.searchInput}
+                placeholder="Введіть пошуковий запит"
+              />
+              <img className={s.searchIconInput} src={searchIconInput} alt="searchIconInput" />
+            </div>
+          </div>
         </div>
       )}
     </>
