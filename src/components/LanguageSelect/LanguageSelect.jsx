@@ -1,8 +1,9 @@
 import { useState, useRef } from "react";
+import iconSelectLaunguage from 'images/header/iconSelectLaunguage.svg'
 import s from "./LanguageSelect.module.scss";
 
 const languages = [
-  { code: "uk", label: "УКР" },
+  { code: "ua", label: "УКР" },
   { code: "en", label: "ENG" }
 ];
 
@@ -21,7 +22,7 @@ const LanguageSelect = () => {
   return (
     <div className={s.languageSelect} ref={dropdownRef}>
       <button className={s.selected} onClick={toggleDropdown}>
-        {selectedLanguage.label} <span className={s.arrow}>&#9662;</span>
+        <p className={s.currentLanguage}>{selectedLanguage.label}</p> <img className={s.iconSelectLaunguage} src={iconSelectLaunguage} alt="iconSelectLaunguage" />
       </button>
       {isOpen && (
         <ul className={s.dropdown}>
