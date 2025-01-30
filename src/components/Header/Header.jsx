@@ -1,9 +1,10 @@
 import logo from 'images/header/logo.svg';
 import NavSearch from 'components/NavSearch/NavSearch'
 import NavBar from 'components/NavBar/NavBar';
+import LanguageSelect from 'components/LanguageSelect/LanguageSelect'
 import s from './Header.module.scss';
 
-const header = () => {
+const Header = () => {
   return (
     <header className={s.header}>
       <div className={'container ' + s.header__container}>
@@ -12,11 +13,7 @@ const header = () => {
 
         <nav className={s.navigation__container}>
           <NavSearch />
-          <select className={s.languageSelect} name="" id="">
-            <option className={s.languageSelectOption} value="">УКР</option>
-            <option className={s.languageSelectOption} value="">ENG</option>
-          </select>
-
+          <LanguageSelect />
           <NavBar />
         </nav>
         
@@ -25,4 +22,4 @@ const header = () => {
   )
 };
 
-export default header;
+export default Header;
