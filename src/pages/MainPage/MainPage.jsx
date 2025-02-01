@@ -1,12 +1,12 @@
 import Header from 'components/Header/Header';
-import ComponentForMainPage from 'components/ComponentForMainPage/ComponentForMainPage';
+import SectionAbout from 'components/SectionAbout/SectionAbout';
 
 const MainPage = () => {
   return (
     <>
       <Header />
         <main>
-        <ComponentForMainPage />      
+        <SectionAbout />      
       </main>
     </>
   );
