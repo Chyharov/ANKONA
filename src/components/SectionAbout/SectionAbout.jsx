@@ -3,9 +3,10 @@ import s from './SectionAbout.module.scss';
 const SectionAbout = () => {
   return (
     <section className={s.sectionAbout}>
-      <div className="container">
-        <h2>Ми спеціалісти сучасної годівлі</h2>
-        <p>
+      <div className={`container ${s.sectionAboutContainer}`}>
+        <h2 className={s.sectionAboutTitle}>Ми спеціалісти сучасної годівлі</h2>
+        <div className={s.aboutTitleBorder}></div>
+        <p className={s.sectionAboutDescription}>
           Ми впроваджуємо раціональну годівлю як інструмент стратегічного
           управління у тваринництві
         </p>
