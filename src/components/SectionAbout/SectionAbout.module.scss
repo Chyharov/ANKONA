@@ -13,6 +13,7 @@
 }
 
 .sectionAboutTitle {
+  font-family: 'Montserrat SemiBold';
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
@@ -29,6 +30,7 @@
 }
 
 .sectionAboutDescription {
+  font-family: 'Montserrat Bold';
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -37,4 +39,71 @@
   padding: 8px 4px;
   width: 298px;
   margin-bottom: 16px;
+}
+
+.sectionAboutListTitle {
+  font-family: 'Montserrat Bold';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(191, 119, 66, 1);
+  margin-bottom: 16px;
+}
+
+.sectionAboutListTitleBorder {
+  border-bottom: 1px solid rgba(99, 83, 74, 1);
+  margin-bottom: 16px;
+}
+
+.sectionAboutListBG {
+  padding: 24px 14px;
+  background-color: rgba(240, 231, 218, 1);
+  background-image: url(../../images/about/BackgroundHorse.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
+}
+
+.sectionAboutListItem {
+  font-family: 'Montserrat Regular';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(39, 18, 12, 1);
+  list-style: inside;
+  margin-bottom: 16px;
+}
+
+.sectionAboutListItem:last-child {
+  margin-bottom: 0px;
+}
+
+.sectionAboutListImg {
+  width: 328px;
+  height: 160px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  box-shadow: 2px 2px 15px 4px rgba(240, 236, 229, 0.15);
+}
+
+.sectionAboutBtn {
+  width: 300px;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+  background-color: rgba(191, 119, 66, 1);
+  color: rgba(240, 231, 218, 1);
+    font-family: 'Montserrat Bold';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 4px;
 }

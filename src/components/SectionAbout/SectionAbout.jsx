@@ -1,3 +1,4 @@
+import sectionAboutListImg from 'images/about/pict.jpg'
 import s from './SectionAbout.module.scss';
 
 const SectionAbout = () => {
@@ -10,32 +11,33 @@ const SectionAbout = () => {
           Ми впроваджуємо раціональну годівлю як інструмент стратегічного
           управління у тваринництві
         </p>
-        <div>
-          <h3>
-            Ми впроваджуємо раціональну годівлю як інструмент стратегічного
-            управління у тваринництві
+        <div className={s.sectionAboutListBG}>
+          <h3 className={s.sectionAboutListTitle}>
+            Наша стратегія
           </h3>
-          <ul>
-            <li>
+          <div className={s.sectionAboutListTitleBorder}></div>
+          <ul className={s.sectionAboutList}>
+            <li className={s.sectionAboutListItem}>
               Забезпечуємо клієнтів не лише продукцією, а й надихаємо дивитися
               на тваринництво по-новому
             </li>
-            <li>Далекоглядний підхід до роботи, націлений на майбутнє</li>
-            <li>Довготривале партнерство</li>
+            <li className={s.sectionAboutListItem}>Далекоглядний підхід до роботи, націлений на майбутнє</li>
+            <li className={s.sectionAboutListItem}>Довготривале партнерство</li>
           </ul>
         </div>
-        <img src="" alt="" />
-        <div>
-          <h3>Наші інновації</h3>
-          <ul>
-            <li>Науковий та дослідницький підхід до всього, що ми робимо</li>
-            <li>
+        <img className={s.sectionAboutListImg} src={sectionAboutListImg} alt="sectionAboutListImg" />
+        <div className={s.sectionAboutListBG} style={{marginBottom: '16px', paddingTop: '36px', paddingBottom: '36px'}}>
+          <h3 className={s.sectionAboutListTitle}>Наші інновації</h3>
+          <div className={s.sectionAboutListTitleBorder}></div>
+          <ul className={s.sectionAboutList}>
+            <li className={s.sectionAboutListItem}>Науковий та дослідницький підхід до всього, що ми робимо</li>
+            <li className={s.sectionAboutListItem}>
               Пошук нових, альтернативних рішень, що підвищують ефективність
             </li>
-            <li>Погляд, спрямований у майбутнє</li>
+            <li className={s.sectionAboutListItem}>Погляд, спрямований у майбутнє</li>
           </ul>
         </div>
-        <button>Розгорнути</button>
+        <button className={s.sectionAboutBtn}>Розгорнути</button>
       </div>
     </section>
   );
