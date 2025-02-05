@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/ANKONA/static/css/main.d8dbb9cc.css",
-    "main.js": "/ANKONA/static/js/main.250a5443.js",
-    "static/css/993.bbf2f149.chunk.css": "/ANKONA/static/css/993.bbf2f149.chunk.css",
-    "static/js/993.956fe513.chunk.js": "/ANKONA/static/js/993.956fe513.chunk.js",
+    "main.css": "/ANKONA/static/css/main.7d77fc66.css",
+    "main.js": "/ANKONA/static/js/main.0f303eed.js",
+    "static/css/993.bd82bd5e.chunk.css": "/ANKONA/static/css/993.bd82bd5e.chunk.css",
+    "static/js/993.301dbb5a.chunk.js": "/ANKONA/static/js/993.301dbb5a.chunk.js",
     "static/js/203.46848ae0.chunk.js": "/ANKONA/static/js/203.46848ae0.chunk.js",
-    "static/media/Poppins-Regular.ttf": "/ANKONA/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
-    "static/media/Poppins-Medium.ttf": "/ANKONA/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
-    "static/media/Poppins-SemiBold.ttf": "/ANKONA/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
-    "static/media/Alata-Regular.ttf": "/ANKONA/static/media/Alata-Regular.a90e0970a7aca7d36f95.ttf",
+    "static/media/Montserrat-Bold.ttf": "/ANKONA/static/media/Montserrat-Bold.3530bfc1b50b41bdc29d.ttf",
+    "static/media/Montserrat-SemiBold.ttf": "/ANKONA/static/media/Montserrat-SemiBold.38e62f01be69b2e02e29.ttf",
+    "static/media/Montserrat-Regular.ttf": "/ANKONA/static/media/Montserrat-Regular.cfbf0da06d33097e6d0a.ttf",
+    "static/media/Montserrat-Medium.ttf": "/ANKONA/static/media/Montserrat-Medium.d3f3d769c2fc1af5c0b4.ttf",
+    "static/media/BackgroundHorse.png": "/ANKONA/static/media/BackgroundHorse.cbb13a65d05e036dd765.png",
+    "static/media/pict.jpg": "/ANKONA/static/media/pict.d45121cbc4dd96cd6816.jpg",
     "static/media/searchIcon.svg": "/ANKONA/static/media/searchIcon.8663b9aac198f3260439a974878d9a6c.svg",
     "static/media/searchIconInput.svg": "/ANKONA/static/media/searchIconInput.be226e16ef6c98953446669cc5d07bf7.svg",
     "index.html": "/ANKONA/index.html",
@@ -16,14 +18,14 @@
     "static/media/burgerMenuClose.svg": "/ANKONA/static/media/burgerMenuClose.a4ca55899d89e648e17a5e85032ae584.svg",
     "static/media/iconSelectLaunguage.svg": "/ANKONA/static/media/iconSelectLaunguage.2f4ae345464f9ce83a4dc141da30ebe2.svg",
     "static/media/burgerMenu.svg": "/ANKONA/static/media/burgerMenu.a0126a8fc4403527ad28731f97366787.svg",
-    "main.d8dbb9cc.css.map": "/ANKONA/static/css/main.d8dbb9cc.css.map",
-    "main.250a5443.js.map": "/ANKONA/static/js/main.250a5443.js.map",
-    "993.bbf2f149.chunk.css.map": "/ANKONA/static/css/993.bbf2f149.chunk.css.map",
-    "993.956fe513.chunk.js.map": "/ANKONA/static/js/993.956fe513.chunk.js.map",
+    "main.7d77fc66.css.map": "/ANKONA/static/css/main.7d77fc66.css.map",
+    "main.0f303eed.js.map": "/ANKONA/static/js/main.0f303eed.js.map",
+    "993.bd82bd5e.chunk.css.map": "/ANKONA/static/css/993.bd82bd5e.chunk.css.map",
+    "993.301dbb5a.chunk.js.map": "/ANKONA/static/js/993.301dbb5a.chunk.js.map",
     "203.46848ae0.chunk.js.map": "/ANKONA/static/js/203.46848ae0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8dbb9cc.css",
-    "static/js/main.250a5443.js"
+    "static/css/main.7d77fc66.css",
+    "static/js/main.0f303eed.js"
   ]
 }
