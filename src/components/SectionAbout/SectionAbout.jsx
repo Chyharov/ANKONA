@@ -1,7 +1,14 @@
+import { useState } from 'react';
 import sectionAboutListImg from 'images/about/pict.jpg';
 import s from './SectionAbout.module.scss';
 
 const SectionAbout = () => {
+  const [isBlockVisible, setIsBlockVisible] = useState(false);
+
+  const toggleBlock = () => {
+    setIsBlockVisible(prev => !prev);
+  };
+
   return (
     <section className={s.sectionAbout}>
       <div className={`container ${s.sectionAboutContainer}`}>
@@ -52,38 +59,41 @@ const SectionAbout = () => {
             </li>
           </ul>
         </div>
-        <button className={s.sectionAboutBtn}>Розгорнути</button>
-
-        <div className={s.sectionAboutBlockWhyUs}>
-          <h3>Чому ми?</h3>
-          <ul>
-            <li>
-              <h4>Надійність</h4>
-              <p>продукція безпечна для тварин та людей</p>
-            </li>
-            <li>
-              <h4>Далекоглядність</h4>
-              <p>націлені на довготривале партнерство</p>
-            </li>
-            <li>
-              <h4>Гнучкість</h4>
-              <p>мобільні до вирішення поточних проблем</p>
-            </li>
-            <li>
-              <h4>Інноваційність</h4>
-              <p>про пошук нових рішень</p>
-            </li>
-            <li>
-              <h4>Збалансованість</h4>
-              <p>про пошук балансу між витратами та заробітком</p>
-            </li>
-            <li>
-              <h4>Результативність</h4>
-              <p>знаємо, як досягати та підтримувати продуктивність </p>
-            </li>
-          </ul>
-          <button>Згорнути</button>
-        </div>
+        <button className={s.sectionAboutBtn} onClick={toggleBlock}>
+          {isBlockVisible ? 'Згорнути' : 'Розгорнути'}
+        </button>
+        {isBlockVisible && (
+          <div className={s.sectionAboutBlockWhyUs}>
+            <h3>Чому ми?</h3>
+            <ul>
+              <li>
+                <h4>Надійність</h4>
+                <p>продукція безпечна для тварин та людей</p>
+              </li>
+              <li>
+                <h4>Далекоглядність</h4>
+                <p>націлені на довготривале партнерство</p>
+              </li>
+              <li>
+                <h4>Гнучкість</h4>
+                <p>мобільні до вирішення поточних проблем</p>
+              </li>
+              <li>
+                <h4>Інноваційність</h4>
+                <p>про пошук нових рішень</p>
+              </li>
+              <li>
+                <h4>Збалансованість</h4>
+                <p>про пошук балансу між витратами та заробітком</p>
+              </li>
+              <li>
+                <h4>Результативність</h4>
+                <p>знаємо, як досягати та підтримувати продуктивність</p>
+              </li>
+            </ul>
+            <button onClick={toggleBlock}>Згорнути</button>
+          </div>
+        )}
       </div>
     </section>
   );
