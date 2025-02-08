@@ -7,8 +7,6 @@
 }
 
 .sectionAboutContainer {
-  padding-top: 32px;
-  padding-bottom: 32px;
   background: rgba(39, 31, 28, 1);
 }
 
@@ -18,14 +16,14 @@
   font-weight: 600;
   line-height: 32px;
   text-align: center;
-  color: rgba(240, 231, 218, 1);
+  color: var(--eggShellWhite);
   padding: 8px 16px;
   margin-bottom: 8px;
 }
 
 .aboutTitleBorder {
   margin-left: -16px;
-  border-top: 1px solid #bf7742;
+  border-top: 1px solid var(--copperYellow);
   margin-bottom: 16px;
 }
 
@@ -35,7 +33,7 @@
   font-weight: 700;
   line-height: 24px;
   text-align: left;
-  color: rgba(240, 231, 218, 1);
+  color: var(--eggShellWhite);
   padding: 8px 4px;
   width: 298px;
   margin-bottom: 16px;
@@ -47,18 +45,18 @@
   font-weight: 700;
   line-height: 24px;
   text-align: center;
-  color: rgba(191, 119, 66, 1);
+  color: var(--copperYellow);
   margin-bottom: 16px;
 }
 
 .sectionAboutListTitleBorder {
-  border-bottom: 1px solid rgba(99, 83, 74, 1);
+  border-bottom: 1px solid var(--grayColor);
   margin-bottom: 16px;
 }
 
 .sectionAboutListBG {
   padding: 24px 14px;
-  background-color: rgba(240, 231, 218, 1);
+  background-color: var(--eggShellWhite);
   background-image: url(../../images/about/BackgroundHorse.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -89,34 +87,73 @@
   box-shadow: 2px 2px 15px 4px rgba(240, 236, 229, 0.15);
 }
 
-.sectionAboutBtn {
+.sectionAboutBtn,
+.aboutBlockWhyUsBtnClose {
   width: 91.5%;
   display: block;
-    margin-left: auto;
-    margin-right: auto;
-  background-color: rgba(191, 119, 66, 1);
-  color: rgba(240, 231, 218, 1);
-    font-family: 'Montserrat Bold';
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: center;
-    border: none;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Montserrat Bold';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 4px;
+}
+
+.sectionAboutBtn {
+ background-color: var(--copperYellow);
+  color: var(--eggShellWhite);
+}
+
+.aboutBlockWhyUsBtnClose {
+  color: var(--richSoilBrown);
+  background-color: var(--eggShellWhite);
+  border: 1px solid var(--copperYellow);
 }
 
 .sectionAboutBlockWhyUs {
   padding-top: 8px;
-  padding-bottom: 32px;
 }
 
 .aboutBlockWhyUsTitle {
   font-family: 'Montserrat SemiBold';
-    font-size: 24px;
-    line-height: 32px;
-    padding: 8px;
-    text-align: end;
-    color: rgba(240, 231, 218, 1);
+  font-size: 24px;
+  line-height: 32px;
+  padding: 8px;
+  text-align: end;
+  color: var(--eggShellWhite);
+  opacity: 0.08;
+}
+
+.aboutBlockWhyUsList {
+  margin-bottom: 24px;
+}
+
+.aboutBlockWhyUsList__Item {
+  padding: 8px;
+}
+
+.aboutBlockWhyUsList__Item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.aboutBlockWhyUsList__ItemTitle {
+  font-family: 'Montserrat Bold';
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--eggShellWhite);
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--copperYellow);
+}
+
+.aboutBlockWhyUsList__ItemDescription {
+  font-family: 'Montserrat Regular';
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--eggShellWhite);
+  padding-top: 4px;
 }

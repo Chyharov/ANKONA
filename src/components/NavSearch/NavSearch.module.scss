@@ -34,7 +34,7 @@
   padding: 16px;
   border-radius: 16px;
   border: 1px solid rgba(39, 18, 12, 1);
-  background-color: rgba(240, 231, 218, 1);
+  background-color: var(--eggShellWhite);
   box-shadow: 0px 2px 4px 0px rgba(240, 231, 218, 1);
 }
 
@@ -45,9 +45,9 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: rgba(99, 83, 74, 1);
+  color: var(--grayColor);
   border: none;
-  background-color: rgba(240, 231, 218, 1);
+  background-color: var(--eggShellWhite);
 }
 
 .searchIconInput {

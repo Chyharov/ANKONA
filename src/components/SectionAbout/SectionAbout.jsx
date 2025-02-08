@@ -67,33 +67,33 @@ const SectionAbout = () => {
         {isBlockVisible && (
           <div className={s.sectionAboutBlockWhyUs}>
             <h3 className={s.aboutBlockWhyUsTitle}>Чому ми?</h3>
-            <ul>
-              <li>
-                <h4>Надійність</h4>
-                <p>продукція безпечна для тварин та людей</p>
+            <ul className={s.aboutBlockWhyUsList}>
+              <li className={s.aboutBlockWhyUsList__Item}>
+                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>Надійність</h4>
+                <p className={s.aboutBlockWhyUsList__ItemDescription}>продукція безпечна для тварин та людей</p>
               </li>
-              <li>
-                <h4>Далекоглядність</h4>
-                <p>націлені на довготривале партнерство</p>
+              <li className={s.aboutBlockWhyUsList__Item}>
+                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>Далекоглядність</h4>
+                <p className={s.aboutBlockWhyUsList__ItemDescription}>націлені на довготривале партнерство</p>
               </li>
-              <li>
-                <h4>Гнучкість</h4>
-                <p>мобільні до вирішення поточних проблем</p>
+              <li className={s.aboutBlockWhyUsList__Item}>
+                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>Гнучкість</h4>
+                <p className={s.aboutBlockWhyUsList__ItemDescription}>мобільні до вирішення поточних проблем</p>
               </li>
-              <li>
-                <h4>Інноваційність</h4>
-                <p>про пошук нових рішень</p>
+              <li className={s.aboutBlockWhyUsList__Item}>
+                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>Інноваційність</h4>
+                <p className={s.aboutBlockWhyUsList__ItemDescription}>про пошук нових рішень</p>
               </li>
-              <li>
-                <h4>Збалансованість</h4>
-                <p>про пошук балансу між витратами та заробітком</p>
+              <li className={s.aboutBlockWhyUsList__Item}>
+                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>Збалансованість</h4>
+                <p className={s.aboutBlockWhyUsList__ItemDescription}>про пошук балансу між витратами та заробітком</p>
               </li>
-              <li>
-                <h4>Результативність</h4>
-                <p>знаємо, як досягати та підтримувати продуктивність</p>
+              <li className={s.aboutBlockWhyUsList__Item}>
+                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>Результативність</h4>
+                <p className={s.aboutBlockWhyUsList__ItemDescription}>знаємо, як досягати та підтримувати продуктивність</p>
               </li>
             </ul>
-            <button onClick={toggleBlock}>Згорнути</button>
+            <button className={s.aboutBlockWhyUsBtnClose} onClick={toggleBlock}>Згорнути</button>
           </div>
         )}
       </div>
