@@ -59,12 +59,14 @@ const SectionAbout = () => {
             </li>
           </ul>
         </div>
-        <button className={s.sectionAboutBtn} onClick={toggleBlock}>
-          {isBlockVisible ? 'Згорнути' : 'Розгорнути'}
-        </button>
+        {!isBlockVisible && (
+          <button className={s.sectionAboutBtn} onClick={toggleBlock}>
+            Розгорнути
+          </button>
+        )}
         {isBlockVisible && (
           <div className={s.sectionAboutBlockWhyUs}>
-            <h3>Чому ми?</h3>
+            <h3 className={s.aboutBlockWhyUsTitle}>Чому ми?</h3>
             <ul>
               <li>
                 <h4>Надійність</h4>
