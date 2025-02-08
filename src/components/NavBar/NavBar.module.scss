@@ -1,14 +1,14 @@
 @import '../../sass/utils/mixin';
 
 .menu__list {
-    @include mq(mob) {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-    }
+  @include mq(mob) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 
   @include mq(tab) {
     display: flex;
@@ -41,14 +41,14 @@
 }
 
 .menu__list_item {
+  font-family: 'Montserrat Regular';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--richSoilBrown);
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  font-family: 'Montserrat Regular';
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: var(--richSoilBrown);
 
   @include mq(mob-only) {
     padding: 12px;
@@ -62,15 +62,14 @@
 
 .menu__list_item:not(:last-child) {
   @include mq(tab) {
-      margin-right: 10px;
-    }
- 
+    margin-right: 10px;
+  }
 }
 
 .menu__list_item a:hover,
 .menu__list_item a:focus {
-    border-bottom: 5px solid var(--primaryTextColor);
-    margin-bottom: -5px;
+  border-bottom: 5px solid var(--primaryTextColor);
+  margin-bottom: -5px;
 }
 
 .navBar {
@@ -78,28 +77,28 @@
   align-items: center;
   justify-content: center;
 
-    @include mq(tab) {
+  @include mq(tab) {
     display: flex;
     align-items: center;
     justify-content: center;
-    }
   }
-  
-  @media screen and (max-width: 768px) {
-    .navBar .navigation {
-      display: none;
-    }
+}
+
+@media screen and (max-width: 768px) {
+  .navBar .navigation {
+    display: none;
   }
-  
-  @media (min-width: 769px) {
-    .navBar .navigation {
-      display: flex;
-    }
-  
-    .navBar .mobileNavigation {
-      display: none;
-    }
+}
+
+@media (min-width: 769px) {
+  .navBar .navigation {
+    display: flex;
   }
+
+  .navBar .mobileNavigation {
+    display: none;
+  }
+}
 
 .navBar .mobileNavigation .hamburgerMenu {
   cursor: pointer;
