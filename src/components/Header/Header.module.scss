@@ -1,5 +1,9 @@
 @import '../../sass/utils/mixin';
 
+.header {
+  border-bottom: 1px solid var(--eggShellWhite);
+}
+
 .header__container {
   margin: 0 auto;
   padding-top: 16px;
