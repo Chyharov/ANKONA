@@ -1,1 +1,74 @@
 @import '../../sass/utils/mixin';
+
+.sectionHero {
+  position: relative;
+  background-color: var(--eggShellWhite);
+  padding-bottom: 100px;
+}
+
+.heroPhotoContainer {
+  background-color: #000000;
+}
+
+.horseHeroImage {
+  width: 360px;
+  height: 490px;
+  margin-left: auto;
+  position: relative;
+  z-index: 3;
+  margin-bottom: 50px;
+}
+
+.ankonaText {
+  width: 328px;
+  height: 72px;
+  position: absolute;
+  top: 452px;
+  right: 16px;
+}
+
+.heroBorder {
+  border-bottom: 1px solid var(--grayColor);
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.heroBorderDot {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background-color: var(--grayColor);
+}
+
+.heroDescription {
+  font-family: 'Montserrat Medium';
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--richSoilBrown);
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.heroButton {
+  width: 91.5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat Bold';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 4px;
+    background-color: var(--copperYellow);
+    color: var(--eggShellWhite);
+}
