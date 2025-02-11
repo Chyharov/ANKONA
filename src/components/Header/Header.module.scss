@@ -1,7 +1,12 @@
 @import '../../sass/utils/mixin';
 
 .header {
+  left: 50%;
+  position: fixed;
+  transform: translateX(-50%);
+  width: 100%;
   border-bottom: 1px solid var(--eggShellWhite);
+  z-index: 9;
 }
 
 .header__container {
@@ -17,10 +22,10 @@
 .logo {
   width: 75px;
   height: 46px;
-  
+
   @include mq(tab) {
   }
-  
+
   @include mq(desk) {
   }
 }
