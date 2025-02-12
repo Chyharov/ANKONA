@@ -1,1 +1,57 @@
 @import '../../sass/utils/mixin';
+
+.sectionGoods {
+  padding-top: 32px;
+  padding-bottom: 62px;
+  background-color: rgba(240, 236, 229, 1);
+}
+
+.sectionGoodsTitle {
+  font-family: 'Montserrat SemiBold';
+  font-size: 24px;
+  line-height: 1.4;
+  text-align: start;
+  color: rgba(39, 18, 12, 1);
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.sectionGoodsBorder {
+  border-bottom: 1px solid rgba(191, 119, 66, 1);
+  margin-left: -16px;
+  margin-bottom: 16px;
+}
+
+.sectionGoodsCategoryTitle {
+  font-family: 'Montserrat Bold';
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(240, 231, 218, 1);
+  background-color: rgba(39, 18, 12, 1);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  min-height: 48px;
+}
+
+.sectionGoodsCategoryList__item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: rgba(39, 31, 28, 1);
+    box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.sectionGoodsCategoryList__item:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.sectionGoodsCategoryList__itemName {
+    font-family: 'Montserrat Regular';
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgba(240, 231, 218, 1);
+}
