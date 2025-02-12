@@ -1,49 +1,80 @@
 import React from 'react';
+import closeIcon from 'images/hero/closeIcon.svg';
 import s from './PopUp.module.scss';
 
 const PopUp = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className={s.PopUpOverlay} onClick={onClose}>
-      <div className={s.PopUpContent} onClick={e => e.stopPropagation()}>
+    <div className={s.popUpOverlay} onClick={onClose}>
+      <div className={s.popUpContent} onClick={e => e.stopPropagation()}>
         <button className={s.closeButton} onClick={onClose}>
-          ×
+          <img
+            className={s.closeIcon}
+            src={closeIcon}
+            alt="closeIcon"
+            aria-label="закрити заявку"
+          />
         </button>
-        <h2>Для отримання консультації</h2>
-        <p>Заповніть інформацію нижче та ми зв’яжемося з Вами</p>
+        <h2 className={s.popUpTitle}>Для отримання консультації</h2>
+        <p className={s.popUpDescription}>
+          Заповніть інформацію нижче та ми зв’яжемося з Вами
+        </p>
+        <div className={s.popUpDescription__border}></div>
 
         <form>
           <label>
-            Як до Вас звертатися?
-            <input type="text" placeholder="ПІБ" required />
+            <p className={s.labelTitle}>Як до Вас звертатися?</p>
+            <input
+              className={s.popUplabel}
+              type="text"
+              placeholder="ПІБ"
+              required
+            />
           </label>
 
           <label>
-            Ваш номер телефону
-            <input type="tel" placeholder="+38 (000) 000 00 00" required />
+            <p className={s.labelTitle}>Ваш номер телефону</p>
+            <input
+              className={s.popUplabel}
+              type="tel"
+              placeholder="+38 (000) 000 00 00"
+              required
+            />
           </label>
 
           <label>
-            Ваше повідомлення
-            <textarea placeholder="Напишіть коротко про Ваше тваринництво та що Вас цікавить"></textarea>
+            <p className={s.labelTitle}>Ваше повідомлення</p>
+            <textarea
+              className={s.popUplabel}
+              style={{ minHeight: '96px', marginBottom: '16px' }}
+              placeholder="Напишіть коротко про Ваше тваринництво та що Вас цікавить"
+            ></textarea>
           </label>
 
-          <button type="submit" className={s.submitButton}>
+          <button
+            className={s.submitButton}
+            type="submit"
+            aria-label="Відправити заявку"
+          >
             Відправити заявку
           </button>
         </form>
 
-        <p className={s.privacyText}>
-          Відправляючи свої дані Ви автоматично погоджуєтеся з{' '}
-          <a href="/privacy-policy" className={s.privacyLink}>
-            політикою конфіденційності
-          </a>
-        </p>
-        <p className={s.teamText}>
-          *Для контакту з безпосереднім спеціалістом розгляньте розділ{' '}
-          <a href="/team">"Наша команда"</a>
-        </p>
+        <div className={s.privacyContainer}>
+          <p className={s.privacyText}>
+            Відправляючи свої дані Ви автоматично погоджуєтеся з{' '}
+            <a className={s.privacyLink} href="/privacy-policy">
+              політикою конфіденційності
+            </a>
+          </p>
+          <p className={s.privacyText}>
+            *Для контакту з безпосереднім спеціалістом розгляньте розділ{' '}
+            <a className={s.privacyLink} href="/team">
+              "Наша команда"
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -125,7 +125,7 @@ const NavLinks = props => {
               transition={{ delay: 0.4 }}
               className={s.menu__list_item}
             >
-              Інновації
+              Блог
             </motion.li>
           </Link>
         </ul>
