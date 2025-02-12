@@ -62,7 +62,7 @@ const PopUp = ({ isOpen, onClose }) => {
         </form>
 
         <div className={s.privacyContainer}>
-          <p className={s.privacyText}>
+          <p className={s.privacyText} style={{marginBottom: '8px'}}>
             Відправляючи свої дані Ви автоматично погоджуєтеся з{' '}
             <a className={s.privacyLink} href="/privacy-policy">
               політикою конфіденційності
