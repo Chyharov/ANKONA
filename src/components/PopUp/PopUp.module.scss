@@ -19,6 +19,11 @@
   padding-right: 14px;
   border-radius: 8px;
   background-color: rgba(240, 231, 218, 1);
+
+  max-height: 90vh;
+  /* Максимальна висота модалки — 90% від висоти екрану */
+  overflow-y: auto;
+  /* Додає вертикальну прокрутку */
 }
 
 .closeButton {
@@ -115,4 +120,10 @@
 
 .privacyContainer {
   padding: 8px 24px;
+}
+
+.noScroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }

@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import closeIcon from 'images/hero/closeIcon.svg';
-import s from './PopUp.module.scss';
+import s from './PopUp.module.scss'; // імпортуємо SCSS модулі
 
 const PopUp = ({ isOpen, onClose }) => {
+  useEffect(() => {
+    if (isOpen) {
+      // Додаємо клас до body, використовуючи стилі з модульного SCSS
+      document.body.classList.add(s.noScroll); 
+    } else {
+      document.body.classList.remove(s.noScroll);
+    }
+
+    // Очищення при розмонтуванні
+    return () => {
+      document.body.classList.remove(s.noScroll);
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
