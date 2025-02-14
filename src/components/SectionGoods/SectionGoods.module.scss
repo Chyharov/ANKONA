@@ -35,23 +35,116 @@
 }
 
 .sectionGoodsCategoryList__item {
-    display: flex;
-    align-items: center;
-    padding: 12px;
-    border-radius: 4px;
-    background-color: rgba(39, 31, 28, 1);
-    box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
-    margin-left: 16px;
-    margin-right: 16px;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: rgba(39, 31, 28, 1);
+  box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
 }
 
 .sectionGoodsCategoryList__item:not(:last-child) {
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .sectionGoodsCategoryList__itemName {
-    font-family: 'Montserrat Regular';
-        font-size: 16px;
-        line-height: 1.5;
-        color: rgba(240, 231, 218, 1);
+  font-family: 'Montserrat Regular';
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(240, 231, 218, 1);
 }
+
+.findCountContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.findTitle {
+  font-family: 'Montserrat Regular';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grayColor);
+  padding: 8px;
+}
+
+.borderforGoodsCategoryList {
+  border-bottom: 1px solid var(--grayColor);
+  margin-bottom: 16px;
+}
+
+.findNumerCount {
+  font-family: 'Montserrat Bold';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--copperYellow);
+  padding: 8px;
+}
+
+.findNumerContainer {
+  display: flex;
+  align-items: center;
+}
+
+.findDescription {
+  font-family: 'Montserrat Regular';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--richSoilBrown);
+  padding: 8px 8px 8px 0px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancelButton,
+.saveButton {
+  font-family: 'Montserrat Bold';
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 4px;
+  border: 1px solid var(--copperYellow);
+  width: 45.13%;
+  height: 48px;
+}
+
+.cancelButton {
+  color: var(--richSoilBrown);
+  background-color: var(--eggShellWhite);
+}
+
+.saveButton {
+  color: var(--eggShellWhite);
+  background-color: var(--copperYellow);
+}
+
+.productListItem {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.loadMoreButton {
+  width: 91.5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Montserrat Bold';
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 4px;
+  color: var(--richSoilBrown);
+  background-color: var(--eggShellWhite);
+  border: 1px solid var(--copperYellow);
+  margin-bottom: 16px;
+}
+
