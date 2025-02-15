@@ -22,7 +22,7 @@
   margin-bottom: 16px;
 }
 
-.sectionGoodsCategoryTitle {
+.sectionGoodsCategoryBtn {
   font-family: 'Montserrat Bold';
   font-size: 16px;
   line-height: 1.5;
@@ -32,6 +32,16 @@
   padding: 4px 8px;
   margin-bottom: 8px;
   min-height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: start;
+}
+
+.toggleBtnImg {
+  width: 40px;
+  height: 40px;
 }
 
 .sectionGoodsCategoryList__item {
@@ -148,3 +158,34 @@
   margin-bottom: 16px;
 }
 
+.pagination {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonPagination {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+}
+
+.numerPaginationBtn,
+.numerPaginationBtnActive {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--richSoilBrown);
+}
+
+.numerPaginationBtn {
+  color: #FFFFFF;
+  background-color: var(--richSoilBrown);
+}
+
+.numerPaginationBtnActive {
+  color: #A7A7A7;
+  background-color: transparent;
+
+}

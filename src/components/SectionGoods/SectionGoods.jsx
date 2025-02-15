@@ -1,4 +1,8 @@
 import { useState, useEffect } from 'react';
+import arrowUp from 'images/goods/arrowUp.svg';
+import arrowDown from 'images/goods/arrowDown.svg';
+import arrowLeft from 'images/goods/arrowLeft.svg';
+import arrowRight from 'images/goods/arrowRight.svg';
 import s from './SectionGoods.module.scss';
 
 const mockProducts = [
@@ -82,6 +86,90 @@ const mockProducts = [
   { id: 23, name: 'Feed Mix', category: 'ДРХ', manufacturer: 'JRS' },
   {
     id: 23,
+    name: 'Mineralfluter',
+    category: 'Коні',
+    manufacturer: 'Anhoff FUTTERGUT',
+  },
+  {
+    id: 24,
+    name: 'Mineralfluter',
+    category: 'Коні',
+    manufacturer: 'AGRO-BIZEK',
+  },
+  { id: 25, name: 'Feed Mix', category: 'ДРХ', manufacturer: 'JRS' },
+  {
+    id: 26,
+    name: 'SuperFeed',
+    category: 'ВРХ дорослі',
+    manufacturer: 'FUTTERGUT — надійна годівля',
+  },
+  { id: 27, name: 'SuperFeed', category: 'Свині', manufacturer: 'ETOS' },
+  { id: 28, name: 'Feed Mix', category: 'ДРХ', manufacturer: 'JRS' },
+  {
+    id: 29,
+    name: 'Mineralfluter',
+    category: 'ВРХ молодняк',
+    manufacturer: 'AGRO-BIZEK',
+  },
+  {
+    id: 30,
+    name: 'Mineralfluter',
+    category: 'Підходе для всіх',
+    manufacturer: 'Anhoff FUTTERGUT',
+  },
+  { id: 31, name: 'Feed Mix', category: 'ДРХ', manufacturer: 'JRS' },
+  { id: 32, name: 'SuperFeed', category: 'ВРХ дорослі', manufacturer: 'ETOS' },
+  {
+    id: 33,
+    name: 'SuperFeed',
+    category: 'Свині',
+    manufacturer: 'FUTTERGUT — надійна годівля',
+  },
+  { id: 34, name: 'Feed Mix', category: 'ДРХ', manufacturer: 'JRS' },
+  {
+    id: 35,
+    name: 'Mineralfluter',
+    category: 'Підходе для всіх',
+    manufacturer: 'Anhoff FUTTERGUT',
+  },
+  {
+    id: 36,
+    name: 'Mineralfluter',
+    category: 'Коні',
+    manufacturer: 'AGRO-BIZEK',
+  },
+  { id: 37, name: 'Feed Mix', category: 'ДРХ', manufacturer: 'JRS' },
+  {
+    id: 38,
+    name: 'SuperFeed',
+    category: 'Підходе для всіх',
+    manufacturer: 'FUTTERGUT — надійна годівля',
+  },
+  { id: 39, name: 'SuperFeed', category: 'Свині', manufacturer: 'ETOS' },
+  { id: 40, name: 'Feed Mix', category: 'ДРХ', manufacturer: 'JRS' },
+  {
+    id: 41,
+    name: 'Mineralfluter',
+    category: 'ВРХ молодняк',
+    manufacturer: 'AGRO-BIZEK',
+  },
+  {
+    id: 42,
+    name: 'Mineralfluter',
+    category: 'Підходе для всіх',
+    manufacturer: 'Anhoff FUTTERGUT',
+  },
+  { id: 43, name: 'Feed Mix', category: 'ДРХ', manufacturer: 'JRS' },
+  { id: 44, name: 'SuperFeed', category: 'ВРХ дорослі', manufacturer: 'ETOS' },
+  {
+    id: 45,
+    name: 'SuperFeed',
+    category: 'Підходе для всіх',
+    manufacturer: 'FUTTERGUT — надійна годівля',
+  },
+  { id: 46, name: 'Feed Mix', category: 'ДРХ', manufacturer: 'JRS' },
+  {
+    id: 47,
     name: 'Mineralfluter',
     category: 'Коні',
     manufacturer: 'Anhoff FUTTERGUT',
@@ -186,12 +274,19 @@ const SectionGoods = () => {
       <div className={`container ${s.sectionGoods__Container}`}>
         <h2 className={s.sectionGoodsTitle}>Товари</h2>
         <div className={s.sectionGoodsBorder}></div>
-        <h3
+        <button
           onClick={() => setShowCategories(!showCategories)}
-          className={s.sectionGoodsCategoryTitle}
+          className={s.sectionGoodsCategoryBtn}
+          type="button"
+          aria-label="toggleButtons"
         >
-          Фільтрувати за категорією тварин: {showCategories ? '🔼' : '🔽'}
-        </h3>
+          Фільтрувати за категорією тварин:{' '}
+          <img
+            className={s.toggleBtnImg}
+            src={showCategories ? arrowUp : arrowDown}
+            alt="toggle categories"
+          />
+        </button>
         {showCategories && (
           <ul className={s.sectionGoodsCategoryList}>
             {initialCategories.map(cat => (
@@ -207,12 +302,19 @@ const SectionGoods = () => {
           </ul>
         )}
 
-        <h3
+        <button
           onClick={() => setShowManufacturers(!showManufacturers)}
-          className={s.sectionGoodsCategoryTitle}
+          className={s.sectionGoodsCategoryBtn}
+          type="button"
+          aria-label="toggleButtons"
         >
-          Фільтрувати за виробником: {showManufacturers ? '🔼' : '🔽'}
-        </h3>
+          Фільтрувати за виробником:{' '}
+          <img
+            className={s.toggleBtnImg}
+            src={showManufacturers ? arrowUp : arrowDown}
+            alt="toggle categories"
+          />
+        </button>
         {showManufacturers && (
           <ul className={s.sectionGoodsCategoryList}>
             {initialManufacturers.map(man => (
@@ -276,7 +378,12 @@ const SectionGoods = () => {
         </ul>
 
         {visibleCount < filteredProducts.length && (
-          <button className={s.loadMoreButton} onClick={loadMore}>
+          <button
+            type="button"
+            aria-label="loadMore"
+            className={s.loadMoreButton}
+            onClick={loadMore}
+          >
             Переглянути ще
           </button>
         )}
@@ -286,14 +393,19 @@ const SectionGoods = () => {
             <button
               disabled={currentPage === 1}
               onClick={() => handlePageChange(currentPage - 1)}
+              type="button"
+              aria-label="arrowLeft"
+              className={s.buttonPagination}
             >
-              ⬅️
+              <img src={arrowLeft} alt="arrowLeft" />
             </button>
             {Array.from({ length: totalPages }, (_, i) => (
               <button
                 key={i}
-                className={currentPage === i + 1 ? s.active : ''}
+                className={currentPage === i + 1 ? s.numerPaginationBtn : s.numerPaginationBtnActive}
                 onClick={() => handlePageChange(i + 1)}
+                type="button"
+                aria-label="NumerButton"
               >
                 {i + 1}
               </button>
@@ -301,8 +413,11 @@ const SectionGoods = () => {
             <button
               disabled={currentPage === totalPages}
               onClick={() => handlePageChange(currentPage + 1)}
+              type="button"
+              aria-label="arrowRight"
+              className={s.buttonPagination}
             >
-              ➡️
+              <img src={arrowRight} alt="arrowRight" />
             </button>
           </div>
         )}
