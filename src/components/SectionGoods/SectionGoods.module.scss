@@ -160,8 +160,8 @@
 
 .pagination {
   display: flex;
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .buttonPagination {
@@ -180,12 +180,24 @@
 }
 
 .numerPaginationBtn {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: var(--richSoilBrown);
 }
 
 .numerPaginationBtnActive {
-  color: #A7A7A7;
+  color: #a7a7a7;
   background-color: transparent;
+}
 
+.productListItem {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color: #f0e7da;
+}
+
+.productCard {
+  padding-top: 4px;
+  padding-left: 8px;
+  padding-bottom: 4px;
 }

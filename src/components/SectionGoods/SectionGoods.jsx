@@ -3,6 +3,7 @@ import arrowUp from 'images/goods/arrowUp.svg';
 import arrowDown from 'images/goods/arrowDown.svg';
 import arrowLeft from 'images/goods/arrowLeft.svg';
 import arrowRight from 'images/goods/arrowRight.svg';
+import noImages from 'images/goods/noMedia.jpg'
 import s from './SectionGoods.module.scss';
 
 const mockProducts = [
@@ -307,6 +308,7 @@ const SectionGoods = () => {
           className={s.sectionGoodsCategoryBtn}
           type="button"
           aria-label="toggleButtons"
+          style={{ marginBottom: '16px' }}
         >
           Фільтрувати за виробником:{' '}
           <img
@@ -362,19 +364,20 @@ const SectionGoods = () => {
         )}
 
         <ul className={s.productList}>
-          <li className={s.productListItem}>
-            {filteredProducts.length > 0 ? (
-              currentProducts.map(product => (
+          {filteredProducts.length > 0 ? (
+            currentProducts.map(product => (
+              <li className={s.productListItem}>
                 <div key={product.id} className={s.productCard}>
                   <h4>{product.name}</h4>
                   <p>{product.category}</p>
                   <p>{product.manufacturer}</p>
                 </div>
-              ))
-            ) : (
-              <p className={s.noResults}>Немає товарів за вашим фільтром.</p>
-            )}
-          </li>
+                <img src={noImages} alt="noImages" />
+              </li>
+            ))
+          ) : (
+            <p className={s.noResults}>Немає товарів за вашим фільтром.</p>
+          )}
         </ul>
 
         {visibleCount < filteredProducts.length && (
@@ -402,7 +405,11 @@ const SectionGoods = () => {
             {Array.from({ length: totalPages }, (_, i) => (
               <button
                 key={i}
-                className={currentPage === i + 1 ? s.numerPaginationBtn : s.numerPaginationBtnActive}
+                className={
+                  currentPage === i + 1
+                    ? s.numerPaginationBtn
+                    : s.numerPaginationBtnActive
+                }
                 onClick={() => handlePageChange(i + 1)}
                 type="button"
                 aria-label="NumerButton"
