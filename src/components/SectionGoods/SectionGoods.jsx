@@ -3,7 +3,7 @@ import arrowUp from 'images/goods/arrowUp.svg';
 import arrowDown from 'images/goods/arrowDown.svg';
 import arrowLeft from 'images/goods/arrowLeft.svg';
 import arrowRight from 'images/goods/arrowRight.svg';
-import noImages from 'images/goods/noMedia.jpg'
+import noImages from 'images/goods/noMedia.jpg';
 import s from './SectionGoods.module.scss';
 
 const mockProducts = [
@@ -209,8 +209,8 @@ const SectionGoods = () => {
   const [filteredProducts, setFilteredProducts] = useState(mockProducts);
   const [currentPage, setCurrentPage] = useState(1);
   const [showButtons, setShowButtons] = useState(false);
-  const [showCategories, setShowCategories] = useState(true);
-  const [showManufacturers, setShowManufacturers] = useState(true);
+  const [showCategories, setShowCategories] = useState(false);
+  const [showManufacturers, setShowManufacturers] = useState(false);
   const [visibleCount, setVisibleCount] = useState(5);
 
   const itemsPerPage = 5;
@@ -223,6 +223,19 @@ const SectionGoods = () => {
     setVisibleCount(itemsPerPage);
     setCurrentPage(1);
   }, [savedFilters]);
+
+  useEffect(() => {
+    if (
+      showCategories ||
+      showManufacturers ||
+      tempFilters.category.size ||
+      tempFilters.manufacturer.size
+    ) {
+      setShowButtons(true);
+    } else {
+      setShowButtons(false);
+    }
+  }, [showCategories, showManufacturers, tempFilters]);
 
   const loadMore = () => {
     setVisibleCount(prev => prev + itemsPerPage);
@@ -256,6 +269,8 @@ const SectionGoods = () => {
   const applyFilters = () => {
     setSavedFilters(tempFilters);
     setShowButtons(false);
+    setShowCategories(false);
+    setShowManufacturers(false);
   };
 
   const resetFilters = () => {
@@ -297,7 +312,13 @@ const SectionGoods = () => {
                   checked={tempFilters.category.has(cat)}
                   onChange={() => handleTempFilterChange('category', cat)}
                 />
-                <p className={s.sectionGoodsCategoryList__itemName}>{cat}</p>
+                <p
+                  className={`${s.sectionGoodsCategoryList__itemName} ${
+                    savedFilters.category.has(cat) ? s.selectedCategory : ''
+                  }`}
+                >
+                  {cat}
+                </p>
               </li>
             ))}
           </ul>
