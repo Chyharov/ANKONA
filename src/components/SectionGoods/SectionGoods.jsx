@@ -268,6 +268,7 @@ const SectionGoods = () => {
 
   const applyFilters = () => {
     setSavedFilters(tempFilters);
+
     setShowButtons(false);
     setShowCategories(false);
     setShowManufacturers(false);
@@ -290,8 +291,12 @@ const SectionGoods = () => {
       <div className={`container ${s.sectionGoods__Container}`}>
         <h2 className={s.sectionGoodsTitle}>Товари</h2>
         <div className={s.sectionGoodsBorder}></div>
+
         <button
-          onClick={() => setShowCategories(!showCategories)}
+          onClick={() => {
+            setShowCategories(!showCategories);
+            setShowButtons(true);
+          }}
           className={s.sectionGoodsCategoryBtn}
           type="button"
           aria-label="toggleButtons"
@@ -303,29 +308,34 @@ const SectionGoods = () => {
             alt="toggle categories"
           />
         </button>
+
         {showCategories && (
           <ul className={s.sectionGoodsCategoryList}>
             {initialCategories.map(cat => (
-              <li key={cat} className={s.sectionGoodsCategoryList__item}>
+              <li
+                key={cat}
+                className={`${s.sectionGoodsCategoryList__item} ${
+                  tempFilters.category.has(cat) ? s.selectedCategory : ''
+                }`}
+                onClick={() => handleTempFilterChange('category', cat)}
+              >
                 <input
                   type="checkbox"
                   checked={tempFilters.category.has(cat)}
+                  onClick={e => e.stopPropagation()}
                   onChange={() => handleTempFilterChange('category', cat)}
                 />
-                <p
-                  className={`${s.sectionGoodsCategoryList__itemName} ${
-                    savedFilters.category.has(cat) ? s.selectedCategory : ''
-                  }`}
-                >
-                  {cat}
-                </p>
+                <p className={s.sectionGoodsCategoryList__itemName}>{cat}</p>
               </li>
             ))}
           </ul>
         )}
 
         <button
-          onClick={() => setShowManufacturers(!showManufacturers)}
+          onClick={() => {
+            setShowManufacturers(!showManufacturers);
+            setShowButtons(true);
+          }}
           className={s.sectionGoodsCategoryBtn}
           type="button"
           aria-label="toggleButtons"
@@ -335,9 +345,10 @@ const SectionGoods = () => {
           <img
             className={s.toggleBtnImg}
             src={showManufacturers ? arrowUp : arrowDown}
-            alt="toggle categories"
+            alt="toggle manufacturers"
           />
         </button>
+
         {showManufacturers && (
           <ul className={s.sectionGoodsCategoryList}>
             {initialManufacturers.map(man => (
