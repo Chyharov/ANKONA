@@ -172,7 +172,7 @@
 }
 
 .numerPaginationBtn,
-.numerPaginationBtnActive {
+.numerPaginationBtnInactive {
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -184,7 +184,7 @@
   background-color: var(--richSoilBrown);
 }
 
-.numerPaginationBtnActive {
+.numerPaginationBtnInactive {
   color: #a7a7a7;
   background-color: transparent;
 }

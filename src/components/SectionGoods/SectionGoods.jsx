@@ -84,7 +84,6 @@ const mockProducts = [
     category: 'Підходе для всіх',
     manufacturer: 'FUTTERGUT — надійна годівля',
   },
-  { id: 23, name: 'Feed Mix', category: 'ДРХ', manufacturer: 'JRS' },
   {
     id: 23,
     name: 'Mineralfluter',
@@ -261,14 +260,12 @@ const SectionGoods = () => {
     setTempFilters(prevFilters => {
       const updatedSet = new Set(prevFilters[type]);
       updatedSet.has(value) ? updatedSet.delete(value) : updatedSet.add(value);
-      setShowButtons(true);
-      return { ...prevFilters, [type]: updatedSet };
+      return { ...prevFilters, [type]: new Set(updatedSet) };
     });
   };
 
   const applyFilters = () => {
     setSavedFilters(tempFilters);
-
     setShowButtons(false);
     setShowCategories(false);
     setShowManufacturers(false);
@@ -285,6 +282,23 @@ const SectionGoods = () => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentProducts = filteredProducts.slice(startIndex, visibleCount);
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+
+  const FilterCheckbox = ({ label, checked, onChange }) => (
+    <li
+      className={`${s.sectionGoodsCategoryList__item} ${
+        checked ? s.selectedCategory : ''
+      }`}
+      onClick={onChange}
+    >
+      <input
+        type="checkbox"
+        checked={checked}
+        onClick={e => e.stopPropagation()}
+        onChange={onChange}
+      />
+      <p className={s.sectionGoodsCategoryList__itemName}>{label}</p>
+    </li>
+  );
 
   return (
     <section className={s.sectionGoods}>
@@ -312,21 +326,12 @@ const SectionGoods = () => {
         {showCategories && (
           <ul className={s.sectionGoodsCategoryList}>
             {initialCategories.map(cat => (
-              <li
+              <FilterCheckbox
                 key={cat}
-                className={`${s.sectionGoodsCategoryList__item} ${
-                  tempFilters.category.has(cat) ? s.selectedCategory : ''
-                }`}
-                onClick={() => handleTempFilterChange('category', cat)}
-              >
-                <input
-                  type="checkbox"
-                  checked={tempFilters.category.has(cat)}
-                  onClick={e => e.stopPropagation()}
-                  onChange={() => handleTempFilterChange('category', cat)}
-                />
-                <p className={s.sectionGoodsCategoryList__itemName}>{cat}</p>
-              </li>
+                label={cat}
+                checked={tempFilters.category.has(cat)}
+                onChange={() => handleTempFilterChange('category', cat)}
+              />
             ))}
           </ul>
         )}
@@ -351,16 +356,27 @@ const SectionGoods = () => {
 
         {showManufacturers && (
           <ul className={s.sectionGoodsCategoryList}>
-            {initialManufacturers.map(man => (
-              <li key={man} className={s.sectionGoodsCategoryList__item}>
-                <input
-                  type="checkbox"
-                  checked={tempFilters.manufacturer.has(man)}
-                  onChange={() => handleTempFilterChange('manufacturer', man)}
-                />
-                <p className={s.sectionGoodsCategoryList__itemName}>{man}</p>
-              </li>
-            ))}
+            {initialManufacturers.map(man => {
+              const isSelected = tempFilters.manufacturer.has(man);
+
+              return (
+                <li
+                  key={man}
+                  className={`${s.sectionGoodsCategoryList__item} ${
+                    isSelected ? s.selectedCategory : ''
+                  }`}
+                  onClick={() => handleTempFilterChange('manufacturer', man)}
+                >
+                  <input
+                    type="checkbox"
+                    checked={isSelected}
+                    onClick={e => e.stopPropagation()}
+                    onChange={() => handleTempFilterChange('manufacturer', man)}
+                  />
+                  <p className={s.sectionGoodsCategoryList__itemName}>{man}</p>
+                </li>
+              );
+            })}
           </ul>
         )}
 
@@ -440,7 +456,7 @@ const SectionGoods = () => {
                 className={
                   currentPage === i + 1
                     ? s.numerPaginationBtn
-                    : s.numerPaginationBtnActive
+                    : s.numerPaginationBtnInactive
                 }
                 onClick={() => handlePageChange(i + 1)}
                 type="button"
