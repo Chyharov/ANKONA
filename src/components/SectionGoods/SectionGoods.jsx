@@ -197,53 +197,21 @@ const initialManufacturers = [
 ];
 
 const SectionGoods = () => {
-  const [savedFilters, setSavedFilters] = useState({
+  const [filters, setFilters] = useState({
     category: new Set(),
     manufacturer: new Set(),
   });
-  const [tempFilters, setTempFilters] = useState({
-    category: new Set(),
-    manufacturer: new Set(),
-  });
+  
   const [filteredProducts, setFilteredProducts] = useState(mockProducts);
   const [currentPage, setCurrentPage] = useState(1);
-  const [showButtons, setShowButtons] = useState(false);
   const [showCategories, setShowCategories] = useState(false);
   const [showManufacturers, setShowManufacturers] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(5);
-
   const itemsPerPage = 5;
 
   useEffect(() => {
-    setFilteredProducts(filterProducts(mockProducts, savedFilters));
-  }, [savedFilters]);
-
-  useEffect(() => {
-    setVisibleCount(itemsPerPage);
+    setFilteredProducts(filterProducts(mockProducts, filters));
     setCurrentPage(1);
-  }, [savedFilters]);
-
-  useEffect(() => {
-    if (
-      showCategories ||
-      showManufacturers ||
-      tempFilters.category.size ||
-      tempFilters.manufacturer.size
-    ) {
-      setShowButtons(true);
-    } else {
-      setShowButtons(false);
-    }
-  }, [showCategories, showManufacturers, tempFilters]);
-
-  const loadMore = () => {
-    setVisibleCount(prev => prev + itemsPerPage);
-  };
-
-  const handlePageChange = page => {
-    setCurrentPage(page);
-    setVisibleCount(page * itemsPerPage);
-  };
+  }, [filters]);
 
   const filterProducts = (products, filters) => {
     let filtered = products;
@@ -256,49 +224,17 @@ const SectionGoods = () => {
     return filtered;
   };
 
-  const handleTempFilterChange = (type, value) => {
-    setTempFilters(prevFilters => {
+  const handleFilterChange = (type, value) => {
+    setFilters(prevFilters => {
       const updatedSet = new Set(prevFilters[type]);
       updatedSet.has(value) ? updatedSet.delete(value) : updatedSet.add(value);
-      return { ...prevFilters, [type]: new Set(updatedSet) };
+      return { ...prevFilters, [type]: updatedSet };
     });
   };
 
-  const applyFilters = () => {
-    setSavedFilters(tempFilters);
-    setShowButtons(false);
-    setShowCategories(false);
-    setShowManufacturers(false);
-  };
-
-  const resetFilters = () => {
-    setTempFilters({ category: new Set(), manufacturer: new Set() });
-    setSavedFilters({ category: new Set(), manufacturer: new Set() });
-    setVisibleCount(itemsPerPage);
-    setCurrentPage(1);
-    setShowButtons(false);
-  };
-
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentProducts = filteredProducts.slice(startIndex, visibleCount);
+  const currentProducts = filteredProducts.slice(startIndex, startIndex + itemsPerPage);
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-
-  const FilterCheckbox = ({ label, checked, onChange }) => (
-    <li
-      className={`${s.sectionGoodsCategoryList__item} ${
-        checked ? s.selectedCategory : ''
-      }`}
-      onClick={onChange}
-    >
-      <input
-        type="checkbox"
-        checked={checked}
-        onClick={e => e.stopPropagation()}
-        onChange={onChange}
-      />
-      <p className={s.sectionGoodsCategoryList__itemName}>{label}</p>
-    </li>
-  );
 
   return (
     <section className={s.sectionGoods}>
@@ -307,115 +243,66 @@ const SectionGoods = () => {
         <div className={s.sectionGoodsBorder}></div>
 
         <button
-          onClick={() => {
-            setShowCategories(!showCategories);
-            setShowButtons(true);
-          }}
+          onClick={() => setShowCategories(!showCategories)}
           className={s.sectionGoodsCategoryBtn}
           type="button"
-          aria-label="toggleButtons"
         >
           Фільтрувати за категорією тварин:{' '}
-          <img
-            className={s.toggleBtnImg}
-            src={showCategories ? arrowUp : arrowDown}
-            alt="toggle categories"
-          />
+          <img className={s.toggleBtnImg} src={showCategories ? arrowUp : arrowDown} alt="toggle categories" />
         </button>
 
         {showCategories && (
           <ul className={s.sectionGoodsCategoryList}>
             {initialCategories.map(cat => (
-              <FilterCheckbox
+              <li
                 key={cat}
-                label={cat}
-                checked={tempFilters.category.has(cat)}
-                onChange={() => handleTempFilterChange('category', cat)}
-              />
+                className={`${s.sectionGoodsCategoryList__item} ${filters.category.has(cat) ? s.selectedCategory : ''}`}
+                onClick={() => handleFilterChange('category', cat)}
+              >
+                <input
+                  type="checkbox"
+                  checked={filters.category.has(cat)}
+                  readOnly
+                />
+                <p className={s.sectionGoodsCategoryList__itemName}>{cat}</p>
+              </li>
             ))}
           </ul>
         )}
 
         <button
-          onClick={() => {
-            setShowManufacturers(!showManufacturers);
-            setShowButtons(true);
-          }}
+          onClick={() => setShowManufacturers(!showManufacturers)}
           className={s.sectionGoodsCategoryBtn}
           type="button"
-          aria-label="toggleButtons"
-          style={{ marginBottom: '16px' }}
         >
           Фільтрувати за виробником:{' '}
-          <img
-            className={s.toggleBtnImg}
-            src={showManufacturers ? arrowUp : arrowDown}
-            alt="toggle manufacturers"
-          />
+          <img className={s.toggleBtnImg} src={showManufacturers ? arrowUp : arrowDown} alt="toggle manufacturers" />
         </button>
 
         {showManufacturers && (
           <ul className={s.sectionGoodsCategoryList}>
-            {initialManufacturers.map(man => {
-              const isSelected = tempFilters.manufacturer.has(man);
-
-              return (
-                <li
-                  key={man}
-                  className={`${s.sectionGoodsCategoryList__item} ${
-                    isSelected ? s.selectedCategory : ''
-                  }`}
-                  onClick={() => handleTempFilterChange('manufacturer', man)}
-                >
-                  <input
-                    type="checkbox"
-                    checked={isSelected}
-                    onClick={e => e.stopPropagation()}
-                    onChange={() => handleTempFilterChange('manufacturer', man)}
-                  />
-                  <p className={s.sectionGoodsCategoryList__itemName}>{man}</p>
-                </li>
-              );
-            })}
+            {initialManufacturers.map(man => (
+              <li
+                key={man}
+                className={`${s.sectionGoodsCategoryList__item} ${filters.manufacturer.has(man) ? s.selectedCategory : ''}`}
+                onClick={() => handleFilterChange('manufacturer', man)}
+              >
+                <input
+                  type="checkbox"
+                  checked={filters.manufacturer.has(man)}
+                  readOnly
+                />
+                <p className={s.sectionGoodsCategoryList__itemName}>{man}</p>
+              </li>
+            ))}
           </ul>
-        )}
-
-        <div className={s.borderforGoodsCategoryList}></div>
-
-        <div className={s.findCountContainer}>
-          <p className={s.findTitle}>Знайдено:</p>{' '}
-          <div className={s.findNumerContainer}>
-            <p className={s.findNumerCount}>{filteredProducts.length}</p>
-            <p className={s.findDescription}>позицій</p>
-          </div>
-        </div>
-
-        {showButtons && (
-          <div className={s.buttonGroup}>
-            <button
-              className={s.cancelButton}
-              type="button"
-              aria-label="cancelButton"
-              onClick={resetFilters}
-            >
-              Скасувати
-            </button>
-            <button
-              className={s.saveButton}
-              type="button"
-              aria-label="saveButton"
-              onClick={applyFilters}
-            >
-              Зберегти
-            </button>
-          </div>
         )}
 
         <ul className={s.productList}>
           {filteredProducts.length > 0 ? (
             currentProducts.map(product => (
-              <li className={s.productListItem}>
-                <div key={product.id} className={s.productCard}>
+              <li className={s.productListItem} key={product.id}>
+                <div className={s.productCard}>
                   <h4>{product.name}</h4>
                   <p>{product.category}</p>
                   <p>{product.manufacturer}</p>
@@ -428,50 +315,21 @@ const SectionGoods = () => {
           )}
         </ul>
 
-        {visibleCount < filteredProducts.length && (
-          <button
-            type="button"
-            aria-label="loadMore"
-            className={s.loadMoreButton}
-            onClick={loadMore}
-          >
-            Переглянути ще
-          </button>
-        )}
-
         {totalPages > 1 && (
           <div className={s.pagination}>
-            <button
-              disabled={currentPage === 1}
-              onClick={() => handlePageChange(currentPage - 1)}
-              type="button"
-              aria-label="arrowLeft"
-              className={s.buttonPagination}
-            >
+            <button disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage - 1)}>
               <img src={arrowLeft} alt="arrowLeft" />
             </button>
             {Array.from({ length: totalPages }, (_, i) => (
               <button
                 key={i}
-                className={
-                  currentPage === i + 1
-                    ? s.numerPaginationBtn
-                    : s.numerPaginationBtnInactive
-                }
-                onClick={() => handlePageChange(i + 1)}
-                type="button"
-                aria-label="NumerButton"
+                className={currentPage === i + 1 ? s.numerPaginationBtn : s.numerPaginationBtnInactive}
+                onClick={() => setCurrentPage(i + 1)}
               >
                 {i + 1}
               </button>
             ))}
-            <button
-              disabled={currentPage === totalPages}
-              onClick={() => handlePageChange(currentPage + 1)}
-              type="button"
-              aria-label="arrowRight"
-              className={s.buttonPagination}
-            >
+            <button disabled={currentPage === totalPages} onClick={() => setCurrentPage(currentPage + 1)}>
               <img src={arrowRight} alt="arrowRight" />
             </button>
           </div>
