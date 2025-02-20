@@ -33,7 +33,7 @@ const SectionGoods = () => {
     category: new Set(),
     manufacturer: new Set(),
   });
-  
+
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [currentPage, setCurrentPage] = useState(1);
   const [showCategories, setShowCategories] = useState(false);
@@ -65,7 +65,10 @@ const SectionGoods = () => {
   };
 
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentProducts = filteredProducts.slice(startIndex, startIndex + itemsPerPage);
+  const currentProducts = filteredProducts.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
   return (
@@ -80,7 +83,11 @@ const SectionGoods = () => {
           type="button"
         >
           Фільтрувати за категорією тварин:{' '}
-          <img className={s.toggleBtnImg} src={showCategories ? arrowUp : arrowDown} alt="toggle categories" />
+          <img
+            className={s.toggleBtnImg}
+            src={showCategories ? arrowUp : arrowDown}
+            alt="toggle categories"
+          />
         </button>
 
         {showCategories && (
@@ -88,7 +95,9 @@ const SectionGoods = () => {
             {initialCategories.map(cat => (
               <li
                 key={cat}
-                className={`${s.sectionGoodsCategoryList__item} ${filters.category.has(cat) ? s.selectedCategory : ''}`}
+                className={`${s.sectionGoodsCategoryList__item} ${
+                  filters.category.has(cat) ? s.selectedCategory : ''
+                }`}
                 onClick={() => handleFilterChange('category', cat)}
               >
                 <input
@@ -108,7 +117,11 @@ const SectionGoods = () => {
           type="button"
         >
           Фільтрувати за виробником:{' '}
-          <img className={s.toggleBtnImg} src={showManufacturers ? arrowUp : arrowDown} alt="toggle manufacturers" />
+          <img
+            className={s.toggleBtnImg}
+            src={showManufacturers ? arrowUp : arrowDown}
+            alt="toggle manufacturers"
+          />
         </button>
 
         {showManufacturers && (
@@ -116,7 +129,9 @@ const SectionGoods = () => {
             {initialManufacturers.map(man => (
               <li
                 key={man}
-                className={`${s.sectionGoodsCategoryList__item} ${filters.manufacturer.has(man) ? s.selectedCategory : ''}`}
+                className={`${s.sectionGoodsCategoryList__item} ${
+                  filters.manufacturer.has(man) ? s.selectedCategory : ''
+                }`}
                 onClick={() => handleFilterChange('manufacturer', man)}
               >
                 <input
@@ -147,21 +162,39 @@ const SectionGoods = () => {
           )}
         </ul>
 
+        <button
+          type="button"
+          aria-label="loadMore"
+          className={s.loadMoreButton}
+        >
+          Переглянути ще
+        </button>
+
         {totalPages > 1 && (
           <div className={s.pagination}>
-            <button disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage - 1)}>
+            <button
+              disabled={currentPage === 1}
+              onClick={() => setCurrentPage(currentPage - 1)}
+            >
               <img src={arrowLeft} alt="arrowLeft" />
             </button>
             {Array.from({ length: totalPages }, (_, i) => (
               <button
                 key={i}
-                className={currentPage === i + 1 ? s.numerPaginationBtn : s.numerPaginationBtnInactive}
+                className={
+                  currentPage === i + 1
+                    ? s.numerPaginationBtn
+                    : s.numerPaginationBtnInactive
+                }
                 onClick={() => setCurrentPage(i + 1)}
               >
                 {i + 1}
               </button>
             ))}
-            <button disabled={currentPage === totalPages} onClick={() => setCurrentPage(currentPage + 1)}>
+            <button
+              disabled={currentPage === totalPages}
+              onClick={() => setCurrentPage(currentPage + 1)}
+            >
               <img src={arrowRight} alt="arrowRight" />
             </button>
           </div>
