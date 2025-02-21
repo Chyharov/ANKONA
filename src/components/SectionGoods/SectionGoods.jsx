@@ -33,9 +33,9 @@ const SectionGoods = () => {
     category: new Set(),
     manufacturer: new Set(),
   });
-
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [currentPage, setCurrentPage] = useState(1);
+  const [visibleItemsPerPage, setVisibleItemsPerPage] = useState(5); // Кількість товарів на сторінці
   const [showCategories, setShowCategories] = useState(false);
   const [showManufacturers, setShowManufacturers] = useState(false);
   const itemsPerPage = 5;
@@ -43,6 +43,7 @@ const SectionGoods = () => {
   useEffect(() => {
     setFilteredProducts(filterProducts(products, filters));
     setCurrentPage(1);
+    setVisibleItemsPerPage(5); // Скидаємо видимі товари при зміні фільтрів
   }, [filters]);
 
   const filterProducts = (products, filters) => {
@@ -64,12 +65,21 @@ const SectionGoods = () => {
     });
   };
 
+  const handleLoadMore = () => {
+    setVisibleItemsPerPage(prev => Math.min(prev + itemsPerPage, filteredProducts.length));
+  };
+
+  // Обчислюємо товари для відображення з урахуванням пагінації
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentProducts = filteredProducts.slice(
-    startIndex,
-    startIndex + itemsPerPage
-  );
+  const endIndex = startIndex + visibleItemsPerPage;
+  const currentProducts = filteredProducts.slice(startIndex, endIndex);
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+
+  // Перемикання сторінок
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    setVisibleItemsPerPage(itemsPerPage); // Скидаємо до стандартної кількості на сторінці
+  };
 
   return (
     <section className={s.sectionGoods}>
@@ -162,19 +172,22 @@ const SectionGoods = () => {
           )}
         </ul>
 
-        <button
-          type="button"
-          aria-label="loadMore"
-          className={s.loadMoreButton}
-        >
-          Переглянути ще
-        </button>
+        {endIndex < filteredProducts.length && (
+          <button
+            type="button"
+            aria-label="loadMore"
+            className={s.loadMoreButton}
+            onClick={handleLoadMore}
+          >
+            Переглянути ще
+          </button>
+        )}
 
         {totalPages > 1 && (
           <div className={s.pagination}>
             <button
               disabled={currentPage === 1}
-              onClick={() => setCurrentPage(currentPage - 1)}
+              onClick={() => handlePageChange(currentPage - 1)}
             >
               <img src={arrowLeft} alt="arrowLeft" />
             </button>
@@ -186,14 +199,14 @@ const SectionGoods = () => {
                     ? s.numerPaginationBtn
                     : s.numerPaginationBtnInactive
                 }
-                onClick={() => setCurrentPage(i + 1)}
+                onClick={() => handlePageChange(i + 1)}
               >
                 {i + 1}
               </button>
             ))}
             <button
               disabled={currentPage === totalPages}
-              onClick={() => setCurrentPage(currentPage + 1)}
+              onClick={() => handlePageChange(currentPage + 1)}
             >
               <img src={arrowRight} alt="arrowRight" />
             </button>
