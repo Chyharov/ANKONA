@@ -100,6 +100,36 @@
   align-items: center;
 }
 
+.productListItem {
+  width: 100%;
+  height: 136px;
+}
+
+.productListItemTitle {
+  font-family: 'Montserrat Bold';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--richSoilBrown);
+}
+
+.productListItemCategory {
+  font-family: 'Montserrat Regular';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--richSoilBrown);
+}
+
+.productListItemManufacturer {
+  font-family: 'Montserrat Regular';
+  font-size: 14px;
+  line-height: 1.44;
+  color: var(--richSoilBrown);
+}
+
+.productListItemImg {
+  display: none;
+}
+
 .findDescription {
   font-family: 'Montserrat Regular';
   font-size: 16px;
@@ -168,7 +198,12 @@
   width: 40px;
   height: 40px;
   border: none;
-  background: transparent;
+  background: var(----eggShellWhite);
+}
+
+.buttonPagination:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .numerPaginationBtn,

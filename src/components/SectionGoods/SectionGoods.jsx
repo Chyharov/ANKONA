@@ -35,7 +35,7 @@ const SectionGoods = () => {
   });
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [currentPage, setCurrentPage] = useState(1);
-  const [visibleItemsPerPage, setVisibleItemsPerPage] = useState(5); // Кількість товарів на сторінці
+  const [itemsToShow, setItemsToShow] = useState(5);
   const [showCategories, setShowCategories] = useState(false);
   const [showManufacturers, setShowManufacturers] = useState(false);
   const itemsPerPage = 5;
@@ -43,19 +43,26 @@ const SectionGoods = () => {
   useEffect(() => {
     setFilteredProducts(filterProducts(products, filters));
     setCurrentPage(1);
-    setVisibleItemsPerPage(5); // Скидаємо видимі товари при зміні фільтрів
+    setItemsToShow(5);
   }, [filters]);
 
   const filterProducts = (products, filters) => {
-    let filtered = products;
-    if (filters.category.size) {
-      filtered = filtered.filter(p => filters.category.has(p.category));
-    }
-    if (filters.manufacturer.size) {
-      filtered = filtered.filter(p => filters.manufacturer.has(p.manufacturer));
-    }
-    return filtered;
-  };
+  let filtered = products;
+
+  if (filters.category.size) {
+    filtered = filtered.filter(p =>
+      Array.isArray(p.category)
+        ? p.category.some(cat => filters.category.has(cat)) // Перевіряємо, чи хоч одна категорія є у фільтрах
+        : filters.category.has(p.category)
+    );
+  }
+
+  if (filters.manufacturer.size) {
+    filtered = filtered.filter(p => filters.manufacturer.has(p.manufacturer));
+  }
+
+  return filtered;
+};
 
   const handleFilterChange = (type, value) => {
     setFilters(prevFilters => {
@@ -66,19 +73,18 @@ const SectionGoods = () => {
   };
 
   const handleLoadMore = () => {
-    setVisibleItemsPerPage(prev => Math.min(prev + itemsPerPage, filteredProducts.length));
+    const remainingItemsOnPage = filteredProducts.length - (currentPage - 1) * itemsPerPage;
+    setItemsToShow(prev => Math.min(prev + itemsPerPage, remainingItemsOnPage));
   };
 
-  // Обчислюємо товари для відображення з урахуванням пагінації
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + visibleItemsPerPage;
+  const endIndex = startIndex + itemsToShow;
   const currentProducts = filteredProducts.slice(startIndex, endIndex);
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
-  // Перемикання сторінок
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    setVisibleItemsPerPage(itemsPerPage); // Скидаємо до стандартної кількості на сторінці
+    setItemsToShow(itemsPerPage);
   };
 
   return (
@@ -156,21 +162,23 @@ const SectionGoods = () => {
         )}
 
         <ul className={s.productList}>
-          {filteredProducts.length > 0 ? (
-            currentProducts.map(product => (
-              <li className={s.productListItem} key={product.id}>
-                <div className={s.productCard}>
-                  <h4>{product.name}</h4>
-                  <p>{product.category}</p>
-                  <p>{product.manufacturer}</p>
-                </div>
-                <img src={noImages} alt="noImages" />
-              </li>
-            ))
-          ) : (
-            <p className={s.noResults}>Немає товарів за вашим фільтром.</p>
-          )}
-        </ul>
+  {filteredProducts.length > 0 ? (
+    currentProducts.map(product => (
+      <li className={s.productListItem} key={product.id}>
+        <div className={s.productCard}>
+          <h4 className={s.productListItemTitle}>{product.name}</h4>
+          <p className={s.productListItemManufacturer}>{product.manufacturer}</p>
+          <p className={s.productListItemCategory}>
+            {Array.isArray(product.category) ? product.category.join(", ") : product.category}
+          </p>
+        </div>
+        <img className={s.productListItemImg} src={noImages} alt="noImages" />
+      </li>
+    ))
+  ) : (
+    <p className={s.noResults}>Немає товарів за вашим фільтром.</p>
+  )}
+</ul>
 
         {endIndex < filteredProducts.length && (
           <button
@@ -185,7 +193,8 @@ const SectionGoods = () => {
 
         {totalPages > 1 && (
           <div className={s.pagination}>
-            <button
+            <button 
+              className={s.buttonPagination}
               disabled={currentPage === 1}
               onClick={() => handlePageChange(currentPage - 1)}
             >
@@ -205,6 +214,7 @@ const SectionGoods = () => {
               </button>
             ))}
             <button
+              className={s.buttonPagination}
               disabled={currentPage === totalPages}
               onClick={() => handlePageChange(currentPage + 1)}
             >

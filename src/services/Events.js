@@ -2,7 +2,7 @@ export const products = [
   {
     id: 1,
     name: 'Mineralfluter',
-    category: 'Коні',
+    category: ['Коні', 'ВРХ дорослі'],
     manufacturer: 'AGRO-BIZEK',
   },
   { id: 2, name: 'Feed Mix', category: 'ДРХ', manufacturer: 'JRS' },
