@@ -174,17 +174,44 @@ const SectionGoods = () => {
         </button>
 
         {!showCategories && filters.category.size > 0 && (
-          <div className={s.selectedFiltersContainer}>
+          <ul className={s.sectionGoodsCategoryList}>
             {[...filters.category].map(cat => (
-              <button
+              <li
                 key={cat}
-                className={s.selectedFilter}
-                onClick={() => handleFilterChange('category', cat)}
+                className={`${s.sectionGoodsCategoryList__item} ${s.selectedCategory}`}
+                style={{ cursor: 'pointer' }}
               >
-                {cat} ✕
-              </button>
+                <label className={s.customCheckbox}>
+                  <input
+                    type="checkbox"
+                    checked={true}
+                    onChange={() => handleFilterChange('category', cat)}
+                  />
+                  <span className={s.checkmark}>
+                    <img
+                      src={iconCheckBox}
+                      alt="Checked"
+                      className={s.checkIcon}
+                    />
+                  </span>
+                  {categoryIcons[cat] && (
+                    <div className={s.sectionGoodsCategoryList__itemImg}>
+                      <img
+                        src={categoryIcons[cat]}
+                        alt={cat}
+                        className={`${s.categoryIcon} ${s.selectedIcon}`}
+                      />
+                    </div>
+                  )}
+                  <p
+                    className={`${s.sectionGoodsCategoryList__itemName} ${s.selectedCategoryText}`}
+                  >
+                    {cat}
+                  </p>
+                </label>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
 
         {showCategories && (
@@ -244,7 +271,6 @@ const SectionGoods = () => {
           onClick={() => setShowManufacturers(!showManufacturers)}
           className={s.sectionGoodsCategoryBtn}
           type="button"
-          style={{ marginBottom: '16px', marginTop: '16px' }}
         >
           Фільтрувати за виробником:{' '}
           <img
@@ -255,17 +281,44 @@ const SectionGoods = () => {
         </button>
 
         {!showManufacturers && filters.manufacturer.size > 0 && (
-          <div className={s.selectedFiltersContainer}>
+          <ul className={s.sectionGoodsCategoryList}>
             {[...filters.manufacturer].map(man => (
-              <button
+              <li
                 key={man}
-                className={s.selectedFilter}
-                onClick={() => handleFilterChange('manufacturer', man)}
+                className={`${s.sectionGoodsCategoryList__item} ${s.selectedCategory}`}
+                style={{ cursor: 'pointer' }}
               >
-                {man} ✕
-              </button>
+                <label className={s.customCheckbox}>
+                  <input
+                    type="checkbox"
+                    checked={true}
+                    onChange={() => handleFilterChange('manufacturer', man)} // Виправлено тут
+                  />
+                  <span className={s.checkmark}>
+                    <img
+                      src={iconCheckBox}
+                      alt="Checked"
+                      className={s.checkIcon}
+                    />
+                  </span>
+                  {categoryIcons[man] && (
+                    <div className={s.sectionGoodsCategoryList__itemImg}>
+                      <img
+                        src={categoryIcons[man]}
+                        alt={man}
+                        className={`${s.categoryIcon} ${s.selectedIcon}`}
+                      />
+                    </div>
+                  )}
+                  <p
+                    className={`${s.sectionGoodsCategoryList__itemName} ${s.selectedCategoryText}`}
+                  >
+                    {man}
+                  </p>
+                </label>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
 
         {showManufacturers && (

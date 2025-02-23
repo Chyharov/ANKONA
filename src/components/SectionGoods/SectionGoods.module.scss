@@ -48,6 +48,7 @@
 .sectionGoodsCategoryList {
   padding-left: 14px;
   padding-right: 14px;
+  margin-bottom: 16px;
 }
 
 .sectionGoodsCategoryList__item {
@@ -57,13 +58,13 @@
   border-radius: 4px;
   background-color: var(--brownBG);
   box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
-  margin-bottom: 16px;
+  margin-bottom: 4px;
   min-height: 48px;
   width: 100%;
 }
 
-.sectionGoodsCategoryList__item:not(:last-child) {
-  margin-bottom: 4px;
+.sectionGoodsCategoryList__item:last-child {
+  margin-bottom: 0px;
 }
 
 .sectionGoodsCategoryList__itemName {
