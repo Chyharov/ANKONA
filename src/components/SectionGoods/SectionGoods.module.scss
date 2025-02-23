@@ -241,7 +241,7 @@
 
 .selectedCategory,
 .selectedCategoryText {
-  color: var(--brownBG);
+  color: var(--brownBG) !important;
   background-color: var(--copperYellow);
   font-family: 'Montserrat Bold';
   font-size: 16px;
@@ -293,4 +293,46 @@
   text-align: center;
 }
 
+.customCheckbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 
+  input {
+    display: none;
+  }
+
+  .checkmark {
+    width: 21px;
+    height: 18px;
+    border-radius: 2px;
+    border: 2px solid rgba(240, 231, 218, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+  }
+
+  .checkIcon {
+    width: 12px;
+    height: 9.4px;
+  }
+
+  input:checked+.checkmark {
+    background-color: var(--richSoilBrown);
+    border-color: var(--richSoilBrown);
+    border: none;
+  }
+
+  .sectionGoodsCategoryList__itemName {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+}
+
+.selectedCategory {
+  background-color: var(--copperYellow) !important;
+}

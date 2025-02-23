@@ -10,6 +10,7 @@ import iconHen from 'images/goods/iconHen.svg';
 import iconCalf from 'images/goods/iconCalf.svg';
 import iconCow from 'images/goods/iconCow.svg';
 import iconGoat from 'images/goods/iconGoat.svg';
+import iconCheckBox from 'images/goods/iconCheckBox.svg';
 import { products } from 'services/Events';
 import s from './SectionGoods.module.scss';
 
@@ -230,32 +231,44 @@ const SectionGoods = () => {
         </button>
 
         {showManufacturers && (
-          <ul className={s.sectionGoodsCategoryList}>
-            {initialManufacturers.map(man => (
-              <li
-                key={man}
-                className={`${s.sectionGoodsCategoryList__item} ${
-                  filters.manufacturer.has(man) ? s.selectedCategory : ''
-                }`}
-                onClick={() => handleFilterChange('manufacturer', man)}
-              >
-                <input
-                  type="checkbox"
-                  checked={filters.manufacturer.has(man)}
-                  readOnly
-                  style={{ marginRight: '15px' }}
-                />
-                <p
-                  className={`${s.sectionGoodsCategoryList__itemName} ${
-                    filters.manufacturer.has(man) ? s.selectedCategoryText : ''
-                  }`}
-                >
-                  {man}
-                </p>
-              </li>
-            ))}
-          </ul>
-        )}
+  <ul className={s.sectionGoodsCategoryList}>
+    {initialManufacturers.map(man => {
+      const isChecked = filters.manufacturer.has(man);
+
+      return (
+        <li
+          key={man}
+          className={`${s.sectionGoodsCategoryList__item} ${isChecked ? s.selectedCategory : ''}`}
+          onClick={(event) => {
+            if (event.target.tagName !== 'INPUT') {
+              handleFilterChange('manufacturer', man);
+            }
+          }}
+          style={{ cursor: 'pointer' }}
+        >
+          <label className={s.customCheckbox}>
+            <input
+              type="checkbox"
+              checked={isChecked}
+              readOnly
+              onClick={(e) => e.stopPropagation()} // Запобігає подвійному кліку при натисканні саме на чекбокс
+            />
+            <span className={s.checkmark}>
+              {isChecked && <img src={iconCheckBox} alt="Checked" className={s.checkIcon} />}
+            </span>
+            <p
+  className={`${s.sectionGoodsCategoryList__itemName} ${
+    isChecked ? s.selectedCategoryText : ''
+  }`}
+>
+  {man}
+</p>
+          </label>
+        </li>
+      );
+    })}
+  </ul>
+)}
 
         <div className={s.borderforGoodsCategoryList}></div>
 
