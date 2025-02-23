@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.19c1f14f.css",
-    "main.js": "/ANKONA/static/js/main.058ee069.js",
-    "static/css/943.a95de956.chunk.css": "/ANKONA/static/css/943.a95de956.chunk.css",
-    "static/js/943.d989419a.chunk.js": "/ANKONA/static/js/943.d989419a.chunk.js",
+    "main.js": "/ANKONA/static/js/main.01f6ba75.js",
+    "static/css/41.896d3c81.chunk.css": "/ANKONA/static/css/41.896d3c81.chunk.css",
+    "static/js/41.6e4a9984.chunk.js": "/ANKONA/static/js/41.6e4a9984.chunk.js",
     "static/js/314.460900ac.chunk.js": "/ANKONA/static/js/314.460900ac.chunk.js",
     "static/media/ankonaText.svg": "/ANKONA/static/media/ankonaText.da7a364639f91aa424acc23dbb33d63d.svg",
     "static/media/Montserrat-Bold.ttf": "/ANKONA/static/media/Montserrat-Bold.3530bfc1b50b41bdc29d.ttf",
@@ -31,14 +31,15 @@
     "static/media/burgerMenu.svg": "/ANKONA/static/media/burgerMenu.a0126a8fc4403527ad28731f97366787.svg",
     "static/media/arrowLeft.svg": "/ANKONA/static/media/arrowLeft.3242f183cb33cdf0ef9019de535658c1.svg",
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
+    "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.19c1f14f.css.map": "/ANKONA/static/css/main.19c1f14f.css.map",
-    "main.058ee069.js.map": "/ANKONA/static/js/main.058ee069.js.map",
-    "943.a95de956.chunk.css.map": "/ANKONA/static/css/943.a95de956.chunk.css.map",
-    "943.d989419a.chunk.js.map": "/ANKONA/static/js/943.d989419a.chunk.js.map",
+    "main.01f6ba75.js.map": "/ANKONA/static/js/main.01f6ba75.js.map",
+    "41.896d3c81.chunk.css.map": "/ANKONA/static/css/41.896d3c81.chunk.css.map",
+    "41.6e4a9984.chunk.js.map": "/ANKONA/static/js/41.6e4a9984.chunk.js.map",
     "314.460900ac.chunk.js.map": "/ANKONA/static/js/314.460900ac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.19c1f14f.css",
-    "static/js/main.058ee069.js"
+    "static/js/main.01f6ba75.js"
   ]
 }
