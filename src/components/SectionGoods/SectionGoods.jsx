@@ -4,6 +4,12 @@ import arrowDown from 'images/goods/arrowDown.svg';
 import arrowLeft from 'images/goods/arrowLeft.svg';
 import arrowRight from 'images/goods/arrowRight.svg';
 import noImages from 'images/goods/noMedia.jpg';
+import iconHorse from 'images/goods/iconHorse.svg';
+import iconPig from 'images/goods/iconPig.svg';
+import iconHen from 'images/goods/iconHen.svg';
+import iconCalf from 'images/goods/iconCalf.svg';
+import iconCow from 'images/goods/iconCow.svg';
+import iconGoat from 'images/goods/iconGoat.svg';
 import { products } from 'services/Events';
 import s from './SectionGoods.module.scss';
 
@@ -16,6 +22,15 @@ const initialCategories = [
   'Свині',
   'Підходе для всіх',
 ];
+
+const categoryIcons = {
+  'ВРХ дорослі': iconCow,
+  'ВРХ молодняк': iconCalf,
+  ДРХ: iconGoat,
+  Коні: iconHorse,
+  Птиця: iconHen,
+  Свині: iconPig,
+};
 
 const initialManufacturers = [
   'AGRO-BIZEK',
@@ -47,22 +62,24 @@ const SectionGoods = () => {
   }, [filters]);
 
   const filterProducts = (products, filters) => {
-  let filtered = products;
+    let filtered = products;
 
-  if (filters.category.size) {
-    filtered = filtered.filter(p =>
-      Array.isArray(p.category)
-        ? p.category.some(cat => filters.category.has(cat)) // Перевіряємо, чи хоч одна категорія є у фільтрах
-        : filters.category.has(p.category)
-    );
-  }
+    const hasAllCategories = filters.category.has('Підходе для всіх');
 
-  if (filters.manufacturer.size) {
-    filtered = filtered.filter(p => filters.manufacturer.has(p.manufacturer));
-  }
+    if (!hasAllCategories && filters.category.size) {
+      filtered = filtered.filter(p =>
+        Array.isArray(p.category)
+          ? p.category.some(cat => filters.category.has(cat))
+          : filters.category.has(p.category)
+      );
+    }
 
-  return filtered;
-};
+    if (filters.manufacturer.size) {
+      filtered = filtered.filter(p => filters.manufacturer.has(p.manufacturer));
+    }
+
+    return filtered;
+  };
 
   const handleFilterChange = (type, value) => {
     setFilters(prevFilters => {
@@ -73,7 +90,8 @@ const SectionGoods = () => {
   };
 
   const handleLoadMore = () => {
-    const remainingItemsOnPage = filteredProducts.length - (currentPage - 1) * itemsPerPage;
+    const remainingItemsOnPage =
+      filteredProducts.length - (currentPage - 1) * itemsPerPage;
     setItemsToShow(prev => Math.min(prev + itemsPerPage, remainingItemsOnPage));
   };
 
@@ -82,9 +100,57 @@ const SectionGoods = () => {
   const currentProducts = filteredProducts.slice(startIndex, endIndex);
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
-  const handlePageChange = (page) => {
+  const handlePageChange = page => {
     setCurrentPage(page);
     setItemsToShow(itemsPerPage);
+  };
+
+  const renderPaginationButtons = () => {
+    const pages = [];
+    const firstPage = 1;
+    const secondPage = 2;
+    const lastPage = totalPages;
+    const middlePage = Math.ceil(totalPages / 2);
+
+    pages.push(firstPage);
+    pages.push(secondPage);
+
+    if (middlePage > secondPage + 1) {
+      pages.push('...');
+    }
+
+    if (
+      middlePage !== firstPage &&
+      middlePage !== secondPage &&
+      middlePage !== lastPage
+    ) {
+      pages.push(middlePage);
+    }
+
+    if (middlePage < lastPage - 1) {
+      pages.push('...');
+    }
+
+    if (lastPage !== firstPage && lastPage !== secondPage) {
+      pages.push(lastPage);
+    }
+
+    return pages.map((page, index) => (
+      <button
+        key={index}
+        className={
+          page === '...'
+            ? s.ellipsis
+            : page === currentPage
+            ? s.numerPaginationBtn
+            : s.numerPaginationBtnInactive
+        }
+        onClick={() => typeof page === 'number' && handlePageChange(page)}
+        disabled={page === '...'}
+      >
+        {page}
+      </button>
+    ));
   };
 
   return (
@@ -120,8 +186,28 @@ const SectionGoods = () => {
                   type="checkbox"
                   checked={filters.category.has(cat)}
                   readOnly
+                  style={{ marginRight: '15px' }}
                 />
-                <p className={s.sectionGoodsCategoryList__itemName}>{cat}</p>
+                {categoryIcons[cat] && (
+                  <div className={s.sectionGoodsCategoryList__itemImg}>
+                    <img
+                      src={categoryIcons[cat]}
+                      alt={cat}
+                      className={`${s.categoryIcon} ${
+                        filters.category.has(cat) ? s.selectedIcon : ''
+                      }`}
+                    />
+                  </div>
+                )}
+                <p
+                  className={`
+    ${s.sectionGoodsCategoryList__itemName} 
+    ${cat === 'Підходе для всіх' ? s.allCategoriesCentered : ''} 
+    ${filters.category.has(cat) ? s.selectedCategoryText : ''}
+  `}
+                >
+                  {cat}
+                </p>
               </li>
             ))}
           </ul>
@@ -131,6 +217,7 @@ const SectionGoods = () => {
           onClick={() => setShowManufacturers(!showManufacturers)}
           className={s.sectionGoodsCategoryBtn}
           type="button"
+          style={{ marginBottom: '16px', marginTop: '16px' }}
         >
           Фільтрувати за виробником:{' '}
           <img
@@ -154,31 +241,52 @@ const SectionGoods = () => {
                   type="checkbox"
                   checked={filters.manufacturer.has(man)}
                   readOnly
+                  style={{ marginRight: '15px' }}
                 />
-                <p className={s.sectionGoodsCategoryList__itemName}>{man}</p>
+                <p className={`${s.sectionGoodsCategoryList__itemName} ${filters.category.has(man) ? s.selectedCategoryText : ''}`}>{man}</p>
               </li>
             ))}
           </ul>
         )}
 
-        <ul className={s.productList}>
-  {filteredProducts.length > 0 ? (
-    currentProducts.map(product => (
-      <li className={s.productListItem} key={product.id}>
-        <div className={s.productCard}>
-          <h4 className={s.productListItemTitle}>{product.name}</h4>
-          <p className={s.productListItemManufacturer}>{product.manufacturer}</p>
-          <p className={s.productListItemCategory}>
-            {Array.isArray(product.category) ? product.category.join(", ") : product.category}
-          </p>
+        <div className={s.borderforGoodsCategoryList}></div>
+
+        <div className={s.findCountContainer}>
+          <p className={s.findTitle}>Знайдено:</p>
+          <div className={s.findNumerContainer}>
+            <p className={s.findNumerCount}>{filteredProducts.length}</p>
+            <p className={s.findDescription}>позицій</p>
+          </div>
         </div>
-        <img className={s.productListItemImg} src={noImages} alt="noImages" />
-      </li>
-    ))
-  ) : (
-    <p className={s.noResults}>Немає товарів за вашим фільтром.</p>
-  )}
-</ul>
+
+        <ul className={s.productList}>
+          {filteredProducts.length > 0 ? (
+            currentProducts.map(product => (
+              <li className={s.productListItem} key={product.id}>
+                <div className={s.productCard}>
+                  <h4 className={s.productListItemTitle}>{product.name}</h4>
+                  <p className={s.productListItemManufacturer}>
+                    {Array.isArray(product.manufacturer)
+                      ? product.manufacturer.join(', ')
+                      : product.manufacturer}
+                  </p>
+                  <p className={s.productListItemCategory}>
+                    {Array.isArray(product.category)
+                      ? product.category.join(', ')
+                      : product.category}
+                  </p>
+                </div>
+                <img
+                  className={s.productListItemImg}
+                  src={noImages}
+                  alt="noImages"
+                />
+              </li>
+            ))
+          ) : (
+            <p className={s.noResults}>Немає товарів за вашим фільтром.</p>
+          )}
+        </ul>
 
         {endIndex < filteredProducts.length && (
           <button
@@ -191,37 +299,25 @@ const SectionGoods = () => {
           </button>
         )}
 
-        {totalPages > 1 && (
-          <div className={s.pagination}>
-            <button 
-              className={s.buttonPagination}
-              disabled={currentPage === 1}
-              onClick={() => handlePageChange(currentPage - 1)}
-            >
-              <img src={arrowLeft} alt="arrowLeft" />
-            </button>
-            {Array.from({ length: totalPages }, (_, i) => (
-              <button
-                key={i}
-                className={
-                  currentPage === i + 1
-                    ? s.numerPaginationBtn
-                    : s.numerPaginationBtnInactive
-                }
-                onClick={() => handlePageChange(i + 1)}
-              >
-                {i + 1}
-              </button>
-            ))}
-            <button
-              className={s.buttonPagination}
-              disabled={currentPage === totalPages}
-              onClick={() => handlePageChange(currentPage + 1)}
-            >
-              <img src={arrowRight} alt="arrowRight" />
-            </button>
-          </div>
-        )}
+        <div className={s.pagination}>
+          <button
+            className={s.buttonPagination}
+            disabled={currentPage === 1}
+            onClick={() => handlePageChange(currentPage - 1)}
+          >
+            <img src={arrowLeft} alt="arrowLeft" />
+          </button>
+
+          {renderPaginationButtons()}
+
+          <button
+            className={s.buttonPagination}
+            disabled={currentPage === totalPages}
+            onClick={() => handlePageChange(currentPage + 1)}
+          >
+            <img src={arrowRight} alt="arrowRight" />
+          </button>
+        </div>
       </div>
     </section>
   );
