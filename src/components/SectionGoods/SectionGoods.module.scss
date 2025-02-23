@@ -319,20 +319,19 @@
     height: 9.4px;
   }
 
-  input:checked+.checkmark {
+  input:checked + .checkmark {
     background-color: var(--richSoilBrown);
     border-color: var(--richSoilBrown);
     border: none;
-  }
-
-  .sectionGoodsCategoryList__itemName {
-    font-size: 16px;
-    font-weight: 700;
-    color: #fff;
-    transition: color 0.3s ease;
   }
 }
 
 .selectedCategory {
   background-color: var(--copperYellow) !important;
+}
+
+.sectionGoodsCategoryList__itemNameSpan {
+  font-family: 'Montserrat Regular';
+  font-size: 14px;
+  line-height: 1.43;
 }

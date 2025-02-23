@@ -285,7 +285,18 @@ const SectionGoods = () => {
                         isChecked ? s.selectedCategoryText : ''
                       }`}
                     >
-                      {man}
+                      {man === 'FUTTERGUT — надійна годівля' ? (
+                        <>
+                          FUTTERGUT{' '}
+                          <span
+                            className={s.sectionGoodsCategoryList__itemNameSpan}
+                          >
+                            — надійна годівля
+                          </span>
+                        </>
+                      ) : (
+                        man
+                      )}
                     </p>
                   </label>
                 </li>
