@@ -278,9 +278,19 @@
 }
 
 .categoryIcon {
-  color: #271F1C;
+  color: #271f1c;
 }
 
 .selectedIcon {
   filter: brightness(0) invert(0);
 }
+
+.noResults {
+  font-family: 'Montserrat Bold';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--richSoilBrown);
+  text-align: center;
+}
+
+

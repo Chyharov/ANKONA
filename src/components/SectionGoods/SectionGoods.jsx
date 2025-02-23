@@ -201,10 +201,12 @@ const SectionGoods = () => {
                 )}
                 <p
                   className={`
-    ${s.sectionGoodsCategoryList__itemName} 
-    ${cat === 'Підходе для всіх' ? s.allCategoriesCentered : ''} 
-    ${filters.category.has(cat) ? s.selectedCategoryText : ''}
-  `}
+                    ${s.sectionGoodsCategoryList__itemName} 
+                    ${
+                      cat === 'Підходе для всіх' ? s.allCategoriesCentered : ''
+                    } 
+                    ${filters.category.has(cat) ? s.selectedCategoryText : ''}
+                  `}
                 >
                   {cat}
                 </p>
@@ -243,7 +245,13 @@ const SectionGoods = () => {
                   readOnly
                   style={{ marginRight: '15px' }}
                 />
-                <p className={`${s.sectionGoodsCategoryList__itemName} ${filters.category.has(man) ? s.selectedCategoryText : ''}`}>{man}</p>
+                <p
+                  className={`${s.sectionGoodsCategoryList__itemName} ${
+                    filters.manufacturer.has(man) ? s.selectedCategoryText : ''
+                  }`}
+                >
+                  {man}
+                </p>
               </li>
             ))}
           </ul>
@@ -299,25 +307,27 @@ const SectionGoods = () => {
           </button>
         )}
 
-        <div className={s.pagination}>
-          <button
-            className={s.buttonPagination}
-            disabled={currentPage === 1}
-            onClick={() => handlePageChange(currentPage - 1)}
-          >
-            <img src={arrowLeft} alt="arrowLeft" />
-          </button>
+        {filteredProducts.length > 0 && (
+          <div className={s.pagination}>
+            <button
+              className={s.buttonPagination}
+              disabled={currentPage === 1}
+              onClick={() => handlePageChange(currentPage - 1)}
+            >
+              <img src={arrowLeft} alt="arrowLeft" />
+            </button>
 
-          {renderPaginationButtons()}
+            {renderPaginationButtons()}
 
-          <button
-            className={s.buttonPagination}
-            disabled={currentPage === totalPages}
-            onClick={() => handlePageChange(currentPage + 1)}
-          >
-            <img src={arrowRight} alt="arrowRight" />
-          </button>
-        </div>
+            <button
+              className={s.buttonPagination}
+              disabled={currentPage === totalPages}
+              onClick={() => handlePageChange(currentPage + 1)}
+            >
+              <img src={arrowRight} alt="arrowRight" />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
