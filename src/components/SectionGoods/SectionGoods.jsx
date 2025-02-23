@@ -175,44 +175,60 @@ const SectionGoods = () => {
 
         {showCategories && (
           <ul className={s.sectionGoodsCategoryList}>
-            {initialCategories.map(cat => (
-              <li
-                key={cat}
-                className={`${s.sectionGoodsCategoryList__item} ${
-                  filters.category.has(cat) ? s.selectedCategory : ''
-                }`}
-                onClick={() => handleFilterChange('category', cat)}
-              >
-                <input
-                  type="checkbox"
-                  checked={filters.category.has(cat)}
-                  readOnly
-                  style={{ marginRight: '15px' }}
-                />
-                {categoryIcons[cat] && (
-                  <div className={s.sectionGoodsCategoryList__itemImg}>
-                    <img
-                      src={categoryIcons[cat]}
-                      alt={cat}
-                      className={`${s.categoryIcon} ${
-                        filters.category.has(cat) ? s.selectedIcon : ''
-                      }`}
-                    />
-                  </div>
-                )}
-                <p
-                  className={`
-                    ${s.sectionGoodsCategoryList__itemName} 
-                    ${
-                      cat === 'Підходе для всіх' ? s.allCategoriesCentered : ''
-                    } 
-                    ${filters.category.has(cat) ? s.selectedCategoryText : ''}
-                  `}
+            {initialCategories.map(cat => {
+              const isChecked = filters.category.has(cat);
+
+              return (
+                <li
+                  key={cat}
+                  className={`${s.sectionGoodsCategoryList__item} ${
+                    isChecked ? s.selectedCategory : ''
+                  }`}
+                  onClick={event => {
+                    if (event.target.tagName !== 'INPUT') {
+                      handleFilterChange('category', cat);
+                    }
+                  }}
+                  style={{ cursor: 'pointer' }}
                 >
-                  {cat}
-                </p>
-              </li>
-            ))}
+                  <label className={s.customCheckbox}>
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      readOnly
+                      onClick={e => e.stopPropagation()}
+                    />
+                    <span className={s.checkmark}>
+                      {isChecked && (
+                        <img
+                          src={iconCheckBox}
+                          alt="Checked"
+                          className={s.checkIcon}
+                        />
+                      )}
+                    </span>
+                    {categoryIcons[cat] && (
+                      <div className={s.sectionGoodsCategoryList__itemImg}>
+                        <img
+                          src={categoryIcons[cat]}
+                          alt={cat}
+                          className={`${s.categoryIcon} ${
+                            isChecked ? s.selectedIcon : ''
+                          }`}
+                        />
+                      </div>
+                    )}
+                    <p
+                      className={`${s.sectionGoodsCategoryList__itemName} ${
+                        isChecked ? s.selectedCategoryText : ''
+                      }`}
+                    >
+                      {cat}
+                    </p>
+                  </label>
+                </li>
+              );
+            })}
           </ul>
         )}
 
@@ -231,44 +247,52 @@ const SectionGoods = () => {
         </button>
 
         {showManufacturers && (
-  <ul className={s.sectionGoodsCategoryList}>
-    {initialManufacturers.map(man => {
-      const isChecked = filters.manufacturer.has(man);
+          <ul className={s.sectionGoodsCategoryList}>
+            {initialManufacturers.map(man => {
+              const isChecked = filters.manufacturer.has(man);
 
-      return (
-        <li
-          key={man}
-          className={`${s.sectionGoodsCategoryList__item} ${isChecked ? s.selectedCategory : ''}`}
-          onClick={(event) => {
-            if (event.target.tagName !== 'INPUT') {
-              handleFilterChange('manufacturer', man);
-            }
-          }}
-          style={{ cursor: 'pointer' }}
-        >
-          <label className={s.customCheckbox}>
-            <input
-              type="checkbox"
-              checked={isChecked}
-              readOnly
-              onClick={(e) => e.stopPropagation()} // Запобігає подвійному кліку при натисканні саме на чекбокс
-            />
-            <span className={s.checkmark}>
-              {isChecked && <img src={iconCheckBox} alt="Checked" className={s.checkIcon} />}
-            </span>
-            <p
-  className={`${s.sectionGoodsCategoryList__itemName} ${
-    isChecked ? s.selectedCategoryText : ''
-  }`}
->
-  {man}
-</p>
-          </label>
-        </li>
-      );
-    })}
-  </ul>
-)}
+              return (
+                <li
+                  key={man}
+                  className={`${s.sectionGoodsCategoryList__item} ${
+                    isChecked ? s.selectedCategory : ''
+                  }`}
+                  onClick={event => {
+                    if (event.target.tagName !== 'INPUT') {
+                      handleFilterChange('manufacturer', man);
+                    }
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <label className={s.customCheckbox}>
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      readOnly
+                      onClick={e => e.stopPropagation()}
+                    />
+                    <span className={s.checkmark}>
+                      {isChecked && (
+                        <img
+                          src={iconCheckBox}
+                          alt="Checked"
+                          className={s.checkIcon}
+                        />
+                      )}
+                    </span>
+                    <p
+                      className={`${s.sectionGoodsCategoryList__itemName} ${
+                        isChecked ? s.selectedCategoryText : ''
+                      }`}
+                    >
+                      {man}
+                    </p>
+                  </label>
+                </li>
+              );
+            })}
+          </ul>
+        )}
 
         <div className={s.borderforGoodsCategoryList}></div>
 
