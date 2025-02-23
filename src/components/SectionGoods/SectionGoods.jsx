@@ -165,13 +165,27 @@ const SectionGoods = () => {
           className={s.sectionGoodsCategoryBtn}
           type="button"
         >
-          Фільтрувати за категорією тварин:{' '}
+          Фільтрувати за категорією тварин:
           <img
             className={s.toggleBtnImg}
             src={showCategories ? arrowUp : arrowDown}
             alt="toggle categories"
           />
         </button>
+
+        {!showCategories && filters.category.size > 0 && (
+          <div className={s.selectedFiltersContainer}>
+            {[...filters.category].map(cat => (
+              <button
+                key={cat}
+                className={s.selectedFilter}
+                onClick={() => handleFilterChange('category', cat)}
+              >
+                {cat} ✕
+              </button>
+            ))}
+          </div>
+        )}
 
         {showCategories && (
           <ul className={s.sectionGoodsCategoryList}>
@@ -184,19 +198,13 @@ const SectionGoods = () => {
                   className={`${s.sectionGoodsCategoryList__item} ${
                     isChecked ? s.selectedCategory : ''
                   }`}
-                  onClick={event => {
-                    if (event.target.tagName !== 'INPUT') {
-                      handleFilterChange('category', cat);
-                    }
-                  }}
                   style={{ cursor: 'pointer' }}
                 >
                   <label className={s.customCheckbox}>
                     <input
                       type="checkbox"
                       checked={isChecked}
-                      readOnly
-                      onClick={e => e.stopPropagation()}
+                      onChange={() => handleFilterChange('category', cat)}
                     />
                     <span className={s.checkmark}>
                       {isChecked && (
@@ -246,6 +254,20 @@ const SectionGoods = () => {
           />
         </button>
 
+        {!showManufacturers && filters.manufacturer.size > 0 && (
+          <div className={s.selectedFiltersContainer}>
+            {[...filters.manufacturer].map(man => (
+              <button
+                key={man}
+                className={s.selectedFilter}
+                onClick={() => handleFilterChange('manufacturer', man)}
+              >
+                {man} ✕
+              </button>
+            ))}
+          </div>
+        )}
+
         {showManufacturers && (
           <ul className={s.sectionGoodsCategoryList}>
             {initialManufacturers.map(man => {
@@ -257,19 +279,13 @@ const SectionGoods = () => {
                   className={`${s.sectionGoodsCategoryList__item} ${
                     isChecked ? s.selectedCategory : ''
                   }`}
-                  onClick={event => {
-                    if (event.target.tagName !== 'INPUT') {
-                      handleFilterChange('manufacturer', man);
-                    }
-                  }}
                   style={{ cursor: 'pointer' }}
                 >
                   <label className={s.customCheckbox}>
                     <input
                       type="checkbox"
                       checked={isChecked}
-                      readOnly
-                      onClick={e => e.stopPropagation()}
+                      onChange={() => handleFilterChange('manufacturer', man)}
                     />
                     <span className={s.checkmark}>
                       {isChecked && (
