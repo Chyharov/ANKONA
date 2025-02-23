@@ -27,15 +27,15 @@ const initialCategories = [
 const categoryIcons = {
   'ВРХ дорослі': iconCow,
   'ВРХ молодняк': iconCalf,
-  ДРХ: iconGoat,
-  Коні: iconHorse,
-  Птиця: iconHen,
-  Свині: iconPig,
+  'ДРХ': iconGoat,
+  'Коні': iconHorse,
+  'Птиця': iconHen,
+  'Свині': iconPig,
 };
 
 const initialManufacturers = [
   'AGRO-BIZEK',
-  'Anhoff FUTTERGUT',
+  'Ahrhoff FUTTERGUT',
   'ETOS',
   'FUTTERGUT — надійна годівля',
   'JRS',
@@ -63,24 +63,23 @@ const SectionGoods = () => {
   }, [filters]);
 
   const filterProducts = (products, filters) => {
-    let filtered = products;
+  let filtered = products;
 
-    const hasAllCategories = filters.category.has('Підходе для всіх');
+  const hasAllCategories = filters.category.has('Підходе для всіх');
 
-    if (!hasAllCategories && filters.category.size) {
-      filtered = filtered.filter(p =>
-        Array.isArray(p.category)
-          ? p.category.some(cat => filters.category.has(cat))
-          : filters.category.has(p.category)
-      );
-    }
+  if (!hasAllCategories && filters.category.size) {
+    filtered = filtered.filter(p => {
+      const productCategories = Array.isArray(p.category) ? p.category : [p.category];
+      return productCategories.some(cat => filters.category.has(cat) || cat === 'Підходе для всіх');
+    });
+  }
 
-    if (filters.manufacturer.size) {
-      filtered = filtered.filter(p => filters.manufacturer.has(p.manufacturer));
-    }
+  if (filters.manufacturer.size) {
+    filtered = filtered.filter(p => filters.manufacturer.has(p.manufacturer));
+  }
 
-    return filtered;
-  };
+  return filtered;
+};
 
   const handleFilterChange = (type, value) => {
     setFilters(prevFilters => {
@@ -419,11 +418,11 @@ const SectionGoods = () => {
                     {categoryIconsList.map((icon, index) => (
                       <div className={s.iconManufacturerContainerBorder}>
                         <img
-                        key={index}
-                        className={s.iconManufacturer}
-                        src={icon}
-                        alt="category icon"
-                      />
+                          key={index}
+                          className={s.iconManufacturer}
+                          src={icon}
+                          alt="category icon"
+                        />
                       </div>
                     ))}
                   </div>
@@ -452,7 +451,7 @@ const SectionGoods = () => {
           </button>
         )}
 
-        {filteredProducts.length > 0 && (
+        {filteredProducts.length > itemsPerPage && (
           <div className={s.pagination}>
             <button
               className={s.buttonPagination}
