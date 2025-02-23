@@ -124,11 +124,16 @@
   color: var(--richSoilBrown);
 }
 
-.productListItemCategory {
+.productListItemCategoryNone {
+  display: none;
+}
+
+.productListItemDescription {
   font-family: 'Montserrat Regular';
   font-size: 16px;
   line-height: 1.5;
   color: var(--richSoilBrown);
+  margin-bottom: 4px;
 }
 
 .productListItemManufacturer {
@@ -233,12 +238,8 @@
   justify-content: space-between;
   border-radius: 4px;
   background-color: var(--eggShellWhite);
-}
-
-.productCard {
-  padding-top: 4px;
-  padding-left: 8px;
-  padding-bottom: 4px;
+  flex-direction: column;
+  padding: 4px 8px;
 }
 
 .selectedCategory,
@@ -283,7 +284,8 @@
   color: var(--brownBG);
 }
 
-.selectedIcon {
+.selectedIcon,
+.iconManufacturer {
   filter: brightness(0) invert(0);
 }
 
@@ -337,4 +339,18 @@
   font-family: 'Montserrat Regular';
   font-size: 14px;
   line-height: 1.43;
+}
+
+.iconManufacturerContainerBorder {
+  border-right: 1px solid var(--copperYellow);
+  margin-right: 4px;
+}
+
+.iconManufacturerContainerBorder:last-child {
+  margin-right: 0px;
+}
+
+.iconManufacturerContainer {
+  display: flex;
+  align-items: center;
 }

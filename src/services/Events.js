@@ -3,7 +3,8 @@ export const products = [
     id: 1,
     name: 'Mineralfutter',
     category: ['Коні', 'ВРХ дорослі'],
-    manufacturer: ['Премікси для ВРХ', 'ДРХ', 'Коні',],
+    manufacturer: 'VILOFOSS',
+    description: 'Премікси для ВРХ, ДРХ та Коней',
   },
   { id: 2, name: 'Feed Mix', category: 'ДРХ', manufacturer: 'JRS' },
   {

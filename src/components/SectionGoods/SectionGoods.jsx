@@ -292,7 +292,7 @@ const SectionGoods = () => {
                   <input
                     type="checkbox"
                     checked={true}
-                    onChange={() => handleFilterChange('manufacturer', man)} // Виправлено тут
+                    onChange={() => handleFilterChange('manufacturer', man)}
                   />
                   <span className={s.checkmark}>
                     <img
@@ -386,28 +386,56 @@ const SectionGoods = () => {
 
         <ul className={s.productList}>
           {filteredProducts.length > 0 ? (
-            currentProducts.map(product => (
-              <li className={s.productListItem} key={product.id}>
-                <div className={s.productCard}>
-                  <h4 className={s.productListItemTitle}>{product.name}</h4>
-                  <p className={s.productListItemManufacturer}>
-                    {Array.isArray(product.manufacturer)
-                      ? product.manufacturer.join(', ')
-                      : product.manufacturer}
-                  </p>
-                  <p className={s.productListItemCategory}>
-                    {Array.isArray(product.category)
-                      ? product.category.join(', ')
-                      : product.category}
-                  </p>
-                </div>
-                <img
-                  className={s.productListItemImg}
-                  src={noImages}
-                  alt="noImages"
-                />
-              </li>
-            ))
+            currentProducts.map(product => {
+              let categories = Array.isArray(product.category)
+                ? product.category
+                : [product.category];
+              if (categories.includes('Підходе для всіх')) {
+                categories = Object.keys(categoryIcons);
+              }
+
+              const categoryIconsList = categories
+                .map(cat => categoryIcons[cat])
+                .filter(Boolean);
+
+              return (
+                <li className={s.productListItem} key={product.id}>
+                  <div className={s.productCard}>
+                    <h4 className={s.productListItemTitle}>{product.name}</h4>
+                    <p className={s.productListItemManufacturer}>
+                      {Array.isArray(product.manufacturer)
+                        ? product.manufacturer.join(', ')
+                        : product.manufacturer}
+                    </p>
+                    <p className={s.productListItemCategoryNone}>
+                      {categories.join(', ')}
+                    </p>
+                    <p className={s.productListItemDescription}>
+                      {product.description}
+                    </p>
+                  </div>
+
+                  <div className={s.iconManufacturerContainer}>
+                    {categoryIconsList.map((icon, index) => (
+                      <div className={s.iconManufacturerContainerBorder}>
+                        <img
+                        key={index}
+                        className={s.iconManufacturer}
+                        src={icon}
+                        alt="category icon"
+                      />
+                      </div>
+                    ))}
+                  </div>
+
+                  <img
+                    className={s.productListItemImg}
+                    src={noImages}
+                    alt="noImages"
+                  />
+                </li>
+              );
+            })
           ) : (
             <p className={s.noResults}>Немає товарів за вашим фільтром.</p>
           )}
