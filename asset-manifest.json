@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.19c1f14f.css",
-    "main.js": "/ANKONA/static/js/main.860c31c4.js",
-    "static/css/41.3d66c8b9.chunk.css": "/ANKONA/static/css/41.3d66c8b9.chunk.css",
-    "static/js/41.efbfb40b.chunk.js": "/ANKONA/static/js/41.efbfb40b.chunk.js",
+    "main.js": "/ANKONA/static/js/main.e00fc4de.js",
+    "static/css/41.1d106c0f.chunk.css": "/ANKONA/static/css/41.1d106c0f.chunk.css",
+    "static/js/41.8716bd7b.chunk.js": "/ANKONA/static/js/41.8716bd7b.chunk.js",
     "static/js/314.460900ac.chunk.js": "/ANKONA/static/js/314.460900ac.chunk.js",
     "static/media/ankonaText.svg": "/ANKONA/static/media/ankonaText.da7a364639f91aa424acc23dbb33d63d.svg",
     "static/media/Montserrat-Bold.ttf": "/ANKONA/static/media/Montserrat-Bold.3530bfc1b50b41bdc29d.ttf",
@@ -33,13 +33,13 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.19c1f14f.css.map": "/ANKONA/static/css/main.19c1f14f.css.map",
-    "main.860c31c4.js.map": "/ANKONA/static/js/main.860c31c4.js.map",
-    "41.3d66c8b9.chunk.css.map": "/ANKONA/static/css/41.3d66c8b9.chunk.css.map",
-    "41.efbfb40b.chunk.js.map": "/ANKONA/static/js/41.efbfb40b.chunk.js.map",
+    "main.e00fc4de.js.map": "/ANKONA/static/js/main.e00fc4de.js.map",
+    "41.1d106c0f.chunk.css.map": "/ANKONA/static/css/41.1d106c0f.chunk.css.map",
+    "41.8716bd7b.chunk.js.map": "/ANKONA/static/js/41.8716bd7b.chunk.js.map",
     "314.460900ac.chunk.js.map": "/ANKONA/static/js/314.460900ac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.19c1f14f.css",
-    "static/js/main.860c31c4.js"
+    "static/js/main.e00fc4de.js"
   ]
 }
