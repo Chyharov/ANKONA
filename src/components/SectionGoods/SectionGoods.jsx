@@ -27,10 +27,10 @@ const initialCategories = [
 const categoryIcons = {
   'ВРХ дорослі': iconCow,
   'ВРХ молодняк': iconCalf,
-  'ДРХ': iconGoat,
-  'Коні': iconHorse,
-  'Птиця': iconHen,
-  'Свині': iconPig,
+  ДРХ: iconGoat,
+  Коні: iconHorse,
+  Птиця: iconHen,
+  Свині: iconPig,
 };
 
 const initialManufacturers = [
@@ -49,9 +49,9 @@ const SectionGoods = () => {
     category: new Set(),
     manufacturer: new Set(),
   });
+  
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsToShow, setItemsToShow] = useState(5);
   const [showCategories, setShowCategories] = useState(false);
   const [showManufacturers, setShowManufacturers] = useState(false);
   const itemsPerPage = 5;
@@ -59,27 +59,30 @@ const SectionGoods = () => {
   useEffect(() => {
     setFilteredProducts(filterProducts(products, filters));
     setCurrentPage(1);
-    setItemsToShow(5);
   }, [filters]);
 
   const filterProducts = (products, filters) => {
-  let filtered = products;
+    let filtered = products;
 
-  const hasAllCategories = filters.category.has('Підходе для всіх');
+    const hasAllCategories = filters.category.has('Підходе для всіх');
 
-  if (!hasAllCategories && filters.category.size) {
-    filtered = filtered.filter(p => {
-      const productCategories = Array.isArray(p.category) ? p.category : [p.category];
-      return productCategories.some(cat => filters.category.has(cat) || cat === 'Підходе для всіх');
-    });
-  }
+    if (!hasAllCategories && filters.category.size) {
+      filtered = filtered.filter(p => {
+        const productCategories = Array.isArray(p.category)
+          ? p.category
+          : [p.category];
+        return productCategories.some(
+          cat => filters.category.has(cat) || cat === 'Підходе для всіх'
+        );
+      });
+    }
 
-  if (filters.manufacturer.size) {
-    filtered = filtered.filter(p => filters.manufacturer.has(p.manufacturer));
-  }
+    if (filters.manufacturer.size) {
+      filtered = filtered.filter(p => filters.manufacturer.has(p.manufacturer));
+    }
 
-  return filtered;
-};
+    return filtered;
+  };
 
   const handleFilterChange = (type, value) => {
     setFilters(prevFilters => {
@@ -90,19 +93,16 @@ const SectionGoods = () => {
   };
 
   const handleLoadMore = () => {
-    const remainingItemsOnPage =
-      filteredProducts.length - (currentPage - 1) * itemsPerPage;
-    setItemsToShow(prev => Math.min(prev + itemsPerPage, remainingItemsOnPage));
+    if (currentPage < totalPages) {
+      setCurrentPage(prev => prev + 1);
+    }
   };
 
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsToShow;
-  const currentProducts = filteredProducts.slice(startIndex, endIndex);
+  const currentProducts = filteredProducts.slice(0, currentPage * itemsPerPage);
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
   const handlePageChange = page => {
     setCurrentPage(page);
-    setItemsToShow(itemsPerPage);
   };
 
   const renderPaginationButtons = () => {
@@ -440,16 +440,17 @@ const SectionGoods = () => {
           )}
         </ul>
 
-        {endIndex < filteredProducts.length && (
-          <button
-            type="button"
-            aria-label="loadMore"
-            className={s.loadMoreButton}
-            onClick={handleLoadMore}
-          >
-            Переглянути ще
-          </button>
-        )}
+        {currentProducts.length < filteredProducts.length &&
+          currentPage < totalPages && (
+            <button
+              type="button"
+              aria-label="loadMore"
+              className={s.loadMoreButton}
+              onClick={handleLoadMore}
+            >
+              Переглянути ще
+            </button>
+          )}
 
         {filteredProducts.length > itemsPerPage && (
           <div className={s.pagination}>
