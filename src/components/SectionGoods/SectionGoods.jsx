@@ -49,7 +49,7 @@ const SectionGoods = () => {
     category: new Set(),
     manufacturer: new Set(),
   });
-  
+
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [currentPage, setCurrentPage] = useState(1);
   const [showCategories, setShowCategories] = useState(false);
@@ -203,7 +203,9 @@ const SectionGoods = () => {
                     </div>
                   )}
                   <p
-                    className={`${s.sectionGoodsCategoryList__itemName} ${s.selectedCategoryText}`}
+                    className={`${s.sectionGoodsCategoryList__itemName} ${
+                      s.selectedCategoryText
+                    } ${cat === 'Підходе для всіх' ? s.centeredText : ''}`}
                   >
                     {cat}
                   </p>
@@ -255,7 +257,7 @@ const SectionGoods = () => {
                     <p
                       className={`${s.sectionGoodsCategoryList__itemName} ${
                         isChecked ? s.selectedCategoryText : ''
-                      }`}
+                      } ${cat === 'Підходе для всіх' ? s.centeredText : ''}`}
                     >
                       {cat}
                     </p>
