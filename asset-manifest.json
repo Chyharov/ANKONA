@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.19c1f14f.css",
-    "main.js": "/ANKONA/static/js/main.6afc6f7f.js",
+    "main.js": "/ANKONA/static/js/main.2fe74de8.js",
     "static/css/41.1d106c0f.chunk.css": "/ANKONA/static/css/41.1d106c0f.chunk.css",
-    "static/js/41.1704f9c6.chunk.js": "/ANKONA/static/js/41.1704f9c6.chunk.js",
+    "static/js/41.a51eb23b.chunk.js": "/ANKONA/static/js/41.a51eb23b.chunk.js",
     "static/js/314.460900ac.chunk.js": "/ANKONA/static/js/314.460900ac.chunk.js",
     "static/media/ankonaText.svg": "/ANKONA/static/media/ankonaText.da7a364639f91aa424acc23dbb33d63d.svg",
     "static/media/Montserrat-Bold.ttf": "/ANKONA/static/media/Montserrat-Bold.3530bfc1b50b41bdc29d.ttf",
@@ -33,13 +33,13 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.19c1f14f.css.map": "/ANKONA/static/css/main.19c1f14f.css.map",
-    "main.6afc6f7f.js.map": "/ANKONA/static/js/main.6afc6f7f.js.map",
+    "main.2fe74de8.js.map": "/ANKONA/static/js/main.2fe74de8.js.map",
     "41.1d106c0f.chunk.css.map": "/ANKONA/static/css/41.1d106c0f.chunk.css.map",
-    "41.1704f9c6.chunk.js.map": "/ANKONA/static/js/41.1704f9c6.chunk.js.map",
+    "41.a51eb23b.chunk.js.map": "/ANKONA/static/js/41.a51eb23b.chunk.js.map",
     "314.460900ac.chunk.js.map": "/ANKONA/static/js/314.460900ac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.19c1f14f.css",
-    "static/js/main.6afc6f7f.js"
+    "static/js/main.2fe74de8.js"
   ]
 }
