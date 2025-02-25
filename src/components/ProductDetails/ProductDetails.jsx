@@ -1,7 +1,22 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { products } from 'services/Products';
 import Header from 'components/Header/Header';
+import iconHorse from 'images/goods/iconHorse.svg';
+import iconPig from 'images/goods/iconPig.svg';
+import iconHen from 'images/goods/iconHen.svg';
+import iconCalf from 'images/goods/iconCalf.svg';
+import iconCow from 'images/goods/iconCow.svg';
+import iconGoat from 'images/goods/iconGoat.svg';
 import s from './ProductDetails.module.scss';
+
+const categoryIcons = {
+  'ВРХ дорослі': iconCow,
+  'ВРХ молодняк': iconCalf,
+  ДРХ: iconGoat,
+  Коні: iconHorse,
+  Птиця: iconHen,
+  Свині: iconPig,
+};
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -11,6 +26,12 @@ const ProductDetails = () => {
   if (!product) {
     return <p className={s.notFound}>Товар не знайдено</p>;
   }
+
+  const categoryIconsList = Array.isArray(product.category)
+    ? product.category.map(cat => categoryIcons[cat]).filter(Boolean)
+    : categoryIcons[product.category]
+    ? [categoryIcons[product.category]]
+    : [];
 
   return (
     <>
@@ -24,15 +45,34 @@ const ProductDetails = () => {
             <div className={s.decorationBorder}></div>
             <h2 className={s.sectionProductDetailsTitle}>{product.name}</h2>
           </div>
+          <img
+            className={s.imgProductDetails}
+            src={product.image}
+            alt={product.name}
+          />
 
-          <p>Виробник: {product.manufacturer}</p>
+          <p>Категорія тварин:</p>
+          <div className={s.iconManufacturerContainer}>
+            {categoryIconsList.map((icon, index) => (
+              <div key={index} className={s.iconManufacturerContainerBorder}>
+                <img
+                  className={s.iconManufacturer}
+                  src={icon}
+                  alt="category icon"
+                />
+              </div>
+            ))}
+          </div>
           <p>
-            Категорія:{' '}
+            {' '}
             {Array.isArray(product.category)
               ? product.category.join(', ')
               : product.category}
           </p>
-          <p>Опис: {product.description}</p>
+
+          <h3>{product.name}</h3>
+          <p>{product.manufacturer}</p>
+          <p>{product.description}</p>
         </div>
       </section>
     </>

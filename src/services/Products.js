@@ -1,3 +1,5 @@
+import imgProductDetails1 from 'images/productDetails/imgProductDetailsId1.jpg';
+
 export const products = [
   {
     id: 1,
@@ -5,6 +7,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Премікси для ВРХ, ДРХ та Коней',
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
+    image: imgProductDetails1,
   },
   {
     id: 2,
@@ -12,6 +15,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Премікс - лизунець Стандарт',
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
+    image: imgProductDetails1,
   },
   {
     id: 3,
@@ -19,6 +23,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Лизунець для сухостійних корів',
     category: ['ВРХ дорослі', 'ВРХ молодняк'],
+    image: imgProductDetails1,
   },
   {
     id: 4,
@@ -26,6 +31,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Матеріал для птахівників',
     category: [ 'Птиця' ],
+    image: imgProductDetails1,
   },
   {
     id: 5,
@@ -33,6 +39,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Оптимізація протеїнової годівлі',
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
+    image: imgProductDetails1,
   },
   {
     id: 6,
@@ -40,6 +47,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Оптимізація крохмальної годівлі',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 7,
@@ -47,6 +55,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Перша випойка після отелу',
     category: ['ВРХ дорослі', 'ВРХ молодняк'],
+    image: imgProductDetails1,
   },
   {
     id: 8,
@@ -54,6 +63,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Профілактика гіпокальціємії',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 9,
@@ -61,6 +71,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Транзитна добавка для корів',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 10,
@@ -68,6 +79,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: `Рідкий мінерально–вітамінний підкислювач (підходе для всіх)`,
     category: ['Підходе для всіх'],
+    image: imgProductDetails1,
   },
   {
     id: 11,
@@ -75,6 +87,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: `Імуностимулююча кормова добавка  (підходе для всіх)`,
     category: ['Підходе для всіх'],
+    image: imgProductDetails1,
   },
   {
     id: 12,
@@ -82,6 +95,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Рідкий підкислювач для всіх видів тварин',
     category: ['ВРХ молодняк', 'ДРХ', 'Свині', 'Птиця'],
+    image: imgProductDetails1,
   },
   {
     id: 13,
@@ -89,6 +103,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс+сорбент токсинів',
     category: ['Підходе для всіх'],
+    image: imgProductDetails1,
   },
   {
     id: 14,
@@ -96,6 +111,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Сорбент токсинів комплексний',
     category: ['Підходе для всіх'],
+    image: imgProductDetails1,
   },
   {
     id: 15,
@@ -103,6 +119,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Сорбент токсинів',
     category: ['Підходе для всіх'],
+    image: imgProductDetails1,
   },
   {
     id: 16,
@@ -110,6 +127,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Буферна кормова добавка',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 17,
@@ -117,6 +135,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Буферна кормова добавка',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 18,
@@ -124,6 +143,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Концентрат Біотину',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 19,
@@ -131,6 +151,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Концентрат каротину',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 20,
@@ -138,6 +159,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Спеціальна дріжджова добавка',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 21,
@@ -145,6 +167,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Фракціонований захищений жир',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 22,
@@ -152,6 +175,7 @@ export const products = [
     manufacturer: 'Schils',
     description: 'Кальцінований захищений жир',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 23,
@@ -159,6 +183,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Енергетична рідка добавка',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 24,
@@ -166,6 +191,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Енергетична рідка добавка',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 25,
@@ -173,6 +199,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Престартер у вигляді мюсли',
     category: ['ВРХ молодняк'],
+    image: imgProductDetails1,
   },
   {
     id: 26,
@@ -180,6 +207,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: '10% ядро для кормів телятам',
     category: ['ВРХ молодняк'],
+    image: imgProductDetails1,
   },
   {
     id: 27,
@@ -187,6 +215,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Збагачувач незбираного молока',
     category: ['ВРХ молодняк'],
+    image: imgProductDetails1,
   },
   {
     id: 28,
@@ -194,6 +223,7 @@ export const products = [
     manufacturer: 'Schils',
     description: 'ЗНМ для телят з 3-ї доби життя',
     category: ['ВРХ молодняк'],
+    image: imgProductDetails1,
   },
   {
     id: 29,
@@ -201,6 +231,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Профілактика діареї у телят',
     category: ['ВРХ молодняк'],
+    image: imgProductDetails1,
   },
   {
     id: 30,
@@ -208,6 +239,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Швидке лікування діареї у телят',
     category: ['ВРХ молодняк', 'ДРХ', 'Коні'],
+    image: imgProductDetails1,
   },
   {
     id: 31,
@@ -215,6 +247,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Профілактика респіраторних хвороб у телят',
     category: ['ВРХ молодняк'],
+    image: imgProductDetails1,
   },
   {
     id: 32,
@@ -222,6 +255,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Рідкий пероральний пробіотик в шприці',
     category: ['Підходе для всіх'],
+    image: imgProductDetails1,
   },
   {
     id: 33,
@@ -229,6 +263,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Спеціальний Премікс',
     category: ['ВРХ дорослі', 'ВРХ молодняк'],
+    image: imgProductDetails1,
   },
   {
     id: 34,
@@ -236,6 +271,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Дезинфектант в присутності тварин',
     category: ['Підходе для всіх'],
+    image: imgProductDetails1,
   },
   {
     id: 35,
@@ -243,6 +279,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Інокулянт для силосування',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 36,
@@ -250,6 +287,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Лизунець меласований для овець',
     category: ['ДРХ'],
+    image: imgProductDetails1,
   },
   {
     id: 37,
@@ -257,6 +295,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Кормові концентрати та премікси для свиней, птиці, ВРХ',
     category: ['Підходе для всіх'],
+    image: imgProductDetails1,
   },
   {
     id: 38,
@@ -264,6 +303,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Престартер для телят. Гранула.',
      category: ['ВРХ молодняк'],
+     image: imgProductDetails1,
   },
   {
     id: 39,
@@ -271,6 +311,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'БМВД. Гранула.',
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
+    image: imgProductDetails1,
   },
   {
     id: 40,
@@ -278,6 +319,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Для лактуючих корів.',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 41,
@@ -285,6 +327,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Годівля на роботах',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 42,
@@ -292,6 +335,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Премікс з/без живими дріжджами',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 43,
@@ -299,6 +343,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Добавка з живими дріжджами',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 44,
@@ -306,6 +351,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Вітаміно-мінеральний Премікс',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 45,
@@ -313,6 +359,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Премікс для сухостійних корів',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 46,
@@ -320,6 +367,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Буферна добавка',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 47,
@@ -327,6 +375,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Регулює кальцій-фосфорний метаболізм + іммунітет',
     category: ['Свині'],
+    image: imgProductDetails1,
   },
   {
     id: 48,
@@ -334,6 +383,7 @@ export const products = [
     manufacturer: 'NUTRIBOS',
     description: 'Захищена сечовина (Хорватія)',
     category: ['ВРХ дорослі', 'ДРХ'],
+    image: imgProductDetails1,
   },
   {
     id: 49,
@@ -341,6 +391,7 @@ export const products = [
     manufacturer: 'NUTRIBOS',
     description: 'Комплексні продукти с захищеною сечовиною у складі (Хорватія)',
     category: ['ВРХ дорослі'],
+    image: imgProductDetails1,
   },
   {
     id: 50,
@@ -348,6 +399,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс для свиней на відгодівлі 30-60 кг, 4,5%',
     category: ['Свині'],
+    image: imgProductDetails1,
   },
   {
     id: 51,
@@ -355,6 +407,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс для свиней на відгодівлі від 60 кг, 3,3%',
     category: ['Свині'],
+    image: imgProductDetails1,
   },
   {
     id: 52,
@@ -362,6 +415,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс для свиноматок у транзитний період',
     category: ['Свині'],
+    image: imgProductDetails1,
   },
   {
     id: 53,
@@ -369,6 +423,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс для лактуючих свиноматок, 5%',
     category: ['Свині'],
+    image: imgProductDetails1,
   },
   {
     id: 54,
@@ -376,6 +431,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс для супоросних свиноматок, 3%',
     category: ['Свині'],
+    image: imgProductDetails1,
   },
   {
     id: 55,
@@ -383,6 +439,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс для поросят до 30 кг 6,5%',
     category: ['Свині'],
+    image: imgProductDetails1,
   },
   {
     id: 56,
@@ -390,6 +447,7 @@ export const products = [
     manufacturer: 'ETOS',
     description: 'Модулятор мікробіому; Кокцидіостатик; Суміш органічних кислот',
     category: ['Птиця'],
+    image: imgProductDetails1,
   },
   {
     id: 57,
@@ -397,6 +455,7 @@ export const products = [
     manufacturer: 'ETOS',
     description: 'Модулятор мікробіому; Альтернатива антибіотику; Суміш органічних кислот',
     category: ['Свині'],
+    image: imgProductDetails1,
   },
   {
     id: 58,
@@ -404,6 +463,7 @@ export const products = [
     manufacturer: ['ANKONA', 'FUTTERGUT - надійна годівля'],
     description: 'Модулятор мікробіому; Альтернатива антибіотику; Суміш органічних кислот',
     category: ['Свині'],
+    image: imgProductDetails1,
   },
   {
     id: 59,
@@ -411,6 +471,7 @@ export const products = [
     manufacturer: ['ANKONA', 'FUTTERGUT - надійна годівля'],
     description: 'Підвищення рівня вітаміну D3 у сироватці крові',
     category: ['Птиця'],
+    image: imgProductDetails1,
   },
   {
     id: 60,
@@ -418,6 +479,7 @@ export const products = [
     manufacturer: ['ANKONA', 'FUTTERGUT - надійна годівля'],
     description: 'Підвищення рівня вітаміну D3 у сироватці крові',
     category: ['Птиця'],
+    image: imgProductDetails1,
   },
   {
     id: 61,
@@ -425,6 +487,7 @@ export const products = [
     manufacturer: ['ANKONA', 'FUTTERGUT - надійна годівля'],
     description: 'Підвищення рівня вітаміну D3 у сироватці крові',
     category: ['Птиця'],
+    image: imgProductDetails1,
   },
   {
     id: 62,
@@ -432,6 +495,7 @@ export const products = [
     manufacturer: ['ETOS'],
     description: 'Додаткова кормова суміш',
     category: ['Підходе для всіх'],
+    image: imgProductDetails1,
   },
   {
     id: 63,
@@ -439,6 +503,7 @@ export const products = [
     manufacturer: ['Agro-Bizek'],
     description: 'Ультрабіотик',
     category: ['Підходе для всіх'],
+    image: imgProductDetails1,
   },
   {
     id: 64,
@@ -446,6 +511,7 @@ export const products = [
     manufacturer: ['JRS'],
     description: 'Концентрат сирої клітковини для свиней',
     category: ['Свині'],
+    image: imgProductDetails1,
   },
 ];
 
