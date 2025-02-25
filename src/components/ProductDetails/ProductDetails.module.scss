@@ -1,1 +1,41 @@
 @import '../../sass/utils/mixin';
+
+.sectionProductDetails {
+  padding-top: 86px;
+  padding-bottom: 120px;
+  background-color: var(--eggShellWhite);
+}
+
+.buttonBackContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.buttonBack {
+  font-family: 'Montserrat Regular';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--richSoilBrown);
+  padding: 8px;
+  margin-right: 4px;
+  border: none;
+  background-color: transparent;
+}
+
+.decorationBorder {
+  width: 24px;
+  height: 1px;
+  border: 1px solid var(--copperYellow);
+  opacity: 24%;
+  margin-right: 4px;
+}
+
+.sectionProductDetailsTitle {
+  font-family: 'Montserrat Bold';
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--richSoilBrown);
+  padding: 8px;
+}
