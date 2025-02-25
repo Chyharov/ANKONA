@@ -37,7 +37,7 @@ const initialManufacturers = [
   'AGRO-BIZEK',
   'Ahrhoff FUTTERGUT',
   'ETOS',
-  'FUTTERGUT — надійна годівля',
+  'FUTTERGUT - надійна годівля',
   'JRS',
   'NUTRIBOS',
   'Schils',
@@ -78,7 +78,11 @@ const SectionGoods = () => {
     }
 
     if (filters.manufacturer.size) {
-      filtered = filtered.filter(p => filters.manufacturer.has(p.manufacturer));
+      filtered = filtered.filter(p =>
+        Array.isArray(p.manufacturer)
+          ? p.manufacturer.some(m => filters.manufacturer.has(m))
+          : filters.manufacturer.has(p.manufacturer)
+      );
     }
 
     return filtered;
@@ -355,7 +359,7 @@ const SectionGoods = () => {
                         isChecked ? s.selectedCategoryText : ''
                       }`}
                     >
-                      {man === 'FUTTERGUT — надійна годівля' ? (
+                      {man === 'FUTTERGUT - надійна годівля' ? (
                         <>
                           FUTTERGUT{' '}
                           <span
