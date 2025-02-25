@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import arrowUp from 'images/goods/arrowUp.svg';
 import arrowDown from 'images/goods/arrowDown.svg';
 import arrowLeft from 'images/goods/arrowLeft.svg';
@@ -11,7 +12,7 @@ import iconCalf from 'images/goods/iconCalf.svg';
 import iconCow from 'images/goods/iconCow.svg';
 import iconGoat from 'images/goods/iconGoat.svg';
 import iconCheckBox from 'images/goods/iconCheckBox.svg';
-import { products } from 'services/Events';
+import { products } from 'services/Products';
 import s from './SectionGoods.module.scss';
 
 const initialCategories = [
@@ -45,6 +46,7 @@ const initialManufacturers = [
 ];
 
 const SectionGoods = () => {
+  const navigate = useNavigate();
   const [filters, setFilters] = useState({
     category: new Set(),
     manufacturer: new Set(),
@@ -404,7 +406,12 @@ const SectionGoods = () => {
                 .filter(Boolean);
 
               return (
-                <li className={s.productListItem} key={product.id}>
+                <li
+                  className={s.productListItem}
+                  key={product.id}
+                  onClick={() => navigate(`/product/${product.id}`)}
+                  style={{ cursor: 'pointer' }}
+                >
                   <div className={s.productCard}>
                     <h4 className={s.productListItemTitle}>{product.name}</h4>
                     <p className={s.productListItemManufacturer}>
