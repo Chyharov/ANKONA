@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.19c1f14f.css",
-    "main.js": "/ANKONA/static/js/main.4a22b2b0.js",
-    "static/css/464.f1ad0230.chunk.css": "/ANKONA/static/css/464.f1ad0230.chunk.css",
-    "static/js/464.1668ac6d.chunk.js": "/ANKONA/static/js/464.1668ac6d.chunk.js",
-    "static/css/987.d8743de8.chunk.css": "/ANKONA/static/css/987.d8743de8.chunk.css",
-    "static/js/987.71838a54.chunk.js": "/ANKONA/static/js/987.71838a54.chunk.js",
+    "main.js": "/ANKONA/static/js/main.68a96081.js",
+    "static/css/702.53c58e81.chunk.css": "/ANKONA/static/css/702.53c58e81.chunk.css",
+    "static/js/702.be90f92d.chunk.js": "/ANKONA/static/js/702.be90f92d.chunk.js",
+    "static/css/987.e5669670.chunk.css": "/ANKONA/static/css/987.e5669670.chunk.css",
+    "static/js/987.8cb1a583.chunk.js": "/ANKONA/static/js/987.8cb1a583.chunk.js",
     "static/js/314.460900ac.chunk.js": "/ANKONA/static/js/314.460900ac.chunk.js",
-    "static/js/50.d4b59379.chunk.js": "/ANKONA/static/js/50.d4b59379.chunk.js",
+    "static/js/381.5a39dc2c.chunk.js": "/ANKONA/static/js/381.5a39dc2c.chunk.js",
     "static/media/ankonaText.svg": "/ANKONA/static/media/ankonaText.da7a364639f91aa424acc23dbb33d63d.svg",
     "static/media/Montserrat-Bold.ttf": "/ANKONA/static/media/Montserrat-Bold.3530bfc1b50b41bdc29d.ttf",
     "static/media/Montserrat-SemiBold.ttf": "/ANKONA/static/media/Montserrat-SemiBold.38e62f01be69b2e02e29.ttf",
     "static/media/Montserrat-Regular.ttf": "/ANKONA/static/media/Montserrat-Regular.cfbf0da06d33097e6d0a.ttf",
     "static/media/Montserrat-Medium.ttf": "/ANKONA/static/media/Montserrat-Medium.d3f3d769c2fc1af5c0b4.ttf",
     "static/media/horseHeroImage.jpg": "/ANKONA/static/media/horseHeroImage.6475d1fa3a43ddb543a6.jpg",
+    "static/media/imgProductDetailsId1.jpg": "/ANKONA/static/media/imgProductDetailsId1.9c07be21f3332c4dd6db.jpg",
     "static/media/BackgroundHorse.png": "/ANKONA/static/media/BackgroundHorse.cbb13a65d05e036dd765.png",
     "static/media/pict.jpg": "/ANKONA/static/media/pict.d45121cbc4dd96cd6816.jpg",
     "static/media/iconPig.svg": "/ANKONA/static/media/iconPig.537725057fbd3cdad259aaf61e5561c7.svg",
@@ -36,16 +37,16 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.19c1f14f.css.map": "/ANKONA/static/css/main.19c1f14f.css.map",
-    "main.4a22b2b0.js.map": "/ANKONA/static/js/main.4a22b2b0.js.map",
-    "464.f1ad0230.chunk.css.map": "/ANKONA/static/css/464.f1ad0230.chunk.css.map",
-    "464.1668ac6d.chunk.js.map": "/ANKONA/static/js/464.1668ac6d.chunk.js.map",
-    "987.d8743de8.chunk.css.map": "/ANKONA/static/css/987.d8743de8.chunk.css.map",
-    "987.71838a54.chunk.js.map": "/ANKONA/static/js/987.71838a54.chunk.js.map",
+    "main.68a96081.js.map": "/ANKONA/static/js/main.68a96081.js.map",
+    "702.53c58e81.chunk.css.map": "/ANKONA/static/css/702.53c58e81.chunk.css.map",
+    "702.be90f92d.chunk.js.map": "/ANKONA/static/js/702.be90f92d.chunk.js.map",
+    "987.e5669670.chunk.css.map": "/ANKONA/static/css/987.e5669670.chunk.css.map",
+    "987.8cb1a583.chunk.js.map": "/ANKONA/static/js/987.8cb1a583.chunk.js.map",
     "314.460900ac.chunk.js.map": "/ANKONA/static/js/314.460900ac.chunk.js.map",
-    "50.d4b59379.chunk.js.map": "/ANKONA/static/js/50.d4b59379.chunk.js.map"
+    "381.5a39dc2c.chunk.js.map": "/ANKONA/static/js/381.5a39dc2c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.19c1f14f.css",
-    "static/js/main.4a22b2b0.js"
+    "static/js/main.68a96081.js"
   ]
 }
