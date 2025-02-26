@@ -1,15 +1,9 @@
-import { useState } from 'react';
 import horseHeroImage from 'images/hero/horseHeroImage.jpg';
 import ankonaText from 'images/hero/ankonaText.svg';
-import PopUp from 'components/PopUp/PopUp';
+import ButtonCallBack from 'components/ButtonCallBack/ButtonCallBack';
 import s from './SectionHero.module.scss';
 
 const SectionHero = () => {
-  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
-
-  const openPopUp = () => setIsPopUpOpen(true);
-  const closePopUp = () => setIsPopUpOpen(false);
-
   return (
     <section className={s.sectionHero}>
       <div className={s.heroPhotoContainer}>
@@ -25,12 +19,8 @@ const SectionHero = () => {
           <div className={s.heroBorderDot}></div>
         </div>
         <p className={s.heroDescription}>Нова стратегія раціональної годівлі</p>
-        <button className={s.heroButton} onClick={openPopUp}>
-          Зв’язатися
-        </button>
+        <ButtonCallBack />
       </div>
-
-      <PopUp isOpen={isPopUpOpen} onClose={closePopUp} />
     </section>
   );
 };
