@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PopUp from 'components/PopUp/PopUp';
 import s from './ButtonCallBack.module.scss';
 
-const ButtonCallBack = () => {
+const ButtonCallBack = ({ style }) => {
   const [isPopUpOpen, setIsPopUpOpen] = useState(false);
 
   const openPopUp = () => setIsPopUpOpen(true);
@@ -10,7 +10,7 @@ const ButtonCallBack = () => {
 
   return (
     <>
-      <button className={s.buttonCallBack} onClick={openPopUp}>
+      <button className={s.buttonCallBack} style={style} onClick={openPopUp}>
         Зв’язатися
       </button>
 

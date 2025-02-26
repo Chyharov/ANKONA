@@ -87,52 +87,21 @@ const ProductDetails = () => {
             {product.description}
           </p>
 
-          <div className={s.productDetailsBorder}></div>
+          {product.sections &&
+            product.sections.map((section, index) => (
+              <div key={index} className={s.productDetailsBorder}>
+                <h3 className={s.categoryGoods}>{section.title}</h3>
+                <ul className={s.categoryGoodsList}>
+                  {section.items.map((item, i) => (
+                    <li key={i} className={s.categoryGoodsList__item}>
+                      <p className={s.productDetailsDescription}>{item}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
 
-          <h3
-            className={s.categoryGoods}
-            style={{ padding: '8px', margin: '0px' }}
-          >
-            Можуть бути представлені:
-          </h3>
-          <ul className={s.categoryGoodsList}>
-            <li className={s.categoryGoodsList__item}>
-              <p className={s.productDetailsDescription}>стандартна лінійка</p>
-            </li>
-            <li className={s.categoryGoodsList__item}>
-              <p className={s.productDetailsDescription}>
-                індивідуальні рецептури
-              </p>
-            </li>
-          </ul>
-
-          <div className={s.productDetailsBorder}></div>
-          <h3
-            className={s.categoryGoods}
-            style={{ padding: '8px', margin: '0px' }}
-          >
-            Дозування:
-          </h3>
-          <ul className={s.categoryGoodsList}>
-            <li className={s.categoryGoodsList__item}>
-              <p className={s.productDetailsDescription}>
-                50-250 г/гол/добу (залежить від рецептури)
-              </p>
-            </li>
-          </ul>
-          <div className={s.productDetailsBorder}></div>
-          <h3
-            className={s.categoryGoods}
-            style={{ padding: '8px', margin: '0px' }}
-          >
-            Фасовка:
-          </h3>
-          <ul className={s.categoryGoodsList} style={{ marginBottom: '20px' }}>
-            <li className={s.categoryGoodsList__item}>
-              <p className={s.productDetailsDescription}>мішок 25 кг</p>
-            </li>
-          </ul>
-          <ButtonCallBack />
+          <ButtonCallBack style={{ marginTop: '16px' }} />
         </div>
       </section>
     </>
