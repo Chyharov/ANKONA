@@ -37,7 +37,7 @@ const ProductDetails = () => {
     <>
       <Header />
       <section className={s.sectionProductDetails}>
-        <div className={`container ${s.sectionProductDetails__Container}`}>
+        <div className={`container ${s.productDetailsContainer}`}>
           <div className={s.buttonBackContainer}>
             <button onClick={() => navigate(-1)} className={s.buttonBack}>
               Товар
@@ -51,28 +51,86 @@ const ProductDetails = () => {
             alt={product.name}
           />
 
-          <p>Категорія тварин:</p>
-          <div className={s.iconManufacturerContainer}>
+          <h3 className={s.categoryGoods}>Категорія тварин:</h3>
+          <ul className={s.iconManufacturerList}>
             {categoryIconsList.map((icon, index) => (
-              <div key={index} className={s.iconManufacturerContainerBorder}>
+              <li key={index} className={s.iconManufacturerList__item}>
                 <img
                   className={s.iconManufacturer}
                   src={icon}
                   alt="category icon"
                 />
-              </div>
+              </li>
             ))}
-          </div>
-          <p>
-            {' '}
-            {Array.isArray(product.category)
-              ? product.category.join(', ')
-              : product.category}
+          </ul>
+          <ul className={s.categoryList}>
+            {Array.isArray(product.category) ? (
+              product.category.map((cat, index) => (
+                <li className={s.categoryList__item} key={index}>
+                  <p className={s.categoryDescription}>{cat}</p>
+                </li>
+              ))
+            ) : (
+              <li className={s.categoryList__item}>
+                <p className={s.categoryDescription}>{product.category}</p>
+              </li>
+            )}
+          </ul>
+
+          <h3 className={s.productDetailsName}>{product.name}</h3>
+          <p className={s.productDetailsManufacturer}>{product.manufacturer}</p>
+          <p
+            className={s.productDetailsDescription}
+            style={{ padding: '8px', marginBottom: '4px' }}
+          >
+            {product.description}
           </p>
 
-          <h3>{product.name}</h3>
-          <p>{product.manufacturer}</p>
-          <p>{product.description}</p>
+          <div className={s.productDetailsBorder}></div>
+
+          <h3
+            className={s.categoryGoods}
+            style={{ padding: '8px', margin: '0px' }}
+          >
+            Можуть бути представлені:
+          </h3>
+          <ul className={s.categoryGoodsList}>
+            <li className={s.categoryGoodsList__item}>
+              <p className={s.productDetailsDescription}>стандартна лінійка</p>
+            </li>
+            <li className={s.categoryGoodsList__item}>
+              <p className={s.productDetailsDescription}>
+                індивідуальні рецептури
+              </p>
+            </li>
+          </ul>
+
+          <div className={s.productDetailsBorder}></div>
+          <h3
+            className={s.categoryGoods}
+            style={{ padding: '8px', margin: '0px' }}
+          >
+            Дозування:
+          </h3>
+          <ul className={s.categoryGoodsList}>
+            <li className={s.categoryGoodsList__item}>
+              <p className={s.productDetailsDescription}>
+                50-250 г/гол/добу (залежить від рецептури)
+              </p>
+            </li>
+          </ul>
+          <div className={s.productDetailsBorder}></div>
+          <h3
+            className={s.categoryGoods}
+            style={{ padding: '8px', margin: '0px' }}
+          >
+            Фасовка:
+          </h3>
+          <ul className={s.categoryGoodsList} style={{ marginBottom: '20px' }}>
+            <li className={s.categoryGoodsList__item}>
+              <p className={s.productDetailsDescription}>мішок 25 кг</p>
+            </li>
+          </ul>
         </div>
       </section>
     </>
