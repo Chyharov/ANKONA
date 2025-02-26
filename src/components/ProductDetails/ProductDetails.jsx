@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { products } from 'services/Products';
 import Header from 'components/Header/Header';
+import ButtonCallBack from 'components/ButtonCallBack/ButtonCallBack';
 import iconHorse from 'images/goods/iconHorse.svg';
 import iconPig from 'images/goods/iconPig.svg';
 import iconHen from 'images/goods/iconHen.svg';
@@ -131,6 +132,7 @@ const ProductDetails = () => {
               <p className={s.productDetailsDescription}>мішок 25 кг</p>
             </li>
           </ul>
+          <ButtonCallBack />
         </div>
       </section>
     </>
