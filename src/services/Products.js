@@ -1,4 +1,15 @@
-import imgProductDetails1 from 'images/productDetails/imgProductDetailsId1.jpg';
+import imgProductDetailsId1 from 'images/productDetails/imgProductDetailsId1.jpg';
+import imgProductDetailsId2 from 'images/productDetails/imgProductDetailsId2.jpg';
+import imgProductDetailsId3 from 'images/productDetails/imgProductDetailsId3.jpg';
+import imgProductDetailsId4 from 'images/productDetails/imgProductDetailsId4.jpg';
+import imgProductDetailsId5 from 'images/productDetails/imgProductDetailsId5.jpg';
+import imgProductDetailsId6 from 'images/productDetails/imgProductDetailsId6.jpg';
+import imgProductDetailsId7 from 'images/productDetails/imgProductDetailsId7.jpg';
+import imgProductDetailsId8 from 'images/productDetails/imgProductDetailsId8.jpg';
+import imgProductDetailsId9 from 'images/productDetails/imgProductDetailsId9.jpg';
+import imgProductDetailsId10 from 'images/productDetails/imgProductDetailsId10.jpg';
+import imgProductDetailsId11 from 'images/productDetails/imgProductDetailsId11.jpg';
+import imgProductDetailsId12 from 'images/productDetails/imgProductDetailsId12.jpg';
 
 export const products = [
   {
@@ -7,7 +18,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Премікси для ВРХ, ДРХ та Коней',
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
     sections: [
       {
         title: 'Можуть бути представлені:',
@@ -29,7 +40,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Смачний та гомогенний лизунець',
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId2,
     sections: [
       {
         title: 'Складові:',
@@ -61,7 +72,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Лизунець для сухостійних корів',
     category: ['ВРХ дорослі', 'ВРХ молодняк'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId3,
     sections: [
       {
         title: 'Використання лизунців для сухостійних корів сприяє:',
@@ -91,7 +102,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Професійний матеріал для птахівників',
     category: ['Птиця'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId4,
     sections: [
       {
         title: 'Складові:',
@@ -118,7 +129,7 @@ export const products = [
     description: 'Оптимізація протеїнової годівлі',
     descriptionText: 'Запатентована комбинація деяких ефірних олій: знижує швидке виділення амміаку з амінокислот, без погіршення синтезу оцтової й пропіонової кислот, тому не має негативного впливу на виробництво молока та молочного жиру.',
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId5,
     sections: [
       {
         title: 'Переваги:',
@@ -139,48 +150,159 @@ export const products = [
     name: 'Футтергут Румі-Ферм',
     manufacturer: 'VILOFOSS',
     description: 'Оптимізація крохмальної годівлі',
+    descriptionText: 'Кормова добавка на основі фермента амілази —  спеціально призначена для годівлі корів.',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId6,
+    sections: [
+      {
+        title: 'Використання:',
+        items: ['для оптимізації засвоювання крохмалю в раціонах високопродуктивних корів'],
+      },
+      {
+        title: 'Переваги:',
+        items: ['посилює перетравлення крохмалю в рубці та кишковнику', 'покращує перетравлення клітковини в рубці', 'підвищує засвоюваність раціон', 'не змінює pH рубця', 'бореться з негативним впливом додаткового крохмалю на функцію рубця', 'збільшує забезпечення корови ацетатом, глюкозою та енергією для молока, молочного жиру та фертильності'],
+      },
+      {
+        title: 'Дозування:',
+        items: ['100-150 г/гол/добу'],
+      },
+      {
+        title: 'Фасування:',
+        items: ['мішок 25 кг'],
+      },
+    ]
   },
   {
     id: 7,
     name: 'Lactoval liquid',
     manufacturer: 'VILOFOSS',
     description: 'Перша випойка після отелу',
+    descriptionText: ['ЕНЕРГЕТИЧНИЙ напій для тільки що отелених і виздоровлюючих корів, що містить харчові речовини, мінерали, живі дріжджі й добавки.', 'Також, рекомендовано випоювати Лактоваль тваринам які хворіють, або знаходяться на стадії одужання - як симптоматичний та підтримуючий засіб.'],
     category: ['ВРХ дорослі', 'ВРХ молодняк'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId7,
+    sections: [
+      {
+        title: `Корови охоче п'ють смачне пійло, що містить:`,
+        items: [`вітаміни (A, D3, E та вітамін B)`, `електроліти`, `дріжджові клітини`, `речовини, що стабілізують рН рубця`],
+      },
+      {
+        title: `Сприяє:`,
+        items: [`зменшенню втрати рідини та електролітів`, `поліпшення рухливості після отелення`, `підвищення вмісту глюкози в крові`, `розвиток мікроорганізмів у рубці`, `оптимізація кислотного рівня в рубці`, `запобігання кетозу`, `зменшення ризику переміщених сичугів`],
+      },
+      {
+        title: `Складові:`,
+        items: [`швидкі вуглеводи, бікарбонат натрію, ацетат магнію, насіння ріпаку`],
+      },
+      {
+        title: `Дозування:`,
+        items: [`500 г порошку Лактовал, розчинити в 12,5 –15,0 л теплої води й відразу напувати, поки корова не вип'є 20 - 25 літрів рідини`],
+      },
+      {
+        title: `Фасування:`,
+        items: [`відро 5 кг / 15 кг`],
+      },
+    ]
   },
   {
     id: 8,
     name: 'X-Zelit Calcium-Mobilisation',
     manufacturer: 'VILOFOSS',
     description: 'Профілактика гіпокальціємії',
+    descriptionText: [`Кормова добавка, на основі синтетичного абсорбенту кальцію`, `Має інертні смакові якості, одже, не знижує поїдання сухої речовини перед отелом.`, `Дає можливість використовувати в раціонах сухостійних корів будь-які корми, не звертаючи увагу на їх поживність по кальцію.`],
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId8,
+    sections: [
+      {
+        title: `Корови охоче п'ють смачне пійло, що містить:`,
+        items: [`вітаміни (A, D3, E та вітамін B)`, `електроліти`, `дріжджові клітини`, `речовини, що стабілізують рН рубця`],
+      },
+      {
+        title: `Дозування:`,
+        items: [`500 г/гол/добу, за 2-3 тижні до отелу`],
+      },
+      {
+        title: `Фасування:`,
+        items: [`мішок 25 кг`],
+      },
+    ]
   },
   {
     id: 9,
     name: 'Br. Close Up 30 Pro',
     manufacturer: 'Ahrhoff FUTTERGUT',
-    description: 'Транзитна добавка для корів',
+    description: 'Добавка для профілактики гіпокальціємії',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId9,
+    sections: [
+      {
+        title: `Складові:`,
+        items: [`екструдовані мелені зернові пластівці, смачні захищені аніонні солі, буферні пробіотичні дріжджі Landhause Pro, високодоступний кальцій та магній, комплекс з вітамінів та мікроелементів`],
+      },
+      {
+        title: `Практичний досвід з Browser® XXL Close Up 30:`,
+        items: [`запобігання субклінічній та клінічній молочній лихоманці`, `поліпшене споживання кормів перет отелом`, `метаболічно стабільні та продуктивні тварини`, `високий рівень продуктивності на початку лактації`, `найкращі інгредієнти молока`],
+      },
+      {
+        title: `Дозування:`,
+        items: [`30 - 40кг/т к/корму = 0,8-1,2 кг/гол на добу`],
+      },
+      {
+        title: `Фасування:`,
+        items: [`мішок 25 кг`],
+      },
+    ]
   },
   {
     id: 10,
     name: 'Clex® blue drink',
     manufacturer: 'Ahrhoff FUTTERGUT',
-    description: `Рідкий мінерально–вітамінний підкислювач (підходе для всіх)`,
+    description: `Рідкий мінерально–вітамінний підкислювач`,
     category: ['Підходе для всіх'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId10,
+    sections: [
+      {
+        title: `Складові:`,
+        items: [`кальцію пропіонат, аммонію фосфат, кальцію ацетат, 750 мг, мідь, 3.000 мг цинк. Консерванти: ортофосфорна кислота (E 338), муравїна кислота (E 236), лимонна кислота (E 330)`],
+      },
+      {
+        title: `Дозування, г/гол на добу:`,
+        items: [`підсосні свиноматки: 50 - 80`, `супоросні свиноматки: 20 - 30`, `поросята: 5 - 15`, `свині на відгодівлі: 20 - 25`, `молочні корови (сух. / лакт.*): 200 - 250`, `бички на відгодівлі*: 100 - 120`, `бройлери (з питною водою на 1.000 л): 1.500 - 2.500`, `кури несучки й батьки 1.000 - 3.000 (з питною водою на 1.000 л)`],
+      },
+      {
+        title: `Переваги:`,
+        items: [`оптимальна гігієна води й кормів`, `дуже смачний`, `легко дозується`, `покращує конверсію кормів`, `захист ворсинок ШКТ`, `зміцнення іммунної системи`, `покращує засвоєння протеїнів`, `гарна постність м'яса`, `недорогий й висококонцентрований`],
+      },
+      {
+        title: `Фасування:`,
+        items: [`каністра 25 кг`, `бочка 250 кг`, `контейнер 1000 кг`],
+      },
+    ]
   },
   {
     id: 11,
     name: 'Clex® Beta-Inulin met BLUE',
     manufacturer: 'Ahrhoff FUTTERGUT',
-    description: `Імуностимулююча кормова добавка  (підходе для всіх)`,
+    description: `Імуностимулююча кормова добавка`,
     category: ['Підходе для всіх'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId11,
+    sections: [
+      {
+        title: `Складові:`,
+        items: [`пульпа цикорію (суха), моногліціриди з харчових жирных кислот й гліцерин, цикорій-інулін, карбонат кальцію, ізомальтулоза меласса, ароматизатори`],
+      },
+      {
+        title: `Дозування:`,
+        items: [`супоросні свиноматки 0,8 - 1,0 %`, `підсосні свиноматки 1,0 - 1,5 %`, `поросята 1,5 - 2,5 %`, `свині на відгодівлі 0,5 - 2,0 %`, `кури несучки й кури батьківське стадо 1,0 - 1,5 %`, `бройлери 1,5 - 2,0 %`, `телята 1,5 - 2,0 %`],
+      },
+      {
+        title: `Переваги:`,
+        items: [`має приємні смакові якості`, `профілактує діареї після відлучення й в боксах для опоросу, завдяки покращенню функції шлунку и ШКТ`, `підсилює самовідновлення кишковика, сприяє зміцненню імуної системи`, ` ідеальне доповнення раціонів на основі сої й оптимальне співвідношення по амінокислотам`],
+      },
+      {
+        title: `Фасування:`,
+        items: [`мішок 25 кг`],
+      },
+    ]
   },
   {
     id: 12,
@@ -188,7 +310,25 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Рідкий підкислювач для всіх видів тварин',
     category: ['ВРХ молодняк', 'ДРХ', 'Свині', 'Птиця'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId12,
+    sections: [
+      {
+        title: `Складові:`,
+        items: [`метіонін гідрокси-аналог (3c307), суміш органічних кислот: мурашина кислота (Е 236), оцтова кислота (Е 260), пропіонова кислота (Е 280). Ароматичні добавки: бензойна кислота (2b08021) 1350 мг/кг`],
+      },
+      {
+        title: `Мета використання:`,
+        items: [`сприяє кращій гігієні кормів завдяки використанню органічних кислот`, `середньоланцюгові жирні кислоти запобігають розмноженню небажаних мікроорганізмів, таких як стрептококи, стафілококи, кишкова паличка, сальмонела, ілеїт (PIA), а також, клостридій та вірусів в шлунку, рубці та кишечнику`, `велика кількість бетаїну та інуліну сприяє перетравленню клітковини, засвоєнню вітамінів і амінокислот, забезпечує покращення метаболізму, має позитивний вплив на захист клітин печінки`, `метіонін, часник і орегано запобігають запаленням`],
+      },
+      {
+        title: `Дозування (вводити у кормову суміш в наступних кількостях, г/гол/добу):`,
+        items: [`поросні свиноматки 25-30 г`, `лактуючі свиноматки 45-100 г`, `поросята 15-20 г`, `свині гровер 20-30 г`, `свині фініш 25-35 г`, `свині (рідка годівля) 0,4-0,6 % до TMR`, `свині (суха годівля) 1-1,5 %`, `телята, молодняк ВРХ, корови 0,4-0,6 %`, `птиця (суха годівля) 1 %`, `вівці, ягнята 0,8 - 1,0 % до TMR`, `вівці, ягнята 1,5 %`],
+      },
+      {
+        title: `Фасування:`,
+        items: [`каністра 25 л`],
+      },
+    ]
   },
   {
     id: 13,
@@ -196,7 +336,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс+сорбент токсинів',
     category: ['Підходе для всіх'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 14,
@@ -204,7 +344,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Сорбент токсинів комплексний',
     category: ['Підходе для всіх'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 15,
@@ -212,7 +352,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Сорбент токсинів',
     category: ['Підходе для всіх'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 16,
@@ -220,7 +360,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Буферна кормова добавка',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 17,
@@ -228,7 +368,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Буферна кормова добавка',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 18,
@@ -236,7 +376,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Концентрат Біотину',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 19,
@@ -244,7 +384,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Концентрат каротину',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 20,
@@ -252,7 +392,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Спеціальна дріжджова добавка',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 21,
@@ -260,7 +400,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Фракціонований захищений жир',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 22,
@@ -268,7 +408,7 @@ export const products = [
     manufacturer: 'Schils',
     description: 'Кальцінований захищений жир',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 23,
@@ -276,7 +416,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Енергетична рідка добавка',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 24,
@@ -284,7 +424,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Енергетична рідка добавка',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 25,
@@ -292,7 +432,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Престартер у вигляді мюсли',
     category: ['ВРХ молодняк'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 26,
@@ -300,7 +440,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: '10% ядро для кормів телятам',
     category: ['ВРХ молодняк'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 27,
@@ -308,7 +448,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Збагачувач незбираного молока',
     category: ['ВРХ молодняк'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 28,
@@ -316,7 +456,7 @@ export const products = [
     manufacturer: 'Schils',
     description: 'ЗНМ для телят з 3-ї доби життя',
     category: ['ВРХ молодняк'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 29,
@@ -324,7 +464,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Профілактика діареї у телят',
     category: ['ВРХ молодняк'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 30,
@@ -332,7 +472,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Швидке лікування діареї у телят',
     category: ['ВРХ молодняк', 'ДРХ', 'Коні'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 31,
@@ -340,7 +480,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Профілактика респіраторних хвороб у телят',
     category: ['ВРХ молодняк'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 32,
@@ -348,7 +488,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Рідкий пероральний пробіотик в шприці',
     category: ['Підходе для всіх'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 33,
@@ -356,7 +496,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Спеціальний Премікс',
     category: ['ВРХ дорослі', 'ВРХ молодняк'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 34,
@@ -364,7 +504,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Дезинфектант в присутності тварин',
     category: ['Підходе для всіх'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 35,
@@ -372,7 +512,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Інокулянт для силосування',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 36,
@@ -380,7 +520,7 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Лизунець меласований для овець',
     category: ['ДРХ'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 37,
@@ -388,7 +528,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Кормові концентрати та премікси для свиней, птиці, ВРХ',
     category: ['Підходе для всіх'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 38,
@@ -396,7 +536,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Престартер для телят. Гранула.',
     category: ['ВРХ молодняк'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 39,
@@ -404,7 +544,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'БМВД. Гранула.',
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 40,
@@ -412,7 +552,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Для лактуючих корів.',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 41,
@@ -420,7 +560,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Годівля на роботах',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 42,
@@ -428,7 +568,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Премікс з/без живими дріжджами',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 43,
@@ -436,7 +576,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Добавка з живими дріжджами',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 44,
@@ -444,7 +584,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Вітаміно-мінеральний Премікс',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 45,
@@ -452,7 +592,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Премікс для сухостійних корів',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 46,
@@ -460,7 +600,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Буферна добавка',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 47,
@@ -468,7 +608,7 @@ export const products = [
     manufacturer: 'FUTTERGUT - надійна годівля',
     description: 'Регулює кальцій-фосфорний метаболізм + іммунітет',
     category: ['Свині'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 48,
@@ -476,7 +616,7 @@ export const products = [
     manufacturer: 'NUTRIBOS',
     description: 'Захищена сечовина (Хорватія)',
     category: ['ВРХ дорослі', 'ДРХ'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 49,
@@ -485,7 +625,7 @@ export const products = [
     description:
       'Комплексні продукти с захищеною сечовиною у складі (Хорватія)',
     category: ['ВРХ дорослі'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 50,
@@ -493,7 +633,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс для свиней на відгодівлі 30-60 кг, 4,5%',
     category: ['Свині'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 51,
@@ -501,7 +641,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс для свиней на відгодівлі від 60 кг, 3,3%',
     category: ['Свині'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 52,
@@ -509,7 +649,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс для свиноматок у транзитний період',
     category: ['Свині'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 53,
@@ -517,7 +657,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс для лактуючих свиноматок, 5%',
     category: ['Свині'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 54,
@@ -525,7 +665,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс для супоросних свиноматок, 3%',
     category: ['Свині'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 55,
@@ -533,7 +673,7 @@ export const products = [
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: 'Премікс для поросят до 30 кг 6,5%',
     category: ['Свині'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 56,
@@ -542,7 +682,7 @@ export const products = [
     description:
       'Модулятор мікробіому; Кокцидіостатик; Суміш органічних кислот',
     category: ['Птиця'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 57,
@@ -551,7 +691,7 @@ export const products = [
     description:
       'Модулятор мікробіому; Альтернатива антибіотику; Суміш органічних кислот',
     category: ['Свині'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 58,
@@ -560,7 +700,7 @@ export const products = [
     description:
       'Модулятор мікробіому; Альтернатива антибіотику; Суміш органічних кислот',
     category: ['Свині'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 59,
@@ -568,7 +708,7 @@ export const products = [
     manufacturer: ['ANKONA', 'FUTTERGUT - надійна годівля'],
     description: 'Підвищення рівня вітаміну D3 у сироватці крові',
     category: ['Птиця'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 60,
@@ -576,7 +716,7 @@ export const products = [
     manufacturer: ['ANKONA', 'FUTTERGUT - надійна годівля'],
     description: 'Підвищення рівня вітаміну D3 у сироватці крові',
     category: ['Птиця'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 61,
@@ -584,7 +724,7 @@ export const products = [
     manufacturer: ['ANKONA', 'FUTTERGUT - надійна годівля'],
     description: 'Підвищення рівня вітаміну D3 у сироватці крові',
     category: ['Птиця'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 62,
@@ -592,7 +732,7 @@ export const products = [
     manufacturer: ['ETOS'],
     description: 'Додаткова кормова суміш',
     category: ['Підходе для всіх'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 63,
@@ -600,7 +740,7 @@ export const products = [
     manufacturer: ['Agro-Bizek'],
     description: 'Ультрабіотик',
     category: ['Підходе для всіх'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
   {
     id: 64,
@@ -608,7 +748,7 @@ export const products = [
     manufacturer: ['JRS'],
     description: 'Концентрат сирої клітковини для свиней',
     category: ['Свині'],
-    image: imgProductDetails1,
+    image: imgProductDetailsId1,
   },
 ];
 

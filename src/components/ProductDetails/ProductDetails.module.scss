@@ -35,7 +35,7 @@
   font-family: 'Montserrat Bold';
   font-size: 16px;
   line-height: 1.5;
-  text-align: center;
+  text-align: start;
   color: var(--richSoilBrown);
   padding: 8px;
 }
@@ -123,13 +123,16 @@
 
 .productDetailsBorder {
   border-top: 1px solid var(--copperYellow);
-  margin-bottom: 4px;
+}
+
+.productDetailsBorder:last-child {
+  margin-bottom: 16px;
 }
 
 .categoryGoodsList {
   padding-left: 48px;
   padding-right: 24px;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
 }
 
 .categoryGoodsList__item {

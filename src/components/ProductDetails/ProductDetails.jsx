@@ -86,20 +86,34 @@ const ProductDetails = () => {
           >
             {product.description}
           </p>
-
-          {product.descriptionText && (
-            <p
-              className={s.productDetailsDescription}
-              style={{ marginBottom: '12px' }}
-            >
-              {product.descriptionText}
-            </p>
-          )}
+          {Array.isArray(product.descriptionText)
+            ? product.descriptionText.map((text, index) => (
+                <p
+                  key={index}
+                  className={s.productDetailsDescription}
+                  style={{ marginBottom: '8px' }}
+                >
+                  {text}
+                </p>
+              ))
+            : product.descriptionText && (
+                <p
+                  className={s.productDetailsDescription}
+                  style={{ marginBottom: '8px' }}
+                >
+                  {product.descriptionText}
+                </p>
+              )}
 
           {product.sections &&
             product.sections.map((section, index) => (
               <div key={index} className={s.productDetailsBorder}>
-                <h3 className={s.categoryGoods}>{section.title}</h3>
+                <h3
+                  className={s.categoryGoods}
+                  style={{ marginBottom: '0px', padding: '12px 8px 8px 8px' }}
+                >
+                  {section.title}
+                </h3>
                 <ul className={s.categoryGoodsList}>
                   {section.items.map((item, i) => (
                     <li key={i} className={s.categoryGoodsList__item}>
@@ -110,7 +124,7 @@ const ProductDetails = () => {
               </div>
             ))}
 
-          <ButtonCallBack style={{ marginTop: '16px' }} />
+          <ButtonCallBack style={{ marginTop: '8px' }} />
         </div>
       </section>
     </>
