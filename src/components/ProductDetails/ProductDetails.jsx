@@ -36,7 +36,7 @@ const ProductDetails = () => {
 
   return (
     <>
-      <Header navSearchStyle={{ display: 'none' }} style={{width: '130px'}}/>
+      <Header navSearchStyle={{ display: 'none' }} style={{ width: '130px' }} />
       <section className={s.sectionProductDetails}>
         <div className={`container ${s.productDetailsContainer}`}>
           <div className={s.buttonBackContainer}>
@@ -86,6 +86,15 @@ const ProductDetails = () => {
           >
             {product.description}
           </p>
+
+          {product.descriptionText && (
+            <p
+              className={s.productDetailsDescription}
+              style={{ marginBottom: '12px' }}
+            >
+              {product.descriptionText}
+            </p>
+          )}
 
           {product.sections &&
             product.sections.map((section, index) => (
