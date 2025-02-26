@@ -5,16 +5,16 @@ import NavBar from 'components/NavBar/NavBar';
 import LanguageSelect from 'components/LanguageSelect/LanguageSelect';
 import s from './Header.module.scss';
 
-const Header = () => {
+const Header = ({ navSearchStyle, languageSelectStyle, navBarStyle, style }) => {
   return (
     <header className={s.header}>
       <div className={`container ${s.header__container}`}>
         <Link to='/'><img className={s.logo} src={logo} alt="logo" /></Link>
 
-        <nav className={s.navigation__container}>
-          <NavSearch />
-          <LanguageSelect />
-          <NavBar />
+        <nav className={s.navigation__container} style={style}>
+          <NavSearch style={navSearchStyle} />
+          <LanguageSelect style={languageSelectStyle} />
+          <NavBar style={navBarStyle} />
         </nav>
       </div>
     </header>

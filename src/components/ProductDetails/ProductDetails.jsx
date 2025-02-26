@@ -36,7 +36,7 @@ const ProductDetails = () => {
 
   return (
     <>
-      <Header />
+      <Header navSearchStyle={{ display: 'none' }} style={{width: '130px'}}/>
       <section className={s.sectionProductDetails}>
         <div className={`container ${s.productDetailsContainer}`}>
           <div className={s.buttonBackContainer}>

@@ -7,7 +7,7 @@ const languages = [
   { code: "en", label: "ENG" }
 ];
 
-const LanguageSelect = () => {
+const LanguageSelect = ({ style }) => {
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -20,7 +20,7 @@ const LanguageSelect = () => {
   };
 
   return (
-    <div className={s.languageSelect} ref={dropdownRef}>
+    <div className={s.languageSelect} style={style} ref={dropdownRef}>
       <button className={s.selected} onClick={toggleDropdown}>
         <p className={s.currentLanguage}>{selectedLanguage.label}</p> <img className={s.iconSelectLaunguage} src={iconSelectLaunguage} alt="iconSelectLaunguage" />
       </button>

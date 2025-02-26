@@ -2,10 +2,10 @@ import MobileNavigation from './MobileNavigation';
 import Navigation from './Navigation';
 import s from './NavBar.module.scss';
 
-const NavMenu = () => {
+const NavMenu = ({ style }) => {
   return (
     <>
-      <div className={s.navBar} onClick={e => e.stopPropagation()}>
+      <div className={s.navBar} style={style} onClick={e => e.stopPropagation()}>
         <nav className={s.nav}>
           <MobileNavigation />
           <Navigation />

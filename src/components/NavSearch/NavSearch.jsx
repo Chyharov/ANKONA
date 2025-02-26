@@ -3,7 +3,7 @@ import searchIcon from 'images/header/searchIcon.svg';
 import searchIconInput from 'images/header/searchIconInput.svg';
 import s from './NavSearch.module.scss';
 
-const NavSearch = () => {
+const NavSearch = ({ style }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const toggleSearch = () => {
@@ -25,6 +25,7 @@ const NavSearch = () => {
     <>
       <button
         className={s.navSearch__button}
+        style={style}
         aria-label="Search"
         onClick={toggleSearch}
       >
