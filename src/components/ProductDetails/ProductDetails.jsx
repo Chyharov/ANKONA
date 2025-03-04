@@ -19,6 +19,8 @@ const categoryIcons = {
   Свині: iconPig,
 };
 
+const allIcons = Object.values(categoryIcons);
+
 const ProductDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -28,11 +30,14 @@ const ProductDetails = () => {
     return <p className={s.notFound}>Товар не знайдено</p>;
   }
 
-  const categoryIconsList = Array.isArray(product.category)
-    ? product.category.map(cat => categoryIcons[cat]).filter(Boolean)
-    : categoryIcons[product.category]
-    ? [categoryIcons[product.category]]
-    : [];
+  const categoryIconsList =
+    product.category === 'Підходе для всіх' || (Array.isArray(product.category) && product.category.includes('Підходе для всіх'))
+      ? allIcons
+      : Array.isArray(product.category)
+      ? product.category.map(cat => categoryIcons[cat]).filter(Boolean)
+      : categoryIcons[product.category]
+      ? [categoryIcons[product.category]]
+      : [];
 
   return (
     <>
@@ -54,15 +59,16 @@ const ProductDetails = () => {
 
           <h3 className={s.categoryGoods}>Категорія тварин:</h3>
           <ul className={s.iconManufacturerList}>
-            {categoryIconsList.map((icon, index) => (
-              <li key={index} className={s.iconManufacturerList__item}>
-                <img
-                  className={s.iconManufacturer}
-                  src={icon}
-                  alt="category icon"
-                />
-              </li>
-            ))}
+            {categoryIconsList.length > 0 &&
+              categoryIconsList.map((icon, index) => (
+                <li key={index} className={s.iconManufacturerList__item}>
+                  <img
+                    className={s.iconManufacturer}
+                    src={icon}
+                    alt="category icon"
+                  />
+                </li>
+              ))}
           </ul>
           <ul className={s.categoryList}>
             {Array.isArray(product.category) ? (
