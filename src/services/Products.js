@@ -23,6 +23,11 @@ import imgProductDetailsId22 from 'images/productDetails/imgProductDetailsId22.j
 import imgProductDetailsId23 from 'images/productDetails/imgProductDetailsId23.jpg';
 import imgProductDetailsId24 from 'images/productDetails/imgProductDetailsId24.jpg';
 import imgProductDetailsId25 from 'images/productDetails/imgProductDetailsId25.jpg';
+import imgProductDetailsId26 from 'images/productDetails/imgProductDetailsId26.jpg';
+import imgProductDetailsId27 from 'images/productDetails/imgProductDetailsId27.jpg';
+import imgProductDetailsId28 from 'images/productDetails/imgProductDetailsId28.jpg';
+import imgProductDetailsId29 from 'images/productDetails/imgProductDetailsId29.jpg';
+import imgProductDetailsId30 from 'images/productDetails/imgProductDetailsId30.jpg';
 
 export const products = [
   {
@@ -902,7 +907,28 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: '10% ядро для кормів телятам',
     category: ['ВРХ молодняк'],
-    image: imgProductDetailsId1,
+    image: imgProductDetailsId26,
+    sections: [
+      {
+        title: `Складові:`,
+        items: [
+          `бісквіт і вафельне борошно, макро- та мікроелементи, вітаміни`,
+        ],
+      },
+      {
+        items: [
+          `стимуляція загального споживання корму для молодняку, хороший розвиток теляти і високі щоденні прирости`,
+          `змішується з сухим ТМР 10%, може зберігатися кілька тижнів`,
+          `телятам з 4-х тижневого віку`,
+        ],
+      },
+      {
+        title: `Фасування:`,
+        items: [
+          `мішок 25 кг`,
+        ],
+      }
+    ]
   },
   {
     id: 27,
@@ -910,23 +936,99 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Збагачувач незбираного молока',
     category: ['ВРХ молодняк'],
-    image: imgProductDetailsId1,
+    image: imgProductDetailsId27,
+    sections: [
+      {
+        items: [
+          `Покращує поживність незбираного молока, та сприяє кращому розвитку телят.`,
+          `Це спеціальна добавка мікроелементів (Fe, Cu, Co, Se) і вітамінів (A, D3, E, K3, вітаміни групи B).`,
+          `Особливої ​​уваги заслуговують молочнокислі бактерії (пробіотик - профілактика дізбактеріозу й діареї) та біодоступне залізо.`,
+        ],
+      },
+      {
+        title: `Дозування:`,
+        items: [
+          `10 г на 1 літр незбираного молока (1 мішок на 1 т молока)`,
+        ],
+      },
+      {
+        title: `Фасування:`,
+        items: [
+          `мішок 10 кг`,
+        ],
+      }
+    ]
   },
   {
     id: 28,
     name: 'Євролак (зелений)',
     manufacturer: 'Schils',
-    description: 'ЗНМ для телят з 3-ї доби життя',
+    description: 'Високоякісний замінник незбираного молока',
     category: ['ВРХ молодняк'],
-    image: imgProductDetailsId1,
+    image: imgProductDetailsId28,
+    sections: [
+      {
+        items: [
+          `Має гарні відгуки від покупців!`,
+          `Можна давати телятам з 3-ї доби життя.`,
+        ],
+      },
+      {
+        items: [
+          `молочні складові — 85%.`,
+          `клітковина - 0,05%.`,
+        ],
+      },
+      {
+        title: `Змішувати:`,
+        items: [
+          `1 кг на 8 л води, або 125 г / 1 л`,
+        ],
+      },
+      {
+        title: `Фасування:`,
+        items: [
+          `мішок 25 кг`,
+        ],
+      }
+    ]
   },
   {
     id: 29,
     name: 'RoCoSal E',
     manufacturer: 'VILOFOSS',
-    description: 'Профілактика діареї у телят',
+    description: 'Концентрат для профілактики діареї у телят',
     category: ['ВРХ молодняк'],
-    image: imgProductDetailsId1,
+    image: imgProductDetailsId29,
+    sections: [
+      {
+        items: [
+          `містить електроліти та спеціальну суміш яєчного порошку, яка за допомогою природних імуноглобулінів підтримує продуктивність тварин у зоні вирощування телят`,
+          `компенсує дефіцит електролітів, викликаний хворобою, або стресом`,
+          `добавка для телят проти ротавірусу, коронавірусу та Salmonella spp. для полегшення виниклих проблем зі здоров'ям й стабілізації електролітного балансу`,
+        ],
+      },
+      {
+        title: `Інгредієнти:`,
+        items: [
+          `декстроза, харчова сода, дріжджі, хлорид калію, хлорид натрію, яєчний порошок`,
+        ],
+      },
+      {
+        title: `Дозування:`,
+        items: [
+          `10 г на 1 л молочного напою (замінника цільного молока, або незбираного молока, води)`,
+          `1 повної мірної ложки (близько 15 г) суміші — вистачає на 1,5 л напою`,
+          `протягом 5 - 10 днів з першого дня життя, або при виникненні проблем у більш старшому віці`,
+        ],
+      },
+      {
+        title: `Фасування:`,
+        items: [
+          `відро 5 кг / 15 кг`,
+        ],
+      }
+    ]
   },
   {
     id: 30,
@@ -934,7 +1036,31 @@ export const products = [
     manufacturer: 'VILOFOSS',
     description: 'Швидке лікування діареї у телят',
     category: ['ВРХ молодняк', 'ДРХ', 'Коні'],
-    image: imgProductDetailsId1,
+    image: imgProductDetailsId30,
+    sections: [
+      {
+        items: [
+          `Рідка дієтична добавка для телят для швидкої стабілізації водно-електролітного балансу.`,
+          `На додаток до швидкодоступної енергії для компенсації постійної втрати поживних речовин, він також містить різні буферні речовини.`,
+        ]
+      },
+      {
+        title: `Просте застосування:`,
+        items: [`готовий до використання без будь-якої попередньої обробки або змішування`, `можна зберігати безпосередньо на місці використання (біля тварин, або на молочному таксі)`, `НЕ має негативного впливу на згортання казеїну сичужним ферментом`, `можна змішувати безпосередньо з молоком`, `Годування молоком + додавання діаліту = одна операція!`],
+      },
+      {
+        title: `Поради щодо годування:`,
+        items: [`телята: 60 мл Dialyte Express один - два рази на добу, протягом 2 - 7 днів`, `для всіх тварин: 30 мл Dialyt Express змішують в 1 л молока, або води`],
+      },
+      {
+        title: `Адмініструється:`,
+        items: [`1 - 2 рази на добу, протягом 2 - 7 днів`],
+      },
+      {
+        title: `Фасування:`,
+        items: [`каністра 15 л`],
+      },
+    ]
   },
   {
     id: 31,
