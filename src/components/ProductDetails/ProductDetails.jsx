@@ -108,7 +108,7 @@ const ProductDetails = () => {
                   style={{ marginBottom: '8px' }}
                 >
                   {product.descriptionText}
-                </p>
+                </p> 
               )}
 
           {product.sections &&
