@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.19c1f14f.css",
-    "main.js": "/ANKONA/static/js/main.83e4ad28.js",
+    "main.js": "/ANKONA/static/js/main.78bc83ab.js",
     "static/css/533.e1539ca3.chunk.css": "/ANKONA/static/css/533.e1539ca3.chunk.css",
     "static/js/533.22b1144b.chunk.js": "/ANKONA/static/js/533.22b1144b.chunk.js",
     "static/css/502.7222d312.chunk.css": "/ANKONA/static/css/502.7222d312.chunk.css",
     "static/js/502.56a48f97.chunk.js": "/ANKONA/static/js/502.56a48f97.chunk.js",
     "static/js/314.b32557ec.chunk.js": "/ANKONA/static/js/314.b32557ec.chunk.js",
-    "static/js/489.1d9ffb88.chunk.js": "/ANKONA/static/js/489.1d9ffb88.chunk.js",
+    "static/js/489.9cc42a84.chunk.js": "/ANKONA/static/js/489.9cc42a84.chunk.js",
     "static/media/imgProductDetailsId18.jpg": "/ANKONA/static/media/imgProductDetailsId18.513a50b5db4315799b0d.jpg",
     "static/media/imgProductDetailsId33.jpg": "/ANKONA/static/media/imgProductDetailsId33.29c4c70eb54ae882e964.jpg",
     "static/media/imgProductDetailsId7.jpg": "/ANKONA/static/media/imgProductDetailsId7.6ed54c9ba74c137709df.jpg",
@@ -36,11 +36,14 @@
     "static/media/Montserrat-SemiBold.ttf": "/ANKONA/static/media/Montserrat-SemiBold.38e62f01be69b2e02e29.ttf",
     "static/media/Montserrat-Regular.ttf": "/ANKONA/static/media/Montserrat-Regular.cfbf0da06d33097e6d0a.ttf",
     "static/media/Montserrat-Medium.ttf": "/ANKONA/static/media/Montserrat-Medium.d3f3d769c2fc1af5c0b4.ttf",
+    "static/media/imgProductDetailsId50.jpg": "/ANKONA/static/media/imgProductDetailsId50.1f89266c4c8b0eb1007a.jpg",
+    "static/media/imgProductDetailsId48.jpg": "/ANKONA/static/media/imgProductDetailsId48.90c5dde58d0daeea9a7d.jpg",
     "static/media/imgProductDetailsId6.jpg": "/ANKONA/static/media/imgProductDetailsId6.f456fe77e5cdbebb940a.jpg",
     "static/media/imgProductDetailsId2.jpg": "/ANKONA/static/media/imgProductDetailsId2.b1aefa887a9a7d740e7a.jpg",
     "static/media/imgProductDetailsId4.jpg": "/ANKONA/static/media/imgProductDetailsId4.45da2651ef883325f2b1.jpg",
     "static/media/imgProductDetailsId24.jpg": "/ANKONA/static/media/imgProductDetailsId24.96b2f55089fa321b4114.jpg",
     "static/media/imgProductDetailsId14.jpg": "/ANKONA/static/media/imgProductDetailsId14.182134e6428944bf720d.jpg",
+    "static/media/imgProductDetailsId49.jpg": "/ANKONA/static/media/imgProductDetailsId49.937b673496b7595dec48.jpg",
     "static/media/imgProductDetailsId12.jpg": "/ANKONA/static/media/imgProductDetailsId12.979fb98177a65a18e35c.jpg",
     "static/media/imgProductDetailsId35.jpg": "/ANKONA/static/media/imgProductDetailsId35.2517457d51396dad16e3.jpg",
     "static/media/imgProductDetailsId28.jpg": "/ANKONA/static/media/imgProductDetailsId28.8219a0c5b3d1a328a22c.jpg",
@@ -74,16 +77,16 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.19c1f14f.css.map": "/ANKONA/static/css/main.19c1f14f.css.map",
-    "main.83e4ad28.js.map": "/ANKONA/static/js/main.83e4ad28.js.map",
+    "main.78bc83ab.js.map": "/ANKONA/static/js/main.78bc83ab.js.map",
     "533.e1539ca3.chunk.css.map": "/ANKONA/static/css/533.e1539ca3.chunk.css.map",
     "533.22b1144b.chunk.js.map": "/ANKONA/static/js/533.22b1144b.chunk.js.map",
     "502.7222d312.chunk.css.map": "/ANKONA/static/css/502.7222d312.chunk.css.map",
     "502.56a48f97.chunk.js.map": "/ANKONA/static/js/502.56a48f97.chunk.js.map",
     "314.b32557ec.chunk.js.map": "/ANKONA/static/js/314.b32557ec.chunk.js.map",
-    "489.1d9ffb88.chunk.js.map": "/ANKONA/static/js/489.1d9ffb88.chunk.js.map"
+    "489.9cc42a84.chunk.js.map": "/ANKONA/static/js/489.9cc42a84.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.19c1f14f.css",
-    "static/js/main.83e4ad28.js"
+    "static/js/main.78bc83ab.js"
   ]
 }
