@@ -3,6 +3,7 @@ import SectionHero from 'components/SectionHero/SectionHero';
 import SectionAbout from 'components/SectionAbout/SectionAbout';
 import SectionGoods from 'components/SectionGoods/SectionGoods';
 import SectionTradeMarks from 'components/SectionTradeMarks/SectionTradeMarks';
+import SectionTeam from 'components/SectionTeam/SectionTeam';
 
 const MainPage = () => {
   return (
@@ -13,6 +14,7 @@ const MainPage = () => {
         <SectionAbout />
         <SectionGoods />
         <SectionTradeMarks />
+        <SectionTeam />
       </main>
     </>
   );
