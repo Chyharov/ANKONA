@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.19c1f14f.css",
-    "main.js": "/ANKONA/static/js/main.f4e5c693.js",
-    "static/css/533.e1539ca3.chunk.css": "/ANKONA/static/css/533.e1539ca3.chunk.css",
-    "static/js/533.22b1144b.chunk.js": "/ANKONA/static/js/533.22b1144b.chunk.js",
+    "main.js": "/ANKONA/static/js/main.410d2e25.js",
+    "static/css/530.c6550855.chunk.css": "/ANKONA/static/css/530.c6550855.chunk.css",
+    "static/js/530.2d5e456f.chunk.js": "/ANKONA/static/js/530.2d5e456f.chunk.js",
     "static/css/502.7222d312.chunk.css": "/ANKONA/static/css/502.7222d312.chunk.css",
     "static/js/502.56a48f97.chunk.js": "/ANKONA/static/js/502.56a48f97.chunk.js",
     "static/js/314.b32557ec.chunk.js": "/ANKONA/static/js/314.b32557ec.chunk.js",
@@ -48,6 +48,7 @@
     "static/media/imgProductDetailsId4.jpg": "/ANKONA/static/media/imgProductDetailsId4.45da2651ef883325f2b1.jpg",
     "static/media/imgProductDetailsId24.jpg": "/ANKONA/static/media/imgProductDetailsId24.96b2f55089fa321b4114.jpg",
     "static/media/imgProductDetailsId14.jpg": "/ANKONA/static/media/imgProductDetailsId14.182134e6428944bf720d.jpg",
+    "static/media/jrs.svg": "/ANKONA/static/media/jrs.6df7d0be73e4f31ad7de7a648c676caa.svg",
     "static/media/imgProductDetailsId49.jpg": "/ANKONA/static/media/imgProductDetailsId49.937b673496b7595dec48.jpg",
     "static/media/imgProductDetailsId12.jpg": "/ANKONA/static/media/imgProductDetailsId12.979fb98177a65a18e35c.jpg",
     "static/media/imgProductDetailsId35.jpg": "/ANKONA/static/media/imgProductDetailsId35.2517457d51396dad16e3.jpg",
@@ -63,8 +64,19 @@
     "static/media/imgProductDetailsId56.jpg": "/ANKONA/static/media/imgProductDetailsId56.3e7989951552740f1283.jpg",
     "static/media/imgProductDetailsId63.jpg": "/ANKONA/static/media/imgProductDetailsId63.95dc0fb831816bf66c36.jpg",
     "static/media/imgProductDetailsId13.jpg": "/ANKONA/static/media/imgProductDetailsId13.d978a5d648df5d385f98.jpg",
+    "static/media/futtergut.svg": "/ANKONA/static/media/futtergut.5d719433aa328d563555432e7bb604ed.svg",
+    "static/media/vilifoss.svg": "/ANKONA/static/media/vilifoss.2d8dd43bc38314fc4f66f7eb350de1d9.svg",
+    "static/media/polykovAndriy.jpg": "/ANKONA/static/media/polykovAndriy.d88e7056f1a52569961e.jpg",
+    "static/media/etos.svg": "/ANKONA/static/media/etos.c30210cc7b64400852dbcd799b994fc0.svg",
+    "static/media/ahrhoff.svg": "/ANKONA/static/media/ahrhoff.26975348e8e785193b85865fddbc98fd.svg",
+    "static/media/hodirevSerhiy.jpg": "/ANKONA/static/media/hodirevSerhiy.0e365053dc34e1f3afd1.jpg",
+    "static/media/yanenkoYana.jpg": "/ANKONA/static/media/yanenkoYana.ef2833f4d424d2938ce6.jpg",
+    "static/media/hodirevaNatalia.jpg": "/ANKONA/static/media/hodirevaNatalia.5362fe84a82fe6841895.jpg",
+    "static/media/komarVolodymyr.jpg": "/ANKONA/static/media/komarVolodymyr.a4a0bb4561c2a9287352.jpg",
+    "static/media/soloshenkoAndrii.jpg": "/ANKONA/static/media/soloshenkoAndrii.8ce7e40fa35fd2f520f3.jpg",
     "static/media/BackgroundHorse.png": "/ANKONA/static/media/BackgroundHorse.cbb13a65d05e036dd765.png",
     "static/media/pict.jpg": "/ANKONA/static/media/pict.d45121cbc4dd96cd6816.jpg",
+    "static/media/agro-bizek.svg": "/ANKONA/static/media/agro-bizek.0e2a3d9297a3dbb96559f06fbe6068dd.svg",
     "static/media/iconPig.svg": "/ANKONA/static/media/iconPig.537725057fbd3cdad259aaf61e5561c7.svg",
     "static/media/iconGoat.svg": "/ANKONA/static/media/iconGoat.09352da20dc1e890a8896f4cc56f1f5c.svg",
     "static/media/iconCow.svg": "/ANKONA/static/media/iconCow.7b567cbf50a963ee7f1fa9a48511d622.svg",
@@ -85,9 +97,9 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.19c1f14f.css.map": "/ANKONA/static/css/main.19c1f14f.css.map",
-    "main.f4e5c693.js.map": "/ANKONA/static/js/main.f4e5c693.js.map",
-    "533.e1539ca3.chunk.css.map": "/ANKONA/static/css/533.e1539ca3.chunk.css.map",
-    "533.22b1144b.chunk.js.map": "/ANKONA/static/js/533.22b1144b.chunk.js.map",
+    "main.410d2e25.js.map": "/ANKONA/static/js/main.410d2e25.js.map",
+    "530.c6550855.chunk.css.map": "/ANKONA/static/css/530.c6550855.chunk.css.map",
+    "530.2d5e456f.chunk.js.map": "/ANKONA/static/js/530.2d5e456f.chunk.js.map",
     "502.7222d312.chunk.css.map": "/ANKONA/static/css/502.7222d312.chunk.css.map",
     "502.56a48f97.chunk.js.map": "/ANKONA/static/js/502.56a48f97.chunk.js.map",
     "314.b32557ec.chunk.js.map": "/ANKONA/static/js/314.b32557ec.chunk.js.map",
@@ -95,6 +107,6 @@
   },
   "entrypoints": [
     "static/css/main.19c1f14f.css",
-    "static/js/main.f4e5c693.js"
+    "static/js/main.410d2e25.js"
   ]
 }
