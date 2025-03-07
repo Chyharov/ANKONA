@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.19c1f14f.css",
-    "main.js": "/ANKONA/static/js/main.78bc83ab.js",
+    "main.js": "/ANKONA/static/js/main.9d51b519.js",
     "static/css/533.e1539ca3.chunk.css": "/ANKONA/static/css/533.e1539ca3.chunk.css",
     "static/js/533.22b1144b.chunk.js": "/ANKONA/static/js/533.22b1144b.chunk.js",
     "static/css/502.7222d312.chunk.css": "/ANKONA/static/css/502.7222d312.chunk.css",
     "static/js/502.56a48f97.chunk.js": "/ANKONA/static/js/502.56a48f97.chunk.js",
     "static/js/314.b32557ec.chunk.js": "/ANKONA/static/js/314.b32557ec.chunk.js",
-    "static/js/489.9cc42a84.chunk.js": "/ANKONA/static/js/489.9cc42a84.chunk.js",
+    "static/js/489.32520df9.chunk.js": "/ANKONA/static/js/489.32520df9.chunk.js",
     "static/media/imgProductDetailsId18.jpg": "/ANKONA/static/media/imgProductDetailsId18.513a50b5db4315799b0d.jpg",
     "static/media/imgProductDetailsId33.jpg": "/ANKONA/static/media/imgProductDetailsId33.29c4c70eb54ae882e964.jpg",
     "static/media/imgProductDetailsId7.jpg": "/ANKONA/static/media/imgProductDetailsId7.6ed54c9ba74c137709df.jpg",
     "static/media/imgProductDetailsId23.jpg": "/ANKONA/static/media/imgProductDetailsId23.ba59844727f9d80459ff.jpg",
     "static/media/imgProductDetailsId32.jpg": "/ANKONA/static/media/imgProductDetailsId32.aade60fe7ffd534e5f78.jpg",
     "static/media/imgProductDetailsId26.jpg": "/ANKONA/static/media/imgProductDetailsId26.d6af74fd48694449e0ab.jpg",
+    "static/media/imgProductDetailsId54.jpg": "/ANKONA/static/media/imgProductDetailsId54.066d7b448cad60f8eef9.jpg",
     "static/media/imgProductDetailsId31.jpg": "/ANKONA/static/media/imgProductDetailsId31.81a769bd88b7fed1d440.jpg",
     "static/media/imgProductDetailsId21.jpg": "/ANKONA/static/media/imgProductDetailsId21.cf64ce4ef3e4b5f7041d.jpg",
     "static/media/imgProductDetailsId20.jpg": "/ANKONA/static/media/imgProductDetailsId20.db0d14b4196549909911.jpg",
@@ -30,13 +31,17 @@
     "static/media/imgProductDetailsId29.jpg": "/ANKONA/static/media/imgProductDetailsId29.c15e90bfbf9e7c412863.jpg",
     "static/media/imgProductDetailsId11.jpg": "/ANKONA/static/media/imgProductDetailsId11.d68f3e01109e5dfda414.jpg",
     "static/media/imgProductDetailsId36.jpg": "/ANKONA/static/media/imgProductDetailsId36.21ecc312435fa6e9625d.jpg",
+    "static/media/imgProductDetailsId53.jpg": "/ANKONA/static/media/imgProductDetailsId53.e9b83b811026723922c9.jpg",
     "static/media/imgProductDetailsId10.jpg": "/ANKONA/static/media/imgProductDetailsId10.3a6281d27195be0e543d.jpg",
     "static/media/ankonaText.svg": "/ANKONA/static/media/ankonaText.da7a364639f91aa424acc23dbb33d63d.svg",
     "static/media/Montserrat-Bold.ttf": "/ANKONA/static/media/Montserrat-Bold.3530bfc1b50b41bdc29d.ttf",
     "static/media/Montserrat-SemiBold.ttf": "/ANKONA/static/media/Montserrat-SemiBold.38e62f01be69b2e02e29.ttf",
     "static/media/Montserrat-Regular.ttf": "/ANKONA/static/media/Montserrat-Regular.cfbf0da06d33097e6d0a.ttf",
     "static/media/Montserrat-Medium.ttf": "/ANKONA/static/media/Montserrat-Medium.d3f3d769c2fc1af5c0b4.ttf",
+    "static/media/imgProductDetailsId55.jpg": "/ANKONA/static/media/imgProductDetailsId55.0f7afd6cde8ee2618bb3.jpg",
     "static/media/imgProductDetailsId50.jpg": "/ANKONA/static/media/imgProductDetailsId50.1f89266c4c8b0eb1007a.jpg",
+    "static/media/imgProductDetailsId51.jpg": "/ANKONA/static/media/imgProductDetailsId51.adef242f6d3a19dff73a.jpg",
+    "static/media/imgProductDetailsId52.jpg": "/ANKONA/static/media/imgProductDetailsId52.6b74e4b78ca7cce5ae1b.jpg",
     "static/media/imgProductDetailsId48.jpg": "/ANKONA/static/media/imgProductDetailsId48.90c5dde58d0daeea9a7d.jpg",
     "static/media/imgProductDetailsId6.jpg": "/ANKONA/static/media/imgProductDetailsId6.f456fe77e5cdbebb940a.jpg",
     "static/media/imgProductDetailsId2.jpg": "/ANKONA/static/media/imgProductDetailsId2.b1aefa887a9a7d740e7a.jpg",
@@ -77,16 +82,16 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.19c1f14f.css.map": "/ANKONA/static/css/main.19c1f14f.css.map",
-    "main.78bc83ab.js.map": "/ANKONA/static/js/main.78bc83ab.js.map",
+    "main.9d51b519.js.map": "/ANKONA/static/js/main.9d51b519.js.map",
     "533.e1539ca3.chunk.css.map": "/ANKONA/static/css/533.e1539ca3.chunk.css.map",
     "533.22b1144b.chunk.js.map": "/ANKONA/static/js/533.22b1144b.chunk.js.map",
     "502.7222d312.chunk.css.map": "/ANKONA/static/css/502.7222d312.chunk.css.map",
     "502.56a48f97.chunk.js.map": "/ANKONA/static/js/502.56a48f97.chunk.js.map",
     "314.b32557ec.chunk.js.map": "/ANKONA/static/js/314.b32557ec.chunk.js.map",
-    "489.9cc42a84.chunk.js.map": "/ANKONA/static/js/489.9cc42a84.chunk.js.map"
+    "489.32520df9.chunk.js.map": "/ANKONA/static/js/489.32520df9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.19c1f14f.css",
-    "static/js/main.78bc83ab.js"
+    "static/js/main.9d51b519.js"
   ]
 }
