@@ -1,0 +1,39 @@
+@import '../../sass/utils/mixin';
+
+.sectionTradeMarks {
+    padding-top: 40px;
+    padding-bottom: 32px;
+    background-color: var(--whiteBG);
+}
+
+.tradeMarksTitle {
+    font-family: 'Montserrat SemiBold';
+    font-size: 24px;
+    line-height: 1.34;
+    color: var(--richSoilBrown);
+    padding: 8px;
+    text-align: start;
+    margin-bottom: 8px;
+}
+
+.tradeMarksBorder {
+    border: 1px solid rgba(191, 119, 66, 1);
+    margin-left: -16px;
+    margin-bottom: 16px;
+}
+
+.tradeMarkList {
+    width: 100%;
+}
+
+.tradeMarkList__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.tradeMarkList__item:last-child {
+    margin-bottom: 0px;
+}
