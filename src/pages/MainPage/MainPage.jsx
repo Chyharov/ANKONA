@@ -4,6 +4,7 @@ import SectionAbout from 'components/SectionAbout/SectionAbout';
 import SectionGoods from 'components/SectionGoods/SectionGoods';
 import SectionTradeMarks from 'components/SectionTradeMarks/SectionTradeMarks';
 import SectionTeam from 'components/SectionTeam/SectionTeam';
+import Footer from 'components/Footer/Footer';
 
 const MainPage = () => {
   return (
@@ -16,10 +17,9 @@ const MainPage = () => {
         <SectionTradeMarks />
         <SectionTeam />
       </main>
+      <Footer />
     </>
   );
 };
-
-
 
 export default MainPage;
