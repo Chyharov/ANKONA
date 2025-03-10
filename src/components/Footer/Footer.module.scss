@@ -1,1 +1,64 @@
 @import '../../sass/utils/mixin';
+
+.footer {
+  padding-top: 32px;
+  padding-bottom: 80px;
+  background-color: var(--richSoilBrown);
+}
+
+.logoFooter {
+  width: 160px;
+  height: 68px;
+}
+
+.footerSocailMediaList {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.footerSocailMediaList__item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.footerSocailMediaList__itemLogo {
+  width: 40px;
+  height: 40px;
+}
+
+.footerNavBarList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.footerNavBarList__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.footerNavBarList__itemDescription {
+  font-family: 'Montserrat Regular';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--eggShellWhite);
+  padding: 8px 4px;
+}
+
+.footerCopyrightTitle {
+  font-family: 'Montserrat Bold';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--eggShellWhite);
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.footerCopyrightDescription {
+    font-family: 'Montserrat Regular';
+    font-size: 14px;
+    line-height: 1.43;
+    color: var(--eggShellWhite);
+    padding: 8px;
+}
