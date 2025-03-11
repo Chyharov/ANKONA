@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.19c1f14f.css",
-    "main.js": "/ANKONA/static/js/main.6dc89b17.js",
-    "static/css/305.ed4a7fae.chunk.css": "/ANKONA/static/css/305.ed4a7fae.chunk.css",
-    "static/js/305.f708989d.chunk.js": "/ANKONA/static/js/305.f708989d.chunk.js",
+    "main.js": "/ANKONA/static/js/main.90709b77.js",
+    "static/css/305.cf3a9ee8.chunk.css": "/ANKONA/static/css/305.cf3a9ee8.chunk.css",
+    "static/js/305.3c669114.chunk.js": "/ANKONA/static/js/305.3c669114.chunk.js",
     "static/css/502.7222d312.chunk.css": "/ANKONA/static/css/502.7222d312.chunk.css",
     "static/js/502.56a48f97.chunk.js": "/ANKONA/static/js/502.56a48f97.chunk.js",
     "static/js/314.b32557ec.chunk.js": "/ANKONA/static/js/314.b32557ec.chunk.js",
@@ -51,11 +51,17 @@
     "static/media/jrs.svg": "/ANKONA/static/media/jrs.6df7d0be73e4f31ad7de7a648c676caa.svg",
     "static/media/imgProductDetailsId49.jpg": "/ANKONA/static/media/imgProductDetailsId49.937b673496b7595dec48.jpg",
     "static/media/imgProductDetailsId12.jpg": "/ANKONA/static/media/imgProductDetailsId12.979fb98177a65a18e35c.jpg",
+    "static/media/polykovAndriyIsActive.jpg": "/ANKONA/static/media/polykovAndriyIsActive.f884a9d9ab4d48daa14a.jpg",
+    "static/media/hodirevSerhiyIsActive.jpg": "/ANKONA/static/media/hodirevSerhiyIsActive.6c28623cbde6c97d632f.jpg",
     "static/media/imgProductDetailsId35.jpg": "/ANKONA/static/media/imgProductDetailsId35.2517457d51396dad16e3.jpg",
     "static/media/imgProductDetailsId28.jpg": "/ANKONA/static/media/imgProductDetailsId28.8219a0c5b3d1a328a22c.jpg",
+    "static/media/komarVolodymyrIsActive.jpg": "/ANKONA/static/media/komarVolodymyrIsActive.e38cb803651e3646acdd.jpg",
+    "static/media/yanenkoYanaIsActive.jpg": "/ANKONA/static/media/yanenkoYanaIsActive.ddf1a6c9259f40234b41.jpg",
     "static/media/imgProductDetailsId37.jpg": "/ANKONA/static/media/imgProductDetailsId37.840d92118532939d2c5d.jpg",
     "static/media/imgProductDetailsId38.jpg": "/ANKONA/static/media/imgProductDetailsId38.840d92118532939d2c5d.jpg",
+    "static/media/soloshenkoAndriiIsActive.jpg": "/ANKONA/static/media/soloshenkoAndriiIsActive.b2a54a140b086fcbab97.jpg",
     "static/media/imgProductDetailsId15.jpg": "/ANKONA/static/media/imgProductDetailsId15.386f6914793100a756d2.jpg",
+    "static/media/hodirevaNataliaIsActive.jpg": "/ANKONA/static/media/hodirevaNataliaIsActive.03f5d78f521dea5a3f3a.jpg",
     "static/media/imgProductDetailsId22.jpg": "/ANKONA/static/media/imgProductDetailsId22.4b452f184061f2f5cb14.jpg",
     "static/media/imgProductDetailsId64.jpg": "/ANKONA/static/media/imgProductDetailsId64.2b9c89a92aa1844497bc.jpg",
     "static/media/imgProductDetailsId34.jpg": "/ANKONA/static/media/imgProductDetailsId34.c63a0dc90c40607dc008.jpg",
@@ -101,9 +107,9 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.19c1f14f.css.map": "/ANKONA/static/css/main.19c1f14f.css.map",
-    "main.6dc89b17.js.map": "/ANKONA/static/js/main.6dc89b17.js.map",
-    "305.ed4a7fae.chunk.css.map": "/ANKONA/static/css/305.ed4a7fae.chunk.css.map",
-    "305.f708989d.chunk.js.map": "/ANKONA/static/js/305.f708989d.chunk.js.map",
+    "main.90709b77.js.map": "/ANKONA/static/js/main.90709b77.js.map",
+    "305.cf3a9ee8.chunk.css.map": "/ANKONA/static/css/305.cf3a9ee8.chunk.css.map",
+    "305.3c669114.chunk.js.map": "/ANKONA/static/js/305.3c669114.chunk.js.map",
     "502.7222d312.chunk.css.map": "/ANKONA/static/css/502.7222d312.chunk.css.map",
     "502.56a48f97.chunk.js.map": "/ANKONA/static/js/502.56a48f97.chunk.js.map",
     "314.b32557ec.chunk.js.map": "/ANKONA/static/js/314.b32557ec.chunk.js.map",
@@ -111,6 +117,6 @@
   },
   "entrypoints": [
     "static/css/main.19c1f14f.css",
-    "static/js/main.6dc89b17.js"
+    "static/js/main.90709b77.js"
   ]
 }
