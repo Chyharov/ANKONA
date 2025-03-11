@@ -8,7 +8,7 @@ import s from './SectionTradeMarks.module.scss';
 
 const SectionTradeMarks = () => {
   return (
-    <section className={s.sectionTradeMarks}>
+    <section className={s.sectionTradeMarks} id='tradeMarks'>
           <div className={`container ${s.tradeMarksContainer}`}>
               <h2 className={s.tradeMarksTitle}>Наші Торгові Марки</h2>
               <div className={s.tradeMarksBorder}></div>

@@ -90,7 +90,7 @@ const SectionTeam = () => {
   };
 
   return (
-    <section className={s.sectionTeam}>
+    <section className={s.sectionTeam} id='team'>
       <div className={`container ${s.teamContainer}`}>
         <h2 className={s.teamTitle}>Наша команда</h2>
         <div className={s.teamBorder}></div>

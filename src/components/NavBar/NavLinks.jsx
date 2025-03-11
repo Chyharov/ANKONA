@@ -1,32 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import s from './NavBar.module.scss';
 
 const NavLinks = props => {
   const animateFrom = { opacity: 0, y: -40 };
   const animateTo = { opacity: 1, y: 0 };
-
-  const getDeviceType = () => {
-    const width = window.innerWidth;
-    if (width <= 767) {
-      return 'mobile';
-    } else if (width >= 768 && width <= 1359) {
-      return 'tablet';
-    } else {
-      return 'desktop';
-    }
-  };
-
-  const getOffsetByDeviceType = () => {
-    const deviceType = getDeviceType();
-    if (deviceType === 'mobile') {
-      return -90;
-    } else if (deviceType === 'tablet') {
-      return -160;
-    } else {
-      return -180;
-    }
-  };
 
   return (
     <div className={s.bgShadow}>
@@ -35,10 +13,10 @@ const NavLinks = props => {
           <Link
             onClick={() => props.isMobile && props.closeMobileMenu()}
             className={s.menu__list_link}
-            to="/"
+            to="about"
             spy={true}
             smooth={true}
-            offset={getOffsetByDeviceType()}
+            offset={-70}
             duration={500}
           >
             <motion.li
@@ -54,10 +32,10 @@ const NavLinks = props => {
           <Link
             onClick={() => props.isMobile && props.closeMobileMenu()}
             className={s.menu__list_link}
-            to="/about"
+            to="goods"
             spy={true}
             smooth={true}
-            offset={getOffsetByDeviceType()}
+            offset={-70}
             duration={500}
           >
             <motion.li
@@ -73,10 +51,10 @@ const NavLinks = props => {
           <Link
             onClick={() => props.isMobile && props.closeMobileMenu()}
             className={s.menu__list_link}
-            to="/ritualgoods"
+            to="tradeMarks"
             spy={true}
             smooth={true}
-            offset={getOffsetByDeviceType()}
+            offset={-70}
             duration={500}
           >
             <motion.li
@@ -93,10 +71,10 @@ const NavLinks = props => {
           <Link
             onClick={() => props.isMobile && props.closeMobileMenu()}
             className={s.menu__list_link}
-            to="/ritualtransport"
+            to="team"
             spy={true}
             smooth={true}
-            offset={getOffsetByDeviceType()}
+            offset={-70}
             duration={500}
           >
             <motion.li
@@ -113,10 +91,10 @@ const NavLinks = props => {
           <Link
             onClick={() => props.isMobile && props.closeMobileMenu()}
             className={s.menu__list_link}
-            to="/ritualservices"
+            to="/blog"
             spy={true}
             smooth={true}
-            offset={getOffsetByDeviceType()}
+            offset={-70}
             duration={500}
           >
             <motion.li

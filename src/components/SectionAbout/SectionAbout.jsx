@@ -10,7 +10,7 @@ const SectionAbout = () => {
   };
 
   return (
-    <section className={s.sectionAbout}>
+    <section className={s.sectionAbout} id='about'>
       <div className={`container ${s.sectionAboutContainer}`}>
         <h2 className={s.sectionAboutTitle}>Ми спеціалісти сучасної годівлі</h2>
         <div className={s.aboutTitleBorder}></div>

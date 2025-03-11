@@ -160,7 +160,7 @@ const SectionGoods = () => {
   };
 
   return (
-    <section className={s.sectionGoods}>
+    <section className={s.sectionGoods} id='goods'>
       <div className={`container ${s.sectionGoods__Container}`}>
         <h2 className={s.sectionGoodsTitle}>Товари</h2>
         <div className={s.sectionGoodsBorder}></div>
