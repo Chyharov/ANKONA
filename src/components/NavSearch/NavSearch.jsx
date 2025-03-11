@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { scroller } from 'react-scroll';
 import searchIcon from 'images/header/searchIcon.svg';
 import searchIconInput from 'images/header/searchIconInput.svg';
 import s from './NavSearch.module.scss';
@@ -6,8 +7,15 @@ import s from './NavSearch.module.scss';
 const NavSearch = ({ style }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  const toggleSearch = () => {
-    setIsSearchOpen(prev => !prev);
+  const toggleSearchAndScroll = () => {
+    setIsSearchOpen(true); // Відкриваємо пошук
+
+    // Прокручуємо до секції "goods"
+    scroller.scrollTo('goods', {
+      smooth: true,
+      offset: -70,
+      duration: 500,
+    });
   };
 
   const closeSearch = () => {
@@ -27,11 +35,10 @@ const NavSearch = ({ style }) => {
         className={s.navSearch__button}
         style={style}
         aria-label="Search"
-        onClick={toggleSearch}
+        onClick={toggleSearchAndScroll}
       >
         <img className={s.searchIcon} src={searchIcon} alt="Search" />
       </button>
-
       {isSearchOpen && (
         <div className={s.bgShadow} onClick={handleOutsideClick}>
           <div className={`container ${s.searchContainer}`}>
