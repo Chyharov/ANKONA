@@ -1,8 +1,9 @@
 import { Link } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import s from './NavBar.module.scss';
 
-const NavLinks = props => {
+const NavLinks = (props) => {
   const animateFrom = { opacity: 0, y: -40 };
   const animateTo = { opacity: 1, y: 0 };
 
@@ -62,7 +63,6 @@ const NavLinks = props => {
               animate={animateTo}
               transition={{ delay: 0.2 }}
               className={s.menu__list_item}
-              onClick={() => props.isMobile && props.closeMobileMenu()}
             >
               Торгові марки
             </motion.li>
@@ -82,20 +82,15 @@ const NavLinks = props => {
               animate={animateTo}
               transition={{ delay: 0.3 }}
               className={s.menu__list_item}
-              onClick={() => props.isMobile && props.closeMobileMenu()}
             >
               Команда
             </motion.li>
           </Link>
 
-          <Link
+          <RouterLink
             onClick={() => props.isMobile && props.closeMobileMenu()}
             className={s.menu__list_link}
             to="/blog"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
           >
             <motion.li
               initial={animateFrom}
@@ -105,7 +100,7 @@ const NavLinks = props => {
             >
               Блог
             </motion.li>
-          </Link>
+          </RouterLink>
         </ul>
       </div>
     </div>

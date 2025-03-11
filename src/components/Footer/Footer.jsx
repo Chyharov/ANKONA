@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import linkedinLogo from 'images/footer/linkedinLogo.svg';
 import facebookLogo from 'images/footer/facebookLogo.svg';
 import instagramLogo from 'images/footer/instagramLogo.svg';
@@ -8,7 +9,7 @@ const Footer = () => {
   return (
     <footer className={s.footer}>
       <div className={`container ${s.footerContainer}`}>
-        <img className={s.logoFooter} src={logoFooter} alt="logoFooter" />
+        <Link to='/'><img className={s.logoFooter} src={logoFooter} alt="logoFooter" /></Link>
         <ul className={s.footerSocailMediaList}>
           <li className={s.footerSocailMediaList__item}>
             <a
