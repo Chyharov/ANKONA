@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.19c1f14f.css",
-    "main.js": "/ANKONA/static/js/main.3c11ec06.js",
+    "main.js": "/ANKONA/static/js/main.bc422b36.js",
     "static/css/381.d00cce01.chunk.css": "/ANKONA/static/css/381.d00cce01.chunk.css",
     "static/js/381.88c28105.chunk.js": "/ANKONA/static/js/381.88c28105.chunk.js",
     "static/css/502.72859bb2.chunk.css": "/ANKONA/static/css/502.72859bb2.chunk.css",
     "static/js/502.56a48f97.chunk.js": "/ANKONA/static/js/502.56a48f97.chunk.js",
     "static/css/543.f8fd4600.chunk.css": "/ANKONA/static/css/543.f8fd4600.chunk.css",
     "static/js/543.9e5ef277.chunk.js": "/ANKONA/static/js/543.9e5ef277.chunk.js",
-    "static/css/520.c56f0b26.chunk.css": "/ANKONA/static/css/520.c56f0b26.chunk.css",
-    "static/js/520.4ad1e91e.chunk.js": "/ANKONA/static/js/520.4ad1e91e.chunk.js",
+    "static/css/520.d2a0a85a.chunk.css": "/ANKONA/static/css/520.d2a0a85a.chunk.css",
+    "static/js/520.0abd84a5.chunk.js": "/ANKONA/static/js/520.0abd84a5.chunk.js",
     "static/js/532.fea0ce3f.chunk.js": "/ANKONA/static/js/532.fea0ce3f.chunk.js",
     "static/js/161.f4b634d1.chunk.js": "/ANKONA/static/js/161.f4b634d1.chunk.js",
     "static/js/517.3a543be6.chunk.js": "/ANKONA/static/js/517.3a543be6.chunk.js",
-    "static/js/175.6adffc43.chunk.js": "/ANKONA/static/js/175.6adffc43.chunk.js",
+    "static/js/175.d59382a4.chunk.js": "/ANKONA/static/js/175.d59382a4.chunk.js",
     "static/media/imgProductDetailsId18.jpg": "/ANKONA/static/media/imgProductDetailsId18.513a50b5db4315799b0d.jpg",
     "static/media/imgProductDetailsId33.jpg": "/ANKONA/static/media/imgProductDetailsId33.29c4c70eb54ae882e964.jpg",
     "static/media/imgProductDetailsId7.jpg": "/ANKONA/static/media/imgProductDetailsId7.6ed54c9ba74c137709df.jpg",
@@ -113,22 +113,22 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.19c1f14f.css.map": "/ANKONA/static/css/main.19c1f14f.css.map",
-    "main.3c11ec06.js.map": "/ANKONA/static/js/main.3c11ec06.js.map",
+    "main.bc422b36.js.map": "/ANKONA/static/js/main.bc422b36.js.map",
     "381.d00cce01.chunk.css.map": "/ANKONA/static/css/381.d00cce01.chunk.css.map",
     "381.88c28105.chunk.js.map": "/ANKONA/static/js/381.88c28105.chunk.js.map",
     "502.72859bb2.chunk.css.map": "/ANKONA/static/css/502.72859bb2.chunk.css.map",
     "502.56a48f97.chunk.js.map": "/ANKONA/static/js/502.56a48f97.chunk.js.map",
     "543.f8fd4600.chunk.css.map": "/ANKONA/static/css/543.f8fd4600.chunk.css.map",
     "543.9e5ef277.chunk.js.map": "/ANKONA/static/js/543.9e5ef277.chunk.js.map",
-    "520.c56f0b26.chunk.css.map": "/ANKONA/static/css/520.c56f0b26.chunk.css.map",
-    "520.4ad1e91e.chunk.js.map": "/ANKONA/static/js/520.4ad1e91e.chunk.js.map",
+    "520.d2a0a85a.chunk.css.map": "/ANKONA/static/css/520.d2a0a85a.chunk.css.map",
+    "520.0abd84a5.chunk.js.map": "/ANKONA/static/js/520.0abd84a5.chunk.js.map",
     "532.fea0ce3f.chunk.js.map": "/ANKONA/static/js/532.fea0ce3f.chunk.js.map",
     "161.f4b634d1.chunk.js.map": "/ANKONA/static/js/161.f4b634d1.chunk.js.map",
     "517.3a543be6.chunk.js.map": "/ANKONA/static/js/517.3a543be6.chunk.js.map",
-    "175.6adffc43.chunk.js.map": "/ANKONA/static/js/175.6adffc43.chunk.js.map"
+    "175.d59382a4.chunk.js.map": "/ANKONA/static/js/175.d59382a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.19c1f14f.css",
-    "static/js/main.3c11ec06.js"
+    "static/js/main.bc422b36.js"
   ]
 }
