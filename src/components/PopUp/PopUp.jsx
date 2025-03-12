@@ -6,7 +6,7 @@ import s from './PopUp.module.scss';
 const PopUp = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add(s.noScroll); 
+      document.body.classList.add(s.noScroll);
     } else {
       document.body.classList.remove(s.noScroll);
     }
@@ -75,9 +75,14 @@ const PopUp = ({ isOpen, onClose }) => {
         </form>
 
         <div className={s.privacyContainer}>
-          <p className={s.privacyText} style={{marginBottom: '8px'}}>
+          <p className={s.privacyText} style={{ marginBottom: '8px' }}>
             Відправляючи свої дані Ви автоматично погоджуєтеся з{' '}
-              <Link to='/privacy' className={s.privacyLink}>
+            <Link
+              to="/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={s.privacyLink}
+            >
               політикою конфіденційності
             </Link>
           </p>

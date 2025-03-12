@@ -5,3 +5,28 @@
     padding-bottom: 80px;
     background-color: var(--whiteBG);
 }
+
+.privacyTitle,
+.privacyListTitle {
+    font-family: 'Montserrat Bold';
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--richSoilBrown);
+    padding: 4px 8px;
+}
+
+.privacyDescription,
+.privacyListDescription {
+    font-family: 'Montserrat Regular';
+    font-size: 14px;
+    line-height: 1.43;
+    color: var(--richSoilBrown);
+    padding: 4px 8px;
+}
+
+.privacyLink {
+    font-family: 'Montserrat Bold';
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--richSoilBrown);
+}
