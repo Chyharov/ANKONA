@@ -1,8 +1,8 @@
 import Header from 'components/Header/Header';
-import SectionBlog from 'components/SectionBlog/SectionBlog';
+import SectionBlog from 'components/SectionPrivacy/SectionPrivacy';
 import Footer from 'components/Footer/Footer';
 
-const BlogPage = () => {
+const PrivacyPage = () => {
   return (
     <>
       <Header />
@@ -14,4 +14,4 @@ const BlogPage = () => {
   );
 };
 
-export default BlogPage;
+export default PrivacyPage;
