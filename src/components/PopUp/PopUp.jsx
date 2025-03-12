@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import closeIcon from 'images/hero/closeIcon.svg';
 import s from './PopUp.module.scss';
 
@@ -76,9 +77,9 @@ const PopUp = ({ isOpen, onClose }) => {
         <div className={s.privacyContainer}>
           <p className={s.privacyText} style={{marginBottom: '8px'}}>
             Відправляючи свої дані Ви автоматично погоджуєтеся з{' '}
-            <a className={s.privacyLink} href="/privacy-policy">
+              <Link to='/privacy' className={s.privacyLink}>
               політикою конфіденційності
-            </a>
+            </Link>
           </p>
           <p className={s.privacyText}>
             *Для контакту з безпосереднім спеціалістом розгляньте розділ{' '}
