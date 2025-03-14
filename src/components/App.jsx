@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 const MainPage = lazy(() => import('pages/MainPage/MainPage'));
 const ProductDetails = lazy(() => import('components/ProductDetails/ProductDetails'));
 const BlogPage = lazy(() => import('pages/BlogPage/BlogPage'));
+const BlogPostPage = lazy(() => import('pages/BlogPostPage/BlogPostPage'));
 const PrivacyPage = lazy(() => import('pages/PrivacyPage/PrivacyPage'));
 
 
@@ -14,6 +15,7 @@ export const App = () => {
           <Route path="/" element={<MainPage />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogPostPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
         </Routes>
       </Suspense>
