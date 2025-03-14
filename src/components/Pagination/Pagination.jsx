@@ -2,7 +2,13 @@ import arrowLeft from 'images/goods/arrowLeft.svg';
 import arrowRight from 'images/goods/arrowRight.svg';
 import s from './Pagination.module.scss';
 
-const Pagination = ({ currentPage, totalPages, onPageChange, onLoadMore, hasMoreItems }) => {
+const Pagination = ({
+  currentPage,
+  totalPages,
+  onPageChange,
+  onLoadMore,
+  hasMoreItems,
+}) => {
   const renderPaginationButtons = () => {
     const pages = [];
     const firstPage = 1;
@@ -17,7 +23,11 @@ const Pagination = ({ currentPage, totalPages, onPageChange, onLoadMore, hasMore
       pages.push('...');
     }
 
-    if (middlePage !== firstPage && middlePage !== secondPage && middlePage !== lastPage) {
+    if (
+      middlePage !== firstPage &&
+      middlePage !== secondPage &&
+      middlePage !== lastPage
+    ) {
       pages.push(middlePage);
     }
 
@@ -49,6 +59,11 @@ const Pagination = ({ currentPage, totalPages, onPageChange, onLoadMore, hasMore
 
   return (
     <div className={s.paginationContainer}>
+      {hasMoreItems && (
+        <button type="button" className={s.loadMoreButton} onClick={onLoadMore}>
+          Переглянути ще
+        </button>
+      )}
       <div className={s.paginationButtons}>
         <button
           className={s.buttonPagination}
@@ -68,16 +83,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange, onLoadMore, hasMore
           <img src={arrowRight} alt="arrowRight" />
         </button>
       </div>
-
-      {hasMoreItems && (
-        <button
-          type="button"
-          className={s.loadMoreButton}
-          onClick={onLoadMore}
-        >
-          Переглянути ще
-        </button>
-      )}
     </div>
   );
 };

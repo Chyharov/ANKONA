@@ -404,23 +404,13 @@ const SectionGoods = () => {
           )}
         </ul>
 
-        {currentProducts.length < filteredProducts.length &&
-          currentPage < totalPages && (
-            <button
-              type="button"
-              aria-label="loadMore"
-              className={s.loadMoreButton}
-              onClick={handleLoadMore}
-            >
-              Переглянути ще
-            </button>
-          )}
-
         {filteredProducts.length > itemsPerPage && (
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
             onPageChange={handlePageChange}
+            onLoadMore={handleLoadMore}
+            hasMoreItems={currentProducts.length < filteredProducts.length}
           />
         )}
       </div>
