@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import arrowUp from 'images/goods/arrowUp.svg';
 import arrowDown from 'images/goods/arrowDown.svg';
-import arrowLeft from 'images/goods/arrowLeft.svg';
-import arrowRight from 'images/goods/arrowRight.svg';
 import noImages from 'images/goods/noMedia.jpg';
 import iconHorse from 'images/goods/iconHorse.svg';
 import iconPig from 'images/goods/iconPig.svg';
@@ -12,6 +10,7 @@ import iconCalf from 'images/goods/iconCalf.svg';
 import iconCow from 'images/goods/iconCow.svg';
 import iconGoat from 'images/goods/iconGoat.svg';
 import iconCheckBox from 'images/goods/iconCheckBox.svg';
+import Pagination from 'components/Pagination/Pagination';
 import { products } from 'services/Products';
 import s from './SectionGoods.module.scss';
 
@@ -111,56 +110,8 @@ const SectionGoods = () => {
     setCurrentPage(page);
   };
 
-  const renderPaginationButtons = () => {
-    const pages = [];
-    const firstPage = 1;
-    const secondPage = 2;
-    const lastPage = totalPages;
-    const middlePage = Math.ceil(totalPages / 2);
-
-    pages.push(firstPage);
-    pages.push(secondPage);
-
-    if (middlePage > secondPage + 1) {
-      pages.push('...');
-    }
-
-    if (
-      middlePage !== firstPage &&
-      middlePage !== secondPage &&
-      middlePage !== lastPage
-    ) {
-      pages.push(middlePage);
-    }
-
-    if (middlePage < lastPage - 1) {
-      pages.push('...');
-    }
-
-    if (lastPage !== firstPage && lastPage !== secondPage) {
-      pages.push(lastPage);
-    }
-
-    return pages.map((page, index) => (
-      <button
-        key={index}
-        className={
-          page === '...'
-            ? s.ellipsis
-            : page === currentPage
-            ? s.numerPaginationBtn
-            : s.numerPaginationBtnInactive
-        }
-        onClick={() => typeof page === 'number' && handlePageChange(page)}
-        disabled={page === '...'}
-      >
-        {page}
-      </button>
-    ));
-  };
-
   return (
-    <section className={s.sectionGoods} id='goods'>
+    <section className={s.sectionGoods} id="goods">
       <div className={`container ${s.sectionGoods__Container}`}>
         <h2 className={s.sectionGoodsTitle}>Товари</h2>
         <div className={s.sectionGoodsBorder}></div>
@@ -466,25 +417,11 @@ const SectionGoods = () => {
           )}
 
         {filteredProducts.length > itemsPerPage && (
-          <div className={s.pagination}>
-            <button
-              className={s.buttonPagination}
-              disabled={currentPage === 1}
-              onClick={() => handlePageChange(currentPage - 1)}
-            >
-              <img src={arrowLeft} alt="arrowLeft" />
-            </button>
-
-            {renderPaginationButtons()}
-
-            <button
-              className={s.buttonPagination}
-              disabled={currentPage === totalPages}
-              onClick={() => handlePageChange(currentPage + 1)}
-            >
-              <img src={arrowRight} alt="arrowRight" />
-            </button>
-          </div>
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
         )}
       </div>
     </section>

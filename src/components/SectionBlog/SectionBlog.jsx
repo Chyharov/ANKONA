@@ -6,7 +6,7 @@ import noImage from 'images/goods/noMedia.jpg';
 import { blogPosts } from 'services/blogPosts';
 import s from './SectionBlog.module.scss';
 
-const itemsPerPage = 5;
+const itemsPerPage = 3;
 
 const SectionBlog = () => {
   const [currentPage, setCurrentPage] = useState(1);

@@ -3,7 +3,7 @@ import { blogPosts } from 'services/blogPosts';
 
 const BlogPostPage = () => {
   const { id } = useParams();
-  const post = blogPosts.find((post) => post.id === id);
+  const post = blogPosts.find((post) => post.id === Number(id));
 
   if (!post) {
     return <h2>Стаття не знайдена</h2>;

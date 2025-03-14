@@ -1,0 +1,67 @@
+@import '../../sass/utils/mixin';
+
+.loadMoreButton {
+    background-color: var(--eggShellWhite);
+    border: 1px solid var(--copperYellow);
+    border-radius: 4px;
+    color: var(--richSoilBrown);
+    display: block;
+    font-family: Montserrat Bold;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    text-align: center;
+    width: 91.5%;
+}
+
+.buttonPagination {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+}
+
+.buttonPagination:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.numerPaginationBtn,
+.numerPaginationBtnInactive {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--richSoilBrown);
+}
+
+.numerPaginationBtn {
+  color: #ffffff;
+  background-color: var(--richSoilBrown);
+}
+
+.numerPaginationBtnInactive {
+  color: #a7a7a7;
+  background-color: transparent;
+}
+
+.paginationButtons {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ellipsis {
+  background: transparent;
+  border: none;
+  color: #a7a7a7;
+  font-family: Montserrat Bold;
+  font-size: 16px;
+  height: 40px;
+  line-height: 1.5;
+  text-align: center;
+  width: 26px;
+}
