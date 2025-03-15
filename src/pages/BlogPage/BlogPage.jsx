@@ -5,7 +5,7 @@ import Footer from 'components/Footer/Footer';
 const BlogPage = () => {
   return (
     <>
-      <Header />
+      <Header navSearchStyle={{ display: 'none' }} style={{ width: '130px' }} />
       <main>
         <SectionBlog />
       </main>

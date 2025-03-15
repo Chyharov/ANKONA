@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import arrowLeft from 'images/goods/arrowLeft.svg';
-import arrowRight from 'images/goods/arrowRight.svg';
+import Pagination from 'components/Pagination/Pagination';
 import noImage from 'images/goods/noMedia.jpg';
 import { blogPosts } from 'services/blogPosts';
 import s from './SectionBlog.module.scss';
@@ -11,22 +10,22 @@ const itemsPerPage = 3;
 const SectionBlog = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
-
+  
   useEffect(() => {
     setCurrentPage(1);
   }, [filteredPosts]);
 
-  const currentPosts = filteredPosts.slice(0, currentPage * itemsPerPage);
   const totalPages = Math.ceil(filteredPosts.length / itemsPerPage);
+  const currentPosts = filteredPosts.slice(0, currentPage * itemsPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
   const handleLoadMore = () => {
     if (currentPage < totalPages) {
-      setCurrentPage(prev => prev + 1);
+      setCurrentPage(prevPage => prevPage + 1);
     }
-  };
-
-  const handlePageChange = page => {
-    setCurrentPage(page);
   };
 
   return (
@@ -59,35 +58,14 @@ const SectionBlog = () => {
           )}
         </ul>
         
-        {currentPosts.length < filteredPosts.length && (
-          <button
-            type='button'
-            aria-label='loadMore'
-            className={s.loadMoreButton}
-            onClick={handleLoadMore}
-          >
-            Переглянути ще
-          </button>
-        )}
-
-        {filteredPosts.length > itemsPerPage && (
-          <div className={s.pagination}>
-            <button
-              className={s.buttonPagination}
-              disabled={currentPage === 1}
-              onClick={() => handlePageChange(currentPage - 1)}
-            >
-              <img src={arrowLeft} alt='arrowLeft' />
-            </button>
-            <button
-              className={s.buttonPagination}
-              disabled={currentPage === totalPages}
-              onClick={() => handlePageChange(currentPage + 1)}
-            >
-              <img src={arrowRight} alt='arrowRight' />
-            </button>
-          </div>
-        )}
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+          onLoadMore={handleLoadMore}
+          hasMoreItems={currentPosts.length < filteredPosts.length}
+          setFilteredPosts={setFilteredPosts}
+        />
       </div>
     </section>
   );

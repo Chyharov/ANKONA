@@ -1,0 +1,82 @@
+@import '../../sass/utils/mixin';
+
+.sectionBlogCard {
+  padding-top: 94px;
+  padding-bottom: 80px;
+  background-color: var(--whiteBG);
+}
+
+.blogTitle {
+  font-family: 'Montserrat SemiBold';
+  font-size: 24px;
+  line-height: 1.34;
+  color: var(--richSoilBrown);
+  padding: 8px;
+  margin-bottom: 4px;
+}
+
+.blogBorder {
+  border: 2px solid var(--copperYellow);
+  margin-bottom: 16px;
+}
+
+.blogSubTitle {
+  font-family: 'Montserrat SemiBold';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--richSoilBrown);
+  padding: 4px;
+  margin-bottom: 16px;
+}
+
+.blogDescription,
+.blogDescriptionMetodoligi,
+.blogTitleResult,
+.blogResultList__item,
+.blogDescriptionConclusions {
+  font-family: 'Montserrat Regular';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--richSoilBrown);
+}
+
+.blogDescription,
+.blogDescriptionMetodoligi,
+.blogTitleResult,
+.blogDescriptionConclusions {
+  padding: 4px;
+  margin-bottom: 16px;
+}
+
+.blogDescriptionSpan,
+.blogTitleMetodoligi,
+.blogTitleResultSpan,
+.blogTitleConclusions {
+  font-family: 'Montserrat Bold';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--richSoilBrown);
+}
+
+.blogTitleMetodoligi,
+.blogTitleConclusions {
+  padding: 4px;
+}
+
+.blogImage {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.blogResultList {
+    padding-left: 30px;
+    margin-bottom: 16px;
+}
+
+.blogResultList__item {
+    list-style: disc;
+    padding: 4px;
+}
