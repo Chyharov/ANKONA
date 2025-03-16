@@ -1997,7 +1997,7 @@ export const products = [
     description:
       'Модулятор мікробіому; Альтернатива антибіотику; Суміш органічних кислот',
     category: ['Свині'],
-    image: imgProductDetailsId1,
+    image: imgProductDetailsId56,
     sections: [
       {
         title: `Складові:`,
