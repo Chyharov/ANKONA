@@ -7,6 +7,10 @@
   width: 100%;
   border-bottom: 1px solid var(--eggShellWhite);
   z-index: 9;
+
+  @include mq(desk) {
+    border: none;
+  }
 }
 
 .header__container {
