@@ -21,6 +21,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include mq(desk) {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
 }
 
 .logo {
@@ -31,6 +36,8 @@
   }
 
   @include mq(desk) {
+    width: 160px;
+    height: 68px;
   }
 }
 
