@@ -10,12 +10,13 @@
     width: 100%;
   }
 
-  @include mq(tab) {
+  @include mq(desk) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    width: 840px;
+    width: 530px;
+    height: 40px;
   }
 }
 
@@ -131,8 +132,10 @@
   transform: translate(-50%, -50%);
 
   @include mq(desk) {
-    position: sticky;
-    top: 0px
+    position: unset;
+    transform: none;
+    padding-bottom: 0px;
+    width: 600px;
   }
 }
 

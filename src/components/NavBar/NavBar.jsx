@@ -4,7 +4,7 @@ import Navigation from './Navigation';
 import s from './NavBar.module.scss';
 
 const NavMenu = ({ style = {} }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1440);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1439);
 
   useEffect(() => {
     const handleResize = () => {
