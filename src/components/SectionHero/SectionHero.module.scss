@@ -4,10 +4,34 @@
   position: relative;
   background-color: var(--eggShellWhite);
   padding-bottom: 100px;
+
+  @include mq(desk) {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    background-color: var(--whiteBG);
+  }
+}
+
+.sectionHero__container {
+  @include mq(desk) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+  }
 }
 
 .heroPhotoContainer {
   background-color: #000000;
+
+  @include mq(desk) {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: var(--whiteBG);
+    position: relative;
+    margin-bottom: 108px;
+  }
 }
 
 .horseHeroImage {
@@ -17,6 +41,22 @@
   position: relative;
   z-index: 3;
   margin-bottom: 50px;
+
+  @include mq(desk) {
+    width: 1280px;
+    height: 640px;
+    border-radius: 4px;
+    margin-bottom: 0px;
+    background-color: #000000;
+  }
+}
+
+.horseHeroImageContainer {
+
+  @include mq(desk) {
+    background-color: #000000;
+    border-radius: 4px;
+  }
 }
 
 .ankonaText {
@@ -25,6 +65,13 @@
   position: absolute;
   top: 452px;
   right: 16px;
+
+  @include mq(desk) {
+    width: 934px;
+      height: 200px;
+      right: 418px;
+      top: 542px;
+  }
 }
 
 .heroBorder {
@@ -33,6 +80,24 @@
   margin-right: 4px;
   margin-bottom: 16px;
   position: relative;
+
+  @include mq(desk) {
+    display: none;
+  }
+}
+
+.heroBorderDesk {
+  display: none;
+
+  @include mq(desk) {
+    display: block;
+    border-bottom: 2px solid var(--grayColor);
+    margin-left: 4px;
+    margin-right: 4px;
+    position: relative;
+    width: 400px;
+    height: 2px;
+  }
 }
 
 .heroBorderDot {
@@ -44,6 +109,26 @@
   border-radius: 50%;
   transform: translateY(-50%);
   background-color: var(--grayColor);
+
+  @include mq(desk) {
+    display: none;
+  }
+}
+
+.heroBorderDotDesk {
+  display: none;
+
+  @include mq(desk) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: var(--grayColor);
+  }
 }
 
 .heroDescription {
@@ -53,4 +138,10 @@
   color: var(--richSoilBrown);
   padding: 8px;
   margin-bottom: 16px;
+
+  @include mq(desk) {
+    font-size: 24px;
+    line-height: 1.33;
+    margin-bottom: 0px;
+  }
 }

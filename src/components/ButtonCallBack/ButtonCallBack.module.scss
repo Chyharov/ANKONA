@@ -15,4 +15,10 @@
     border-radius: 4px;
     background-color: var(--copperYellow);
     color: var(--eggShellWhite);
+
+    @include mq(desk) {
+        width: 23.34%;
+        margin-left: 0px;
+            margin-right: 0px;
+    }
 }
