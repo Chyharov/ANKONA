@@ -8,9 +8,8 @@ const NavSearch = ({ style }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const toggleSearchAndScroll = () => {
-    setIsSearchOpen(true); // Відкриваємо пошук
+    setIsSearchOpen(true);
 
-    // Прокручуємо до секції "goods"
     scroller.scrollTo('goods', {
       smooth: true,
       offset: -70,

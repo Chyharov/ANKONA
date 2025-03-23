@@ -52,7 +52,6 @@
 }
 
 .horseHeroImageContainer {
-
   @include mq(desk) {
     background-color: #000000;
     border-radius: 4px;
@@ -67,10 +66,10 @@
   right: 16px;
 
   @include mq(desk) {
-    width: 934px;
-      height: 200px;
-      right: 418px;
-      top: 542px;
+    width: 933px;
+    height: 200px;
+    right: 419px;
+    top: 543px;
   }
 }
 
