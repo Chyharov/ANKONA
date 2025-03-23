@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.c17f5902.css",
-    "main.js": "/ANKONA/static/js/main.135669f9.js",
-    "static/css/463.784fbf64.chunk.css": "/ANKONA/static/css/463.784fbf64.chunk.css",
-    "static/js/463.7d370817.chunk.js": "/ANKONA/static/js/463.7d370817.chunk.js",
+    "main.js": "/ANKONA/static/js/main.ce7f064e.js",
+    "static/css/463.04432d7d.chunk.css": "/ANKONA/static/css/463.04432d7d.chunk.css",
+    "static/js/463.03b437a1.chunk.js": "/ANKONA/static/js/463.03b437a1.chunk.js",
     "static/css/502.55d31fae.chunk.css": "/ANKONA/static/css/502.55d31fae.chunk.css",
     "static/js/502.059394b1.chunk.js": "/ANKONA/static/js/502.059394b1.chunk.js",
     "static/css/543.c075ed54.chunk.css": "/ANKONA/static/css/543.c075ed54.chunk.css",
@@ -17,7 +17,7 @@
     "static/js/517.3a543be6.chunk.js": "/ANKONA/static/js/517.3a543be6.chunk.js",
     "static/js/175.29b0a159.chunk.js": "/ANKONA/static/js/175.29b0a159.chunk.js",
     "static/media/horseHeroImageDesktop.jpg": "/ANKONA/static/media/horseHeroImageDesktop.e7c655759ea03ee917b5.jpg",
-    "static/media/pictDesk.jpg": "/ANKONA/static/media/pictDesk.09fedfc07b75968e0434.jpg",
+    "static/media/pictDesk.jpg": "/ANKONA/static/media/pictDesk.453e17e05b4a4e32f2e9.jpg",
     "static/media/imgProductDetailsId18.jpg": "/ANKONA/static/media/imgProductDetailsId18.513a50b5db4315799b0d.jpg",
     "static/media/blogImageId1.jpg": "/ANKONA/static/media/blogImageId1.71e385c529dc25912c1c.jpg",
     "static/media/imgProductDetailsId33.jpg": "/ANKONA/static/media/imgProductDetailsId33.29c4c70eb54ae882e964.jpg",
@@ -92,7 +92,9 @@
     "static/media/yanenkoYana.jpg": "/ANKONA/static/media/yanenkoYana.ef2833f4d424d2938ce6.jpg",
     "static/media/hodirevaNatalia.jpg": "/ANKONA/static/media/hodirevaNatalia.5362fe84a82fe6841895.jpg",
     "static/media/komarVolodymyr.jpg": "/ANKONA/static/media/komarVolodymyr.a4a0bb4561c2a9287352.jpg",
+    "static/media/BackgroundHorseRightDesktop.png": "/ANKONA/static/media/BackgroundHorseRightDesktop.880493a8634f9049718c.png",
     "static/media/soloshenkoAndrii.jpg": "/ANKONA/static/media/soloshenkoAndrii.8ce7e40fa35fd2f520f3.jpg",
+    "static/media/BackgroundHorseLeftDesktop.png": "/ANKONA/static/media/BackgroundHorseLeftDesktop.eebba22d6b17a039a118.png",
     "static/media/logoDesk.svg": "/ANKONA/static/media/logoDesk.7161c29b0df79cc305171964042dd8c3.svg",
     "static/media/logoFooter.svg": "/ANKONA/static/media/logoFooter.b884909a2e103ff6c431188e00c708d1.svg",
     "static/media/BackgroundHorse.png": "/ANKONA/static/media/BackgroundHorse.cbb13a65d05e036dd765.png",
@@ -121,9 +123,9 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.c17f5902.css.map": "/ANKONA/static/css/main.c17f5902.css.map",
-    "main.135669f9.js.map": "/ANKONA/static/js/main.135669f9.js.map",
-    "463.784fbf64.chunk.css.map": "/ANKONA/static/css/463.784fbf64.chunk.css.map",
-    "463.7d370817.chunk.js.map": "/ANKONA/static/js/463.7d370817.chunk.js.map",
+    "main.ce7f064e.js.map": "/ANKONA/static/js/main.ce7f064e.js.map",
+    "463.04432d7d.chunk.css.map": "/ANKONA/static/css/463.04432d7d.chunk.css.map",
+    "463.03b437a1.chunk.js.map": "/ANKONA/static/js/463.03b437a1.chunk.js.map",
     "502.55d31fae.chunk.css.map": "/ANKONA/static/css/502.55d31fae.chunk.css.map",
     "502.059394b1.chunk.js.map": "/ANKONA/static/js/502.059394b1.chunk.js.map",
     "543.c075ed54.chunk.css.map": "/ANKONA/static/css/543.c075ed54.chunk.css.map",
@@ -139,6 +141,6 @@
   },
   "entrypoints": [
     "static/css/main.c17f5902.css",
-    "static/js/main.135669f9.js"
+    "static/js/main.ce7f064e.js"
   ]
 }
