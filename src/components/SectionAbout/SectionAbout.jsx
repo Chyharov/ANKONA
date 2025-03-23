@@ -36,7 +36,7 @@ const SectionAbout = () => {
         </p>
         <ul className={s.aboutList}>
           <li className={s.aboutList__item}>
-            <div className={s.sectionAboutListBG}>
+            <div className={s.sectionAboutListLeftBG}>
               <h3 className={s.sectionAboutListTitle}>Наша стратегія</h3>
               <div className={s.sectionAboutListTitleBorder}></div>
               <ul className={s.sectionAboutList}>
@@ -47,22 +47,21 @@ const SectionAbout = () => {
                 <li className={s.sectionAboutListItem}>
                   Далекоглядний підхід до роботи, націлений на майбутнє
                 </li>
-                <li className={s.sectionAboutListItem}>Довготривале партнерство</li>
+                <li className={s.sectionAboutListItem}>
+                  Довготривале партнерство
+                </li>
               </ul>
             </div>
           </li>
           <li className={s.aboutList__item}>
-            <img className={s.sectionAboutListImg} src={imageSrc} alt="aboutListImg" />
+            <img
+              className={s.sectionAboutListImg}
+              src={imageSrc}
+              alt="aboutListImg"
+            />
           </li>
           <li className={s.aboutList__item}>
-            <div
-              className={s.sectionAboutListBG}
-              style={{
-                marginBottom: '16px',
-                paddingTop: '36px',
-                paddingBottom: '36px',
-              }}
-            >
+            <div className={s.sectionAboutListRightBG}>
               <h3 className={s.sectionAboutListTitle}>Наші інновації</h3>
               <div className={s.sectionAboutListTitleBorder}></div>
               <ul className={s.sectionAboutList}>
@@ -72,7 +71,9 @@ const SectionAbout = () => {
                 <li className={s.sectionAboutListItem}>
                   Пошук нових, альтернативних рішень, що підвищують ефективність
                 </li>
-                <li className={s.sectionAboutListItem}>Погляд, спрямований у майбутнє</li>
+                <li className={s.sectionAboutListItem}>
+                  Погляд, спрямований у майбутнє
+                </li>
               </ul>
             </div>
           </li>
@@ -94,7 +95,9 @@ const SectionAbout = () => {
                 </p>
               </li>
               <li className={s.aboutBlockWhyUsList__Item}>
-                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>Далекоглядність</h4>
+                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>
+                  Далекоглядність
+                </h4>
                 <p className={s.aboutBlockWhyUsList__ItemDescription}>
                   націлені на довготривале партнерство
                 </p>
@@ -106,19 +109,25 @@ const SectionAbout = () => {
                 </p>
               </li>
               <li className={s.aboutBlockWhyUsList__Item}>
-                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>Інноваційність</h4>
+                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>
+                  Інноваційність
+                </h4>
                 <p className={s.aboutBlockWhyUsList__ItemDescription}>
                   про пошук нових рішень
                 </p>
               </li>
               <li className={s.aboutBlockWhyUsList__Item}>
-                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>Збалансованість</h4>
+                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>
+                  Збалансованість
+                </h4>
                 <p className={s.aboutBlockWhyUsList__ItemDescription}>
                   про пошук балансу між витратами та заробітком
                 </p>
               </li>
               <li className={s.aboutBlockWhyUsList__Item}>
-                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>Результативність</h4>
+                <h4 className={s.aboutBlockWhyUsList__ItemTitle}>
+                  Результативність
+                </h4>
                 <p className={s.aboutBlockWhyUsList__ItemDescription}>
                   знаємо, як досягати та підтримувати продуктивність
                 </p>

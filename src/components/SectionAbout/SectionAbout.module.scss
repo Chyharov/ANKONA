@@ -67,54 +67,100 @@
 }
 
 .aboutList {
+  margin-bottom: 16px;
   @include mq(desk) {
     display: flex;
-      justify-content: space-between;
-        margin-bottom: 24px;
+    justify-content: space-between;
+    margin-bottom: 24px;
   }
 }
 
 .aboutList__item {
+  margin-bottom: 4px;
   @include mq(desk) {
     width: 400px;
   }
 }
 
+.aboutList__item:last-child {
+  margin-bottom: 0px;
+}
+
 .sectionAboutListTitle {
   font-family: 'Montserrat Bold';
   font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
+  line-height: 1.5;
   text-align: center;
   color: var(--copperYellow);
   margin-bottom: 16px;
+
+  @include mq(desk) {
+    font-family: 'Montserrat Medium';
+    font-size: 24px;
+    line-height: 1.33;
+    margin-bottom: 24px;
+  }
 }
 
 .sectionAboutListTitleBorder {
   border-bottom: 1px solid var(--grayColor);
+  margin-left: 6px;
+  margin-right: 6px;
   margin-bottom: 16px;
+
+  @include mq(desk) {
+    width: 300px;
+    border-bottom: 1px solid var(--grayColor);
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 24px;
+  }
 }
 
-.sectionAboutListBG {
-  padding: 24px 14px;
+.sectionAboutListRightBG,
+.sectionAboutListLeftBG {
+  padding: 36px 8px;
   background-color: var(--eggShellWhite);
   background-image: url(../../images/about/BackgroundHorse.png);
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 4px;
-  margin-bottom: 4px;
   box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
 
   @include mq(desk) {
-    padding: 39px 50px;
+    width: 400px;
+    height: 528px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
   }
+}
+
+.sectionAboutListLeftBG {
+  @include mq(desk) {
+    background-image: url(../../images/about/BackgroundHorseLeftDesktop.png);
+    margin-bottom: 0px;
+  }
+}
+
+.sectionAboutListRightBG {
+  @include mq(desk) {
+    background-image: url(../../images/about/BackgroundHorseRightDesktop.png);
+    margin-bottom: 0px;
+  }
+}
+
+.sectionAboutList {
+  padding-left: 8px;
 }
 
 .sectionAboutListItem {
   font-family: 'Montserrat Regular';
   font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5;
   text-align: left;
   color: var(--brownBG);
   list-style: inside;
@@ -130,6 +176,13 @@
   border-radius: 4px;
   margin-bottom: 4px;
   box-shadow: 2px 2px 15px 4px rgba(240, 236, 229, 0.15);
+
+  @include mq(desk) {
+    width: 400px;
+    height: 528px;
+    margin-bottom: 0px;
+    box-shadow: 2px 2px 15px 4px rgba(240, 236, 229, 0.15);
+  }
 }
 
 .sectionAboutBtn,
@@ -149,7 +202,7 @@
 }
 
 .sectionAboutBtn {
- background-color: var(--copperYellow);
+  background-color: var(--copperYellow);
   color: var(--eggShellWhite);
 }
 
