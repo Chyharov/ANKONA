@@ -214,28 +214,69 @@
 
 .sectionAboutBlockWhyUs {
   padding-top: 8px;
+
+  @include mq(desk) {
+    position: relative;
+  }
 }
 
 .aboutBlockWhyUsTitle {
   font-family: 'Montserrat SemiBold';
   font-size: 24px;
-  line-height: 32px;
+  line-height: 1.34;
   padding: 8px;
   text-align: end;
   color: var(--eggShellWhite);
   opacity: 0.08;
+
+  @include mq(desk) {
+    position: absolute;
+    top: 104px;
+    font-size: 48px;
+    line-height: 1.17;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.aboutBlockWhyUsListLeft {
+  margin-bottom: 8px;
+
+  @include mq(desk) {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: flex-start;
+    }
 }
 
 .aboutBlockWhyUsList {
   margin-bottom: 24px;
+
+  @include mq(desk) {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+  }
 }
 
 .aboutBlockWhyUsList__Item {
   padding: 8px;
+
+  @include mq(desk) {
+    width: 320px;
+    margin-bottom: 0px;
+    padding: 16px;
+  }
 }
 
 .aboutBlockWhyUsList__Item:not(:last-child) {
   margin-bottom: 8px;
+
+  @include mq(desk) {
+    margin-bottom: 0px;
+    margin-right: 80px;
+  }
 }
 
 .aboutBlockWhyUsList__ItemTitle {
@@ -245,12 +286,25 @@
   color: var(--eggShellWhite);
   padding-bottom: 4px;
   border-bottom: 1px solid var(--copperYellow);
+
+  @include mq(desk) {
+    font-size: 24px;
+    line-height: 1.34;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
 }
 
 .aboutBlockWhyUsList__ItemDescription {
   font-family: 'Montserrat Regular';
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   color: var(--eggShellWhite);
   padding-top: 4px;
+
+  @include mq(desk) {
+    padding-top: 0px;
+    font-size: 14px;
+    line-height: 1.43;
+  }
 }
