@@ -137,6 +137,9 @@
     transform: none;
     padding-bottom: 0px;
     width: 600px;
+    display: flex;
+      justify-content: center;
+      align-items: center;
   }
 }
 
@@ -164,5 +167,8 @@
     background-color: transparent;
     top: 20px;
     height: 40px;
+    width: 600px;
+    left: 50%;
+      transform: translateX(-50%);
   }
 }
