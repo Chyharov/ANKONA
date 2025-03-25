@@ -85,7 +85,6 @@ const SectionGoods = () => {
           : filters.manufacturer.has(p.manufacturer)
       );
     }
-
     return filtered;
   };
 

@@ -4,6 +4,12 @@
   padding-top: 32px;
   padding-bottom: 64px;
   background-color: var(--whiteBG);
+
+  @include mq(desk) {
+    padding-top: 44px;
+    padding-bottom: 40px;
+    background-color: var(--whiteBG);
+  }
 }
 
 .sectionGoodsTitle {
@@ -14,12 +20,24 @@
   color: var(--richSoilBrown);
   padding: 8px;
   margin-bottom: 8px;
+
+  @include mq(desk) {
+    font-size: 48px;
+    line-height: 1.17;
+    margin-bottom: 4px;
+  }
 }
 
 .sectionGoodsBorder {
   border-bottom: 1px solid var(--copperYellow);
   margin-left: -16px;
   margin-bottom: 16px;
+
+  @include mq(desk) {
+    margin-left: -80px;
+    width: 1040px;
+    margin-bottom: 40px;
+  }
 }
 
 .sectionGoodsCategoryBtn {
@@ -88,6 +106,12 @@
   line-height: 1.5;
   color: var(--grayColor);
   padding: 8px;
+
+  @include mq(desk) {
+    font-family: 'Montserrat Medium';
+    font-size: 24px;
+    line-height: 1.33;
+  }
 }
 
 .borderforGoodsCategoryList {
