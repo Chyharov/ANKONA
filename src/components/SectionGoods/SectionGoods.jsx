@@ -55,7 +55,30 @@ const SectionGoods = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [showCategories, setShowCategories] = useState(false);
   const [showManufacturers, setShowManufacturers] = useState(false);
-  const itemsPerPage = 5;
+  const [itemsPerPage, setItemsPerPage] = useState(5);
+
+  useEffect(() => {
+    setFilteredProducts(filterProducts(products, filters));
+    setCurrentPage(1);
+  }, [filters]);
+
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      if (window.innerWidth <= 1440) {
+        setItemsPerPage(5);
+      } else {
+        setItemsPerPage(12);
+      }
+    };
+
+    updateItemsPerPage();
+
+    window.addEventListener('resize', updateItemsPerPage);
+
+    return () => {
+      window.removeEventListener('resize', updateItemsPerPage);
+    };
+  }, []);
 
   useEffect(() => {
     setFilteredProducts(filterProducts(products, filters));
@@ -363,6 +386,11 @@ const SectionGoods = () => {
                   style={{ cursor: 'pointer' }}
                 >
                   <div className={s.productCard}>
+                    <img
+                    className={s.productListItemImg}
+                    src={product.imageDesktop}
+                    alt="productImage"
+                  />
                     <h4 className={s.productListItemTitle}>{product.name}</h4>
                     <p className={s.productListItemManufacturer}>
                       {Array.isArray(product.manufacturer)
@@ -389,12 +417,6 @@ const SectionGoods = () => {
                       </div>
                     ))}
                   </div>
-
-                  <img
-                    className={s.productListItemImg}
-                    src={noImages}
-                    alt="noImages"
-                  />
                 </li>
               );
             })

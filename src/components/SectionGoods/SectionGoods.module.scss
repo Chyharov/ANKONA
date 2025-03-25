@@ -111,11 +111,11 @@
   color: var(--grayColor);
   padding: 8px;
 
-    @include mq(desk) {
-        font-family: 'Montserrat Medium';
-        font-size: 24px;
-        line-height: 1.33;
-      }
+  @include mq(desk) {
+    font-family: 'Montserrat Medium';
+    font-size: 24px;
+    line-height: 1.33;
+  }
 }
 
 .borderforGoodsCategoryList {
@@ -131,10 +131,10 @@
   padding: 8px;
 
   @include mq(desk) {
-      font-family: 'Montserrat Medium';
-      font-size: 24px;
-      line-height: 1.33;
-    }
+    font-family: 'Montserrat Medium';
+    font-size: 24px;
+    line-height: 1.33;
+  }
 }
 
 .findNumerContainer {
@@ -144,11 +144,17 @@
 
 .productList {
   padding-top: 32px;
-}
 
-.productListItem {
-  width: 100%;
-  min-height: 136px;
+  @include mq(desk) {
+    padding-top: 40px;
+    padding-bottom: 24px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    justify-items: center;
+    gap: 16px;
+  }
 }
 
 .productListItemTitle {
@@ -180,6 +186,10 @@
 
 .productListItemImg {
   display: none;
+
+  @include mq(desk) {
+    display: block;
+  }
 }
 
 .findDescription {
@@ -189,17 +199,11 @@
   color: var(--richSoilBrown);
   padding: 8px 8px 8px 0px;
 
-    @include mq(desk) {
-        font-family: 'Montserrat Medium';
-        font-size: 24px;
-        line-height: 1.33;
-      }
-}
-
-.productListItem {
-  margin-bottom: 24px;
-  border-radius: 4px;
-  box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
+  @include mq(desk) {
+    font-family: 'Montserrat Medium';
+    font-size: 24px;
+    line-height: 1.33;
+  }
 }
 
 .productListItem {
@@ -209,6 +213,18 @@
   background-color: var(--eggShellWhite);
   flex-direction: column;
   padding: 4px 8px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
+  width: 100%;
+  min-height: 136px;
+
+  @include mq(desk) {
+    width: 306px;
+    margin-bottom: 0px;
+    box-shadow: none;
+    background-color: transparent;
+  }
 }
 
 .selectedCategory,

@@ -47,6 +47,14 @@ import imgProductDetailsId55 from 'images/productDetails/imgProductDetailsId55.j
 import imgProductDetailsId56 from 'images/productDetails/imgProductDetailsId56.jpg';
 import imgProductDetailsId63 from 'images/productDetails/imgProductDetailsId63.jpg';
 import imgProductDetailsId64 from 'images/productDetails/imgProductDetailsId64.jpg';
+import imageToAll from 'images/goods/imageToAll.jpg';
+import imageToVRHDM from 'images/goods/imageToVRHDM.jpg';
+import imageToVRHD from 'images/goods/imageToVRHD.jpg';
+import imageToVRHD2 from 'images/goods/imageToVRHD2.jpg';
+import imageToVRHM from 'images/goods/imageToVRHM.jpg';
+import imageToChicken from 'images/goods/imageToChicken.jpg';
+import imageToPig from 'images/goods/imageToPig.jpg';
+import imageToDRH from 'images/goods/imageToDRH.jpg';
 
 export const products = [
   {
@@ -56,6 +64,7 @@ export const products = [
     description: 'Премікси для ВРХ, ДРХ та Коней',
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
     image: imgProductDetailsId1,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: 'Можуть бути представлені:',
@@ -78,6 +87,7 @@ export const products = [
     description: 'Смачний та гомогенний лизунець',
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
     image: imgProductDetailsId2,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: 'Складові:',
@@ -110,6 +120,7 @@ export const products = [
     description: 'Лизунець для сухостійних корів',
     category: ['ВРХ дорослі', 'ВРХ молодняк'],
     image: imgProductDetailsId3,
+    imageDesktop: imageToVRHDM,
     sections: [
       {
         title: 'Використання лизунців для сухостійних корів сприяє:',
@@ -149,6 +160,7 @@ export const products = [
     description: 'Професійний матеріал для птахівників',
     category: ['Птиця'],
     image: imgProductDetailsId4,
+    imageDesktop: imageToChicken,
     sections: [
       {
         title: 'Складові:',
@@ -183,6 +195,7 @@ export const products = [
       'Запатентована комбинація деяких ефірних олій: знижує швидке виділення амміаку з амінокислот, без погіршення синтезу оцтової й пропіонової кислот, тому не має негативного впливу на виробництво молока та молочного жиру.',
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
     image: imgProductDetailsId5,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: 'Переваги:',
@@ -214,6 +227,7 @@ export const products = [
       'Кормова добавка на основі фермента амілази —  спеціально призначена для годівлі корів.',
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId6,
+    imageDesktop: imageToVRHD,
     sections: [
       {
         title: 'Використання:',
@@ -253,6 +267,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі', 'ВРХ молодняк'],
     image: imgProductDetailsId7,
+    imageDesktop: imageToVRHDM,
     sections: [
       {
         title: `Корови охоче п'ють смачне пійло, що містить:`,
@@ -305,6 +320,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId8,
+    imageDesktop: imageToVRHD2,
     sections: [
       {
         title: `Корови охоче п'ють смачне пійло, що містить:`,
@@ -332,6 +348,7 @@ export const products = [
     description: 'Добавка для профілактики гіпокальціємії',
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId9,
+    imageDesktop: imageToVRHD,
     sections: [
       {
         title: `Складові:`,
@@ -366,6 +383,7 @@ export const products = [
     description: `Рідкий мінерально–вітамінний підкислювач`,
     category: ['Підходе для всіх'],
     image: imgProductDetailsId10,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: `Складові:`,
@@ -413,6 +431,7 @@ export const products = [
     description: `Імуностимулююча кормова добавка`,
     category: ['Підходе для всіх'],
     image: imgProductDetailsId11,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: `Складові:`,
@@ -454,6 +473,7 @@ export const products = [
     description: 'Рідкий підкислювач для всіх видів тварин',
     category: ['ВРХ молодняк', 'ДРХ', 'Свині', 'Птиця'],
     image: imgProductDetailsId12,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: `Складові:`,
