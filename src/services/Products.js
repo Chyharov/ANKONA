@@ -1327,6 +1327,7 @@ export const products = [
     ],
     category: ['Підходе для всіх'],
     image: imgProductDetailsId37,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: `Продукти для птиці:`,
@@ -1382,6 +1383,7 @@ export const products = [
     ],
     category: ['ВРХ молодняк'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToVRHM2,
     sections: [
       {
         title: `Введення:`,
@@ -1407,6 +1409,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: `Складові:`,
@@ -1442,6 +1445,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToVRHD2,
     sections: [
       {
         title: `Складові:`,
@@ -1472,6 +1476,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToVRHD,
     sections: [
       {
         title: `Основа:`,
@@ -1501,6 +1506,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToVRHD2,
     sections: [
       {
         title: `Дозування:`,
@@ -1546,6 +1552,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToVRHD,
     sections: [
       {
         title: `Levucell SC:`,
@@ -1586,6 +1593,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToVRHD2,
     sections: [
       {
         title: `Дозування:`,
@@ -1609,6 +1617,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToVRHD,
     sections: [
       {
         title: `Дозування:`,
@@ -1630,6 +1639,7 @@ export const products = [
     description: 'Буферна добавка',
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToVRHD2,
     sections: [
       {
         title: `Складові:`,
@@ -1664,6 +1674,7 @@ export const products = [
     ],
     category: ['Свині'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToPig,
     sections: [
       {
         title: `Hy-М — це унікальна кормова добавка:`,
@@ -1694,6 +1705,7 @@ export const products = [
     description: 'Захищена сечовина (Хорватія)',
     category: ['ВРХ дорослі', 'ДРХ'],
     image: imgProductDetailsId48,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: `Складові:`,
