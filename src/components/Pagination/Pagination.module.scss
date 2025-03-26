@@ -1,25 +1,25 @@
 @import '../../sass/utils/mixin';
 
 .loadMoreButton {
-    background-color: var(--eggShellWhite);
-    border: 1px solid var(--copperYellow);
-    border-radius: 4px;
-    color: var(--richSoilBrown);
-    display: block;
-    font-family: Montserrat Bold;
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 16px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 12px;
-    padding-top: 12px;
-    text-align: center;
-    width: 91.5%;
+  background-color: var(--eggShellWhite);
+  border: 1px solid var(--copperYellow);
+  border-radius: 4px;
+  color: var(--richSoilBrown);
+  display: block;
+  font-family: Montserrat Bold;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  text-align: center;
+  width: 91.5%;
 
-    @include mq(desk) {
-      display: none;
-    }
+  @include mq(desk) {
+    display: none;
+  }
 }
 
 .buttonPagination {
@@ -56,6 +56,11 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+
+  @include mq(desk) {
+    margin-left: auto;
+    width: 360px;
+  }
 }
 
 .ellipsis {
