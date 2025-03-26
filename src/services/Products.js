@@ -519,6 +519,7 @@ export const products = [
     description: 'Сорбент-премікс преміум-класу',
     category: ['Підходе для всіх'],
     image: imgProductDetailsId13,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: `Складові:`,
@@ -563,6 +564,7 @@ export const products = [
     description: 'Сорбент токсинів комплексний',
     category: ['Підходе для всіх'],
     image: imgProductDetailsId14,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: `Складові:`,
@@ -609,6 +611,7 @@ export const products = [
     ],
     category: ['Підходе для всіх'],
     image: imgProductDetailsId15,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: `Складові, 1кг:`,
@@ -648,6 +651,7 @@ export const products = [
     description: 'Буферна кормова добавка',
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId16,
+    imageDesktop: imageToVRHD2,
     sections: [
       {
         title: `Спеціальна мінеральна добавка в корм, для зниження кислотоутворення в рубці.`,
@@ -675,6 +679,7 @@ export const products = [
     description: 'Буферна кормова добавка',
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId17,
+    imageDesktop: imageToVRHD,
     sections: [
       {
         title: `Буферизує та стабілізує pH рубця`,
@@ -702,6 +707,7 @@ export const products = [
     description: 'Концентрат Біотину',
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId18,
+    imageDesktop: imageToVRHD2,
     sections: [
       {
         title: `У сучасних високопродуктивних стадах, особливо у випадку раціонів, багатих концентрованими кормами, синтез біотину знижується через пригнічення дії мікробів в рубці.`,
@@ -733,6 +739,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId19,
+    imageDesktop: imageToVRHD,
     sections: [
       {
         title: `Добова потреба ß-каротину:`,
@@ -764,6 +771,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId20,
+    imageDesktop: imageToVRHD2,
     sections: [
       {
         title: `Використання Kuhpower забезпечує:`,
@@ -794,6 +802,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId21,
+    imageDesktop: imageToVRHD,
     sections: [
       {
         items: [
@@ -822,6 +831,7 @@ export const products = [
     description: 'Джерело додаткової енергії в раціон',
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId22,
+    imageDesktop: imageToVRHD2,
     sections: [
       {
         title: `Введення коровам:`,
@@ -843,6 +853,7 @@ export const products = [
     description: 'Енергетична добавка для профілактики та лікування кетозів',
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId23,
+    imageDesktop: imageToVRHD,
     sections: [
       {
         title: `Діюча речовина:`,
@@ -879,6 +890,7 @@ export const products = [
     description: 'Енергетична рідка добавка',
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId24,
+    imageDesktop: imageToVRHD2,
     sections: [
       {
         title: `Діюча речовина - гліцерин 80%:`,
