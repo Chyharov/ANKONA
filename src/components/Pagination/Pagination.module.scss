@@ -16,6 +16,10 @@
     padding-top: 12px;
     text-align: center;
     width: 91.5%;
+
+    @include mq(desk) {
+      display: none;
+    }
 }
 
 .buttonPagination {

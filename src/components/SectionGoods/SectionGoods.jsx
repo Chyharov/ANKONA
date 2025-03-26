@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import arrowUp from 'images/goods/arrowUp.svg';
 import arrowDown from 'images/goods/arrowDown.svg';
-import noImages from 'images/goods/noMedia.jpg';
 import iconHorse from 'images/goods/iconHorse.svg';
 import iconPig from 'images/goods/iconPig.svg';
 import iconHen from 'images/goods/iconHen.svg';
@@ -385,12 +384,12 @@ const SectionGoods = () => {
                   onClick={() => navigate(`/product/${product.id}`)}
                   style={{ cursor: 'pointer' }}
                 >
-                  <div className={s.productCard}>
                     <img
                     className={s.productListItemImg}
                     src={product.imageDesktop}
                     alt="productImage"
                   />
+                  <div className={s.productCard}>
                     <h4 className={s.productListItemTitle}>{product.name}</h4>
                     <p className={s.productListItemManufacturer}>
                       {Array.isArray(product.manufacturer)
