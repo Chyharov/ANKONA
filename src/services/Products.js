@@ -55,6 +55,7 @@ import imageToVRHM from 'images/goods/imageToVRHM.jpg';
 import imageToChicken from 'images/goods/imageToChicken.jpg';
 import imageToPig from 'images/goods/imageToPig.jpg';
 import imageToDRH from 'images/goods/imageToDRH.jpg';
+import imageToVRHM2 from 'images/goods/imageToVRHM2.jpg';
 
 export const products = [
   {
@@ -921,6 +922,7 @@ export const products = [
     description: 'Престартер у вигляді мюсли',
     category: ['ВРХ молодняк'],
     image: imgProductDetailsId25,
+    imageDesktop: imageToVRHM2,
     sections: [
       {
         title: `Дуже смачний корм для вирощування телят, ранній прийом корму, з першого тижня життя.`,
@@ -959,6 +961,7 @@ export const products = [
     description: '10% ядро для кормів телятам',
     category: ['ВРХ молодняк'],
     image: imgProductDetailsId26,
+    imageDesktop: imageToVRHM,
     sections: [
       {
         title: `Складові:`,
@@ -986,6 +989,7 @@ export const products = [
     description: 'Збагачувач незбираного молока',
     category: ['ВРХ молодняк'],
     image: imgProductDetailsId27,
+    imageDesktop: imageToVRHM2,
     sections: [
       {
         items: [
@@ -1011,6 +1015,7 @@ export const products = [
     description: 'Високоякісний замінник незбираного молока',
     category: ['ВРХ молодняк'],
     image: imgProductDetailsId28,
+    imageDesktop: imageToVRHM,
     sections: [
       {
         items: [
@@ -1038,6 +1043,7 @@ export const products = [
     description: 'Концентрат для профілактики діареї у телят',
     category: ['ВРХ молодняк'],
     image: imgProductDetailsId29,
+    imageDesktop: imageToVRHM2,
     sections: [
       {
         items: [
@@ -1073,6 +1079,7 @@ export const products = [
     description: 'Швидке лікування діареї у телят',
     category: ['ВРХ молодняк', 'ДРХ', 'Коні'],
     image: imgProductDetailsId30,
+    imageDesktop: imageToAll,
     sections: [
       {
         items: [
@@ -1118,6 +1125,7 @@ export const products = [
     ],
     category: ['ВРХ молодняк'],
     image: imgProductDetailsId31,
+    imageDesktop: imageToVRHM,
     sections: [
       {
         title: `У разі стресу забезпечує телят доступною енергією.`,
@@ -1151,6 +1159,7 @@ export const products = [
     ],
     category: ['Підходе для всіх'],
     image: imgProductDetailsId32,
+    imageDesktop: imageToAll,
     sections: [
       {
         items: [
@@ -1206,6 +1215,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі', 'ВРХ молодняк'],
     image: imgProductDetailsId33,
+    imageDesktop: imageToVRHDM,
     sections: [
       {
         title: `Дозування:`,
@@ -1228,6 +1238,7 @@ export const products = [
     ],
     category: ['Підходе для всіх'],
     image: imgProductDetailsId34,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: `Доза:`,
@@ -1252,6 +1263,7 @@ export const products = [
     ],
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId35,
+    imageDesktop: imageToVRHD,
     sections: [
       {
         title: `Норма витрат:`,
@@ -1281,6 +1293,7 @@ export const products = [
     description: 'Лизунець меласований для овець',
     category: ['ДРХ'],
     image: imgProductDetailsId36,
+    imageDesktop: imageToDRH,
     sections: [
       {
         items: [
