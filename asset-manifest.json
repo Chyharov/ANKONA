@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.c17f5902.css",
-    "main.js": "/ANKONA/static/js/main.a5ab9de4.js",
+    "main.js": "/ANKONA/static/js/main.f3cb8637.js",
     "static/css/463.24b34d86.chunk.css": "/ANKONA/static/css/463.24b34d86.chunk.css",
     "static/js/463.51af1486.chunk.js": "/ANKONA/static/js/463.51af1486.chunk.js",
     "static/css/502.6253c727.chunk.css": "/ANKONA/static/css/502.6253c727.chunk.css",
@@ -15,7 +15,7 @@
     "static/js/532.fea0ce3f.chunk.js": "/ANKONA/static/js/532.fea0ce3f.chunk.js",
     "static/js/664.947465d9.chunk.js": "/ANKONA/static/js/664.947465d9.chunk.js",
     "static/js/517.3a543be6.chunk.js": "/ANKONA/static/js/517.3a543be6.chunk.js",
-    "static/js/175.26caeaa3.chunk.js": "/ANKONA/static/js/175.26caeaa3.chunk.js",
+    "static/js/175.91a2d342.chunk.js": "/ANKONA/static/js/175.91a2d342.chunk.js",
     "static/media/horseHeroImageDesktop.jpg": "/ANKONA/static/media/horseHeroImageDesktop.e7c655759ea03ee917b5.jpg",
     "static/media/pictDesk.jpg": "/ANKONA/static/media/pictDesk.453e17e05b4a4e32f2e9.jpg",
     "static/media/imageToVRHDM.jpg": "/ANKONA/static/media/imageToVRHDM.4f5f3e797fcc285cd344.jpg",
@@ -32,8 +32,10 @@
     "static/media/imgProductDetailsId21.jpg": "/ANKONA/static/media/imgProductDetailsId21.cf64ce4ef3e4b5f7041d.jpg",
     "static/media/imgProductDetailsId20.jpg": "/ANKONA/static/media/imgProductDetailsId20.db0d14b4196549909911.jpg",
     "static/media/imgProductDetailsId8.jpg": "/ANKONA/static/media/imgProductDetailsId8.d5acf3720dc411648928.jpg",
+    "static/media/imageToPig2.jpg": "/ANKONA/static/media/imageToPig2.310c15c98fda6670f4a0.jpg",
     "static/media/imgProductDetailsId5.jpg": "/ANKONA/static/media/imgProductDetailsId5.9caf881d82cd3118c52d.jpg",
     "static/media/imgProductDetailsId1.jpg": "/ANKONA/static/media/imgProductDetailsId1.4fa8e9ddf159db90c050.jpg",
+    "static/media/imageToPig3.jpg": "/ANKONA/static/media/imageToPig3.70dda909253aa2b7acba.jpg",
     "static/media/imgProductDetailsId16.jpg": "/ANKONA/static/media/imgProductDetailsId16.d05cea435138ccbfea64.jpg",
     "static/media/imgProductDetailsId30.jpg": "/ANKONA/static/media/imgProductDetailsId30.ef60541755848ca76b22.jpg",
     "static/media/imageToDRH.jpg": "/ANKONA/static/media/imageToDRH.1636f136fbeadba97175.jpg",
@@ -67,6 +69,7 @@
     "static/media/imgProductDetailsId48.jpg": "/ANKONA/static/media/imgProductDetailsId48.90c5dde58d0daeea9a7d.jpg",
     "static/media/imgProductDetailsId6.jpg": "/ANKONA/static/media/imgProductDetailsId6.f456fe77e5cdbebb940a.jpg",
     "static/media/imgProductDetailsId2.jpg": "/ANKONA/static/media/imgProductDetailsId2.b1aefa887a9a7d740e7a.jpg",
+    "static/media/imageToChicken2.jpg": "/ANKONA/static/media/imageToChicken2.11dbc3e2b4f56f43482c.jpg",
     "static/media/imgProductDetailsId4.jpg": "/ANKONA/static/media/imgProductDetailsId4.45da2651ef883325f2b1.jpg",
     "static/media/imgProductDetailsId24.jpg": "/ANKONA/static/media/imgProductDetailsId24.96b2f55089fa321b4114.jpg",
     "static/media/imgProductDetailsId14.jpg": "/ANKONA/static/media/imgProductDetailsId14.182134e6428944bf720d.jpg",
@@ -132,7 +135,7 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.c17f5902.css.map": "/ANKONA/static/css/main.c17f5902.css.map",
-    "main.a5ab9de4.js.map": "/ANKONA/static/js/main.a5ab9de4.js.map",
+    "main.f3cb8637.js.map": "/ANKONA/static/js/main.f3cb8637.js.map",
     "463.24b34d86.chunk.css.map": "/ANKONA/static/css/463.24b34d86.chunk.css.map",
     "463.51af1486.chunk.js.map": "/ANKONA/static/js/463.51af1486.chunk.js.map",
     "502.6253c727.chunk.css.map": "/ANKONA/static/css/502.6253c727.chunk.css.map",
@@ -146,10 +149,10 @@
     "532.fea0ce3f.chunk.js.map": "/ANKONA/static/js/532.fea0ce3f.chunk.js.map",
     "664.947465d9.chunk.js.map": "/ANKONA/static/js/664.947465d9.chunk.js.map",
     "517.3a543be6.chunk.js.map": "/ANKONA/static/js/517.3a543be6.chunk.js.map",
-    "175.26caeaa3.chunk.js.map": "/ANKONA/static/js/175.26caeaa3.chunk.js.map"
+    "175.91a2d342.chunk.js.map": "/ANKONA/static/js/175.91a2d342.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c17f5902.css",
-    "static/js/main.a5ab9de4.js"
+    "static/js/main.f3cb8637.js"
   ]
 }
