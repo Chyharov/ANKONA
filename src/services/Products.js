@@ -53,7 +53,10 @@ import imageToVRHD from 'images/goods/imageToVRHD.jpg';
 import imageToVRHD2 from 'images/goods/imageToVRHD2.jpg';
 import imageToVRHM from 'images/goods/imageToVRHM.jpg';
 import imageToChicken from 'images/goods/imageToChicken.jpg';
+import imageToChicken2 from 'images/goods/imageToChicken2.jpg';
 import imageToPig from 'images/goods/imageToPig.jpg';
+import imageToPig2 from 'images/goods/imageToPig2.jpg'
+import imageToPig3 from 'images/goods/imageToPig3.jpg';
 import imageToDRH from 'images/goods/imageToDRH.jpg';
 import imageToVRHM2 from 'images/goods/imageToVRHM2.jpg';
 
@@ -1756,6 +1759,7 @@ export const products = [
       'Комплексні продукти с захищеною сечовиною у складі (Хорватія)',
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId49,
+    imageDesktop: imageToVRHD,
     sections: [
       {
         title: `NutriBos VN 75 і COMPLETE в мікрокапсулах, вкритих жировою оболонкою — забезпечує поступове і тривале виділення азоту, вітамінів та мінералів в рубець жуйних, що підвищує ефективність їх використання!`,
@@ -1804,6 +1808,7 @@ export const products = [
     description: 'Премікс для свиней на відгодівлі 30-60 кг, 4,5%',
     category: ['Свині'],
     image: imgProductDetailsId50,
+    imageDesktop: imageToPig,
     sections: [
       {
         title: `Складові:`,
@@ -1839,6 +1844,7 @@ export const products = [
     description: 'Премікс для свиней на відгодівлі від 60 кг, 3,3%',
     category: ['Свині'],
     image: imgProductDetailsId51,
+    imageDesktop: imageToPig2,
     sections: [
       {
         title: `Складові:`,
@@ -1875,6 +1881,7 @@ export const products = [
     description: 'Премікс для свиноматок у транзитний період',
     category: ['Свині'],
     image: imgProductDetailsId52,
+    imageDesktop: imageToPig,
     sections: [
       {
         title: `Складові:`,
@@ -1910,6 +1917,7 @@ export const products = [
     description: 'Премікс для лактуючих свиноматок, 5%',
     category: ['Свині'],
     image: imgProductDetailsId53,
+    imageDesktop: imageToPig3,
     sections: [
       {
         title: `Складові:`,
@@ -1945,6 +1953,7 @@ export const products = [
     description: 'Премікс для супоросних свиноматок, 3%',
     category: ['Свині'],
     image: imgProductDetailsId54,
+    imageDesktop: imageToPig2,
     sections: [
       {
         title: `Складові:`,
@@ -1980,6 +1989,7 @@ export const products = [
     description: 'Премікс для поросят до 30 кг 6,5%',
     category: ['Свині'],
     image: imgProductDetailsId55,
+    imageDesktop: imageToPig,
     sections: [
       {
         title: `Складові:`,
@@ -2016,6 +2026,7 @@ export const products = [
       'Модулятор мікробіому; Кокцидіостатик; Суміш органічних кислот',
     category: ['Птиця'],
     image: imgProductDetailsId56,
+    imageDesktop: imageToChicken2,
     sections: [
       {
         title: `Складові:`,
@@ -2055,6 +2066,7 @@ export const products = [
       'Модулятор мікробіому; Альтернатива антибіотику; Суміш органічних кислот',
     category: ['Свині'],
     image: imgProductDetailsId56,
+    imageDesktop: imageToPig2,
     sections: [
       {
         title: `Складові:`,
@@ -2087,6 +2099,7 @@ export const products = [
     description: 'Підвищення рівня вітаміну D3 у сироватці крові',
     category: ['Свині'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToPig,
     sections: [
       {
         title: `Складові:`,
@@ -2122,6 +2135,7 @@ export const products = [
     description: 'Підвищення рівня вітаміну D3 у сироватці крові',
     category: ['Птиця'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToChicken,
     sections: [
       {
         title: `Складові:`,
@@ -2160,6 +2174,7 @@ export const products = [
     description: 'Підвищення рівня вітаміну D3 у сироватці крові',
     category: ['Птиця'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToChicken2,
     sections: [
       {
         title: `Складові:`,
@@ -2197,6 +2212,7 @@ export const products = [
     description: 'Підвищення рівня вітаміну D3 у сироватці крові',
     category: ['Птиця'],
     image: imgProductDetailsId38,
+    imageDesktop: imageToChicken,
     sections: [
       {
         title: `Складові:`,
@@ -2237,6 +2253,7 @@ export const products = [
     ],
     category: ['Підходе для всіх'],
     image: imgProductDetailsId56,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: 'Складові:',
@@ -2269,6 +2286,7 @@ export const products = [
       'Ультрабіотик, що пригнічує розвиток патогенних мікрооганізмів (вірусів, бактерій, грибків) в широкому спектрі',
     category: ['Підходе для всіх'],
     image: imgProductDetailsId63,
+    imageDesktop: imageToAll,
     sections: [
       {
         title: 'Мета використання:',
@@ -2300,6 +2318,7 @@ export const products = [
     description: 'Концентрат сирої клітковини для свиней',
     category: ['Свині'],
     image: imgProductDetailsId64,
+    imageDesktop: imageToPig2,
     sections: [
       {
         title: 'Складові:',
