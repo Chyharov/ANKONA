@@ -66,7 +66,7 @@ const Pagination = ({
       )}
       <div className={s.paginationButtons}>
         <button
-          className={s.buttonPagination}
+          className={s.buttonPaginationLeft}
           disabled={currentPage === 1}
           onClick={() => onPageChange(currentPage - 1)}
         >
@@ -76,7 +76,7 @@ const Pagination = ({
         {renderPaginationButtons()}
 
         <button
-          className={s.buttonPagination}
+          className={s.buttonPaginationRight}
           disabled={currentPage === totalPages}
           onClick={() => onPageChange(currentPage + 1)}
         >

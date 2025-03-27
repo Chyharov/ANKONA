@@ -22,16 +22,30 @@
   }
 }
 
-.buttonPagination {
+.buttonPaginationLeft,
+.buttonPaginationRight {
   width: 40px;
   height: 40px;
   border: none;
   background: transparent;
 }
 
-.buttonPagination:disabled {
+.buttonPaginationLeft:disabled,
+.buttonPaginationRight:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.buttonPaginationLeft {
+  @include mq(desk) {
+    margin-right: 16px;
+  }
+}
+
+.buttonPaginationRight {
+  @include mq(desk) {
+    margin-left: 16px;
+  }
 }
 
 .numerPaginationBtn,
@@ -45,11 +59,25 @@
 .numerPaginationBtn {
   color: #ffffff;
   background-color: var(--richSoilBrown);
+
+  @include mq(desk) {
+    color: var(--copperYellow);
+    font-family: 'Montserrat Bold';
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 .numerPaginationBtnInactive {
   color: #a7a7a7;
   background-color: transparent;
+
+  @include mq(desk) {
+    color: #574A36;
+        font-family: 'Montserrat Bold';
+        font-size: 16px;
+        line-height: 1.5;
+  }
 }
 
 .paginationButtons {
@@ -59,7 +87,7 @@
 
   @include mq(desk) {
     margin-left: auto;
-    width: 360px;
+    width: 330px;
   }
 }
 
@@ -73,4 +101,9 @@
   line-height: 1.5;
   text-align: center;
   width: 26px;
+
+  @include mq(desk) {
+    width: 34px;
+    color: var(--grayColor);
+  }
 }
