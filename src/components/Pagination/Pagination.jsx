@@ -1,41 +1,36 @@
+import { useEffect } from 'react';
 import arrowLeft from 'images/goods/arrowLeft.svg';
 import arrowRight from 'images/goods/arrowRight.svg';
 import s from './Pagination.module.scss';
 
-const Pagination = ({
-  currentPage,
-  totalPages,
-  onPageChange,
-  onLoadMore,
-  hasMoreItems,
-}) => {
+const Pagination = ({ currentPage, totalPages, onPageChange, onLoadMore, hasMoreItems }) => {
+  useEffect(() => {
+    const handleResize = () => window.innerWidth > 1439;
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const renderPaginationButtons = () => {
     const pages = [];
     const firstPage = 1;
-    const secondPage = 2;
     const lastPage = totalPages;
-    const middlePage = Math.ceil(totalPages / 2);
+    let secondPage = 2;
+
+    if (currentPage > 2 && currentPage < totalPages - 1) {
+      secondPage = currentPage;
+    }
 
     pages.push(firstPage);
-    pages.push(secondPage);
+    if (secondPage !== firstPage && secondPage !== lastPage) {
+      pages.push(secondPage);
+    }
 
-    if (middlePage > secondPage + 1) {
+    if (secondPage <= totalPages - 2) {
       pages.push('...');
     }
 
-    if (
-      middlePage !== firstPage &&
-      middlePage !== secondPage &&
-      middlePage !== lastPage
-    ) {
-      pages.push(middlePage);
-    }
-
-    if (middlePage < lastPage - 1) {
-      pages.push('...');
-    }
-
-    if (lastPage !== firstPage && lastPage !== secondPage) {
+    if (totalPages > 3) {
+      pages.push(lastPage - 1);
       pages.push(lastPage);
     }
 
