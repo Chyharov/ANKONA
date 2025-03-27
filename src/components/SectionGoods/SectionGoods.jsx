@@ -206,7 +206,7 @@ const SectionGoods = () => {
                   }`}
                   style={{ cursor: 'pointer' }}
                 >
-                  <label className={s.customCheckbox}>
+                  <label className={s.customCheckboxCategoryList}>
                     <input
                       type="checkbox"
                       checked={isChecked}
@@ -319,7 +319,7 @@ const SectionGoods = () => {
                       checked={isChecked}
                       onChange={() => handleFilterChange('manufacturer', man)}
                     />
-                    <span className={s.checkmark}>
+                    <span className={s.checkmarkCategoryList}>
                       {isChecked && (
                         <img
                           src={iconCheckBox}
@@ -329,9 +329,9 @@ const SectionGoods = () => {
                       )}
                     </span>
                     <p
-                      className={`${s.sectionGoodsCategoryList__itemName} ${
-                        isChecked ? s.selectedCategoryText : ''
-                      }`}
+                      className={`${
+                        s.sectionGoodsCategoryList__itemNameCategoryList
+                      } ${isChecked ? s.selectedCategoryText : ''}`}
                     >
                       {man === 'FUTTERGUT - надійна годівля' ? (
                         <>
@@ -384,7 +384,7 @@ const SectionGoods = () => {
                   onClick={() => navigate(`/product/${product.id}`)}
                   style={{ cursor: 'pointer' }}
                 >
-                    <img
+                  <img
                     className={s.productListItemImg}
                     src={product.imageDesktop}
                     alt="productImage"

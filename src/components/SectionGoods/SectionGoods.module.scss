@@ -98,13 +98,23 @@
   margin-bottom: 0px;
 }
 
-.sectionGoodsCategoryList__itemName {
+.sectionGoodsCategoryList__itemName,
+.sectionGoodsCategoryList__itemNameCategoryList {
   font-family: 'Montserrat Regular';
   font-size: 16px;
   line-height: 1.5;
   color: var(--eggShellWhite);
   width: 100%;
+}
 
+.sectionGoodsCategoryList__itemName {
+  @include mq(desk) {
+    font-family: 'Montserrat Bold';
+    text-align: center;
+  }
+}
+
+.sectionGoodsCategoryList__itemNameCategoryList {
   @include mq(desk) {
     font-family: 'Montserrat Bold';
     text-align: center;
@@ -312,24 +322,19 @@
   text-align: center;
 }
 
-.customCheckbox {
+.customCheckbox,
+.customCheckboxCategoryList {
   width: 100%;
   display: flex;
   align-items: center;
   cursor: pointer;
 
-  @include mq(desk) {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-
   input {
     display: none;
   }
 
-  .checkmark {
+  .checkmark,
+  .checkmarkCategoryList {
     width: 21px;
     height: 18px;
     border-radius: 2px;
@@ -339,7 +344,9 @@
     justify-content: center;
     margin-right: 15px;
     background-color: var(--grayColor);
+  }
 
+  .checkmark {
     @include mq(desk) {
       margin-left: 10px;
       width: 18px;
@@ -348,15 +355,44 @@
     }
   }
 
+  .checkmarkCategoryList {
+    @include mq(desk) {
+      width: 18px;
+      left: 10px;
+      top: 0px;
+      position: absolute;
+    }
+  }
+
   .checkIcon {
     width: 12px;
     height: 9.4px;
   }
 
-  input:checked + .checkmark {
+  input:checked + .checkmark,
+  input:checked + .checkmarkCategoryList {
     background-color: var(--richSoilBrown);
     border-color: var(--richSoilBrown);
     border: none;
+  }
+}
+
+.customCheckboxCategoryList {
+  @include mq(desk) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.customCheckbox {
+  @include mq(desk) {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 }
 
