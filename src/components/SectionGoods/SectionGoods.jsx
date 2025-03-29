@@ -52,9 +52,21 @@ const SectionGoods = () => {
 
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [currentPage, setCurrentPage] = useState(1);
-  const [showCategories, setShowCategories] = useState(false);
-  const [showManufacturers, setShowManufacturers] = useState(false);
+  const [showCategories, setShowCategories] = useState(window.innerWidth > 1439);
+  const [showManufacturers, setShowManufacturers] = useState(window.innerWidth > 1439);
   const [itemsPerPage, setItemsPerPage] = useState(5);
+
+  useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth > 1439) {
+      setShowCategories(true);
+      setShowManufacturers(true);
+    }
+  };
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
   useEffect(() => {
     setFilteredProducts(filterProducts(products, filters));

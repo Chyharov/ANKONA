@@ -56,6 +56,10 @@
   align-items: center;
   width: 100%;
   text-align: start;
+
+  @include mq(desk) {
+    display: none;
+  }
 }
 
 .toggleBtnImg {
