@@ -1,39 +1,88 @@
 @import '../../sass/utils/mixin';
 
 .sectionTradeMarks {
-    padding-top: 40px;
-    padding-bottom: 32px;
-    background-color: var(--whiteBG);
+  padding-top: 40px;
+  padding-bottom: 32px;
+  background-color: var(--whiteBG);
+
+  @include mq(desk) {
+    padding-bottom: 80px;
+  }
 }
 
 .tradeMarksTitle {
-    font-family: 'Montserrat SemiBold';
-    font-size: 24px;
-    line-height: 1.34;
-    color: var(--richSoilBrown);
-    padding: 8px;
-    text-align: start;
-    margin-bottom: 8px;
+  font-family: 'Montserrat SemiBold';
+  font-size: 24px;
+  line-height: 1.34;
+  color: var(--richSoilBrown);
+  padding: 8px;
+  text-align: start;
+  margin-bottom: 8px;
+
+  @include mq(desk) {
+    font-size: 48px;
+    line-height: 1.17;
+  }
 }
 
 .tradeMarksBorder {
-    border: 1px solid rgba(191, 119, 66, 1);
-    margin-left: -16px;
-    margin-bottom: 16px;
+  border: 1px solid rgba(191, 119, 66, 1);
+  margin-left: -16px;
+  margin-bottom: 16px;
+
+  @include mq(desk) {
+    width: 1040px;
+    margin-left: -80px;
+    margin-bottom: 80px;
+  }
 }
 
 .tradeMarkList {
-    width: 100%;
+  width: 100%;
+
+  @include mq(desk) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .tradeMarkList__item {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+
+  @include mq(desk) {
+    width: auto;
+    margin-bottom: 0px;
+  }
 }
 
 .tradeMarkList__item:last-child {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.tradeMarkLogofuttergutLogo {
+  width: 162px;
+}
+
+.tradeMarkLogoahrhoffLogo {
+  width: 147px;
+}
+
+.tradeMarkLogovilifossLogo {
+  width: 232px;
+}
+
+.tradeMarkLogoetosLogo {
+  width: 144px;
+}
+
+.tradeMarkLogoagrobizekLogo {
+  width: 255px;
+}
+
+.tradeMarkLogojrsLogo {
+  width: 248px;
 }

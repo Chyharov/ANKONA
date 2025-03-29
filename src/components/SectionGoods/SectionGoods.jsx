@@ -75,7 +75,7 @@ const SectionGoods = () => {
 
   useEffect(() => {
     const updateItemsPerPage = () => {
-      if (window.innerWidth <= 1440) {
+      if (window.innerWidth <= 1439) {
         setItemsPerPage(5);
       } else {
         setItemsPerPage(12);
