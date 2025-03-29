@@ -4,7 +4,13 @@
   padding-top: 32px;
   padding-bottom: 80px;
   background-color: var(--brownBG);
+
+  @include mq(desk) {
+    padding-top: 40px;
+    padding-bottom: 120px;
+  }
 }
+
 
 .teamTitle {
   font-family: 'Montserrat SemiBold';
@@ -13,12 +19,24 @@
   padding: 8px;
   color: var(--eggShellWhite);
   margin-bottom: 8px;
+
+  @include mq(desk) {
+    font-size: 48px;
+    line-height: 1.17;
+    margin-bottom: 4px;
+  }
 }
 
 .teamBorder {
   border: 1px solid var(--copperYellow);
   margin-left: -16px;
   margin-bottom: 16px;
+
+  @include mq(desk) {
+    margin-left: -80px;
+    width: 1040px;
+    margin-bottom: 40px;
+  }
 }
 
 .teamList__item {
