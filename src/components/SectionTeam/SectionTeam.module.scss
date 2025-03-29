@@ -11,12 +11,6 @@
   }
 }
 
-.teamList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .teamTitle {
   font-family: 'Montserrat SemiBold';
   font-size: 24px;
@@ -61,7 +55,7 @@
     margin-bottom: 0px;
     flex-direction: column;
     border: none;
-    margin-right: 40px;
+    margin-right: 24px;
   }
 }
 
@@ -91,9 +85,9 @@
     padding-top: 16px;
     padding-bottom: 24px;
     display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -107,6 +101,8 @@
   @include mq(desk) {
     padding-top: 16px;
     padding-bottom: 16px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -163,9 +159,9 @@
   margin-bottom: 4px;
 
   @include mq(desk) {
-  font-size: 14px;
-  line-height: 1.43;
-  margin-bottom: 0px;
+    font-size: 14px;
+    line-height: 1.43;
+    margin-bottom: 0px;
   }
 }
 
@@ -189,6 +185,10 @@
   line-height: 1.5;
   text-align: center;
   transition: background-color 0.3s ease;
+
+  @include mq(desk) {
+    padding: 12px 24px;
+  }
 }
 
 .contactButtons a {
@@ -203,6 +203,11 @@
   transition: background-color 0.3s ease;
   background-color: var(--richSoilBrown);
   color: var(--copperYellow);
+
+  @include mq(desk) {
+    padding: 12px 24px;
+    color: var(--eggShellWhite);
+  }
 }
 
 .btnTeamPhoneNumber {
@@ -226,4 +231,20 @@
   margin-top: 8px;
   font-size: 14px;
   color: var(--richSoilBrown);
+}
+
+.teamList {
+  @include mq(desk) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+.teamList__item:nth-child(-n + 3) {
+  justify-self: start;
+}
+
+.teamList__item:nth-child(n + 4) {
+  justify-content: flex-end;
 }
