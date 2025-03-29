@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.bc2638f6.css",
-    "main.js": "/ANKONA/static/js/main.ed373a6c.js",
-    "static/css/667.1717a610.chunk.css": "/ANKONA/static/css/667.1717a610.chunk.css",
-    "static/js/667.df0990d1.chunk.js": "/ANKONA/static/js/667.df0990d1.chunk.js",
+    "main.js": "/ANKONA/static/js/main.056cb355.js",
+    "static/css/667.d66c775b.chunk.css": "/ANKONA/static/css/667.d66c775b.chunk.css",
+    "static/js/667.1abb058e.chunk.js": "/ANKONA/static/js/667.1abb058e.chunk.js",
     "static/css/502.6253c727.chunk.css": "/ANKONA/static/css/502.6253c727.chunk.css",
     "static/js/502.059394b1.chunk.js": "/ANKONA/static/js/502.059394b1.chunk.js",
     "static/css/543.f6d4c2fe.chunk.css": "/ANKONA/static/css/543.f6d4c2fe.chunk.css",
@@ -42,6 +42,7 @@
     "static/media/imgProductDetailsId17.jpg": "/ANKONA/static/media/imgProductDetailsId17.577685d3285540bb0965.jpg",
     "static/media/imageToVRHM.jpg": "/ANKONA/static/media/imageToVRHM.93a52c11b998a373a58a.jpg",
     "static/media/imgProductDetailsId19.jpg": "/ANKONA/static/media/imgProductDetailsId19.9762dd077957bf82460e.jpg",
+    "static/media/polykovAndriyDesktop.jpg": "/ANKONA/static/media/polykovAndriyDesktop.5ce31f4c6fff379fa85a.jpg",
     "static/media/blogImageId2.jpg": "/ANKONA/static/media/blogImageId2.115bc28eef20b76aff45.jpg",
     "static/media/imgProductDetailsId27.jpg": "/ANKONA/static/media/imgProductDetailsId27.0fe27e1858aa4b5ef007.jpg",
     "static/media/imgProductDetailsId25.jpg": "/ANKONA/static/media/imgProductDetailsId25.378b74516b83a8ac4120.jpg",
@@ -65,13 +66,18 @@
     "static/media/imgProductDetailsId50.jpg": "/ANKONA/static/media/imgProductDetailsId50.1f89266c4c8b0eb1007a.jpg",
     "static/media/imgProductDetailsId51.jpg": "/ANKONA/static/media/imgProductDetailsId51.adef242f6d3a19dff73a.jpg",
     "static/media/imageToChicken.jpg": "/ANKONA/static/media/imageToChicken.3b0c1582ba261a76975a.jpg",
+    "static/media/hodirevSerhiyDesktop.jpg": "/ANKONA/static/media/hodirevSerhiyDesktop.e17f14e03f3a223d3fb5.jpg",
     "static/media/imgProductDetailsId52.jpg": "/ANKONA/static/media/imgProductDetailsId52.6b74e4b78ca7cce5ae1b.jpg",
     "static/media/imgProductDetailsId48.jpg": "/ANKONA/static/media/imgProductDetailsId48.90c5dde58d0daeea9a7d.jpg",
     "static/media/imgProductDetailsId6.jpg": "/ANKONA/static/media/imgProductDetailsId6.f456fe77e5cdbebb940a.jpg",
     "static/media/imgProductDetailsId2.jpg": "/ANKONA/static/media/imgProductDetailsId2.b1aefa887a9a7d740e7a.jpg",
+    "static/media/yanenkoYanaDesktop.jpg": "/ANKONA/static/media/yanenkoYanaDesktop.d98503960cc67725b19f.jpg",
     "static/media/imageToChicken2.jpg": "/ANKONA/static/media/imageToChicken2.11dbc3e2b4f56f43482c.jpg",
+    "static/media/soloshenkoAndriiDesktop.jpg": "/ANKONA/static/media/soloshenkoAndriiDesktop.62a5af4b4f545dba38dc.jpg",
     "static/media/imgProductDetailsId4.jpg": "/ANKONA/static/media/imgProductDetailsId4.45da2651ef883325f2b1.jpg",
+    "static/media/komarVolodymyrDesktop.jpg": "/ANKONA/static/media/komarVolodymyrDesktop.dfd990a9e5a779ffb0d6.jpg",
     "static/media/imgProductDetailsId24.jpg": "/ANKONA/static/media/imgProductDetailsId24.96b2f55089fa321b4114.jpg",
+    "static/media/hodirevaNataliaDesktop.jpg": "/ANKONA/static/media/hodirevaNataliaDesktop.24be1e8cbacf4e1fad39.jpg",
     "static/media/imgProductDetailsId14.jpg": "/ANKONA/static/media/imgProductDetailsId14.182134e6428944bf720d.jpg",
     "static/media/jrs.svg": "/ANKONA/static/media/jrs.6df7d0be73e4f31ad7de7a648c676caa.svg",
     "static/media/imgProductDetailsId49.jpg": "/ANKONA/static/media/imgProductDetailsId49.937b673496b7595dec48.jpg",
@@ -135,9 +141,9 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.bc2638f6.css.map": "/ANKONA/static/css/main.bc2638f6.css.map",
-    "main.ed373a6c.js.map": "/ANKONA/static/js/main.ed373a6c.js.map",
-    "667.1717a610.chunk.css.map": "/ANKONA/static/css/667.1717a610.chunk.css.map",
-    "667.df0990d1.chunk.js.map": "/ANKONA/static/js/667.df0990d1.chunk.js.map",
+    "main.056cb355.js.map": "/ANKONA/static/js/main.056cb355.js.map",
+    "667.d66c775b.chunk.css.map": "/ANKONA/static/css/667.d66c775b.chunk.css.map",
+    "667.1abb058e.chunk.js.map": "/ANKONA/static/js/667.1abb058e.chunk.js.map",
     "502.6253c727.chunk.css.map": "/ANKONA/static/css/502.6253c727.chunk.css.map",
     "502.059394b1.chunk.js.map": "/ANKONA/static/js/502.059394b1.chunk.js.map",
     "543.f6d4c2fe.chunk.css.map": "/ANKONA/static/css/543.f6d4c2fe.chunk.css.map",
@@ -153,6 +159,6 @@
   },
   "entrypoints": [
     "static/css/main.bc2638f6.css",
-    "static/js/main.ed373a6c.js"
+    "static/js/main.056cb355.js"
   ]
 }
