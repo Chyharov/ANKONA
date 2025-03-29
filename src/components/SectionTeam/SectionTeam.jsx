@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { teamMembers } from 'services/team'
+import { teamMembers } from 'services/team';
 import s from './SectionTeam.module.scss';
 
 const SectionTeam = () => {
@@ -9,7 +9,7 @@ const SectionTeam = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsWideScreen(window.innerWidth > 1439);
+      setIsWideScreen(window.innerWidth > 1440);
     };
 
     window.addEventListener('resize', handleResize);
@@ -45,20 +45,20 @@ const SectionTeam = () => {
             >
               <img
                 className={`${s.teamList__itemPhoto} ${selectedMember === member.id ? s.activ : ''}`}
-                src={isWideScreen || selectedMember !== member.id ? member.activePhoto : member.photo}
+                src={
+                  isWideScreen
+                    ? member.photoDesktop
+                    : selectedMember === member.id
+                    ? member.activePhoto
+                    : member.photo
+                }
                 alt={member.name}
               />
-              <div
-                className={`${s.teamNameContainer} ${selectedMember === member.id ? s.activ : ''}`}
-              >
-                <h3
-                  className={`${s.teamList__itemTitle} ${selectedMember === member.id ? s.active : ''}`}
-                >
+              <div className={`${s.teamNameContainer} ${selectedMember === member.id ? s.activ : ''}`}>
+                <h3 className={`${s.teamList__itemTitle} ${selectedMember === member.id ? s.active : ''}`}>
                   {member.name}
                 </h3>
-                <p
-                  className={`${s.teamList__itemDescription} ${selectedMember === member.id ? s.active : ''}`}
-                >
+                <p className={`${s.teamList__itemDescription} ${selectedMember === member.id ? s.active : ''}`}>
                   {member.role}
                 </p>
 
