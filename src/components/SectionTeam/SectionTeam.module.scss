@@ -55,7 +55,6 @@
     margin-bottom: 0px;
     flex-direction: column;
     border: none;
-    margin-right: 24px;
   }
 }
 
@@ -238,13 +237,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
+    justify-items: center;
   }
-}
-
-.teamList__item:nth-child(-n + 3) {
-  justify-self: start;
-}
-
-.teamList__item:nth-child(n + 4) {
-  justify-content: flex-end;
 }

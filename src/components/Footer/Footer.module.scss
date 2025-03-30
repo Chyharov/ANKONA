@@ -4,6 +4,11 @@
   padding-top: 32px;
   padding-bottom: 80px;
   background-color: var(--richSoilBrown);
+
+  @include mq(desk) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .logoFooter {
@@ -16,6 +21,10 @@
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 24px;
+
+  @include mq(desk) {
+    margin-bottom: 0px;
+  }
 }
 
 .footerSocailMediaList__item:not(:last-child) {
@@ -27,18 +36,31 @@
   height: 40px;
 }
 
-.footerNavBarList {
+.footerBarList {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 24px;
+
+  @include mq(desk) {
+    display: flex;
+    margin-bottom: 24px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 0px;
+  }
 }
 
-.footerNavBarList__item:not(:last-child) {
+.footerBarList__item:not(:last-child) {
   margin-bottom: 16px;
+  @include mq(desk) {
+    margin-bottom: 0px;
+    margin-right: 32px;
+  }
 }
 
-.footerNavBarList__itemDescription {
+.footerBarList__itemDescription {
   font-family: 'Montserrat Regular';
   font-size: 16px;
   line-height: 1.5;
@@ -53,12 +75,62 @@
   color: var(--eggShellWhite);
   padding: 8px;
   margin-bottom: 16px;
-}
 
-.footerCopyrightDescription {
+  @include mq(desk) {
     font-family: 'Montserrat Regular';
     font-size: 14px;
     line-height: 1.43;
-    color: var(--eggShellWhite);
-    padding: 8px;
+    margin-bottom: 0px;
+  }
+}
+
+.footerCopyrightDescription {
+  font-family: 'Montserrat Regular';
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--eggShellWhite);
+  padding: 8px;
+
+  @include mq(desk) {
+    width: 528px;
+  }
+}
+
+.footerContainerDesktop {
+  @include mq(desk) {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+}
+
+.footerNavContainerDesktop {
+  @include mq(desk) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.linkLogo {
+  width: 160px;
+  height: 68px;
+}
+
+.footerNavBarList {
+  @include mq(desk) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.privacyContainer {
+  @include mq(desk) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
