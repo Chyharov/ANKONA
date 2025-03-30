@@ -1,6 +1,7 @@
 import polykovAndriy from 'images/team/polykovAndriy.jpg';
 import polykovAndriyIsActive from 'images/team/polykovAndriyIsActive.jpg';
 import polykovAndriyDesktop from 'images/team/polykovAndriyDesktop.jpg';
+import horse from 'images/team/horse.png';
 import hodirevSerhiy from 'images/team/hodirevSerhiy.jpg';
 import hodirevSerhiyIsActive from 'images/team/hodirevSerhiyIsActive.jpg';
 import hodirevSerhiyDesktop from 'images/team/hodirevSerhiyDesktop.jpg';
@@ -25,6 +26,7 @@ export const teamMembers = [
     photo: polykovAndriy,
     activePhoto: polykovAndriyIsActive,
     photoDesktop: polykovAndriyDesktop,
+    horse: horse,
     email: 'info@ankona.com.ua',
     phone: '+38 (098) 973 03 91',
   },

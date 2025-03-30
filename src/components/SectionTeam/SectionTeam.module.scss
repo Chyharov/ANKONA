@@ -56,6 +56,19 @@
     flex-direction: column;
     border: none;
     margin-right: 40px;
+    position: relative;
+  }
+}
+
+.horse {
+  display: none;
+  @include mq(desk) {
+    display: block;
+    position: absolute;
+    width: 44px;
+    height: 68px;
+    right: 24px;
+    bottom: 16px;
   }
 }
 

@@ -16,13 +16,13 @@ const SectionTeam = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const handleSelectMember = (id) => {
+  const handleSelectMember = id => {
     setSelectedMember(id === selectedMember ? null : id);
     setContactInfo({});
   };
 
   const handleShowContact = (id, type, value) => {
-    setContactInfo((prev) => ({
+    setContactInfo(prev => ({
       ...prev,
       [id]: {
         ...prev[id],
@@ -46,7 +46,7 @@ const SectionTeam = () => {
 
         <div className={s.teamGroups}>
           <ul className={s.teamList}>
-            {firstGroup.map((member) => (
+            {firstGroup.map(member => (
               <li
                 key={member.id}
                 className={`${s.teamList__item} ${
@@ -67,6 +67,10 @@ const SectionTeam = () => {
                   }
                   alt={member.name}
                 />
+                {member.horse && (
+                  <img className={s.horse} src={member.horse} alt="horse" />
+                )}{' '}
+                {/* Додано перевірку на horse */}
                 <div
                   className={`${s.teamNameContainer} ${
                     selectedMember === member.id ? s.activ : ''
@@ -93,14 +97,14 @@ const SectionTeam = () => {
                         <a
                           href={`mailto:${member.email}`}
                           className={s.btnTeamPhoneNumber}
-                          onClick={(e) => e.stopPropagation()}
+                          onClick={e => e.stopPropagation()}
                         >
                           {truncateText(contactInfo[member.id].email, 24)}
                         </a>
                       ) : (
                         <button
                           className={s.btnTeamPhoneNumber}
-                          onClick={(e) => {
+                          onClick={e => {
                             e.stopPropagation();
                             handleShowContact(member.id, 'email', member.email);
                           }}
@@ -111,16 +115,19 @@ const SectionTeam = () => {
 
                       {contactInfo[member.id]?.phone ? (
                         <a
-                          href={`tel:${member.phone.replace(/\s|\(|\)|-/g, '')}`}
+                          href={`tel:${member.phone.replace(
+                            /\s|\(|\)|-/g,
+                            ''
+                          )}`}
                           className={s.btnTeamEmail}
-                          onClick={(e) => e.stopPropagation()}
+                          onClick={e => e.stopPropagation()}
                         >
                           {contactInfo[member.id].phone}
                         </a>
                       ) : (
                         <button
                           className={s.btnTeamEmail}
-                          onClick={(e) => {
+                          onClick={e => {
                             e.stopPropagation();
                             handleShowContact(member.id, 'phone', member.phone);
                           }}
@@ -136,7 +143,7 @@ const SectionTeam = () => {
           </ul>
 
           <ul className={s.teamListSecond}>
-            {secondGroup.map((member) => (
+            {secondGroup.map(member => (
               <li
                 key={member.id}
                 className={`${s.teamList__item} ${
@@ -157,6 +164,7 @@ const SectionTeam = () => {
                   }
                   alt={member.name}
                 />
+
                 <div
                   className={`${s.teamNameContainer} ${
                     selectedMember === member.id ? s.activ : ''
@@ -183,14 +191,14 @@ const SectionTeam = () => {
                         <a
                           href={`mailto:${member.email}`}
                           className={s.btnTeamPhoneNumber}
-                          onClick={(e) => e.stopPropagation()}
+                          onClick={e => e.stopPropagation()}
                         >
                           {truncateText(contactInfo[member.id].email, 24)}
                         </a>
                       ) : (
                         <button
                           className={s.btnTeamPhoneNumber}
-                          onClick={(e) => {
+                          onClick={e => {
                             e.stopPropagation();
                             handleShowContact(member.id, 'email', member.email);
                           }}
@@ -201,16 +209,19 @@ const SectionTeam = () => {
 
                       {contactInfo[member.id]?.phone ? (
                         <a
-                          href={`tel:${member.phone.replace(/\s|\(|\)|-/g, '')}`}
+                          href={`tel:${member.phone.replace(
+                            /\s|\(|\)|-/g,
+                            ''
+                          )}`}
                           className={s.btnTeamEmail}
-                          onClick={(e) => e.stopPropagation()}
+                          onClick={e => e.stopPropagation()}
                         >
                           {contactInfo[member.id].phone}
                         </a>
                       ) : (
                         <button
                           className={s.btnTeamEmail}
-                          onClick={(e) => {
+                          onClick={e => {
                             e.stopPropagation();
                             handleShowContact(member.id, 'phone', member.phone);
                           }}
