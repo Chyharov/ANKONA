@@ -4,6 +4,11 @@
   padding-top: 100px;
   padding-bottom: 80px;
   background-color: var(--whiteBG);
+
+  @include mq(desk) {
+    padding-top: 124px;
+    padding-bottom: 120px;
+  }
 }
 
 .blogTitle {
@@ -12,48 +17,146 @@
   line-height: 1.34;
   color: var(--richSoilBrown);
   padding: 8px;
+
+  @include mq(desk) {
+    font-size: 48px;
+    line-height: 1.17;
+    margin-bottom: 4px;
+  }
 }
 
 .blogBorder {
   border-bottom: 2px solid var(--copperYellow);
   margin-bottom: 24px;
+
+  @include mq(desk) {
+    width: 1040px;
+    margin-left: -80px;
+    margin-bottom: 44px;
+  }
 }
 
-.blogList__item {
+.blogList__item,
+.blogListSecond__item {
   padding: 16px;
   border: 1px solid var(--richSoilBrown);
   border-radius: 4px;
   margin-bottom: 24px;
+
+  @include mq(desk) {
+    margin-bottom: 0px;
+  }
 }
 
-.blogList__itemImg {
+.blogListSecond__item {
+  @include mq(desk) {
+    width: 400px;
+    height: 480px;
+    margin-right: 24px;
+  }
+}
+
+.blogListSecond__item:last-child {
+  @include mq(desk) {
+    margin-right: 0px;
+  }
+}
+
+.blogList__item {
+  @include mq(desk) {
+    width: 626px;
+    height: 396px;
+    display: flex;
+    margin-bottom: 0px;
+    margin-right: 24px;
+  }
+}
+
+.blogList__item:last-child,
+.blogListSecond__item:last-child {
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+
+.blogList__itemImg,
+.blogListSecond__itemImg {
   width: 296px;
   height: 200px;
   border-radius: 4px;
   margin-bottom: 16px;
 }
 
-.blogList__itemTitle {
+.blogListSecond__itemImg {
+  @include mq(desk) {
+    width: 368px;
+    height: 200px;
+    margin-bottom: 16px;
+  }
+}
+
+.blogList__itemImg {
+  @include mq(desk) {
+    width: 240px;
+    height: 364px;
+    margin-bottom: 0px;
+    margin-right: 34px;
+  }
+}
+
+.blogListContainer {
+  @include mq(desk) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.blogList__itemTitle,
+.blogListSecond__itemTitle {
   font-family: 'Montserrat Medium';
   font-size: 24px;
   line-height: 1.34;
   color: var(--richSoilBrown);
   padding: 8px;
+
+  @include mq(desk) {
+    font-size: 24px;
+    line-height: 1.34;
+    padding: 16px 8px 8px 8px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--copperYellow);
+  }
 }
 
-.blogList__itemTitleBorder {
+.blogList__itemTitleBorder,
+.blogListSecond__itemTitleBorder {
   border-bottom: 1px solid var(--copperYellow);
   margin-bottom: 16px;
   margin-left: 8px;
   margin-right: 8px;
+
+  @include mq(desk) {
+    display: none;
+  }
 }
 
-.blogList__itemDescription {
+.blogList__itemDescription,
+.blogListSecond__itemDescription {
   font-family: 'Montserrat Regular';
   font-size: 16px;
   line-height: 1.5;
   color: var(--richSoilBrown);
   margin-bottom: 16px;
+
+  @include mq(desk) {
+    margin-bottom: auto;
+  }
+}
+
+.blogListSecond__itemDescription {
+  @include mq(desk) {
+    margin-bottom: 32px;
+  }
 }
 
 .blogBtn {
@@ -69,4 +172,23 @@
   border-radius: 4px;
   color: var(--eggShellWhite);
   background-color: var(--copperYellow);
+}
+
+.blogList {
+  margin-bottom: 24px;
+  @include mq(desk) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.blogListSecond {
+  margin-bottom: 24px;
+  @include mq(desk) {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 0px;
+  }
 }
