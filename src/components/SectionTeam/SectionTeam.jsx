@@ -16,13 +16,13 @@ const SectionTeam = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const handleSelectMember = id => {
+  const handleSelectMember = (id) => {
     setSelectedMember(id === selectedMember ? null : id);
     setContactInfo({});
   };
 
   const handleShowContact = (id, type, value) => {
-    setContactInfo(prev => ({
+    setContactInfo((prev) => ({
       ...prev,
       [id]: {
         ...prev[id],
@@ -35,100 +35,196 @@ const SectionTeam = () => {
     return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
   };
 
+  const firstGroup = teamMembers.slice(0, 3);
+  const secondGroup = teamMembers.slice(3, 6);
+
   return (
     <section className={s.sectionTeam} id="team">
       <div className={`container ${s.teamContainer}`}>
         <h2 className={s.teamTitle}>Наша команда</h2>
         <div className={s.teamBorder}></div>
-        <ul className={s.teamList}>
-          {teamMembers.map(member => (
-            <li
-              key={member.id}
-              className={`${s.teamList__item} ${
-                selectedMember === member.id ? s.active : ''
-              }`}
-              onClick={() => handleSelectMember(member.id)}
-            >
-              <img
-                className={`${s.teamList__itemPhoto} ${
-                  selectedMember === member.id ? s.activ : ''
+
+        <div className={s.teamGroups}>
+          <ul className={s.teamList}>
+            {firstGroup.map((member) => (
+              <li
+                key={member.id}
+                className={`${s.teamList__item} ${
+                  selectedMember === member.id ? s.active : ''
                 }`}
-                src={
-                  isWideScreen
-                    ? member.photoDesktop
-                    : selectedMember === member.id
-                    ? member.activePhoto
-                    : member.photo
-                }
-                alt={member.name}
-              />
-              <div
-                className={`${s.teamNameContainer} ${
-                  selectedMember === member.id ? s.activ : ''
-                }`}
+                onClick={() => handleSelectMember(member.id)}
               >
-                <h3
-                  className={`${s.teamList__itemTitle} ${
-                    selectedMember === member.id ? s.active : ''
+                <img
+                  className={`${s.teamList__itemPhoto} ${
+                    selectedMember === member.id ? s.activ : ''
+                  }`}
+                  src={
+                    isWideScreen
+                      ? member.photoDesktop
+                      : selectedMember === member.id
+                      ? member.activePhoto
+                      : member.photo
+                  }
+                  alt={member.name}
+                />
+                <div
+                  className={`${s.teamNameContainer} ${
+                    selectedMember === member.id ? s.activ : ''
                   }`}
                 >
-                  {member.name}
-                </h3>
-                <p
-                  className={`${s.teamList__itemDescription} ${
-                    selectedMember === member.id ? s.active : ''
+                  <h3
+                    className={`${s.teamList__itemTitle} ${
+                      selectedMember === member.id ? s.active : ''
+                    }`}
+                  >
+                    {member.name}
+                  </h3>
+                  <p
+                    className={`${s.teamList__itemDescription} ${
+                      selectedMember === member.id ? s.active : ''
+                    }`}
+                  >
+                    {member.role}
+                  </p>
+
+                  {selectedMember === member.id && (
+                    <div className={s.contactButtons}>
+                      {contactInfo[member.id]?.email ? (
+                        <a
+                          href={`mailto:${member.email}`}
+                          className={s.btnTeamPhoneNumber}
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {truncateText(contactInfo[member.id].email, 24)}
+                        </a>
+                      ) : (
+                        <button
+                          className={s.btnTeamPhoneNumber}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleShowContact(member.id, 'email', member.email);
+                          }}
+                        >
+                          Написати
+                        </button>
+                      )}
+
+                      {contactInfo[member.id]?.phone ? (
+                        <a
+                          href={`tel:${member.phone.replace(/\s|\(|\)|-/g, '')}`}
+                          className={s.btnTeamEmail}
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {contactInfo[member.id].phone}
+                        </a>
+                      ) : (
+                        <button
+                          className={s.btnTeamEmail}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleShowContact(member.id, 'phone', member.phone);
+                          }}
+                        >
+                          Зателефонувати
+                        </button>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <ul className={s.teamListSecond}>
+            {secondGroup.map((member) => (
+              <li
+                key={member.id}
+                className={`${s.teamList__item} ${
+                  selectedMember === member.id ? s.active : ''
+                }`}
+                onClick={() => handleSelectMember(member.id)}
+              >
+                <img
+                  className={`${s.teamList__itemPhoto} ${
+                    selectedMember === member.id ? s.activ : ''
+                  }`}
+                  src={
+                    isWideScreen
+                      ? member.photoDesktop
+                      : selectedMember === member.id
+                      ? member.activePhoto
+                      : member.photo
+                  }
+                  alt={member.name}
+                />
+                <div
+                  className={`${s.teamNameContainer} ${
+                    selectedMember === member.id ? s.activ : ''
                   }`}
                 >
-                  {member.role}
-                </p>
+                  <h3
+                    className={`${s.teamList__itemTitle} ${
+                      selectedMember === member.id ? s.active : ''
+                    }`}
+                  >
+                    {member.name}
+                  </h3>
+                  <p
+                    className={`${s.teamList__itemDescription} ${
+                      selectedMember === member.id ? s.active : ''
+                    }`}
+                  >
+                    {member.role}
+                  </p>
 
-                {selectedMember === member.id && (
-                  <div className={s.contactButtons}>
-                    {contactInfo[member.id]?.email ? (
-                      <a
-                        href={`mailto:${member.email}`}
-                        className={s.btnTeamPhoneNumber}
-                        onClick={e => e.stopPropagation()}
-                      >
-                        {truncateText(contactInfo[member.id].email, 24)}
-                      </a>
-                    ) : (
-                      <button
-                        className={s.btnTeamPhoneNumber}
-                        onClick={e => {
-                          e.stopPropagation();
-                          handleShowContact(member.id, 'email', member.email);
-                        }}
-                      >
-                        Написати
-                      </button>
-                    )}
+                  {selectedMember === member.id && (
+                    <div className={s.contactButtons}>
+                      {contactInfo[member.id]?.email ? (
+                        <a
+                          href={`mailto:${member.email}`}
+                          className={s.btnTeamPhoneNumber}
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {truncateText(contactInfo[member.id].email, 24)}
+                        </a>
+                      ) : (
+                        <button
+                          className={s.btnTeamPhoneNumber}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleShowContact(member.id, 'email', member.email);
+                          }}
+                        >
+                          Написати
+                        </button>
+                      )}
 
-                    {contactInfo[member.id]?.phone ? (
-                      <a
-                        href={`tel:${member.phone.replace(/\s|\(|\)|-/g, '')}`}
-                        className={s.btnTeamEmail}
-                        onClick={e => e.stopPropagation()}
-                      >
-                        {contactInfo[member.id].phone}
-                      </a>
-                    ) : (
-                      <button
-                        className={s.btnTeamEmail}
-                        onClick={e => {
-                          e.stopPropagation();
-                          handleShowContact(member.id, 'phone', member.phone);
-                        }}
-                      >
-                        Зателефонувати
-                      </button>
-                    )}
-                  </div>
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
+                      {contactInfo[member.id]?.phone ? (
+                        <a
+                          href={`tel:${member.phone.replace(/\s|\(|\)|-/g, '')}`}
+                          className={s.btnTeamEmail}
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {contactInfo[member.id].phone}
+                        </a>
+                      ) : (
+                        <button
+                          className={s.btnTeamEmail}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleShowContact(member.id, 'phone', member.phone);
+                          }}
+                        >
+                          Зателефонувати
+                        </button>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

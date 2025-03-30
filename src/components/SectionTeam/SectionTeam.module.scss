@@ -55,6 +55,7 @@
     margin-bottom: 0px;
     flex-direction: column;
     border: none;
+    margin-right: 40px;
   }
 }
 
@@ -233,10 +234,19 @@
 }
 
 .teamList {
+  margin-bottom: 7px;
   @include mq(desk) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    justify-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+}
+
+.teamListSecond {
+  @include mq(desk) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
