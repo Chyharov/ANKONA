@@ -19,6 +19,17 @@ const SectionBlogCard = ({ post }) => {
               <h3 className={s.blogSubTitle}>{post.description}</h3>
           ))}
         
+        {post.descriptionSecond &&
+            (Array.isArray(post.descriptionSecond) ? (
+              post.descriptionSecond.map((desc, index) => (
+                <h3 key={index} className={s.blogSubTitle}>
+                  {desc}
+                </h3>
+              ))
+            ) : (
+              <h3 className={s.blogSubTitle}>{post.descriptionSecond}</h3>
+          ))}
+        
         <div className={s.imageContainer}>
           <div className={s.imageContainerDescription}>
           
