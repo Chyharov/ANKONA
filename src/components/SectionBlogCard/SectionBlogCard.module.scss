@@ -45,6 +45,10 @@
   color: var(--richSoilBrown);
 }
 
+.blogAddInfoLink {
+  text-decoration: underline;
+}
+
 .blogSubTitle {
   @include mq(desk) {
     margin-bottom: 24px !important;
@@ -86,6 +90,16 @@
   margin-bottom: 16px;
 }
 
+.blogTitleResult {
+  margin-bottom: 8px;
+}
+
+.blogDescriptionConclusions {
+  @include mq(desk) {
+    margin-bottom: 24px;
+  }
+}
+
 .blogDescriptionSpan,
 .blogTitleMetodoligi,
 .blogTitleResultSpan,
@@ -99,12 +113,6 @@
 .blogTitleMetodoligi,
 .blogTitleConclusions {
   padding: 4px;
-}
-
-.blogTitleMetodoligi {
-  @include mq(desk) {
-    margin-bottom: 8px;
-  }
 }
 
 .imageContainer {
@@ -146,6 +154,10 @@
 .blogResultList {
   padding-left: 30px;
   margin-bottom: 16px;
+
+  @include mq(desk) {
+    margin-bottom: 24px;
+  }
 }
 
 .blogResultList__item {
@@ -168,4 +180,9 @@
   color: var(--richSoilBrown);
   background-color: var(--eggShellWhite);
   border: 1px solid var(--copperYellow);
+
+  @include mq(desk) {
+    width: 23.41%;
+    margin-bottom: 24px;
+  }
 }
