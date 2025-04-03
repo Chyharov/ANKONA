@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useContext } from "react";
-import { SearchContext } from "components/SearchContext";
+import { useContext } from 'react';
+import { SearchContext } from 'components/SearchContext';
 import arrowUp from 'images/goods/arrowUp.svg';
 import arrowDown from 'images/goods/arrowDown.svg';
 import iconHorse from 'images/goods/iconHorse.svg';
@@ -54,11 +54,15 @@ const SectionGoods = () => {
 
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [currentPage, setCurrentPage] = useState(1);
-  const [showCategories, setShowCategories] = useState(window.innerWidth > 1439);
-  const [showManufacturers, setShowManufacturers] = useState(window.innerWidth > 1439);
+  const [showCategories, setShowCategories] = useState(
+    window.innerWidth > 1439
+  );
+  const [showManufacturers, setShowManufacturers] = useState(
+    window.innerWidth > 1439
+  );
   const [itemsPerPage, setItemsPerPage] = useState(5);
 
-    const filterProducts = (products, filters) => {
+  const filterProducts = (products, filters) => {
     let filtered = products;
 
     const hasAllCategories = filters.category.has('Підходе для всіх');
@@ -85,16 +89,16 @@ const SectionGoods = () => {
   };
 
   useEffect(() => {
-  const handleResize = () => {
-    if (window.innerWidth > 1439) {
-      setShowCategories(true);
-      setShowManufacturers(true);
-    }
-  };
+    const handleResize = () => {
+      if (window.innerWidth > 1439) {
+        setShowCategories(true);
+        setShowManufacturers(true);
+      }
+    };
 
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     setFilteredProducts(filterProducts(products, filters));
@@ -151,14 +155,19 @@ const SectionGoods = () => {
     let filtered = filterProducts(products, filters);
 
     if (searchQuery) {
-  filtered = filtered.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    (Array.isArray(product.manufacturer)
-      ? product.manufacturer.some(m => m.toLowerCase().includes(searchQuery.toLowerCase()))
-      : product.manufacturer.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
-}
+      filtered = filtered.filter(product => {
+        const productNameMatch = product.name
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase());
+        const productCategoryMatch = Array.isArray(product.category)
+          ? product.category.some(cat =>
+              cat.toLowerCase().includes(searchQuery.toLowerCase())
+            )
+          : product.category.toLowerCase().includes(searchQuery.toLowerCase());
+
+        return productNameMatch || productCategoryMatch;
+      });
+    }
 
     setFilteredProducts(filtered);
   }, [filters, searchQuery]);
