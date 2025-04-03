@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from "react";
+import { SearchContext } from "components/SearchContext";
 import arrowUp from 'images/goods/arrowUp.svg';
 import arrowDown from 'images/goods/arrowDown.svg';
 import iconHorse from 'images/goods/iconHorse.svg';
@@ -56,6 +58,32 @@ const SectionGoods = () => {
   const [showManufacturers, setShowManufacturers] = useState(window.innerWidth > 1439);
   const [itemsPerPage, setItemsPerPage] = useState(5);
 
+    const filterProducts = (products, filters) => {
+    let filtered = products;
+
+    const hasAllCategories = filters.category.has('Підходе для всіх');
+
+    if (!hasAllCategories && filters.category.size) {
+      filtered = filtered.filter(p => {
+        const productCategories = Array.isArray(p.category)
+          ? p.category
+          : [p.category];
+        return productCategories.some(
+          cat => filters.category.has(cat) || cat === 'Підходе для всіх'
+        );
+      });
+    }
+
+    if (filters.manufacturer.size) {
+      filtered = filtered.filter(p =>
+        Array.isArray(p.manufacturer)
+          ? p.manufacturer.some(m => filters.manufacturer.has(m))
+          : filters.manufacturer.has(p.manufacturer)
+      );
+    }
+    return filtered;
+  };
+
   useEffect(() => {
   const handleResize = () => {
     if (window.innerWidth > 1439) {
@@ -96,32 +124,6 @@ const SectionGoods = () => {
     setCurrentPage(1);
   }, [filters]);
 
-  const filterProducts = (products, filters) => {
-    let filtered = products;
-
-    const hasAllCategories = filters.category.has('Підходе для всіх');
-
-    if (!hasAllCategories && filters.category.size) {
-      filtered = filtered.filter(p => {
-        const productCategories = Array.isArray(p.category)
-          ? p.category
-          : [p.category];
-        return productCategories.some(
-          cat => filters.category.has(cat) || cat === 'Підходе для всіх'
-        );
-      });
-    }
-
-    if (filters.manufacturer.size) {
-      filtered = filtered.filter(p =>
-        Array.isArray(p.manufacturer)
-          ? p.manufacturer.some(m => filters.manufacturer.has(m))
-          : filters.manufacturer.has(p.manufacturer)
-      );
-    }
-    return filtered;
-  };
-
   const handleFilterChange = (type, value) => {
     setFilters(prevFilters => {
       const updatedSet = new Set(prevFilters[type]);
@@ -142,6 +144,24 @@ const SectionGoods = () => {
   const handlePageChange = page => {
     setCurrentPage(page);
   };
+
+  const { searchQuery } = useContext(SearchContext);
+
+  useEffect(() => {
+    let filtered = filterProducts(products, filters);
+
+    if (searchQuery) {
+  filtered = filtered.filter((product) =>
+    product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    (Array.isArray(product.manufacturer)
+      ? product.manufacturer.some(m => m.toLowerCase().includes(searchQuery.toLowerCase()))
+      : product.manufacturer.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
+}
+
+    setFilteredProducts(filtered);
+  }, [filters, searchQuery]);
 
   return (
     <section className={s.sectionGoods} id="goods">

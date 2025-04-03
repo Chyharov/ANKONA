@@ -1,3 +1,4 @@
+import { SearchProvider } from 'components/SearchContext';
 import Header from 'components/Header/Header';
 import SectionHero from 'components/SectionHero/SectionHero';
 import SectionAbout from 'components/SectionAbout/SectionAbout';
@@ -8,7 +9,7 @@ import Footer from 'components/Footer/Footer';
 
 const MainPage = () => {
   return (
-    <>
+    <SearchProvider>
       <Header />
       <main>
         <SectionHero />
@@ -18,7 +19,7 @@ const MainPage = () => {
         <SectionTeam />
       </main>
       <Footer />
-    </>
+    </SearchProvider>
   );
 };
 

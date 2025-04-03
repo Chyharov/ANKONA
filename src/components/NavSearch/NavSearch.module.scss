@@ -17,6 +17,13 @@
   top: 158px;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @include mq(desk) {
+    width: 55.5%;
+    height: 72px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 .inputContainer {
