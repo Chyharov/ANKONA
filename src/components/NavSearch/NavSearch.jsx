@@ -10,13 +10,15 @@ const NavSearch = ({ style }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
-  const toggleSearchAndScroll = () => {
-    setIsSearchOpen(true);
-    scroller.scrollTo("goods", {
-      smooth: true,
-      offset: -70,
-      duration: 500,
-    });
+  const toggleSearch = () => {
+    setIsSearchOpen((prev) => !prev);
+    if (!isSearchOpen) {
+      scroller.scrollTo("goods", {
+        smooth: true,
+        offset: -70,
+        duration: 500,
+      });
+    }
   };
 
   const handleSearch = (e) => {
@@ -26,12 +28,13 @@ const NavSearch = ({ style }) => {
 
   return (
     <>
-      <button className={s.navSearch__button} style={style} onClick={toggleSearchAndScroll}>
+      <button className={s.navSearch__button} style={style} onClick={toggleSearch}>
         <img className={s.searchIcon} src={searchIcon} alt="Search" />
       </button>
+
       {isSearchOpen && (
-        <div className={s.bgShadow}>
-          <div className={`container ${s.searchContainer}`}>
+        <div className={s.bgShadow} onClick={toggleSearch}>
+          <div className={`container ${s.searchContainer}`} onClick={(e) => e.stopPropagation()}>
             <div className={s.inputContainer}>
               <input
                 type="text"
