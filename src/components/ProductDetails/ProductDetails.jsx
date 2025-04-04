@@ -43,7 +43,7 @@ const ProductDetails = () => {
     <>
       <Header navSearchStyle={{ display: 'none' }} style={{ width: '130px' }} />
       <section className={s.sectionProductDetails}>
-        <div className={`container ${s.productDetailsContainer}`}>
+        <div className="container">
           <div className={s.buttonBackContainer}>
             <button onClick={() => navigate(-1)} className={s.buttonBack}>
               Товар
@@ -51,6 +51,8 @@ const ProductDetails = () => {
             <div className={s.decorationBorder}></div>
             <h2 className={s.sectionProductDetailsTitle}>{product.name}</h2>
           </div>
+          <div className={s.productDetailsContainer}>
+          <div className={s.imageContainerDesktop}>
           <img
             className={s.imgProductDetails}
             src={product.image}
@@ -83,7 +85,8 @@ const ProductDetails = () => {
               </li>
             )}
           </ul>
-
+            </div>
+            <div className={s.productDescriptionContainer}>
           <h3 className={s.productDetailsName}>{product.name}</h3>
           <p className={s.productDetailsManufacturer}>{product.manufacturer}</p>
           <p
@@ -130,7 +133,9 @@ const ProductDetails = () => {
               </div>
             ))}
 
-          <ButtonCallBack style={{ marginTop: '8px' }} />
+              <ButtonCallBack style={{ marginTop: '8px' }} />
+              </div>
+            </div>
         </div>
       </section>
     </>
