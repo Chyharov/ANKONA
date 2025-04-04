@@ -91,7 +91,7 @@ const SectionPrivacy = () => {
             </ul>
           </li>
           <li>
-            <h3 className={s.privacyTitle}>
+            <h3 className={s.privacyListTitle}>
               2. ПРЕДМЕТ ПОЛІТИКИ КОНФІДЕНЦІЙНОСТІ
             </h3>
             <ul>
@@ -136,7 +136,7 @@ const SectionPrivacy = () => {
             </ul>
           </li>
           <li>
-            <h3 className={s.privacyTitle}>
+            <h3 className={s.privacyListTitle}>
               3. ЦІЛІ ЗБОРУ І ОБРОБКИ ПЕРСОНАЛЬНИХ ДАНИХ
             </h3>
 
@@ -181,7 +181,7 @@ const SectionPrivacy = () => {
             </ul>
           </li>
           <li>
-            <h3 className={s.privacyTitle}>4. КАТЕГОРІЇ ЗБИРАНИХ ДАНИХ</h3>
+            <h3 className={s.privacyListTitle}>4. КАТЕГОРІЇ ЗБИРАНИХ ДАНИХ</h3>
             <ul>
               <li className={s.privacyListDescription}>
                 4.1.Категорії Персональні дані, збір яких здійснює сайт
@@ -214,7 +214,7 @@ const SectionPrivacy = () => {
             </ul>
           </li>
           <li>
-            <h3 className={s.privacyTitle}>
+            <h3 className={s.privacyListTitle}>
               5. СПОСОБИ ТА ТЕРМІНИ ОБРОБКИ ПЕРСОНАЛЬНИХ ДАНИХ
             </h3>
             <ul>
@@ -235,7 +235,7 @@ const SectionPrivacy = () => {
             </ul>
           </li>
           <li>
-            <h3 className={s.privacyTitle}>6. ПРАВА КОРИСТУВАЧІ</h3>
+            <h3 className={s.privacyListTitle}>6. ПРАВА КОРИСТУВАЧІ</h3>
             <ul>
               <li className={s.privacyListDescription}>6.1. Користувачі мають право:</li>
               <li className={s.privacyListDescription}>6.1.1. дізнатися, чи були збережені їх особисті дані;</li>
@@ -264,7 +264,7 @@ const SectionPrivacy = () => {
             </ul>
           </li>
           <li>
-            <h3 className={s.privacyTitle}>7. ПОЛІТИКА ЩОДО ФАЙЛІВ COOKIE</h3>
+            <h3 className={s.privacyListTitle}>7. ПОЛІТИКА ЩОДО ФАЙЛІВ COOKIE</h3>
 
             <ul>
               <li className={s.privacyListDescription}>
@@ -292,7 +292,7 @@ const SectionPrivacy = () => {
             </ul>
           </li>
           <li>
-            <h3 className={s.privacyTitle}>8. БЕЗПЕКА ПЕРСОНАЛЬНИХ ДАНИХ</h3>
+            <h3 className={s.privacyListTitle}>8. БЕЗПЕКА ПЕРСОНАЛЬНИХ ДАНИХ</h3>
 
             <ul>
               <li className={s.privacyListDescription}>
@@ -322,7 +322,7 @@ const SectionPrivacy = () => {
             </ul>
           </li>
           <li>
-            <h3 className={s.privacyTitle}>
+            <h3 className={s.privacyListTitle}>
               9. ДОДАТКОВА ІНФОРМАЦІЯ ПРО ПЕРСОНАЛЬНІ ДАНІ КОРИСТУВАЧА
             </h3>
 
@@ -344,7 +344,7 @@ const SectionPrivacy = () => {
             </ul>
           </li>
           <li>
-            <h3 className={s.privacyTitle}>10. ДОДАТКОВІ УМОВИ</h3>
+            <h3 className={s.privacyListTitle}>10. ДОДАТКОВІ УМОВИ</h3>
 
             <ul>
               <li className={s.privacyListDescription}>

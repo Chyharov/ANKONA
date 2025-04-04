@@ -1,5 +1,5 @@
 import Header from 'components/Header/Header';
-import SectionBlog from 'components/SectionPrivacy/SectionPrivacy';
+import SectionPrivacy from 'components/SectionPrivacy/SectionPrivacy';
 import Footer from 'components/Footer/Footer';
 
 const PrivacyPage = () => {
@@ -7,7 +7,7 @@ const PrivacyPage = () => {
     <>
       <Header />
       <main>
-        <SectionBlog />
+        <SectionPrivacy />
       </main>
       <Footer />
     </>
