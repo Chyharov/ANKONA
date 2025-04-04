@@ -48,6 +48,10 @@
   color: var(--grayColor);
   border: none;
   background-color: var(--eggShellWhite);
+
+  @include mq(desk) {
+    width: 700px;
+  }
 }
 
 .searchIconInput {
