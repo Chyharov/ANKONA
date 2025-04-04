@@ -4,6 +4,11 @@
     padding-top: 94px;
     padding-bottom: 80px;
     background-color: var(--whiteBG);
+
+    @include mq(desk) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 .privacyTitle,
@@ -13,6 +18,16 @@
     line-height: 1.5;
     color: var(--richSoilBrown);
     padding: 4px 8px;
+}
+
+.privacyTitle {
+    @include mq(desk) {
+        font-family: 'Montserrat Medium';
+        font-size: 24px;
+        line-height: 1.34;
+        padding: 8px 8px 0px 8px;
+        text-align: center;
+    }
 }
 
 .privacyDescription,

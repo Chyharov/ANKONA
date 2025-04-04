@@ -99,7 +99,7 @@ const ProductDetails = () => {
             ? product.descriptionText.map((text, index) => (
                 <p
                   key={index}
-                  className={s.productDetailsDescription}
+                  className={s.productDetailsDescriptionSecond}
                   style={{ marginBottom: '8px' }}
                 >
                   {text}
@@ -118,7 +118,7 @@ const ProductDetails = () => {
             product.sections.map((section, index) => (
               <div key={index} className={s.productDetailsBorder}>
                 <h3
-                  className={s.categoryGoods}
+                  className={s.categoryGoodsDescription}
                   style={{ marginBottom: '0px', padding: '12px 8px 8px 8px' }}
                 >
                   {section.title}
@@ -126,14 +126,14 @@ const ProductDetails = () => {
                 <ul className={s.categoryGoodsList}>
                   {section.items.map((item, i) => (
                     <li key={i} className={s.categoryGoodsList__item}>
-                      <p className={s.productDetailsDescription}>{item}</p>
+                      <p className={s.productDetailsDescriptionThird}>{item}</p>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
 
-              <ButtonCallBack style={{ marginTop: '8px' }} />
+              <ButtonCallBack style={{ marginTop: '8px', marginLeft: 'auto', width: '41.67%' }} />
               </div>
             </div>
         </div>
