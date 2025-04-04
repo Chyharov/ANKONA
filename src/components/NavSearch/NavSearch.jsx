@@ -13,7 +13,7 @@ const NavSearch = ({ style }) => {
   const toggleSearch = () => {
     setIsSearchOpen((prev) => !prev);
     if (!isSearchOpen) {
-      scroller.scrollTo("goods", {
+      scroller.scrollTo("search", {
         smooth: true,
         offset: -70,
         duration: 500,

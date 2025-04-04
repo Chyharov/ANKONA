@@ -394,7 +394,7 @@ const SectionGoods = () => {
           </ul>
         )}
 
-        <div className={s.borderforGoodsCategoryList}></div>
+        <div className={s.borderforGoodsCategoryList} id="search"></div>
 
         <div className={s.findCountContainer}>
           <p className={s.findTitle}>Знайдено:</p>
