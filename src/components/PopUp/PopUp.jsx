@@ -35,7 +35,7 @@ const PopUp = ({ isOpen, onClose }) => {
         </p>
         <div className={s.popUpDescription__border}></div>
 
-        <form>
+        <form className={s.popUpForm}>
           <label>
             <p className={s.labelTitle}>Як до Вас звертатися?</p>
             <input
