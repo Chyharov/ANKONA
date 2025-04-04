@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import closeIcon from 'images/hero/closeIcon.svg';
 import s from './PopUp.module.scss';
 
-const PopUp = ({ isOpen, onClose }) => {
+const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add(s.noScroll);
@@ -17,6 +18,15 @@ const PopUp = ({ isOpen, onClose }) => {
   }, [isOpen]);
 
   if (!isOpen) return null;
+
+  const handleScrollToTeam = () => {
+    scroller.scrollTo('team', {
+      smooth: true,
+      offset: -70,
+      duration: 500,
+    });
+    if (isMobile) closeMobileMenu();
+  };
 
   return (
     <div className={s.popUpOverlay} onClick={onClose}>
@@ -77,20 +87,20 @@ const PopUp = ({ isOpen, onClose }) => {
         <div className={s.privacyContainer}>
           <p className={s.privacyText} style={{ marginBottom: '8px' }}>
             Відправляючи свої дані Ви автоматично погоджуєтеся з{' '}
-            <Link
+            <RouterLink
               to="/privacy"
               target="_blank"
               rel="noopener noreferrer"
               className={s.privacyLink}
             >
               політикою конфіденційності
-            </Link>
+            </RouterLink>
           </p>
           <p className={s.privacyText}>
             *Для контакту з безпосереднім спеціалістом розгляньте розділ{' '}
-            <a className={s.privacyLink} href="/team">
+            <span className={s.privacyLink} onClick={handleScrollToTeam}>
               "Наша команда"
-            </a>
+            </span>
           </p>
         </div>
       </div>
