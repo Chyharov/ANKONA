@@ -4,11 +4,11 @@ import horseHeroImageDesktop from 'images/hero/horseHeroImageDesktop.jpg';
 import ankonaText from 'images/hero/ankonaText.svg';
 import ankonaTextDesktop from 'images/hero/ankonaTextDesktop.svg';
 import ButtonCallBack from 'components/ButtonCallBack/ButtonCallBack';
-import translations from "components/LanguageSelect/translations";
+import translations from 'components/LanguageSelect/translations';
 import s from './SectionHero.module.scss';
 
 const SectionHero = ({ language }) => {
-    const t = translations.hero[language];
+  const t = translations.hero[language];
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1440);
 
   useEffect(() => {
@@ -20,19 +20,21 @@ const SectionHero = ({ language }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-
-
   return (
     <section className={s.sectionHero}>
       <div className={s.heroPhotoContainer}>
         <div className={s.horseHeroImageContainer}>
-        <img
-          className={s.horseHeroImage}
-          src={isDesktop ? horseHeroImageDesktop : horseHeroImage}
-          alt="horseHeroImage"
+          <img
+            className={s.horseHeroImage}
+            src={isDesktop ? horseHeroImageDesktop : horseHeroImage}
+            alt="horseHeroImage"
           />
-          </div>
-        <img className={s.ankonaText} src={isDesktop ? ankonaTextDesktop : ankonaText} alt="ankonaText" />
+        </div>
+        <img
+          className={s.ankonaText}
+          src={isDesktop ? ankonaTextDesktop : ankonaText}
+          alt="ankonaText"
+        />
       </div>
       <div className={`container ${s.sectionHero__container}`}>
         <div className={s.heroBorder}>
@@ -42,7 +44,7 @@ const SectionHero = ({ language }) => {
         <div className={s.heroBorderDesk}>
           <div className={s.heroBorderDotDesk}></div>
         </div>
-        <ButtonCallBack language={language}/>
+        <ButtonCallBack language={language} />
       </div>
     </section>
   );

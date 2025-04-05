@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PopUp from 'components/PopUp/PopUp';
-import translations from "components/LanguageSelect/translations";
+import translations from 'components/LanguageSelect/translations';
 import s from './ButtonCallBack.module.scss';
 
 const ButtonCallBack = ({ style, language }) => {
