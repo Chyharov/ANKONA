@@ -39,7 +39,7 @@ const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu }) => {
             aria-label="закрити заявку"
           />
         </button>
-        <h2 className={s.popUpTitle}>Для отримання консультації</h2>
+        <h2 className={s.popUpTitle}>Для отримання консультації або замовлення</h2>
         <p className={s.popUpDescription}>
           Заповніть інформацію нижче та ми зв’яжемося з Вами
         </p>
