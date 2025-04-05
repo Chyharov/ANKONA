@@ -51,6 +51,7 @@ const translations = {
             BalanceDescription: 'Про пошук балансу між витратами та заробітком',
             Performance: 'Результативність',
             PerformanceDescription: 'Знаємо, як досягати та підтримувати продуктивність',
+            buttonBack: 'Згорнути',
         },
         en: {
             title: 'We are specialists in modern feeding',
@@ -77,6 +78,7 @@ const translations = {
             BalanceDescription: 'about finding a balance between expenses and earnings',
             Performance: 'Performance',
             PerformanceDescription: 'we know how to achieve and maintain productivity',
+            buttonBack: 'Back',
         },
     }
 };
