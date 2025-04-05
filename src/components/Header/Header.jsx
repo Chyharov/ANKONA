@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import logo from 'images/header/logo.svg';
 import logoDesk from 'images/header/logoDesk.svg';
@@ -9,6 +9,14 @@ import s from './Header.module.scss';
 
 const Header = ({ navSearchStyle, languageSelectStyle, navBarStyle, style }) => {
   const [currentLogo, setCurrentLogo] = useState(window.innerWidth >= 1440 ? logoDesk : logo);
+  const [language, setLanguage] = useState("ua");
+
+  const handleLanguageChange = useCallback((langCode) => {
+    if (langCode !== language) {  // Перевірка, чи мова змінилася
+      setLanguage(langCode);
+      console.log("Мова змінена на:", langCode);
+    }
+  }, [language]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,8 +36,8 @@ const Header = ({ navSearchStyle, languageSelectStyle, navBarStyle, style }) => 
 
         <nav className={s.navigation__container} style={style}>
           <NavSearch style={navSearchStyle} />
-          <LanguageSelect style={languageSelectStyle} />
-          <NavBar style={navBarStyle} />
+          <LanguageSelect style={languageSelectStyle} onChange={handleLanguageChange}/>
+          <NavBar style={navBarStyle} language={language}/>
         </nav>
       </div>
     </header>

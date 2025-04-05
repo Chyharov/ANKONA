@@ -3,7 +3,7 @@ import MobileNavigation from './MobileNavigation';
 import Navigation from './Navigation';
 import s from './NavBar.module.scss';
 
-const NavMenu = ({ style = {} }) => {
+const NavBar = ({ style = {}, language }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1439);
 
   useEffect(() => {
@@ -18,10 +18,14 @@ const NavMenu = ({ style = {} }) => {
   return (
     <div className={s.navBar} style={style} onClick={e => e.stopPropagation()}>
       <nav className={s.nav}>
-        {isMobile ? <MobileNavigation /> : <Navigation />}
+        {isMobile ? (
+          <MobileNavigation language={language} />
+        ) : (
+          <Navigation language={language} />
+        )}
       </nav>
     </div>
   );
 };
 
-export default NavMenu;
+export default NavBar;

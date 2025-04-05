@@ -1,9 +1,11 @@
 import { Link } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import translations from "components/LanguageSelect/translations";
 import s from './NavBar.module.scss';
 
-const NavLinks = (props) => {
+const NavLinks = ({ language, ...props }) => {
+  const t = translations.navlink[language];
   const animateFrom = { opacity: 0, y: -40 };
   const animateTo = { opacity: 1, y: 0 };
 
@@ -26,7 +28,7 @@ const NavLinks = (props) => {
               transition={{ delay: 0.05 }}
               className={s.menu__list_item}
             >
-              Про нас
+              {t.about}
             </motion.li>
           </Link>
 
@@ -45,7 +47,7 @@ const NavLinks = (props) => {
               transition={{ delay: 0.1 }}
               className={s.menu__list_item}
             >
-              Товари
+              {t.goods}
             </motion.li>
           </Link>
 
@@ -64,7 +66,7 @@ const NavLinks = (props) => {
               transition={{ delay: 0.2 }}
               className={s.menu__list_item}
             >
-              Торгові марки
+              {t.tradeMarks}
             </motion.li>
           </Link>
 
@@ -83,7 +85,7 @@ const NavLinks = (props) => {
               transition={{ delay: 0.3 }}
               className={s.menu__list_item}
             >
-              Команда
+              {t.team}
             </motion.li>
           </Link>
 
@@ -98,7 +100,7 @@ const NavLinks = (props) => {
               transition={{ delay: 0.4 }}
               className={s.menu__list_item}
             >
-              Блог
+              {t.blog}
             </motion.li>
           </RouterLink>
         </ul>

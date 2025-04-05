@@ -1,10 +1,10 @@
 import NavLinks from "./NavLinks";
 import s from './NavBar.module.scss'
 
-const Navigation = () => {
+const Navigation = ({language}) => {
     return ( 
         <nav className={s.navigation}>
-            <NavLinks />
+            <NavLinks language={language}/>
         </nav>
         
      );
