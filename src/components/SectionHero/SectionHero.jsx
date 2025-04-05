@@ -4,9 +4,11 @@ import horseHeroImageDesktop from 'images/hero/horseHeroImageDesktop.jpg';
 import ankonaText from 'images/hero/ankonaText.svg';
 import ankonaTextDesktop from 'images/hero/ankonaTextDesktop.svg';
 import ButtonCallBack from 'components/ButtonCallBack/ButtonCallBack';
+import translations from "components/LanguageSelect/translations";
 import s from './SectionHero.module.scss';
 
-const SectionHero = () => {
+const SectionHero = ({ language }) => {
+    const t = translations.hero[language];
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1440);
 
   useEffect(() => {
@@ -17,6 +19,8 @@ const SectionHero = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+
 
   return (
     <section className={s.sectionHero}>
@@ -34,11 +38,11 @@ const SectionHero = () => {
         <div className={s.heroBorder}>
           <div className={s.heroBorderDot}></div>
         </div>
-        <p className={s.heroDescription}>Нова стратегія раціональної годівлі</p>
+        <p className={s.heroDescription}>{t.title}</p>
         <div className={s.heroBorderDesk}>
           <div className={s.heroBorderDotDesk}></div>
         </div>
-        <ButtonCallBack />
+        <ButtonCallBack language={language}/>
       </div>
     </section>
   );

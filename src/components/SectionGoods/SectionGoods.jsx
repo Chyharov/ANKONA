@@ -447,7 +447,7 @@ const SectionGoods = () => {
 
                   <div className={s.iconManufacturerContainer}>
                     {categoryIconsList.map((icon, index) => (
-                      <div className={s.iconManufacturerContainerBorder}>
+                      <div key={icon + index} className={s.iconManufacturerContainerBorder}>
                         <img
                           key={index}
                           className={s.iconManufacturer}

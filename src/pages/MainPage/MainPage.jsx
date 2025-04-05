@@ -1,3 +1,4 @@
+import { useState, useCallback } from 'react';
 import { SearchProvider } from 'components/SearchContext';
 import Header from 'components/Header/Header';
 import SectionHero from 'components/SectionHero/SectionHero';
@@ -8,17 +9,26 @@ import SectionTeam from 'components/SectionTeam/SectionTeam';
 import Footer from 'components/Footer/Footer';
 
 const MainPage = () => {
+  const [language, setLanguage] = useState('ua');
+
+  const handleLanguageChange = useCallback((langCode) => {
+    if (langCode !== language) {
+      setLanguage(langCode);
+      console.log('Мова змінена на:', langCode);
+    }
+  }, [language]);
+
   return (
     <SearchProvider>
-      <Header />
+      <Header language={language} onLanguageChange={handleLanguageChange} />
       <main>
-        <SectionHero />
-        <SectionAbout />
-        <SectionGoods />
-        <SectionTradeMarks />
-        <SectionTeam />
+        <SectionHero language={language} />
+        <SectionAbout language={language} />
+        <SectionGoods language={language} />
+        <SectionTradeMarks language={language} />
+        <SectionTeam language={language} />
       </main>
-      <Footer />
+      <Footer language={language} />
     </SearchProvider>
   );
 };

@@ -7,29 +7,28 @@ const languages = [
   { code: "en", label: "ENG" }
 ];
 
-// Функція для отримання мови з localStorage, якщо є
 const getInitialLanguage = () => {
   const saved = localStorage.getItem('language');
-  return saved ? languages.find(lang => lang.code === saved) : languages[0]; // за замовчуванням українська
+  return saved ? languages.find(lang => lang.code === saved) : languages[0];
 };
 
 const LanguageSelect = ({ style, onChange }) => {
-  const [selectedLanguage, setSelectedLanguage] = useState(getInitialLanguage()); // ініціалізація мови
+  const [selectedLanguage, setSelectedLanguage] = useState(getInitialLanguage());
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  const toggleDropdown = () => setIsOpen(!isOpen); // Перемикання випадаючого списку
+  const toggleDropdown = () => setIsOpen(!isOpen);
 
   const selectLanguage = (lang) => {
-    setSelectedLanguage(lang); // Зміна вибраної мови
-    localStorage.setItem('language', lang.code); // Зберігаємо в localStorage
+    setSelectedLanguage(lang);
+    localStorage.setItem('language', lang.code);
     setIsOpen(false);
-    onChange?.(lang.code); // Сповіщаємо про зміну мови
+    onChange?.(lang.code);
   };
 
-  // Оновлення мови при зміні вибору
+
   useEffect(() => {
-    onChange?.(selectedLanguage.code); // Повідомляємо про поточну мову
+    onChange?.(selectedLanguage.code);
   }, [selectedLanguage, onChange]);
 
   return (
@@ -44,7 +43,7 @@ const LanguageSelect = ({ style, onChange }) => {
             <li
               key={lang.code}
               className={`${s.option} ${lang.code === selectedLanguage.code ? s.active : ""}`}
-              onClick={() => selectLanguage(lang)} // Вибір мови
+              onClick={() => selectLanguage(lang)}
             >
               {lang.label}
             </li>
