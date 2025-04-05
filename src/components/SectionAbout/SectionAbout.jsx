@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import aboutListImg from 'images/about/pict.jpg';
 import aboutListImgDesk from 'images/about/pictDesk.jpg';
+import translations from 'components/LanguageSelect/translations';
 import s from './SectionAbout.module.scss';
 
-const SectionAbout = () => {
+const SectionAbout = ({language}) => {
+  const t = translations.about[language];
   const [isBlockVisible, setIsBlockVisible] = useState(false);
   const [imageSrc, setImageSrc] = useState(
     window.innerWidth >= 1440 ? aboutListImgDesk : aboutListImg
@@ -15,7 +17,7 @@ const SectionAbout = () => {
       const isLargeScreen = window.innerWidth >= 1440;
       setIsDesktop(isLargeScreen);
       setImageSrc(isLargeScreen ? aboutListImgDesk : aboutListImg);
-      setIsBlockVisible(isLargeScreen); // Завжди показувати блок на великих екранах
+      setIsBlockVisible(isLargeScreen);
     };
 
     window.addEventListener('resize', handleResize);
@@ -30,21 +32,20 @@ const SectionAbout = () => {
   return (
     <section className={s.sectionAbout} id="about">
       <div className={`container ${s.sectionAboutContainer}`}>
-        <h2 className={s.sectionAboutTitle}>Ми спеціалісти сучасної годівлі</h2>
+        <h2 className={s.sectionAboutTitle}>{t.title}</h2>
         <div className={s.aboutTitleBorder}></div>
         <p className={s.sectionAboutDescription}>
-          Ми впроваджуємо раціональну годівлю як інструмент стратегічного
-          управління у тваринництві
+          {t.titleDescription}
         </p>
         <ul className={s.aboutList}>
           <li className={s.aboutList__item}>
             <div className={s.sectionAboutListLeftBG}>
-              <h3 className={s.sectionAboutListTitle}>Наша стратегія</h3>
+              <h3 className={s.sectionAboutListTitle}>{t.OurStrategy}</h3>
               <div className={s.sectionAboutListTitleBorder}></div>
               <ul className={s.sectionAboutList}>
-                <li className={s.sectionAboutListItem}>Забезпечуємо клієнтів не лише продукцією, а й надихаємо дивитися на тваринництво по-новому</li>
-                <li className={s.sectionAboutListItem}>Далекоглядний підхід до роботи, націлений на майбутнє</li>
-                <li className={s.sectionAboutListItem}>Довготривале партнерство</li>
+                <li className={s.sectionAboutListItem}>{t.OurStrategyListItem}</li>
+                <li className={s.sectionAboutListItem}>{t.OurStrategyListItemSecond}</li>
+                <li className={s.sectionAboutListItem}>{t.OurStrategyListItemThird}</li>
               </ul>
             </div>
           </li>
@@ -53,12 +54,12 @@ const SectionAbout = () => {
           </li>
           <li className={s.aboutList__item}>
             <div className={s.sectionAboutListRightBG}>
-              <h3 className={s.sectionAboutListTitle}>Наші інновації</h3>
+              <h3 className={s.sectionAboutListTitle}>{t.OurInnovation}</h3>
               <div className={s.sectionAboutListTitleBorder}></div>
               <ul className={s.sectionAboutList}>
-                <li className={s.sectionAboutListItem}>Науковий та дослідницький підхід до всього, що ми робимо</li>
-                <li className={s.sectionAboutListItem}>Пошук нових, альтернативних рішень, що підвищують ефективність</li>
-                <li className={s.sectionAboutListItem}>Погляд, спрямований у майбутнє</li>
+                <li className={s.sectionAboutListItem}>{t.OurInnovationListItem}</li>
+                <li className={s.sectionAboutListItem}>{t.OurInnovationListItemSecond}</li>
+                <li className={s.sectionAboutListItem}>{t.OurInnovationListItemThird}</li>
               </ul>
             </div>
           </li>
@@ -66,22 +67,22 @@ const SectionAbout = () => {
 
         {!isDesktop && !isBlockVisible && (
           <button className={s.sectionAboutBtn} onClick={toggleBlock}>
-            Розгорнути
+            {t.button}
           </button>
         )}
 
         {(isDesktop || isBlockVisible) && (
           <div className={s.sectionAboutBlockWhyUs}>
-            <h3 className={s.aboutBlockWhyUsTitle}>Чому ми?</h3>
+            <h3 className={s.aboutBlockWhyUsTitle}>{t.blockWhyUsTitle}</h3>
             <ul className={s.aboutBlockWhyUsListLeft}>
-              <li className={s.aboutBlockWhyUsList__Item}><h4 className={s.aboutBlockWhyUsList__ItemTitle}>Надійність</h4><p className={s.aboutBlockWhyUsList__ItemDescription}>Продукція безпечна для тварин та людей</p></li>
-              <li className={s.aboutBlockWhyUsList__Item}><h4 className={s.aboutBlockWhyUsList__ItemTitle}>Далекоглядність</h4><p className={s.aboutBlockWhyUsList__ItemDescription}>Націлені на довготривале партнерство</p></li>
-              <li className={s.aboutBlockWhyUsList__Item}><h4 className={s.aboutBlockWhyUsList__ItemTitle}>Гнучкість</h4><p className={s.aboutBlockWhyUsList__ItemDescription}>Мобільні до вирішення поточних проблем</p></li>
+              <li className={s.aboutBlockWhyUsList__Item}><h4 className={s.aboutBlockWhyUsList__ItemTitle}>{t.Reliability}</h4><p className={s.aboutBlockWhyUsList__ItemDescription}>{t.ReliabilityDescription}</p></li>
+              <li className={s.aboutBlockWhyUsList__Item}><h4 className={s.aboutBlockWhyUsList__ItemTitle}>{t.Farsightedness}</h4><p className={s.aboutBlockWhyUsList__ItemDescription}>{t.FarsightednessDescription}</p></li>
+              <li className={s.aboutBlockWhyUsList__Item}><h4 className={s.aboutBlockWhyUsList__ItemTitle}>{t.Flexibility}</h4><p className={s.aboutBlockWhyUsList__ItemDescription}>{t.FlexibilityDescription}</p></li>
             </ul>
             <ul className={s.aboutBlockWhyUsList}>
-              <li className={s.aboutBlockWhyUsList__Item}><h4 className={s.aboutBlockWhyUsList__ItemTitle}>Інноваційність</h4><p className={s.aboutBlockWhyUsList__ItemDescription}>Про пошук нових рішень</p></li>
-              <li className={s.aboutBlockWhyUsList__Item}><h4 className={s.aboutBlockWhyUsList__ItemTitle}>Збалансованість</h4><p className={s.aboutBlockWhyUsList__ItemDescription}>Про пошук балансу між витратами та заробітком</p></li>
-              <li className={s.aboutBlockWhyUsList__Item}><h4 className={s.aboutBlockWhyUsList__ItemTitle}>Результативність</h4><p className={s.aboutBlockWhyUsList__ItemDescription}>Знаємо, як досягати та підтримувати продуктивність</p></li>
+              <li className={s.aboutBlockWhyUsList__Item}><h4 className={s.aboutBlockWhyUsList__ItemTitle}>{t.Innovativeness}</h4><p className={s.aboutBlockWhyUsList__ItemDescription}>{t.InnovativenessDescription}</p></li>
+              <li className={s.aboutBlockWhyUsList__Item}><h4 className={s.aboutBlockWhyUsList__ItemTitle}>{t.Balance}</h4><p className={s.aboutBlockWhyUsList__ItemDescription}>{t.BalanceDescription}</p></li>
+              <li className={s.aboutBlockWhyUsList__Item}><h4 className={s.aboutBlockWhyUsList__ItemTitle}>{t.Performance}</h4><p className={s.aboutBlockWhyUsList__ItemDescription}>{t.PerformanceDescription}</p></li>
             </ul>
             {!isDesktop && (
               <button className={s.aboutBlockWhyUsBtnClose} onClick={toggleBlock}>
