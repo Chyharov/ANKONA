@@ -13,17 +13,8 @@ import iconGoat from 'images/goods/iconGoat.svg';
 import iconCheckBox from 'images/goods/iconCheckBox.svg';
 import Pagination from 'components/Pagination/Pagination';
 import { products } from 'services/Products';
+import translations from 'components/LanguageSelect/translations';
 import s from './SectionGoods.module.scss';
-
-const initialCategories = [
-  'ВРХ дорослі',
-  'ВРХ молодняк',
-  'ДРХ',
-  'Коні',
-  'Птиця',
-  'Свині',
-  'Підходе для всіх',
-];
 
 const categoryIcons = {
   'ВРХ дорослі': iconCow,
@@ -34,18 +25,10 @@ const categoryIcons = {
   Свині: iconPig,
 };
 
-const initialManufacturers = [
-  'AGRO-BIZEK',
-  'Ahrhoff FUTTERGUT',
-  'ETOS',
-  'FUTTERGUT - надійна годівля',
-  'JRS',
-  'NUTRIBOS',
-  'Schils',
-  'VILOFOSS',
-];
-
-const SectionGoods = () => {
+const SectionGoods = ({ language }) => {
+  const t = translations.goods[language];
+  const initialCategories = t.categories;
+  const initialManufacturers = t.manufacturers;
   const navigate = useNavigate();
   const [filters, setFilters] = useState({
     category: new Set(),
@@ -175,15 +158,15 @@ const SectionGoods = () => {
   return (
     <section className={s.sectionGoods} id="goods">
       <div className={`container ${s.sectionGoods__Container}`}>
-        <h2 className={s.sectionGoodsTitle}>Товари</h2>
+        <h2 className={s.sectionGoodsTitle}>{t.title}</h2>
         <div className={s.sectionGoodsBorder}></div>
-
+        <h3 className={s.titleFilterbyCategorie}>{t.titleFilterByCategorie}</h3>
         <button
           onClick={() => setShowCategories(!showCategories)}
           className={s.sectionGoodsCategoryBtn}
           type="button"
         >
-          Фільтрувати за категорією тварин:
+          {t.titleFilterByCategorie}
           <img
             className={s.toggleBtnImg}
             src={showCategories ? arrowUp : arrowDown}
@@ -287,12 +270,14 @@ const SectionGoods = () => {
           </ul>
         )}
 
+        <h3 className={s.titleFilterbyVendor}>{t.titleFilterByVendor}</h3>
+
         <button
           onClick={() => setShowManufacturers(!showManufacturers)}
           className={s.sectionGoodsCategoryBtn}
           type="button"
         >
-          Фільтрувати за виробником:{' '}
+          {t.titleFilterByVendor}{' '}
           <img
             className={s.toggleBtnImg}
             src={showManufacturers ? arrowUp : arrowDown}
@@ -397,10 +382,10 @@ const SectionGoods = () => {
         <div className={s.borderforGoodsCategoryList} id="search"></div>
 
         <div className={s.findCountContainer}>
-          <p className={s.findTitle}>Знайдено:</p>
+          <p className={s.findTitle}>{t.Found}</p>
           <div className={s.findNumerContainer}>
             <p className={s.findNumerCount}>{filteredProducts.length}</p>
-            <p className={s.findDescription}>позицій</p>
+            <p className={s.findDescription}>{t.positions}</p>
           </div>
         </div>
 
@@ -447,7 +432,10 @@ const SectionGoods = () => {
 
                   <div className={s.iconManufacturerContainer}>
                     {categoryIconsList.map((icon, index) => (
-                      <div key={icon + index} className={s.iconManufacturerContainerBorder}>
+                      <div
+                        key={icon + index}
+                        className={s.iconManufacturerContainerBorder}
+                      >
                         <img
                           key={index}
                           className={s.iconManufacturer}

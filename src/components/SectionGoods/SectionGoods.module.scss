@@ -95,6 +95,7 @@
     width: 150px;
     height: 150px;
     padding: 15px 5px 22px 5px;
+    margin-bottom: 0px;
   }
 }
 
@@ -441,5 +442,19 @@
     padding-right: 0px;
     width: 105px;
     margin-bottom: 29px;
+  }
+}
+
+.titleFilterbyCategorie,
+.titleFilterbyVendor {
+  display: none;
+  @include mq(desk) {
+    display: block;
+    font-family: 'Montserrat Medium';
+    font-size: 24px;
+    line-height: 1.34;
+    color: var(--richSoilBrown);
+    padding: 8px;
+    margin-bottom: 8px;
   }
 }
