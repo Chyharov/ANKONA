@@ -36,6 +36,47 @@
   height: 40px;
 }
 
+
+.footerSocailMediaList__itemTikTok {
+display: flex;
+  height: 34px;
+  width: 34px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--copperYellow);
+  color: var(--richSoilBrown);
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.footerSocailMediaList__itemYouTube {
+  display: flex;
+    height: 35px;
+    width: 35px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--richSoilBrown);
+    color: var(--copperYellow);
+    border-radius: 8px;
+    border: 3px solid rgba(191, 119, 66, 1);
+}
+
+.footerSocailMediaList__itemLogoYouTube {
+  display: flex;
+    height: 25px;
+    width: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerSocailMediaList__itemLogoTikTok {
+  display: flex;
+    height: 35px;
+    width: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
 .footerBarList {
   display: flex;
   flex-direction: column;

@@ -3,6 +3,8 @@ import { Link as RouterLink } from 'react-router-dom';
 import linkedinLogo from 'images/footer/linkedinLogo.svg';
 import facebookLogo from 'images/footer/facebookLogo.svg';
 import instagramLogo from 'images/footer/instagramLogo.svg';
+import { AiFillTikTok } from "react-icons/ai";
+import { FaYoutube } from "react-icons/fa";
 import logoFooter from 'images/footer/logoFooter.svg';
 import s from './Footer.module.scss';
 
@@ -58,6 +60,25 @@ const Footer = props => {
                 />
               </a>
             </li>
+            <li className={s.footerSocailMediaList__itemTikTok}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.tiktok.com/"
+              >
+                <AiFillTikTok className={s.footerSocailMediaList__itemLogoTikTok} alt="tikTokLogo" />
+              </a>
+            </li>
+            <li className={s.footerSocailMediaList__itemYouTube}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.YouTube.com/"
+              >
+                <FaYoutube className={s.footerSocailMediaList__itemLogoYouTube} alt="tikTokLogo" />
+              </a>
+            </li>
+            
           </ul>
 
           <nav className={s.footerNavBarList}>
