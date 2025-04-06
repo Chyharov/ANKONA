@@ -20,7 +20,7 @@ const categoryIcons = {
 
 const allIcons = Object.values(categoryIcons);
 
-const ProductDetails = () => {
+const ProductDetails = ({language}) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const product = products.find(p => p.id === Number(id));
@@ -131,7 +131,7 @@ const ProductDetails = () => {
               </div>
             ))}
 
-              <ButtonCallBack style={{ marginTop: '8px', marginLeft: 'auto', width: '41.67%' }} />
+              <ButtonCallBack style={{ marginTop: '8px', marginLeft: 'auto', width: '41.67%' }} language={language} />
               </div>
             </div>
         </div>
