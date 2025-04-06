@@ -1,6 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { products } from 'services/Products';
-import Header from 'components/Header/Header';
 import ButtonCallBack from 'components/ButtonCallBack/ButtonCallBack';
 import iconHorse from 'images/goods/iconHorse.svg';
 import iconPig from 'images/goods/iconPig.svg';
@@ -41,7 +40,6 @@ const ProductDetails = () => {
 
   return (
     <>
-      <Header navSearchStyle={{ display: 'none' }} style={{ width: '130px' }} />
       <section className={s.sectionProductDetails}>
         <div className="container">
           <div className={s.buttonBackContainer}>

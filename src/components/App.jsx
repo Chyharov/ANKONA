@@ -1,16 +1,16 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import { SearchProvider } from "components/SearchContext"; // Додай провайдер
+import { SearchProvider } from "components/SearchContext";
 
 const MainPage = lazy(() => import("pages/MainPage/MainPage"));
-const ProductDetails = lazy(() => import("components/ProductDetails/ProductDetails"));
+const ProductDetails = lazy(() => import("pages/ProductDetailsPage/ProductDetailsPage"));
 const BlogPage = lazy(() => import("pages/BlogPage/BlogPage"));
 const BlogPostPage = lazy(() => import("pages/BlogPostPage/BlogPostPage"));
 const PrivacyPage = lazy(() => import("pages/PrivacyPage/PrivacyPage"));
 
 export const App = () => {
   return (
-    <SearchProvider> {/* Тепер у всіх дочірніх компонентах буде доступ до SearchContext */}
+    <SearchProvider>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<MainPage />} />
