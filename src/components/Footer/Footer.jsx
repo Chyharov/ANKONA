@@ -6,9 +6,11 @@ import instagramLogo from 'images/footer/instagramLogo.svg';
 import { AiFillTikTok } from "react-icons/ai";
 import { FaYoutube } from "react-icons/fa";
 import logoFooter from 'images/footer/logoFooter.svg';
+import translations from 'components/LanguageSelect/translations';
 import s from './Footer.module.scss';
 
-const Footer = props => {
+const Footer = ({ language, ...props }) => {
+  const t = translations.navlink[language];
   const animateFrom = { opacity: 0, y: -40 };
   const animateTo = { opacity: 1, y: 0 };
 
@@ -98,7 +100,7 @@ const Footer = props => {
                   transition={{ delay: 0.05 }}
                   className={s.footerBarList__itemDescription}
                 >
-                  Про нас
+                  {t.about}
                 </li>
               </Link>
               <Link
@@ -116,7 +118,7 @@ const Footer = props => {
                   transition={{ delay: 0.05 }}
                   className={s.footerBarList__itemDescription}
                 >
-                  Товари
+                  {t.goods}
                 </li>
               </Link>
               <Link
@@ -134,7 +136,7 @@ const Footer = props => {
                   transition={{ delay: 0.05 }}
                   className={s.footerBarList__itemDescription}
                 >
-                  Торгові марки
+                  {t.tradeMarks}
                 </li>
               </Link>
               <Link
@@ -152,7 +154,7 @@ const Footer = props => {
                   transition={{ delay: 0.05 }}
                   className={s.footerBarList__itemDescription}
                 >
-                  Команда
+                  {t.team}
                 </li>
               </Link>
               <li className={s.footerBarList__item}>
@@ -161,7 +163,7 @@ const Footer = props => {
                   className={s.footerBarList__itemDescription}
                   to="/blog"
                 >
-                  Блог
+                 {t.blog}
                 </RouterLink>
               </li>
             </ul>
@@ -169,11 +171,10 @@ const Footer = props => {
         </div>
         <div className={s.privacyContainer}>
           <h3 className={s.footerCopyrightTitle}>
-            Всі права захищені © ANKONA 2025
+            {t.reserved}
           </h3>
           <p className={s.footerCopyrightDescription}>
-            Використання матеріалів сайту можливе лише з письмового дозволу
-            правовласника та із зазначенням активного посилання на джерело
+            {t.reservedDescription}
           </p>
         </div>
       </div>
