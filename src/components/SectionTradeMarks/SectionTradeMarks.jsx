@@ -4,13 +4,15 @@ import vilifossLogo from 'images/tradeMarks/vilifoss.svg';
 import etosLogo from 'images/tradeMarks/etos.svg';
 import agrobizekLogo from 'images/tradeMarks/agro-bizek.svg';
 import jrsLogo from 'images/tradeMarks/jrs.svg';
+import translations from 'components/LanguageSelect/translations';
 import s from './SectionTradeMarks.module.scss';
 
-const SectionTradeMarks = () => {
+const SectionTradeMarks = ({language}) => {
+  const t = translations.tradeMarks[language];
   return (
     <section className={s.sectionTradeMarks} id="tradeMarks">
       <div className={`container ${s.tradeMarksContainer}`}>
-        <h2 className={s.tradeMarksTitle}>Наші Торгові Марки</h2>
+        <h2 className={s.tradeMarksTitle}>{t.title}</h2>
         <div className={s.tradeMarksBorder}></div>
         <ul className={s.tradeMarkList}>
           <li className={s.tradeMarkList__item}>

@@ -128,9 +128,9 @@ const translations = {
       categories: [
         'Adult cattle',
         'Young cattle',
-        'Small ruminants',
+        'Small Cattle',
         'Horses',
-        'Poultry',
+        'Bird',
         'Pigs',
         'Suitable for all',
       ],
@@ -146,6 +146,14 @@ const translations = {
       ],
       Found: 'Found:',
       positions: 'positions',
+    },
+  },
+  tradeMarks: {
+    ua: {
+      title: 'Наші Торгові Марки',
+    },
+    en: {
+      title: 'Our TM',
     },
   },
 };
