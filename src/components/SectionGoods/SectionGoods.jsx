@@ -134,26 +134,40 @@ const SectionGoods = ({ language }) => {
 
   const { searchQuery } = useContext(SearchContext);
 
-  useEffect(() => {
-    let filtered = filterProducts(products, filters);
+useEffect(() => {
+  let filtered = filterProducts(products, filters);
 
-    if (searchQuery) {
-      filtered = filtered.filter(product => {
-        const productNameMatch = product.name
-          .toLowerCase()
-          .includes(searchQuery.toLowerCase());
-        const productCategoryMatch = Array.isArray(product.category)
-          ? product.category.some(cat =>
-              cat.toLowerCase().includes(searchQuery.toLowerCase())
-            )
-          : product.category.toLowerCase().includes(searchQuery.toLowerCase());
+  if (searchQuery) {
+    const lowerQuery = searchQuery.toLowerCase();
 
-        return productNameMatch || productCategoryMatch;
-      });
-    }
+    filtered = filtered.filter(product => {
+      const nameMatch = product.name.toLowerCase().includes(lowerQuery);
 
-    setFilteredProducts(filtered);
-  }, [filters, searchQuery]);
+      const categoryMatch = Array.isArray(product.category)
+        ? product.category.some(cat =>
+            cat.toLowerCase().includes(lowerQuery)
+          )
+        : product.category.toLowerCase().includes(lowerQuery);
+
+      const manufacturerMatch = Array.isArray(product.manufacturer)
+        ? product.manufacturer.some(m =>
+            m.toLowerCase().includes(lowerQuery)
+          )
+        : product.manufacturer.toLowerCase().includes(lowerQuery);
+
+      const descriptionMatch = product.description
+        .toLowerCase()
+        .includes(lowerQuery);
+
+      return (
+        nameMatch || categoryMatch || manufacturerMatch || descriptionMatch
+      );
+    });
+  }
+
+  setFilteredProducts(filtered);
+}, [filters, searchQuery]);
+
 
   return (
     <section className={s.sectionGoods} id="goods">
