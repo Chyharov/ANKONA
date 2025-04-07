@@ -1,15 +1,27 @@
+import { useState, useCallback } from 'react';
 import Header from 'components/Header/Header';
 import SectionBlog from 'components/SectionBlog/SectionBlog';
 import Footer from 'components/Footer/Footer';
 
 const BlogPage = () => {
+  const [language, setLanguage] = useState('ua');
+  
+    const handleLanguageChange = useCallback(
+      langCode => {
+        if (langCode !== language) {
+          setLanguage(langCode);
+          console.log('Мова змінена на:', langCode);
+        }
+      },
+      [language]
+    );
   return (
     <>
-      <Header navSearchStyle={{ display: 'none' }} style={{ width: '130px' }} />
+      <Header navSearchStyle={{ display: 'none' }} style={{ width: '130px' }} language={language} onLanguageChange={handleLanguageChange}/>
       <main>
-        <SectionBlog />
+        <SectionBlog language={language}/>
       </main>
-      <Footer />
+      <Footer language={language}/>
     </>
   );
 };

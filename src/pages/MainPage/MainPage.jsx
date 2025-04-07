@@ -11,12 +11,15 @@ import Footer from 'components/Footer/Footer';
 const MainPage = () => {
   const [language, setLanguage] = useState('ua');
 
-  const handleLanguageChange = useCallback((langCode) => {
-    if (langCode !== language) {
-      setLanguage(langCode);
-      console.log('Мова змінена на:', langCode);
-    }
-  }, [language]);
+  const handleLanguageChange = useCallback(
+    langCode => {
+      if (langCode !== language) {
+        setLanguage(langCode);
+        console.log('Мова змінена на:', langCode);
+      }
+    },
+    [language]
+  );
 
   return (
     <SearchProvider>

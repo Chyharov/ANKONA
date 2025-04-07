@@ -20,7 +20,7 @@ const categoryIcons = {
 
 const allIcons = Object.values(categoryIcons);
 
-const ProductDetails = ({language}) => {
+const ProductDetails = ({ language }) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const product = products.find(p => p.id === Number(id));
@@ -30,7 +30,9 @@ const ProductDetails = ({language}) => {
   }
 
   const categoryIconsList =
-    product.category === 'Підходе для всіх' || (Array.isArray(product.category) && product.category.includes('Підходе для всіх'))
+    product.category === 'Підходе для всіх' ||
+    (Array.isArray(product.category) &&
+      product.category.includes('Підходе для всіх'))
       ? allIcons
       : Array.isArray(product.category)
       ? product.category.map(cat => categoryIcons[cat]).filter(Boolean)
@@ -50,90 +52,104 @@ const ProductDetails = ({language}) => {
             <h2 className={s.sectionProductDetailsTitle}>{product.name}</h2>
           </div>
           <div className={s.productDetailsContainer}>
-          <div className={s.imageContainerDesktop}>
-          <img
-            className={s.imgProductDetails}
-            src={product.image}
-            alt={product.name}
-          />
+            <div className={s.imageContainerDesktop}>
+              <img
+                className={s.imgProductDetails}
+                src={product.image}
+                alt={product.name}
+              />
 
-          <h3 className={s.categoryGoods}>Категорія тварин:</h3>
-          <ul className={s.iconManufacturerList}>
-            {categoryIconsList.length > 0 &&
-              categoryIconsList.map((icon, index) => (
-                <li key={index} className={s.iconManufacturerList__item}>
-                  <img
-                    className={s.iconManufacturer}
-                    src={icon}
-                    alt="category icon"
-                  />
-                </li>
-              ))}
-          </ul>
-          <ul className={s.categoryList}>
-            {Array.isArray(product.category) ? (
-              product.category.map((cat, index) => (
-                <li className={s.categoryList__item} key={index}>
-                  <p className={s.categoryDescription}>{cat}</p>
-                </li>
-              ))
-            ) : (
-              <li className={s.categoryList__item}>
-                <p className={s.categoryDescription}>{product.category}</p>
-              </li>
-            )}
-          </ul>
-            </div>
-            <div className={s.productDescriptionContainer}>
-          <h3 className={s.productDetailsName}>{product.name}</h3>
-          <p className={s.productDetailsManufacturer}>{product.manufacturer}</p>
-          <p
-            className={s.productDetailsDescription}
-            style={{ padding: '8px', marginBottom: '4px' }}
-          >
-            {product.description}
-          </p>
-          {Array.isArray(product.descriptionText)
-            ? product.descriptionText.map((text, index) => (
-                <p
-                  key={index}
-                  className={s.productDetailsDescriptionSecond}
-                  style={{ marginBottom: '8px' }}
-                >
-                  {text}
-                </p>
-              ))
-            : product.descriptionText && (
-                <p
-                  className={s.productDetailsDescription}
-                  style={{ marginBottom: '8px' }}
-                >
-                  {product.descriptionText}
-                </p> 
-              )}
-
-          {product.sections &&
-            product.sections.map((section, index) => (
-              <div key={index} className={s.productDetailsBorder}>
-                <h3
-                  className={s.categoryGoodsDescription}
-                  style={{ marginBottom: '0px', padding: '12px 8px 8px 8px' }}
-                >
-                  {section.title}
-                </h3>
-                <ul className={s.categoryGoodsList}>
-                  {section.items.map((item, i) => (
-                    <li key={i} className={s.categoryGoodsList__item}>
-                      <p className={s.productDetailsDescriptionThird}>{item}</p>
+              <h3 className={s.categoryGoods}>Категорія тварин:</h3>
+              <ul className={s.iconManufacturerList}>
+                {categoryIconsList.length > 0 &&
+                  categoryIconsList.map((icon, index) => (
+                    <li key={index} className={s.iconManufacturerList__item}>
+                      <img
+                        className={s.iconManufacturer}
+                        src={icon}
+                        alt="category icon"
+                      />
                     </li>
                   ))}
-                </ul>
-              </div>
-            ))}
-
-              <ButtonCallBack style={{ marginTop: '8px', marginLeft: 'auto', width: '41.67%' }} language={language} />
-              </div>
+              </ul>
+              <ul className={s.categoryList}>
+                {Array.isArray(product.category) ? (
+                  product.category.map((cat, index) => (
+                    <li className={s.categoryList__item} key={index}>
+                      <p className={s.categoryDescription}>{cat}</p>
+                    </li>
+                  ))
+                ) : (
+                  <li className={s.categoryList__item}>
+                    <p className={s.categoryDescription}>{product.category}</p>
+                  </li>
+                )}
+              </ul>
             </div>
+            <div className={s.productDescriptionContainer}>
+              <h3 className={s.productDetailsName}>{product.name}</h3>
+              <p className={s.productDetailsManufacturer}>
+                {product.manufacturer}
+              </p>
+              <p
+                className={s.productDetailsDescription}
+                style={{ padding: '8px', marginBottom: '4px' }}
+              >
+                {product.description}
+              </p>
+              {Array.isArray(product.descriptionText)
+                ? product.descriptionText.map((text, index) => (
+                    <p
+                      key={index}
+                      className={s.productDetailsDescriptionSecond}
+                      style={{ marginBottom: '8px' }}
+                    >
+                      {text}
+                    </p>
+                  ))
+                : product.descriptionText && (
+                    <p
+                      className={s.productDetailsDescription}
+                      style={{ marginBottom: '8px' }}
+                    >
+                      {product.descriptionText}
+                    </p>
+                  )}
+
+              {product.sections &&
+                product.sections.map((section, index) => (
+                  <div key={index} className={s.productDetailsBorder}>
+                    <h3
+                      className={s.categoryGoodsDescription}
+                      style={{
+                        marginBottom: '0px',
+                        padding: '12px 8px 8px 8px',
+                      }}
+                    >
+                      {section.title}
+                    </h3>
+                    <ul className={s.categoryGoodsList}>
+                      {section.items.map((item, i) => (
+                        <li key={i} className={s.categoryGoodsList__item}>
+                          <p className={s.productDetailsDescriptionThird}>
+                            {item}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+
+              <ButtonCallBack
+                style={{
+                  marginTop: '8px',
+                  marginLeft: 'auto',
+                  width: '41.67%',
+                }}
+                language={language}
+              />
+            </div>
+          </div>
         </div>
       </section>
     </>

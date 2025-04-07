@@ -5,20 +5,28 @@ import Footer from 'components/Footer/Footer';
 
 const ProductDetailsPage = () => {
   const [language, setLanguage] = useState('ua');
-  
-    const handleLanguageChange = useCallback((langCode) => {
+
+  const handleLanguageChange = useCallback(
+    langCode => {
       if (langCode !== language) {
         setLanguage(langCode);
         console.log('Мова змінена на:', langCode);
       }
-    }, [language]);
+    },
+    [language]
+  );
   return (
     <>
-      <Header navSearchStyle={{ display: 'none' }} style={{ width: '130px' }} language={language} onLanguageChange={handleLanguageChange}/>
+      <Header
+        navSearchStyle={{ display: 'none' }}
+        style={{ width: '130px' }}
+        language={language}
+        onLanguageChange={handleLanguageChange}
+      />
       <main>
-        <ProductDetails language={language}/>
+        <ProductDetails language={language} />
       </main>
-      <Footer language={language}/>
+      <Footer language={language} />
     </>
   );
 };
