@@ -156,6 +156,18 @@ const translations = {
       title: 'Our TM',
     },
   },
+  team: {
+    ua: {
+      title: 'Наша команда',
+      btnmail: 'Написати',
+      btncall: 'Зателефонувати',
+    },
+    en: {
+      title: 'Our Team',
+      btnmail: 'Send Email',
+      btncall: 'Call Now',
+    },
+  },
 };
 
 export default translations;

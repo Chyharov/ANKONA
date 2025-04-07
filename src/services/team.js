@@ -19,10 +19,16 @@ import yanenkoYanaIsActive from 'images/team/yanenkoYanaIsActive.jpg';
 import yanenkoYanaDesktop from 'images/team/yanenkoYanaDesktop.jpg';
 
 export const teamMembers = [
-  {
+    {
     id: 1,
-    name: 'Поляков Андрій Юрійович',
-    role: 'Директор',
+    name: {
+      ua: 'Поляков Андрій Юрійович',
+      en: 'Polyakov Andriy Yuriyovych',
+    },
+    role: {
+      ua: 'Директор',
+      en: 'Director',
+    },
     photo: polykovAndriy,
     activePhoto: polykovAndriyIsActive,
     photoDesktop: polykovAndriyDesktop,
@@ -32,8 +38,15 @@ export const teamMembers = [
   },
   {
     id: 2,
-    name: 'Ходирєв Сергій Вікторович',
-    role: 'Керівник/технолог напрямку ВРХ',
+    name: {
+      ua: 'Ходирєв Сергій Вікторович',
+      en: 'Hodyrev Sergiy Viktorovych'
+    },
+
+    role: {
+      ua: 'Керівник/технолог напрямку ВРХ',
+      en: 'Head/technologist of the cattle department'
+    },
     photo: hodirevSerhiy,
     activePhoto: hodirevSerhiyIsActive,
     photoDesktop: hodirevSerhiyDesktop,
@@ -42,8 +55,14 @@ export const teamMembers = [
   },
   {
     id: 3,
-    name: 'Ходирєва Наталія Вікторівна',
-    role: 'Керівник відділу з продажів напрямку ВРХ',
+    name: {
+      ua: 'Ходирєва Наталія Вікторівна',
+      en: 'Hodyreva Natalia Viktorivna'
+    },
+    role: {
+      ua: 'Керівник відділу з продажів напрямку ВРХ',
+      en: 'Head of the sales department for cattle'
+    },
     photo: hodirevaNatalia,
     activePhoto: hodirevaNataliaIsActive,
     photoDesktop: hodirevaNataliaDesktop,
@@ -52,8 +71,14 @@ export const teamMembers = [
   },
   {
     id: 4,
-    name: 'Солошенко Андрій',
-    role: 'Консультант з годівлі свиней',
+    name: {
+      ua: 'Солошенко Андрій',
+      en: 'Soloshenko Andriy'
+    },
+    role: {
+      ua: 'Консультант з годівлі свиней',
+      en: 'Pig feeding consultant'
+    },
     photo: soloshenkoAndrii,
     activePhoto: soloshenkoAndriiIsActive,
     photoDesktop: soloshenkoAndriiDesktop,
@@ -62,8 +87,15 @@ export const teamMembers = [
   },
   {
     id: 5,
-    name: 'Комар Володимир',
-    role: 'Консультант з годівлі свиней',
+    name:
+    {
+      ua: 'Комар Володимир',
+      en: 'Komar Volodymyr'
+    },
+    role: {
+      ua: 'Консультант з годівлі свиней',
+      en: 'Pig feeding consultant'
+    },
     photo: komarVolodymyr,
     activePhoto: komarVolodymyrIsActive,
     photoDesktop: komarVolodymyrDesktop,
@@ -72,8 +104,14 @@ export const teamMembers = [
   },
   {
     id: 6,
-    name: 'Яненко Яна',
-    role: 'Керівник роздрібного відділу',
+    name: {
+      ua: 'Яненко Яна',
+      en: 'Yanenko Yana'
+    },
+    role: {
+      ua: 'Керівник роздрібного відділу',
+      en: 'Head of retail department'
+    },
     photo: yanenkoYana,
     activePhoto: yanenkoYanaIsActive,
     photoDesktop: yanenkoYanaDesktop,

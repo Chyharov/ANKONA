@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { teamMembers } from 'services/team';
+import translations from 'components/LanguageSelect/translations';
 import s from './SectionTeam.module.scss';
 
-const SectionTeam = () => {
+const SectionTeam = ({language}) => {
   const [selectedMember, setSelectedMember] = useState(null);
   const [contactInfo, setContactInfo] = useState({});
   const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 1440);
@@ -38,10 +39,12 @@ const SectionTeam = () => {
   const firstGroup = teamMembers.slice(0, 3);
   const secondGroup = teamMembers.slice(3, 6);
 
+  const t = translations.team[language];
+
   return (
     <section className={s.sectionTeam} id="team">
       <div className={`container ${s.teamContainer}`}>
-        <h2 className={s.teamTitle}>Наша команда</h2>
+        <h2 className={s.teamTitle}>{t.title}</h2>
         <div className={s.teamBorder}></div>
 
         <div className={s.teamGroups}>
@@ -70,7 +73,6 @@ const SectionTeam = () => {
                 {member.horse && (
                   <img className={s.horse} src={member.horse} alt="horse" />
                 )}{' '}
-                {/* Додано перевірку на horse */}
                 <div
                   className={`${s.teamNameContainer} ${
                     selectedMember === member.id ? s.activ : ''
@@ -81,14 +83,14 @@ const SectionTeam = () => {
                       selectedMember === member.id ? s.active : ''
                     }`}
                   >
-                    {member.name}
+                    {member.name[language]}
                   </h3>
                   <p
                     className={`${s.teamList__itemDescription} ${
                       selectedMember === member.id ? s.active : ''
                     }`}
                   >
-                    {member.role}
+                    {member.role[language]}
                   </p>
 
                   {selectedMember === member.id && (
@@ -109,7 +111,7 @@ const SectionTeam = () => {
                             handleShowContact(member.id, 'email', member.email);
                           }}
                         >
-                          Написати
+                          {t.btnmail}
                         </button>
                       )}
 
@@ -132,7 +134,7 @@ const SectionTeam = () => {
                             handleShowContact(member.id, 'phone', member.phone);
                           }}
                         >
-                          Зателефонувати
+                          {t.btncall}
                         </button>
                       )}
                     </div>
@@ -175,14 +177,14 @@ const SectionTeam = () => {
                       selectedMember === member.id ? s.active : ''
                     }`}
                   >
-                    {member.name}
+                    {member.name[language]}
                   </h3>
                   <p
                     className={`${s.teamList__itemDescription} ${
                       selectedMember === member.id ? s.active : ''
                     }`}
                   >
-                    {member.role}
+                    {member.role[language]}
                   </p>
 
                   {selectedMember === member.id && (
@@ -203,7 +205,7 @@ const SectionTeam = () => {
                             handleShowContact(member.id, 'email', member.email);
                           }}
                         >
-                          Написати
+                          {t.btnmail}
                         </button>
                       )}
 
@@ -226,7 +228,7 @@ const SectionTeam = () => {
                             handleShowContact(member.id, 'phone', member.phone);
                           }}
                         >
-                          Зателефонувати
+                          {t.btncall}
                         </button>
                       )}
                     </div>
