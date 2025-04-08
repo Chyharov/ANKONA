@@ -2,9 +2,10 @@ import React, { useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import closeIcon from 'images/hero/closeIcon.svg';
+import translations from 'components/LanguageSelect/translations';
 import s from './PopUp.module.scss';
 
-const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu }) => {
+const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu, language }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add(s.noScroll);
@@ -28,6 +29,8 @@ const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu }) => {
     if (isMobile) closeMobileMenu();
   };
 
+  const t = translations.popup[language];
+
   return (
     <div className={s.popUpOverlay} onClick={onClose}>
       <div className={s.popUpContent} onClick={e => e.stopPropagation()}>
@@ -39,25 +42,25 @@ const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu }) => {
             aria-label="закрити заявку"
           />
         </button>
-        <h2 className={s.popUpTitle}>Для отримання консультації або замовлення</h2>
+        <h2 className={s.popUpTitle}>{t.title}</h2>
         <p className={s.popUpDescription}>
-          Заповніть інформацію нижче та ми зв’яжемося з Вами
+          {t.description}
         </p>
         <div className={s.popUpDescription__border}></div>
 
         <form className={s.popUpForm}>
           <label>
-            <p className={s.labelTitle}>Як до Вас звертатися?</p>
+            <p className={s.labelTitle}>{t.phnametitle}</p>
             <input
               className={s.popUplabel}
               type="text"
-              placeholder="ПІБ"
+              placeholder={t.phname}
               required
             />
           </label>
 
           <label>
-            <p className={s.labelTitle}>Ваш номер телефону</p>
+            <p className={s.labelTitle}>{t.phphonetitle}</p>
             <input
               className={s.popUplabel}
               type="tel"
@@ -67,11 +70,11 @@ const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu }) => {
           </label>
 
           <label>
-            <p className={s.labelTitle}>Ваше повідомлення</p>
+            <p className={s.labelTitle}>{t.phmessagetitle}</p>
             <textarea
               className={s.popUplabel}
               style={{ minHeight: '96px', marginBottom: '16px' }}
-              placeholder="Напишіть коротко про Ваше тваринництво та що Вас цікавить"
+              placeholder={t.phmessage}
             ></textarea>
           </label>
 
@@ -80,26 +83,26 @@ const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu }) => {
             type="submit"
             aria-label="Відправити заявку"
           >
-            Відправити заявку
+            {t.btnsubmit}
           </button>
         </form>
 
         <div className={s.privacyContainer}>
           <p className={s.privacyText} style={{ marginBottom: '8px' }}>
-            Відправляючи свої дані Ви автоматично погоджуєтеся з{' '}
+            {t.privacymessage}{' '}
             <RouterLink
               to="/privacy"
               target="_blank"
               rel="noopener noreferrer"
               className={s.privacyLink}
             >
-              політикою конфіденційності
+              {t.privacymessagelink}
             </RouterLink>
           </p>
           <p className={s.privacyText}>
-            *Для контакту з безпосереднім спеціалістом розгляньте розділ{' '}
+            {t.contactwithteam}{' '}
             <span className={s.privacyLink} onClick={handleScrollToTeam}>
-              "Наша команда"
+              {t.contactwithteamspan}
             </span>
           </p>
         </div>

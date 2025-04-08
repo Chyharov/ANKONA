@@ -3,12 +3,15 @@ import { scroller } from "react-scroll";
 import { SearchContext } from "components/SearchContext";
 import searchIcon from "images/header/searchIcon.svg";
 import searchIconInput from "images/header/searchIconInput.svg";
+import translations from 'components/LanguageSelect/translations';
 import s from "./NavSearch.module.scss";
 
-const NavSearch = ({ style }) => {
+const NavSearch = ({ style, language }) => {
   const { setSearchQuery } = useContext(SearchContext);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
+
+  const t = translations.navsearch[language];
 
   const toggleSearch = () => {
     setIsSearchOpen((prev) => !prev);
@@ -39,7 +42,7 @@ const NavSearch = ({ style }) => {
               <input
                 type="text"
                 className={s.searchInput}
-                placeholder="Введіть пошуковий запит"
+                placeholder={t.placeholder}
                 value={inputValue}
                 onChange={handleSearch}
               />

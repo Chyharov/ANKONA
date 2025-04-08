@@ -25,7 +25,7 @@ const Header = ({ navSearchStyle, languageSelectStyle, navBarStyle, style, langu
           <img className={s.logo} src={currentLogo} alt="logo" />
         </Link>
         <nav className={s.navigation__container} style={style}>
-          <NavSearch style={navSearchStyle} />
+          <NavSearch style={navSearchStyle} language={language}/>
           <LanguageSelect style={languageSelectStyle} onChange={onLanguageChange} />
           <NavBar style={navBarStyle} language={language} />
         </nav>

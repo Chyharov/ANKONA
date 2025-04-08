@@ -16,7 +16,7 @@ const ButtonCallBack = ({ style, language }) => {
         {t.button}
       </button>
 
-      <PopUp isOpen={isPopUpOpen} onClose={closePopUp} />
+      <PopUp isOpen={isPopUpOpen} onClose={closePopUp} language={language} />
     </>
   );
 };
