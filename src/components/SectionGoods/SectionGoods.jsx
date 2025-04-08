@@ -16,14 +16,64 @@ import { products } from 'services/Products';
 import translations from 'components/LanguageSelect/translations';
 import s from './SectionGoods.module.scss';
 
-const categoryIcons = {
-  'ВРХ дорослі': iconCow,
-  'ВРХ молодняк': iconCalf,
-  ДРХ: iconGoat,
-  Коні: iconHorse,
-  Птиця: iconHen,
-  Свині: iconPig,
-};
+const categoryIcons = [
+  {
+    id: 1,
+    name: {
+      ua: 'ВРХ дорослі',
+      en: 'Adult Cattle',
+    },
+    icon: iconCow,
+  },
+  {
+    id: 2,
+    name: {
+      ua: 'ВРХ молодняк',
+      en: 'Young Cattle',
+    },
+    icon: iconCalf,
+  },
+  {
+    id: 3,
+    name: {
+      ua: 'ДРХ',
+      en: 'Small Cattle',
+    },
+    icon: iconGoat,
+  },
+  {
+    id: 4,
+    name: {
+      ua: 'Коні',
+      en: 'Horses',
+    },
+    icon: iconHorse,
+  },
+  {
+    id: 5,
+    name: {
+      ua: 'Птиця',
+      en: 'Bird',
+    },
+    icon: iconHen,
+  },
+  {
+    id: 6,
+    name: {
+      ua: 'Свині',
+      en: 'Pigs',
+    },
+    icon: iconPig,
+  },
+  {
+    id: 7,
+    name: {
+      ua: 'Підходе для всіх',
+      en: 'Suitable for all',
+    },
+    icon: null,
+  },
+];
 
 const SectionGoods = ({ language }) => {
   const t = translations.goods[language];
@@ -134,40 +184,42 @@ const SectionGoods = ({ language }) => {
 
   const { searchQuery } = useContext(SearchContext);
 
-useEffect(() => {
-  let filtered = filterProducts(products, filters);
+  useEffect(() => {
+    let filtered = filterProducts(products, filters);
 
-  if (searchQuery) {
-    const lowerQuery = searchQuery.toLowerCase();
+    if (searchQuery) {
+      const lowerQuery = searchQuery.toLowerCase();
 
-    filtered = filtered.filter(product => {
-      const nameMatch = product.name.toLowerCase().includes(lowerQuery);
+      filtered = filtered.filter(product => {
+        const nameMatch = product.name.toLowerCase().includes(lowerQuery);
 
-      const categoryMatch = Array.isArray(product.category)
-        ? product.category.some(cat =>
-            cat.toLowerCase().includes(lowerQuery)
-          )
-        : product.category.toLowerCase().includes(lowerQuery);
+        const categoryMatch = Array.isArray(product.category)
+          ? product.category.some(cat => cat.toLowerCase().includes(lowerQuery))
+          : product.category.toLowerCase().includes(lowerQuery);
 
-      const manufacturerMatch = Array.isArray(product.manufacturer)
-        ? product.manufacturer.some(m =>
-            m.toLowerCase().includes(lowerQuery)
-          )
-        : product.manufacturer.toLowerCase().includes(lowerQuery);
+        const manufacturerMatch = Array.isArray(product.manufacturer)
+          ? product.manufacturer.some(m => m.toLowerCase().includes(lowerQuery))
+          : product.manufacturer.toLowerCase().includes(lowerQuery);
 
-      const descriptionMatch = product.description
-        .toLowerCase()
-        .includes(lowerQuery);
+        const descriptionMatch = product.description
+          .toLowerCase()
+          .includes(lowerQuery);
 
-      return (
-        nameMatch || categoryMatch || manufacturerMatch || descriptionMatch
-      );
-    });
-  }
+        return (
+          nameMatch || categoryMatch || manufacturerMatch || descriptionMatch
+        );
+      });
+    }
 
-  setFilteredProducts(filtered);
-}, [filters, searchQuery]);
+    setFilteredProducts(filtered);
+  }, [filters, searchQuery]);
 
+  const getCategoryIcon = (categoryName, lang) => {
+    const found = categoryIcons.find(
+      iconObj => iconObj.name[lang] === categoryName
+    );
+    return found?.icon || null;
+  };
 
   return (
     <section className={s.sectionGoods} id="goods">
@@ -259,10 +311,10 @@ useEffect(() => {
                         />
                       )}
                     </span>
-                    {categoryIcons[cat] && (
+                    {getCategoryIcon(cat, language) && (
                       <div className={s.sectionGoodsCategoryList__itemImg}>
                         <img
-                          src={categoryIcons[cat]}
+                          src={getCategoryIcon(cat, language)}
                           alt={cat}
                           className={`${s.categoryIcon} ${
                             isChecked ? s.selectedIcon : ''

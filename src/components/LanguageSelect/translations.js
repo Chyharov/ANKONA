@@ -130,8 +130,8 @@ const translations = {
       titleFilterByCategorie: 'Filter by animal category:',
       titleFilterByVendor: 'Filter by manufacturer:',
       categories: [
-        'Adult cattle',
-        'Young cattle',
+        'Adult Cattle',
+        'Young Cattle',
         'Small Cattle',
         'Horses',
         'Bird',
