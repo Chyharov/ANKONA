@@ -75,21 +75,42 @@ export const products = [
       ua: 'Премікси для ВРХ, ДРХ та Коней',
       en: 'Premixes for cattle, small cattle and horses',
     },
-    category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
+    category: {
+      ua: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
+      en: ['Adult Cattle', 'Young Cattle', 'Small Cattle', 'Horses']
+    },
     image: imgProductDetailsId1,
     imageDesktop: imageToAll,
     sections: [
       {
-        title: 'Можуть бути представлені:',
-        items: ['стандартна лінійка', 'індивідуальні рецептури'],
+        title: {
+          ua: 'Можуть бути представлені:',
+          en: '',
+        },
+        items: {
+          ua: ['стандартна лінійка', 'індивідуальні рецептури'],
+          en: '',
+        },
       },
       {
-        title: 'Дозування:',
-        items: ['50-250 г/гол/добу (залежить від рецептури)'],
+        title: {
+          ua: 'Дозування:',
+          en: '',
+         },
+        items: {
+          ua: ['50-250 г/гол/добу (залежить від рецептури)'],
+          en: '',
+        }
       },
       {
-        title: 'Фасування:',
-        items: ['мішок 25 кг'],
+        title: {
+          ua: 'Фасування:',
+          en: '',
+        },
+        items: {
+          ua: ['мішок 25 кг'],
+          en: '',
+        }
       },
     ],
   },
@@ -242,7 +263,10 @@ export const products = [
     },
     descriptionText:
       'Запатентована комбинація деяких ефірних олій: знижує швидке виділення амміаку з амінокислот, без погіршення синтезу оцтової й пропіонової кислот, тому не має негативного впливу на виробництво молока та молочного жиру.',
-    category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
+    category: {
+      ua: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
+      en: ['Adult Cattle', 'Young Cattle', 'Small Cattle', 'Horses']
+    },
     image: imgProductDetailsId5,
     imageDesktop: imageToAll,
     sections: [
