@@ -1132,8 +1132,14 @@ export const products = [
   },
   {
     id: 25,
-    name: 'VitaloMix',
-    manufacturer: 'VILOFOSS',
+    name: {
+      ua: 'VitaloMix',
+      en: 'VitaloMix',
+    },
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Престартер у вигляді мюсли',
       en: 'Pre-starter in the form of muesli',
@@ -1174,8 +1180,14 @@ export const products = [
   },
   {
     id: 26,
-    name: 'Ruminito TMR',
-    manufacturer: 'VILOFOSS',
+    name: {
+      ua: 'VitaloMix',
+      en: 'VitaloMix',
+    },
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: '10% ядро для кормів телятам',
       en: '10% core for calf feed',
@@ -1205,8 +1217,14 @@ export const products = [
   },
   {
     id: 27,
-    name: 'Vollmilch plus',
-    manufacturer: 'VILOFOSS',
+    name: {
+      ua: 'Vollmilch plus',
+      en: 'Vollmilch plus',
+    },
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Збагачувач незбираного молока',
       en: 'Whole milk enricher',
@@ -1238,7 +1256,10 @@ export const products = [
       ua: 'Євролак (зелений)',
       en: 'Eurolac (green)',
     },
-    manufacturer: 'Schils',
+    manufacturer: {
+      ua: 'Schils',
+      en: 'Schils',
+    },
     description: {
       ua: 'Високоякісний замінник незбираного молока',
       en: 'SOM for calves from the 3rd day of life',
@@ -1268,9 +1289,18 @@ export const products = [
   },
   {
     id: 29,
-    name: 'RoCoSal E',
-    manufacturer: 'VILOFOSS',
-    description: 'Концентрат для профілактики діареї у телят',
+    name: {
+      ua: 'RoCoSal E',
+      en: 'RoCoSal E',
+    },
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
+    description: {
+      ua: 'Концентрат для профілактики діареї у телят',
+      en: 'Prevention of diarrhea in calves',
+    },
     category: ['ВРХ молодняк'],
     image: imgProductDetailsId29,
     imageDesktop: imageToVRHM2,
@@ -1304,9 +1334,18 @@ export const products = [
   },
   {
     id: 30,
-    name: 'Dialyt Express',
-    manufacturer: 'VILOFOSS',
-    description: 'Швидке лікування діареї у телят',
+    name: {
+      ua: 'Dialyt Express',
+      en: 'Dialyt Express',
+    },
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
+    description: {
+      ua: 'Швидке лікування діареї у телят',
+      en: 'Quick treatment of diarrhea in calves',
+    },
     category: ['ВРХ молодняк', 'ДРХ', 'Коні'],
     image: imgProductDetailsId30,
     imageDesktop: imageToAll,
@@ -1346,9 +1385,18 @@ export const products = [
   },
   {
     id: 31,
-    name: 'RespoSan',
-    manufacturer: 'VILOFOSS',
-    description: 'Профілактика респіраторних хвороб у телят',
+    name: {
+      ua: 'RespoSan',
+      en: 'RespoSan',
+    },
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
+    description: {
+      ua: 'Профілактика респіраторних хвороб у телят',
+      en: 'Prevention of respiratory diseases in calves',
+    },
     descriptionText: [
       `Поєднує вітаміни, електроліти та рослинні екстракти.`,
       `В основі RespoSan лежать ефірні олії, кориця, евкаліпт і м'ята перцева.`,
@@ -1381,9 +1429,18 @@ export const products = [
   },
   {
     id: 32,
-    name: 'ProbioBona',
-    manufacturer: 'FUTTERGUT - надійна годівля',
-    description: 'Рідкий пероральний пробіотик в шприці',
+    name: {
+      ua: 'ProbioBona',
+      en: 'ProbioBona',
+    },
+    manufacturer: {
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT – reliable feed',
+    },
+    description: {
+      ua: 'Рідкий пероральний пробіотик в шприці',
+      en: 'Liquid oral probiotic in a syringe',
+    },
     descriptionText: [
       `В складі має 5 штамів Bacillus spp, живих пробіотичних бактерій у споровій формі, завдяки якій препарат легко проходить кислотний бар'єр ШКТ й жовчних кислот та зберігає свою активність до 48 годин.`,
     ],
@@ -1434,9 +1491,18 @@ export const products = [
   },
   {
     id: 33,
-    name: 'Marathon Top',
-    manufacturer: 'VILOFOSS',
-    description: 'Спеціальний Премікс',
+    name: {
+      ua: 'Marathon Top',
+      en: 'Marathon Top',
+    },
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
+    description: {
+      ua: 'Спеціальний Премікс',
+      en: 'Special Premix',
+    },
     descriptionText: [
       `Проблеми з копитами є третьою за поширеністю причиною вибракування у високопродуктивних дійних стадах.`,
       `Кульгавість негативно впливає на споживання корму та активність жування. В результаті можуть постраждати надої молока та добробут корів.`,
@@ -1459,9 +1525,18 @@ export const products = [
   },
   {
     id: 34,
-    name: 'Stalosan F',
-    manufacturer: 'VILOFOSS',
-    description: 'Дезинфектант в присутності тварин',
+    name: {
+      ua: 'Stalosan F',
+      en: 'Stalosan F',
+    },
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
+    description: {
+      ua: 'Дезинфектант в присутності тварин',
+      en: 'Disinfectant in the presence of animals',
+    },
     descriptionText: [
       `Крім здатності до підсушивання та розщеплення шкідливих відходів, має у своєму складі спеціальні активні речовини, які знищують мікроорганізми і перешкоджають їх метаболізму.`,
       `В результаті досягається максимально можлива ефективність, що робить Stalosan F видатним біоцидом, здатним контролювати мікроорганізми на всіх рівнях, незалежно від рівня вологості.`,
@@ -1484,9 +1559,18 @@ export const products = [
   },
   {
     id: 35,
-    name: 'БІО-СИЛ',
-    manufacturer: 'Ahrhoff FUTTERGUT',
-    description: 'Інокулянт для силосування',
+    name: {
+      ua: 'БІО-СИЛ',
+      en: 'Bio-Sil',
+    },
+    manufacturer: {
+      ua: 'Ahrhoff FUTTERGUT',
+      en: 'Ahrhoff FUTTERGUT',
+    },
+    description: {
+      ua: 'Інокулянт для силосування',
+      en: 'Inoculant for silage',
+    },
     descriptionText: [
       `Універсальний інокулянт, порошкоподібна речовина, яка складається з гомоферментативних молочнокислих бактерій двох штамів, що висушені методом заморожування.`,
       `Кількість бактерій на 1 г, мінімально: 3х1011 КУО`,
@@ -1518,9 +1602,18 @@ export const products = [
   },
   {
     id: 36,
-    name: 'Sweet-Min Schafe',
-    manufacturer: 'VILOFOSS',
-    description: 'Лизунець меласований для овець',
+    name: {
+      ua: 'Sweet-Min Schafe',
+      en: 'Sweet-Min Schafe',
+    },
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
+    description: {
+      ua: 'Лизунець меласований для овець',
+      en: 'Melted lick for sheep',
+    },
     category: ['ДРХ'],
     image: imgProductDetailsId36,
     imageDesktop: imageToDRH,
