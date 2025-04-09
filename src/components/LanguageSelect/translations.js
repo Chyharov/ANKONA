@@ -126,7 +126,8 @@ const translations = {
       ],
       Found: 'Знайдено:',
       positions: 'позицій',
-      buttonBack: 'Goods',
+      buttonBack: 'Товар',
+      categoryGoods: 'Категорія тварин:',
     },
     en: {
       title: 'Products',
@@ -153,7 +154,8 @@ const translations = {
       ],
       Found: 'Found:',
       positions: 'positions',
-      buttonBack: 'Товар',
+      buttonBack: 'Goods',
+      categoryGoods: 'Animal category:',
     },
   },
   tradeMarks: {

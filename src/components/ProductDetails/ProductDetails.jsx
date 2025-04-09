@@ -82,7 +82,7 @@ const ProductDetails = ({ language }) => {
                 alt={product.name[language]}
               />
 
-              <h3 className={s.categoryGoods}>Категорія тварин:</h3>
+              <h3 className={s.categoryGoods}>{t.categoryGoods}</h3>
               <ul className={s.iconManufacturerList}>
                 {categoryIconsList.length > 0 &&
                   categoryIconsList.map((icon, index) => (
