@@ -859,7 +859,7 @@ export const products = [
   },
   {
     id: 18,
-     name: {
+    name: {
       ua: 'Biotin 750',
       en: 'Biotin 750',
     },
@@ -895,7 +895,7 @@ export const products = [
   },
   {
     id: 19,
-     name: {
+    name: {
       ua: 'Beta-Carotin',
       en: 'Beta-Carotin',
     },
@@ -2012,7 +2012,7 @@ export const products = [
       ua: 'FUTTERGUT - надійна годівля',
       en: 'FUTTERGUT - reliable feeding',
     },
-     description: {
+    description: {
       ua: 'Вітаміно-мінеральний Премікс для сухостійних корів.',
       en: 'Premix for dry cows',
     },
@@ -2042,7 +2042,7 @@ export const products = [
       ua: 'AnkonaF/buffer/150',
       en: 'AnkonaF/buffer/150',
     },
-     manufacturer: {
+    manufacturer: {
       ua: 'FUTTERGUT - надійна годівля',
       en: 'FUTTERGUT - reliable feeding',
     },
@@ -2247,7 +2247,7 @@ export const products = [
       ua: 'Ahrhoff FUTTERGUT',
       en: 'Ahrhoff FUTTERGUT',
     },
-     description: {
+    description: {
       ua: 'Премікс для свиней на відгодівлі 30-60 кг, 4,5%',
       en: 'Premix for fattening pigs 30-60 kg, 4.5%',
     },
@@ -2288,7 +2288,7 @@ export const products = [
       ua: 'SEGAWEAN® F49 A3',
       en: 'SEGAWEAN® F49 A3',
     },
-        manufacturer: {
+    manufacturer: {
       ua: 'Ahrhoff FUTTERGUT',
       en: 'Ahrhoff FUTTERGUT',
     },
@@ -2334,7 +2334,7 @@ export const products = [
       ua: 'SOW Day 7® Farrow Feed',
       en: 'SOW Day 7® Farrow Feed',
     },
-     manufacturer: {
+    manufacturer: {
       ua: 'Ahrhoff FUTTERGUT',
       en: 'Ahrhoff FUTTERGUT',
     },
@@ -2428,7 +2428,7 @@ export const products = [
       ua: 'Ahrhoff FUTTERGUT',
       en: 'Ahrhoff FUTTERGUT',
     },
-     description: {
+    description: {
       ua: 'Премікс для супоросних свиноматок, 3%',
       en: 'Premix for farrowing sows, 3%',
     },
@@ -2473,7 +2473,7 @@ export const products = [
       ua: 'Ahrhoff FUTTERGUT',
       en: 'Ahrhoff FUTTERGUT',
     },
-     description: {
+    description: {
       ua: 'Премікс для поросят до 30 кг 6,5%',
       en: 'Premix for piglets up to 30 kg 6.5%',
     },
@@ -2518,7 +2518,7 @@ export const products = [
       ua: 'ETOS',
       en: 'ETOS',
     },
-     description: {
+    description: {
       ua: 'Модулятор мікробіому; Кокцидіостатик; Суміш органічних кислот',
       en: 'Microbiome modulator; Coccidiostatic; Organic acid mixture',
     },
@@ -2839,7 +2839,7 @@ export const products = [
       ua: 'AGRO-BIZEK',
       en: 'AGRO-BIZEK',
     },
-   description: {
+    description: {
       ua: 'Ультрабіотик, що пригнічує розвиток патогенних мікрооганізмів (вірусів, бактерій, грибків) в широкому спектрі',
       en: 'Ultrabiotic',
     },

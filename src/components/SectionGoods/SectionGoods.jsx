@@ -183,18 +183,26 @@ const SectionGoods = ({ language }) => {
       const lowerQuery = searchQuery.toLowerCase();
 
       filtered = filtered.filter(product => {
-        const nameMatch = product.name.toLowerCase().includes(lowerQuery);
+        const nameMatch = product.name[language]
+          ?.toLowerCase()
+          .includes(lowerQuery);
 
         const categoryMatch = Array.isArray(product.category)
           ? product.category.some(cat => cat.toLowerCase().includes(lowerQuery))
-          : product.category.toLowerCase().includes(lowerQuery);
+          : product.category?.toLowerCase().includes(lowerQuery);
 
-        const manufacturerMatch = Array.isArray(product.manufacturer)
-          ? product.manufacturer.some(m => m.toLowerCase().includes(lowerQuery))
-          : product.manufacturer.toLowerCase().includes(lowerQuery);
+        const manufacturer = product.manufacturer;
+        const manufacturerMatch =
+          typeof manufacturer === 'string'
+            ? manufacturer.toLowerCase().includes(lowerQuery)
+            : Array.isArray(manufacturer[language])
+            ? manufacturer[language].some(m =>
+                m.toLowerCase().includes(lowerQuery)
+              )
+            : manufacturer[language]?.toLowerCase().includes(lowerQuery);
 
-        const descriptionMatch = product.description
-          .toLowerCase()
+        const descriptionMatch = product.description[language]
+          ?.toLowerCase()
           .includes(lowerQuery);
 
         return (
@@ -204,7 +212,7 @@ const SectionGoods = ({ language }) => {
     }
 
     setFilteredProducts(filtered);
-  }, [filters, searchQuery]);
+  }, [products, filters, searchQuery, language]);
 
   const getCategoryIcon = (categoryName, lang) => {
     const found = categoryIcons.find(
@@ -485,7 +493,9 @@ const SectionGoods = ({ language }) => {
                     alt="productImage"
                   />
                   <div className={s.productCard}>
-                    <h4 className={s.productListItemTitle}>{product.name[language]}</h4>
+                    <h4 className={s.productListItemTitle}>
+                      {product.name[language]}
+                    </h4>
                     <p className={s.productListItemManufacturer}>
                       {Array.isArray(product.manufacturer)
                         ? product.manufacturer[language].join(', ')
@@ -524,16 +534,16 @@ const SectionGoods = ({ language }) => {
                           iconHen,
                         ].map((icon, index) => (
                           <div
-                          key={index}
-                          className={s.iconManufacturerContainerBorder}
-                        >
-                          <img
                             key={index}
-                            className={s.iconManufacturer}
-                            src={icon}
-                            alt="category icon"
+                            className={s.iconManufacturerContainerBorder}
+                          >
+                            <img
+                              key={index}
+                              className={s.iconManufacturer}
+                              src={icon}
+                              alt="category icon"
                             />
-                            </div>
+                          </div>
                         ))}
                       </div>
                     )}

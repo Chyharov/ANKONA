@@ -7,7 +7,8 @@ const translations = {
       team: 'Команда',
       blog: 'Блог',
       reserved: 'Всі права захищені © ANKONA 2025',
-      reservedDescription: 'Використання матеріалів сайту можливе лише з письмового дозволу правовласника та із зазначенням активного посилання на джерело',
+      reservedDescription:
+        'Використання матеріалів сайту можливе лише з письмового дозволу правовласника та із зазначенням активного посилання на джерело',
     },
     en: {
       about: 'About Us',
@@ -16,7 +17,8 @@ const translations = {
       team: 'Team',
       blog: 'Blog',
       reserved: 'All rights reserved © ANKONA 2025',
-      reservedDescription: 'The materials of this site may be used only with the written permission of the copyright holder and with an active link to the source',
+      reservedDescription:
+        'The materials of this site may be used only with the written permission of the copyright holder and with an active link to the source',
     },
   },
   hero: {
@@ -181,37 +183,40 @@ const translations = {
     },
   },
   popup: {
-     ua: {
-       title: 'Для отримання консультації або замовлення',
-       description: 'Заповніть інформацію нижче та ми зв’яжемося з Вами',
-       phnametitle: 'Як до Вас звертатися?',
-       phname: 'ПІБ',
-       phphonetitle: 'Ваш номер телефону',
-       phphone: '+38 (000) 000 00 00',
-       phmessagetitle: 'Ваше повідомлення',
-       phmessage: 'Напишіть коротко про Ваше тваринництво та що Вас цікавить',
-       btnsubmit: 'Відправити заявку',
-       privacymessage: 'Відправляючи свої дані Ви автоматично погоджуєтеся з ',
-       privacymessagelink: 'політикою конфіденційності',
-       contactwithteam: '*Для контакту з безпосереднім спеціалістом розгляньте розділ',
-       contactwithteamspan: '"Наша команда"',
-     },
-     en: {
-       title: 'For a consultation',
-       description: 'Fill in the information below and we will contact you',
-       phnametitle: 'What is your name?',
-       phname: 'Your name',
-       phphonetitle: 'What is your phone number?',
-       phphone: '+38 (000) 000 00 00',
-       phmessagetitle: 'Write your message',
-       btnsubmit: 'Send a Request',
-       phmessage: 'Please write briefly about your livestock farming and what you are interested in',
-       privacymessage: 'By submitting your data, you automatically agree to the ',
-       privacymessagelink: 'Privacy Policy',
-       contactwithteam: 'To contact a direct specialist, please see the',
-       contactwithteamspan: '«Our team»',
-     },
-   },
+    ua: {
+      title: 'Для отримання консультації або замовлення',
+      description: 'Заповніть інформацію нижче та ми зв’яжемося з Вами',
+      phnametitle: 'Як до Вас звертатися?',
+      phname: 'ПІБ',
+      phphonetitle: 'Ваш номер телефону',
+      phphone: '+38 (000) 000 00 00',
+      phmessagetitle: 'Ваше повідомлення',
+      phmessage: 'Напишіть коротко про Ваше тваринництво та що Вас цікавить',
+      btnsubmit: 'Відправити заявку',
+      privacymessage: 'Відправляючи свої дані Ви автоматично погоджуєтеся з ',
+      privacymessagelink: 'політикою конфіденційності',
+      contactwithteam:
+        '*Для контакту з безпосереднім спеціалістом розгляньте розділ',
+      contactwithteamspan: '"Наша команда"',
+    },
+    en: {
+      title: 'For a consultation',
+      description: 'Fill in the information below and we will contact you',
+      phnametitle: 'What is your name?',
+      phname: 'Your name',
+      phphonetitle: 'What is your phone number?',
+      phphone: '+38 (000) 000 00 00',
+      phmessagetitle: 'Write your message',
+      btnsubmit: 'Send a Request',
+      phmessage:
+        'Please write briefly about your livestock farming and what you are interested in',
+      privacymessage:
+        'By submitting your data, you automatically agree to the ',
+      privacymessagelink: 'Privacy Policy',
+      contactwithteam: 'To contact a direct specialist, please see the',
+      contactwithteamspan: '«Our team»',
+    },
+  },
 };
 
 export default translations;
