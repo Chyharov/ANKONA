@@ -1642,9 +1642,18 @@ export const products = [
   },
   {
     id: 37,
-    name: 'FUTTERGUT™',
-    manufacturer: 'FUTTERGUT - надійна годівля',
-    description: 'Кормові концентрати та премікси для свиней, птиці, ВРХ',
+    name: {
+      ua: 'FUTTERGUT™',
+      en: 'FUTTERGUT™',
+    },
+    manufacturer: {
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
+    },
+    description: {
+      ua: 'Кормові концентрати та премікси для свиней, птиці, ВРХ',
+      en: 'Feed concentrates and premixes for pigs, poultry and cattle',
+    },
     descriptionText: [
       `Виготовлення комбікормів, преміксів та БМВД за найвищими стандартами GMP+ B1 ISO22000`,
     ],
@@ -1698,9 +1707,18 @@ export const products = [
   },
   {
     id: 38,
-    name: 'Престартер для телят',
-    manufacturer: 'FUTTERGUT - надійна годівля',
-    description: 'Престартер для телят. Гранула.',
+    name: {
+      ua: 'Престартер для телят',
+      en: 'Pre-starter for calves',
+    },
+    manufacturer: {
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
+    },
+    description: {
+      ua: 'Престартер для телят. Гранула.',
+      en: 'Pre-starter for calves. Granule.',
+    },
     descriptionText: [
       `*При замовленні від 10 т - можлива зміна рецептури під індивідуальні потреби!`,
     ],
@@ -1724,9 +1742,18 @@ export const products = [
   },
   {
     id: 39,
-    name: 'БМВД (універсальний)',
-    manufacturer: 'FUTTERGUT - надійна годівля',
-    description: 'БМВД. Гранула.',
+    name: {
+      ua: 'БМВД (універсальний)',
+      en: 'PVMS (universal)',
+    },
+    manufacturer: {
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
+    },
+    description: {
+      ua: 'БМВД. Гранула.',
+      en: 'PVMS. Granule.',
+    },
     descriptionText: [
       `*При замовленні від 10 т - можлива зміна рецептури під індивідуальні потреби!`,
     ],
@@ -1760,9 +1787,18 @@ export const products = [
   },
   {
     id: 40,
-    name: 'БМВД для корів',
-    manufacturer: 'FUTTERGUT - надійна годівля',
-    description: 'Для лактуючих корів, 4 - 5 кг. Розсипна',
+    name: {
+      ua: 'БМВД для корів',
+      en: 'PVMS for cows',
+    },
+    manufacturer: {
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
+    },
+    description: {
+      ua: 'Для лактуючих корів, 4 - 5 кг. Розсипна',
+      en: 'For lactating cows',
+    },
     descriptionText: [
       `*При замовленні від 5 т - можлива зміна рецептури під індивідуальні потреби!`,
     ],
@@ -1791,9 +1827,18 @@ export const products = [
   },
   {
     id: 41,
-    name: 'Гранула для корів',
-    manufacturer: 'FUTTERGUT - надійна годівля',
-    description: 'Годівля на роботах, 28% протеїн',
+    name: {
+      ua: 'Гранула для корів',
+      en: 'Pellets for cows',
+    },
+    manufacturer: {
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
+    },
+    description: {
+      ua: 'Годівля на роботах, 28% протеїн',
+      en: 'Feeding at work',
+    },
     descriptionText: [
       `*При замовленні від 10 т - можлива зміна рецептури під індивідуальні потреби!`,
     ],
@@ -1820,9 +1865,18 @@ export const products = [
   },
   {
     id: 42,
-    name: 'Премікс для дійних корів 1%',
-    manufacturer: 'FUTTERGUT - надійна годівля',
-    description: 'Вітаміно-мінеральний Премікс для дійних корів П 60-1_Л',
+    name: {
+      ua: 'Премікс для дійних корів 1%',
+      en: 'Premix for dairy cows 1%',
+    },
+    manufacturer: {
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
+    },
+    description: {
+      ua: 'Вітаміно-мінеральний Премікс для дійних корів П 60-1_Л',
+      en: 'Premix with/without live yeast',
+    },
     descriptionText: [
       `*По бажанню замовника можлива зміна рецептури`,
       `*Можливе виробництво даного складу преміксу й без вводу дріжджів!`,
@@ -1866,9 +1920,18 @@ export const products = [
   },
   {
     id: 43,
-    name: 'Футтергут-Лєвуселл для ВРХ',
-    manufacturer: 'FUTTERGUT - надійна годівля',
-    description: 'Добавка з живими дріжджами',
+    name: {
+      ua: 'Футтергут-Лєвуселл для ВРХ',
+      en: 'Futtergut-Levusell for cattle',
+    },
+    manufacturer: {
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
+    },
+    description: {
+      ua: 'Добавка з живими дріжджами',
+      en: 'Supplement with live yeast',
+    },
     descriptionText: [
       `Розсипна кормова добавка з сухими, захищеними оболонкою живими дріжджами штаму Levusell SC.`,
       `* По бажанню замовника можлива зміна рецептури`,
@@ -1908,9 +1971,18 @@ export const products = [
   },
   {
     id: 44,
-    name: 'Премікс для дійних корів 3%',
-    manufacturer: 'FUTTERGUT - надійна годівля',
-    description: 'Вітаміно-мінеральний Премікс',
+    name: {
+      ua: 'Премікс для дійних корів 3%',
+      en: 'Premix for dairy cows 3%',
+    },
+    manufacturer: {
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
+    },
+    description: {
+      ua: 'Вітаміно-мінеральний Премікс',
+      en: 'Vitamin and mineral premix',
+    },
     descriptionText: [
       `*По бажанню замовника - можливе виготовлення рецептури під потреби господарства.`,
     ],
@@ -1932,9 +2004,18 @@ export const products = [
   },
   {
     id: 45,
-    name: 'Премікс для сухостійних корів',
-    manufacturer: 'FUTTERGUT - надійна годівля',
-    description: 'Вітаміно-мінеральний Премікс для сухостійних корів.',
+    name: {
+      ua: 'Премікс для сухостійних корів',
+      en: 'Premix for dry cows',
+    },
+    manufacturer: {
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
+    },
+     description: {
+      ua: 'Вітаміно-мінеральний Премікс для сухостійних корів.',
+      en: 'Premix for dry cows',
+    },
     descriptionText: [
       `* По бажанню замовника - можливе виготовлення рецептури під потреби господарства.`,
     ],
@@ -1957,9 +2038,18 @@ export const products = [
   },
   {
     id: 46,
-    name: 'AnkonaF/buffer/150',
-    manufacturer: 'FUTTERGUT - надійна годівля',
-    description: 'Буферна добавка',
+    name: {
+      ua: 'AnkonaF/buffer/150',
+      en: 'AnkonaF/buffer/150',
+    },
+     manufacturer: {
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
+    },
+    description: {
+      ua: 'Буферна добавка',
+      en: 'Buffer supplement',
+    },
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId38,
     imageDesktop: imageToVRHD2,
@@ -1988,9 +2078,18 @@ export const products = [
   },
   {
     id: 47,
-    name: 'Futtergut Hy-М',
-    manufacturer: 'FUTTERGUT - надійна годівля',
-    description: 'Регулює кальцій-фосфорний метаболізм + іммунітет',
+    name: {
+      ua: 'Futtergut Hy-М',
+      en: 'Futtergut Hy-М',
+    },
+    manufacturer: {
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
+    },
+    description: {
+      ua: 'Регулює кальцій-фосфорний метаболізм + іммунітет',
+      en: 'Regulates Ca-P metabolism + immunity',
+    },
     descriptionText: [
       `Cпеціально розроблений для підвищення рівня вітаміну D у сироватці крові, покращуює міцність скелета у свиноматок і ремонтних свинок.`,
       `Поліпшення здоров’я скелета підвищує відбір ремонтних свинок на 7%, масу при народженні, та відлученні на 3%, зменшення вибраковки свиноматок через кульгавість на 5%.`,
@@ -2023,9 +2122,18 @@ export const products = [
   },
   {
     id: 48,
-    name: 'NutriBos N 85 і NutriBos N 65',
-    manufacturer: 'NUTRIBOS',
-    description: 'Захищена сечовина (Хорватія)',
+    name: {
+      ua: 'NutriBos N 85 і NutriBos N 65',
+      en: 'NutriBos N 85 і NutriBos N 65',
+    },
+    manufacturer: {
+      ua: 'NUTRIBOS',
+      en: 'NUTRIBOS',
+    },
+    description: {
+      ua: 'Захищена сечовина (Хорватія)',
+      en: 'Protected urea (Croatia)',
+    },
     category: ['ВРХ дорослі', 'ДРХ'],
     image: imgProductDetailsId48,
     imageDesktop: imageToAll,
