@@ -485,7 +485,7 @@ const SectionGoods = ({ language }) => {
                     alt="productImage"
                   />
                   <div className={s.productCard}>
-                    <h4 className={s.productListItemTitle}>{product.name}</h4>
+                    <h4 className={s.productListItemTitle}>{product.name[language]}</h4>
                     <p className={s.productListItemManufacturer}>
                       {Array.isArray(product.manufacturer)
                         ? product.manufacturer.join(', ')

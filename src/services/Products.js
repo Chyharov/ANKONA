@@ -55,7 +55,7 @@ import imageToVRHM from 'images/goods/imageToVRHM.jpg';
 import imageToChicken from 'images/goods/imageToChicken.jpg';
 import imageToChicken2 from 'images/goods/imageToChicken2.jpg';
 import imageToPig from 'images/goods/imageToPig.jpg';
-import imageToPig2 from 'images/goods/imageToPig2.jpg'
+import imageToPig2 from 'images/goods/imageToPig2.jpg';
 import imageToPig3 from 'images/goods/imageToPig3.jpg';
 import imageToDRH from 'images/goods/imageToDRH.jpg';
 import imageToVRHM2 from 'images/goods/imageToVRHM2.jpg';
@@ -63,11 +63,14 @@ import imageToVRHM2 from 'images/goods/imageToVRHM2.jpg';
 export const products = [
   {
     id: 1,
-    name: 'Mineralfutter',
+    name: {
+      ua: 'Mineralfutter',
+      en: 'Mineralfutter',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Премікси для ВРХ, ДРХ та Коней',
-      en: 'Premixes for cattle, small cattle and horses'
+      en: 'Premixes for cattle, small cattle and horses',
     },
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
     image: imgProductDetailsId1,
@@ -89,11 +92,14 @@ export const products = [
   },
   {
     id: 2,
-    name: 'LM Rinder ADE',
+    name: {
+      ua: 'LM Rinder ADE',
+      en: 'LM Rinder ADE',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Смачний та гомогенний лизунець',
-      en: 'Premix - lizunets (salt lick)  Standard'
+      en: 'Premix - lizunets (salt lick)  Standard',
     },
     category: ['ВРХ дорослі', 'ВРХ молодняк', 'ДРХ', 'Коні'],
     image: imgProductDetailsId2,
@@ -125,11 +131,14 @@ export const products = [
   },
   {
     id: 3,
-    name: 'LM Rinder TR-Vit',
+    name: {
+      ua: 'LM Rinder TR-Vit',
+      en: 'LM Rinder TR-Vit',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Лизунець для сухостійних корів',
-      en: 'A lick for dry cows'
+      en: 'A lick for dry cows',
     },
     category: ['ВРХ дорослі', 'ВРХ молодняк'],
     image: imgProductDetailsId3,
@@ -168,11 +177,14 @@ export const products = [
   },
   {
     id: 4,
-    name: 'Камінь для клювання',
+    name: {
+      ua: 'Камінь для клювання',
+      en: 'A pecking stone',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Професійний матеріал для птахівників',
-      en: 'Material for poultry farmers'
+      en: 'Material for poultry farmers',
     },
     category: ['Птиця'],
     image: imgProductDetailsId4,
@@ -204,11 +216,14 @@ export const products = [
   },
   {
     id: 5,
-    name: 'ProtiSpar Top 75',
+    name: {
+      ua: 'ProtiSpar Top 75',
+      en: 'ProtiSpar Top 75',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Оптимізація протеїнової годівлі',
-      en: 'Optimization of protein feeding'
+      en: 'Optimization of protein feeding',
     },
     descriptionText:
       'Запатентована комбинація деяких ефірних олій: знижує швидке виділення амміаку з амінокислот, без погіршення синтезу оцтової й пропіонової кислот, тому не має негативного впливу на виробництво молока та молочного жиру.',
@@ -239,11 +254,14 @@ export const products = [
   },
   {
     id: 6,
-    name: 'Футтергут Румі-Ферм',
+    name: {
+      ua: 'Футтергут Румі-Ферм',
+      en: 'Futtergut Rumi-Farm',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Оптимізація крохмальної годівлі',
-      en: 'Optimization of starch feeding'
+      en: 'Optimization of starch feeding',
     },
     descriptionText:
       'Кормова добавка на основі фермента амілази —  спеціально призначена для годівлі корів.',
@@ -280,11 +298,14 @@ export const products = [
   },
   {
     id: 7,
-    name: 'Lactoval liquid',
+    name: {
+      ua: 'Lactoval liquid',
+      en: 'Lactoval liquid',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Перша випойка після отелу',
-      en: 'First drinking after calving'
+      en: 'First drinking after calving',
     },
     descriptionText: [
       'ЕНЕРГЕТИЧНИЙ напій для тільки що отелених і виздоровлюючих корів, що містить харчові речовини, мінерали, живі дріжджі й добавки.',
@@ -335,11 +356,14 @@ export const products = [
   },
   {
     id: 8,
-    name: 'X-Zelit Calcium-Mobilisation',
+    name: {
+      ua: 'X-Zelit Calcium-Mobilisation',
+      en: 'X-Zelit Calcium-Mobilisation',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Профілактика гіпокальціємії',
-      en: 'Prevention of hypocalcemia'
+      en: 'Prevention of hypocalcemia',
     },
     descriptionText: [
       `Кормова добавка, на основі синтетичного абсорбенту кальцію`,
@@ -371,11 +395,14 @@ export const products = [
   },
   {
     id: 9,
-    name: 'Br. Close Up 30 Pro',
+    name: {
+      ua: 'Br. Close Up 30 Pro',
+      en: 'Br. Close Up 30 Pro',
+    },
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: {
       ua: 'Добавка для профілактики гіпокальціємії',
-      en: 'Transit supplement for cows'
+      en: 'Transit supplement for cows',
     },
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId9,
@@ -409,11 +436,14 @@ export const products = [
   },
   {
     id: 10,
-    name: 'Clex® blue drink',
+    name: {
+      ua: 'Clex® blue drink',
+      en: 'Clex® blue drink',
+    },
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: {
       ua: 'Рідкий мінерально–вітамінний підкислювач',
-      en: 'Liquid mineral and vitamin acidifier (suitable for all)'
+      en: 'Liquid mineral and vitamin acidifier (suitable for all)',
     },
     category: ['Підходе для всіх'],
     image: imgProductDetailsId10,
@@ -460,11 +490,14 @@ export const products = [
   },
   {
     id: 11,
-    name: 'Clex® Beta-Inulin met BLUE',
+    name: {
+      ua: 'Clex® Beta-Inulin met BLUE',
+      en: 'Clex® Beta-Inulin met BLUE',
+    },
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: {
       ua: 'Імуностимулююча кормова добавка',
-      en: 'Immunostimulating feed additive supplement (suitable for all)'
+      en: 'Immunostimulating feed additive supplement (suitable for all)',
     },
     category: ['Підходе для всіх'],
     image: imgProductDetailsId11,
@@ -505,11 +538,14 @@ export const products = [
   },
   {
     id: 12,
-    name: 'Quattro drink',
+    name: {
+      ua: 'Quattro drink',
+      en: 'Quattro drink',
+    },
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: {
       ua: 'Рідкий підкислювач для всіх видів тварин',
-      en: 'Liquid acidifier for all types of animals'
+      en: 'Liquid acidifier for all types of animals',
     },
     category: ['ВРХ молодняк', 'ДРХ', 'Свині', 'Птиця'],
     image: imgProductDetailsId12,
@@ -554,11 +590,14 @@ export const products = [
   },
   {
     id: 13,
-    name: 'Clex Vit Hefe 4',
+    name: {
+      ua: 'Clex Vit Hefe 4',
+      en: 'Clex Vit Hefe 4',
+    },
     manufacturer: 'Ahrhoff FUTTERGUT',
     description: {
       ua: 'Сорбент-премікс преміум-класу',
-      en: 'Premix + toxin sorbent'
+      en: 'Premix + toxin sorbent',
     },
     category: ['Підходе для всіх'],
     image: imgProductDetailsId13,
@@ -602,11 +641,14 @@ export const products = [
   },
   {
     id: 14,
-    name: 'Anta®Ferm MT80',
+    name: {
+      ua: 'Anta®Ferm MT80',
+      en: 'Anta®Ferm MT80',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Сорбент токсинів комплексний',
-      en: 'Complex toxin sorbent'
+      en: 'Complex toxin sorbent',
     },
     category: ['Підходе для всіх'],
     image: imgProductDetailsId14,
@@ -648,11 +690,14 @@ export const products = [
   },
   {
     id: 15,
-    name: 'SuperSorber Mykotoxinbinder',
+    name: {
+      ua: 'SuperSorber Mykotoxinbinder',
+      en: 'SuperSorber Mykotoxinbinder',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Сорбент токсинів',
-      en: 'Toxin sorbent'
+      en: 'Toxin sorbent',
     },
     descriptionText: [
       `Має дуже високу здатність зв’язувати й виводити з організму Афлатоксин.`,
@@ -695,11 +740,14 @@ export const products = [
   },
   {
     id: 16,
-    name: 'Pansen-Neutral',
+    name: {
+      ua: 'Pansen-Neutral',
+      en: 'Pansen-Neutral',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Буферна кормова добавка',
-      en: 'Buffer feed additive'
+      en: 'Buffer feed additive',
     },
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId16,
@@ -726,11 +774,14 @@ export const products = [
   },
   {
     id: 17,
-    name: 'Acid-Control',
+    name: {
+      ua: 'Acid-Control',
+      en: 'Acid-Control',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Буферна кормова добавка',
-      en: 'Buffer feed additive'
+      en: 'Buffer feed additive',
     },
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId17,
@@ -757,11 +808,14 @@ export const products = [
   },
   {
     id: 18,
-    name: 'Biotin 750',
+     name: {
+      ua: 'Biotin 750',
+      en: 'Biotin 750',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Концентрат Біотину',
-      en: 'Biotin concentrate'
+      en: 'Biotin concentrate',
     },
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId18,
@@ -787,11 +841,14 @@ export const products = [
   },
   {
     id: 19,
-    name: 'Beta-Carotin',
+     name: {
+      ua: 'Beta-Carotin',
+      en: 'Beta-Carotin',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Мінеральна добавка — сприяє фертильності та показникам здоров’я',
-      en: 'Carotene concentrate'
+      en: 'Carotene concentrate',
     },
     descriptionText: [
       `Зниження народжуваності призводить до високих економічних втрат у тваринництві. У корів, наприклад, понад 30% усіх втрат пов'язані з порушенням фертильності. Причиною може бути недостатня годівля.`,
@@ -823,11 +880,14 @@ export const products = [
   },
   {
     id: 20,
-    name: 'Kuhpower',
+    name: {
+      ua: 'Kuhpower',
+      en: 'Kuhpower',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Спеціальна дріжджова добавка',
-      en: 'Special yeast additive'
+      en: 'Special yeast additive',
     },
     descriptionText: [
       `Кормова добавка зі спеціальних дріжджових культур, для підтримки загального травлення, що стимулює ріст мікробів рубця.`,
@@ -857,11 +917,14 @@ export const products = [
   },
   {
     id: 21,
-    name: 'Elbe Trockenfett DF',
+    name: {
+      ua: 'Elbe Trockenfett DF',
+      en: 'Elbe Trockenfett DF',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Фракціонований захищений жир',
-      en: 'Fractionated protected fat'
+      en: 'Fractionated protected fat',
     },
     descriptionText: [
       `Це чиста рослинна жирна кислота, вироблена шляхом фракціонування з харчової рафінованої пальмової олії.`,
@@ -892,11 +955,14 @@ export const products = [
   },
   {
     id: 22,
-    name: 'Профат',
+    name: {
+      ua: 'Профат',
+      en: 'Профат',
+    },
     manufacturer: 'Schils',
     description: {
       ua: 'Джерело додаткової енергії в раціон',
-      en: 'Calcified protected fat'
+      en: 'Calcified protected fat',
     },
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId22,
@@ -917,11 +983,14 @@ export const products = [
   },
   {
     id: 23,
-    name: 'Propylenglycol',
+    name: {
+      ua: 'Propylenglycol',
+      en: 'Propylenglycol',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Енергетична добавка для профілактики та лікування кетозів',
-      en: 'Energy liquid supplement'
+      en: 'Energy liquid supplement',
     },
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId23,
@@ -957,11 +1026,14 @@ export const products = [
   },
   {
     id: 24,
-    name: 'Glycerine 80%',
+    name: {
+      ua: 'Glycerine 80%',
+      en: 'Glycerine 80%',
+    },
     manufacturer: 'VILOFOSS',
     description: {
       ua: 'Енергетична рідка добавка',
-      en: 'Energy liquid supplement'
+      en: 'Energy liquid supplement',
     },
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId24,
@@ -993,7 +1065,10 @@ export const products = [
     id: 25,
     name: 'VitaloMix',
     manufacturer: 'VILOFOSS',
-    description: 'Престартер у вигляді мюсли',
+    description: {
+      ua: 'Престартер у вигляді мюсли',
+      en: 'Pre-starter in the form of muesli',
+    },
     category: ['ВРХ молодняк'],
     image: imgProductDetailsId25,
     imageDesktop: imageToVRHM2,
@@ -1032,7 +1107,10 @@ export const products = [
     id: 26,
     name: 'Ruminito TMR',
     manufacturer: 'VILOFOSS',
-    description: '10% ядро для кормів телятам',
+    description: {
+      ua: '10% ядро для кормів телятам',
+      en: '10% core for calf feed',
+    },
     category: ['ВРХ молодняк'],
     image: imgProductDetailsId26,
     imageDesktop: imageToVRHM,
@@ -1060,7 +1138,10 @@ export const products = [
     id: 27,
     name: 'Vollmilch plus',
     manufacturer: 'VILOFOSS',
-    description: 'Збагачувач незбираного молока',
+    description: {
+      ua: 'Збагачувач незбираного молока',
+      en: 'Whole milk enricher',
+    },
     category: ['ВРХ молодняк'],
     image: imgProductDetailsId27,
     imageDesktop: imageToVRHM2,
@@ -1084,9 +1165,15 @@ export const products = [
   },
   {
     id: 28,
-    name: 'Євролак (зелений)',
+    name: {
+      ua: 'Євролак (зелений)',
+      en: 'Eurolac (green)',
+    },
     manufacturer: 'Schils',
-    description: 'Високоякісний замінник незбираного молока',
+    description: {
+      ua: 'Високоякісний замінник незбираного молока',
+      en: 'SOM for calves from the 3rd day of life',
+    },
     category: ['ВРХ молодняк'],
     image: imgProductDetailsId28,
     imageDesktop: imageToVRHM,
