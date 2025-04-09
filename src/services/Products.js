@@ -67,7 +67,10 @@ export const products = [
       ua: 'Mineralfutter',
       en: 'Mineralfutter',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Премікси для ВРХ, ДРХ та Коней',
       en: 'Premixes for cattle, small cattle and horses',
@@ -96,7 +99,10 @@ export const products = [
       ua: 'LM Rinder ADE',
       en: 'LM Rinder ADE',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Смачний та гомогенний лизунець',
       en: 'Premix - lizunets (salt lick)  Standard',
@@ -135,7 +141,10 @@ export const products = [
       ua: 'LM Rinder TR-Vit',
       en: 'LM Rinder TR-Vit',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Лизунець для сухостійних корів',
       en: 'A lick for dry cows',
@@ -181,7 +190,10 @@ export const products = [
       ua: 'Камінь для клювання',
       en: 'A pecking stone',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Професійний матеріал для птахівників',
       en: 'Material for poultry farmers',
@@ -220,7 +232,10 @@ export const products = [
       ua: 'ProtiSpar Top 75',
       en: 'ProtiSpar Top 75',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Оптимізація протеїнової годівлі',
       en: 'Optimization of protein feeding',
@@ -258,7 +273,10 @@ export const products = [
       ua: 'Футтергут Румі-Ферм',
       en: 'Futtergut Rumi-Farm',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Оптимізація крохмальної годівлі',
       en: 'Optimization of starch feeding',
@@ -302,7 +320,10 @@ export const products = [
       ua: 'Lactoval liquid',
       en: 'Lactoval liquid',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Перша випойка після отелу',
       en: 'First drinking after calving',
@@ -360,7 +381,10 @@ export const products = [
       ua: 'X-Zelit Calcium-Mobilisation',
       en: 'X-Zelit Calcium-Mobilisation',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Профілактика гіпокальціємії',
       en: 'Prevention of hypocalcemia',
@@ -399,7 +423,10 @@ export const products = [
       ua: 'Br. Close Up 30 Pro',
       en: 'Br. Close Up 30 Pro',
     },
-    manufacturer: 'Ahrhoff FUTTERGUT',
+    manufacturer: {
+      ua: 'Ahrhoff FUTTERGUT',
+      en: 'Ahrhoff FUTTERGUT',
+    },
     description: {
       ua: 'Добавка для профілактики гіпокальціємії',
       en: 'Transit supplement for cows',
@@ -440,7 +467,10 @@ export const products = [
       ua: 'Clex® blue drink',
       en: 'Clex® blue drink',
     },
-    manufacturer: 'Ahrhoff FUTTERGUT',
+    manufacturer: {
+      ua: 'Ahrhoff FUTTERGUT',
+      en: 'Ahrhoff FUTTERGUT',
+    },
     description: {
       ua: 'Рідкий мінерально–вітамінний підкислювач',
       en: 'Liquid mineral and vitamin acidifier (suitable for all)',
@@ -494,7 +524,10 @@ export const products = [
       ua: 'Clex® Beta-Inulin met BLUE',
       en: 'Clex® Beta-Inulin met BLUE',
     },
-    manufacturer: 'Ahrhoff FUTTERGUT',
+    manufacturer: {
+      ua: 'Ahrhoff FUTTERGUT',
+      en: 'Ahrhoff FUTTERGUT',
+    },
     description: {
       ua: 'Імуностимулююча кормова добавка',
       en: 'Immunostimulating feed additive supplement (suitable for all)',
@@ -542,7 +575,10 @@ export const products = [
       ua: 'Quattro drink',
       en: 'Quattro drink',
     },
-    manufacturer: 'Ahrhoff FUTTERGUT',
+    manufacturer: {
+      ua: 'Ahrhoff FUTTERGUT',
+      en: 'Ahrhoff FUTTERGUT',
+    },
     description: {
       ua: 'Рідкий підкислювач для всіх видів тварин',
       en: 'Liquid acidifier for all types of animals',
@@ -594,7 +630,10 @@ export const products = [
       ua: 'Clex Vit Hefe 4',
       en: 'Clex Vit Hefe 4',
     },
-    manufacturer: 'Ahrhoff FUTTERGUT',
+    manufacturer: {
+      ua: 'Ahrhoff FUTTERGUT',
+      en: 'Ahrhoff FUTTERGUT',
+    },
     description: {
       ua: 'Сорбент-премікс преміум-класу',
       en: 'Premix + toxin sorbent',
@@ -645,7 +684,10 @@ export const products = [
       ua: 'Anta®Ferm MT80',
       en: 'Anta®Ferm MT80',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Сорбент токсинів комплексний',
       en: 'Complex toxin sorbent',
@@ -694,7 +736,10 @@ export const products = [
       ua: 'SuperSorber Mykotoxinbinder',
       en: 'SuperSorber Mykotoxinbinder',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Сорбент токсинів',
       en: 'Toxin sorbent',
@@ -744,7 +789,10 @@ export const products = [
       ua: 'Pansen-Neutral',
       en: 'Pansen-Neutral',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Буферна кормова добавка',
       en: 'Buffer feed additive',
@@ -778,7 +826,10 @@ export const products = [
       ua: 'Acid-Control',
       en: 'Acid-Control',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Буферна кормова добавка',
       en: 'Buffer feed additive',
@@ -812,7 +863,10 @@ export const products = [
       ua: 'Biotin 750',
       en: 'Biotin 750',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Концентрат Біотину',
       en: 'Biotin concentrate',
@@ -845,7 +899,10 @@ export const products = [
       ua: 'Beta-Carotin',
       en: 'Beta-Carotin',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Мінеральна добавка — сприяє фертильності та показникам здоров’я',
       en: 'Carotene concentrate',
@@ -884,7 +941,10 @@ export const products = [
       ua: 'Kuhpower',
       en: 'Kuhpower',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Спеціальна дріжджова добавка',
       en: 'Special yeast additive',
@@ -921,7 +981,10 @@ export const products = [
       ua: 'Elbe Trockenfett DF',
       en: 'Elbe Trockenfett DF',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Фракціонований захищений жир',
       en: 'Fractionated protected fat',
@@ -959,7 +1022,10 @@ export const products = [
       ua: 'Профат',
       en: 'Профат',
     },
-    manufacturer: 'Schils',
+    manufacturer: {
+      ua: 'Schils',
+      en: 'Schils',
+    },
     description: {
       ua: 'Джерело додаткової енергії в раціон',
       en: 'Calcified protected fat',
@@ -1030,7 +1096,10 @@ export const products = [
       ua: 'Glycerine 80%',
       en: 'Glycerine 80%',
     },
-    manufacturer: 'VILOFOSS',
+    manufacturer: {
+      ua: 'VILOFOSS',
+      en: 'VILOFOSS',
+    },
     description: {
       ua: 'Енергетична рідка добавка',
       en: 'Energy liquid supplement',
