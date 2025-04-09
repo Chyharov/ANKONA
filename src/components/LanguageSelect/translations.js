@@ -126,6 +126,7 @@ const translations = {
       ],
       Found: 'Знайдено:',
       positions: 'позицій',
+      buttonBack: 'Goods',
     },
     en: {
       title: 'Products',
@@ -152,6 +153,7 @@ const translations = {
       ],
       Found: 'Found:',
       positions: 'positions',
+      buttonBack: 'Товар',
     },
   },
   tradeMarks: {

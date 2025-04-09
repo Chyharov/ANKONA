@@ -212,7 +212,7 @@ const SectionGoods = ({ language }) => {
     }
 
     setFilteredProducts(filtered);
-  }, [products, filters, searchQuery, language]);
+  }, [filters, searchQuery, language]);
 
   const getCategoryIcon = (categoryName, lang) => {
     const found = categoryIcons.find(

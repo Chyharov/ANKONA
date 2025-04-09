@@ -48,10 +48,12 @@ const ProductDetails = ({ language }) => {
         <div className="container">
           <div className={s.buttonBackContainer}>
             <button onClick={() => navigate(-1)} className={s.buttonBack}>
-              Товар
+              {t.buttonBack}
             </button>
             <div className={s.decorationBorder}></div>
-            <h2 className={s.sectionProductDetailsTitle}>{product.name[language]}</h2>
+            <h2 className={s.sectionProductDetailsTitle}>
+              {product.name[language]}
+            </h2>
           </div>
           <div className={s.productDetailsContainer}>
             <div className={s.imageContainerDesktop}>
