@@ -65,14 +65,6 @@ const categoryIcons = [
     },
     icon: iconPig,
   },
-  {
-    id: 7,
-    name: {
-      ua: 'Підходе для всіх',
-      en: 'Suitable for all',
-    },
-    icon: null,
-  },
 ];
 
 const SectionGoods = ({ language }) => {
@@ -465,9 +457,20 @@ const SectionGoods = ({ language }) => {
                 categories = Object.keys(categoryIcons);
               }
 
-              const categoryIconsList = categories
-                .map(cat => categoryIcons[cat])
-                .filter(Boolean);
+              const hasAllCategories =
+                categories.includes('Підходе для всіх') ||
+                categories.includes('Suitable for all');
+
+              const categoryIconsList = hasAllCategories
+                ? categoryIcons.map(c => c.icon)
+                : categories
+                    .map(cat => {
+                      const category = categoryIcons.find(
+                        c => c.name.ua === cat || c.name.en === cat
+                      );
+                      return category ? category.icon : null;
+                    })
+                    .filter(Boolean);
 
               return (
                 <li
@@ -497,19 +500,43 @@ const SectionGoods = ({ language }) => {
                   </div>
 
                   <div className={s.iconManufacturerContainer}>
-                    {categoryIconsList.map((icon, index) => (
-                      <div
-                        key={icon + index}
-                        className={s.iconManufacturerContainerBorder}
-                      >
-                        <img
+                    {categoryIconsList.length > 0 ? (
+                      categoryIconsList.map((icon, index) => (
+                        <div
                           key={index}
-                          className={s.iconManufacturer}
-                          src={icon}
-                          alt="category icon"
-                        />
+                          className={s.iconManufacturerContainerBorder}
+                        >
+                          <img
+                            className={s.iconManufacturer}
+                            src={icon}
+                            alt="category icon"
+                          />
+                        </div>
+                      ))
+                    ) : (
+                      <div style={{ display: 'flex' }}>
+                        {[
+                          iconCow,
+                          iconCalf,
+                          iconGoat,
+                          iconHorse,
+                          iconPig,
+                          iconHen,
+                        ].map((icon, index) => (
+                          <div
+                          key={index}
+                          className={s.iconManufacturerContainerBorder}
+                        >
+                          <img
+                            key={index}
+                            className={s.iconManufacturer}
+                            src={icon}
+                            alt="category icon"
+                            />
+                            </div>
+                        ))}
                       </div>
-                    ))}
+                    )}
                   </div>
                 </li>
               );

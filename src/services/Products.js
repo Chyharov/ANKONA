@@ -2281,7 +2281,7 @@ export const products = [
   {
     id: 63,
     name: 'Цітро',
-    manufacturer: ['Agro-Bizek'],
+    manufacturer: ['AGRO-BIZEK'],
     description:
       'Ультрабіотик, що пригнічує розвиток патогенних мікрооганізмів (вірусів, бактерій, грибків) в широкому спектрі',
     category: ['Підходе для всіх'],
