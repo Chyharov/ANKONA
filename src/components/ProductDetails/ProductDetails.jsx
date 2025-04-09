@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { products } from 'services/Products';
+import translations from 'components/LanguageSelect/translations';
 import ButtonCallBack from 'components/ButtonCallBack/ButtonCallBack';
 import iconHorse from 'images/goods/iconHorse.svg';
 import iconPig from 'images/goods/iconPig.svg';
@@ -24,6 +25,7 @@ const ProductDetails = ({ language }) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const product = products.find(p => p.id === Number(id));
+  const t = translations.goods[language];
 
   if (!product) {
     return <p className={s.notFound}>Товар не знайдено</p>;
@@ -49,14 +51,14 @@ const ProductDetails = ({ language }) => {
               Товар
             </button>
             <div className={s.decorationBorder}></div>
-            <h2 className={s.sectionProductDetailsTitle}>{product.name}</h2>
+            <h2 className={s.sectionProductDetailsTitle}>{product.name[language]}</h2>
           </div>
           <div className={s.productDetailsContainer}>
             <div className={s.imageContainerDesktop}>
               <img
                 className={s.imgProductDetails}
                 src={product.image}
-                alt={product.name}
+                alt={product.name[language]}
               />
 
               <h3 className={s.categoryGoods}>Категорія тварин:</h3>
@@ -87,15 +89,15 @@ const ProductDetails = ({ language }) => {
               </ul>
             </div>
             <div className={s.productDescriptionContainer}>
-              <h3 className={s.productDetailsName}>{product.name}</h3>
+              <h3 className={s.productDetailsName}>{product.name[language]}</h3>
               <p className={s.productDetailsManufacturer}>
-                {product.manufacturer}
+                {product.manufacturer[language]}
               </p>
               <p
                 className={s.productDetailsDescription}
                 style={{ padding: '8px', marginBottom: '4px' }}
               >
-                {product.description}
+                {product.description[language]}
               </p>
               {Array.isArray(product.descriptionText)
                 ? product.descriptionText.map((text, index) => (
