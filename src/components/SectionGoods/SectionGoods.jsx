@@ -495,7 +495,7 @@ const SectionGoods = ({ language }) => {
                       {categories.join(', ')}
                     </p>
                     <p className={s.productListItemDescription}>
-                      {product.description}
+                      {product.description[language]}
                     </p>
                   </div>
 
