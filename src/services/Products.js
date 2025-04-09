@@ -2181,10 +2181,18 @@ export const products = [
   },
   {
     id: 49,
-    name: 'NutriBos VN 75 і COMPLETE',
-    manufacturer: 'NUTRIBOS',
-    description:
-      'Комплексні продукти с захищеною сечовиною у складі (Хорватія)',
+    name: {
+      ua: 'NutriBos VN 75 і COMPLETE',
+      en: 'NutriBos VN 75 і COMPLETE',
+    },
+    manufacturer: {
+      ua: 'NUTRIBOS',
+      en: 'NUTRIBOS',
+    },
+    description: {
+      ua: 'Комплексні продукти с захищеною сечовиною у складі (Хорватія)',
+      en: 'Complex products with protected urea in the composition (Croatia)',
+    },
     category: ['ВРХ дорослі'],
     image: imgProductDetailsId49,
     imageDesktop: imageToVRHD,
@@ -2231,9 +2239,18 @@ export const products = [
   },
   {
     id: 50,
-    name: 'SEGAWEAN® Boost',
-    manufacturer: 'Ahrhoff FUTTERGUT',
-    description: 'Премікс для свиней на відгодівлі 30-60 кг, 4,5%',
+    name: {
+      ua: 'SEGAWEAN® Boost',
+      en: 'SEGAWEAN® Boost',
+    },
+    manufacturer: {
+      ua: 'Ahrhoff FUTTERGUT',
+      en: 'Ahrhoff FUTTERGUT',
+    },
+     description: {
+      ua: 'Премікс для свиней на відгодівлі 30-60 кг, 4,5%',
+      en: 'Premix for fattening pigs 30-60 kg, 4.5%',
+    },
     category: ['Свині'],
     image: imgProductDetailsId50,
     imageDesktop: imageToPig,
@@ -2267,9 +2284,18 @@ export const products = [
   },
   {
     id: 51,
-    name: 'SEGAWEAN® F49 A3',
-    manufacturer: 'Ahrhoff FUTTERGUT',
-    description: 'Премікс для свиней на відгодівлі від 60 кг, 3,3%',
+    name: {
+      ua: 'SEGAWEAN® F49 A3',
+      en: 'SEGAWEAN® F49 A3',
+    },
+        manufacturer: {
+      ua: 'Ahrhoff FUTTERGUT',
+      en: 'Ahrhoff FUTTERGUT',
+    },
+    description: {
+      ua: 'Премікс для свиней на відгодівлі від 60 кг, 3,3%',
+      en: 'Premix for fattening pigs from 60 kg, 3.3%',
+    },
     category: ['Свині'],
     image: imgProductDetailsId51,
     imageDesktop: imageToPig2,
@@ -2304,9 +2330,18 @@ export const products = [
   },
   {
     id: 52,
-    name: 'SOW Day 7® Farrow Feed',
-    manufacturer: 'Ahrhoff FUTTERGUT',
-    description: 'Премікс для свиноматок у транзитний період',
+    name: {
+      ua: 'SOW Day 7® Farrow Feed',
+      en: 'SOW Day 7® Farrow Feed',
+    },
+     manufacturer: {
+      ua: 'Ahrhoff FUTTERGUT',
+      en: 'Ahrhoff FUTTERGUT',
+    },
+    description: {
+      ua: 'Премікс для свиноматок у транзитний період',
+      en: 'Premix for sows in transit period',
+    },
     category: ['Свині'],
     image: imgProductDetailsId52,
     imageDesktop: imageToPig,
@@ -2340,9 +2375,18 @@ export const products = [
   },
   {
     id: 53,
-    name: 'SEGAWEAN® SL Wean',
-    manufacturer: 'Ahrhoff FUTTERGUT',
-    description: 'Премікс для лактуючих свиноматок, 5%',
+    name: {
+      ua: 'SEGAWEAN® SL Wean',
+      en: 'SEGAWEAN® SL Wean',
+    },
+    manufacturer: {
+      ua: 'Ahrhoff FUTTERGUT',
+      en: 'Ahrhoff FUTTERGUT',
+    },
+    description: {
+      ua: 'Премікс для лактуючих свиноматок, 5%',
+      en: 'Premix for lactating sows, 5%.',
+    },
     category: ['Свині'],
     image: imgProductDetailsId53,
     imageDesktop: imageToPig3,
@@ -2376,9 +2420,18 @@ export const products = [
   },
   {
     id: 54,
-    name: 'SEGAWEAN® SFT',
-    manufacturer: 'Ahrhoff FUTTERGUT',
-    description: 'Премікс для супоросних свиноматок, 3%',
+    name: {
+      ua: 'SEGAWEAN® SFT',
+      en: 'SEGAWEAN® SFT',
+    },
+    manufacturer: {
+      ua: 'Ahrhoff FUTTERGUT',
+      en: 'Ahrhoff FUTTERGUT',
+    },
+     description: {
+      ua: 'Премікс для супоросних свиноматок, 3%',
+      en: 'Premix for farrowing sows, 3%',
+    },
     category: ['Свині'],
     image: imgProductDetailsId54,
     imageDesktop: imageToPig2,
@@ -2412,9 +2465,18 @@ export const products = [
   },
   {
     id: 55,
-    name: 'SEGAWEAN® P5 +2 3 6',
-    manufacturer: 'Ahrhoff FUTTERGUT',
-    description: 'Премікс для поросят до 30 кг 6,5%',
+    name: {
+      ua: 'SEGAWEAN® P5 +2 3 6',
+      en: 'SEGAWEAN® P5 +2 3 6',
+    },
+    manufacturer: {
+      ua: 'Ahrhoff FUTTERGUT',
+      en: 'Ahrhoff FUTTERGUT',
+    },
+     description: {
+      ua: 'Премікс для поросят до 30 кг 6,5%',
+      en: 'Premix for piglets up to 30 kg 6.5%',
+    },
     category: ['Свині'],
     image: imgProductDetailsId55,
     imageDesktop: imageToPig,
@@ -2448,10 +2510,18 @@ export const products = [
   },
   {
     id: 56,
-    name: 'Maxi-Cox Dry для птиці',
-    manufacturer: 'ETOS',
-    description:
-      'Модулятор мікробіому; Кокцидіостатик; Суміш органічних кислот',
+    name: {
+      ua: 'Maxi-Cox Dry для птиці',
+      en: 'Maxi-Cox Dry for poultry',
+    },
+    manufacturer: {
+      ua: 'ETOS',
+      en: 'ETOS',
+    },
+     description: {
+      ua: 'Модулятор мікробіому; Кокцидіостатик; Суміш органічних кислот',
+      en: 'Microbiome modulator; Coccidiostatic; Organic acid mixture',
+    },
     category: ['Птиця'],
     image: imgProductDetailsId56,
     imageDesktop: imageToChicken2,
@@ -2488,10 +2558,18 @@ export const products = [
   },
   {
     id: 57,
-    name: 'Maxi-Pi-Blok Dry - для свиней',
-    manufacturer: 'ETOS',
-    description:
-      'Модулятор мікробіому; Альтернатива антибіотику; Суміш органічних кислот',
+    name: {
+      ua: 'Maxi-Pi-Blok Dry - для свиней',
+      en: 'Maxi-Pi-Blok Dry - для свиней',
+    },
+    manufacturer: {
+      ua: 'ETOS',
+      en: 'ETOS',
+    },
+    description: {
+      ua: 'Модулятор мікробіому; Альтернатива антибіотику; Суміш органічних кислот',
+      en: 'Microbiome modulator; Antibiotic alternative; Organic acid mixture',
+    },
     category: ['Свині'],
     image: imgProductDetailsId56,
     imageDesktop: imageToPig2,
@@ -2522,9 +2600,18 @@ export const products = [
   },
   {
     id: 58,
-    name: 'Hy-M для свиней',
-    manufacturer: ['ANKONA', 'FUTTERGUT - надійна годівля'],
-    description: 'Підвищення рівня вітаміну D3 у сироватці крові',
+    name: {
+      ua: 'Hy-M для свиней',
+      en: 'Hy-M for pigs',
+    },
+    manufacturer: {
+      ua: ['ANKONA', 'FUTTERGUT - надійна годівля'],
+      en: ['ANKONA', 'FUTTERGUT - reliable feeding'],
+    },
+    description: {
+      ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
+      en: 'Increasing the level of vitamin D3 in the blood serum',
+    },
     category: ['Свині'],
     image: imgProductDetailsId38,
     imageDesktop: imageToPig,
@@ -2558,9 +2645,18 @@ export const products = [
   },
   {
     id: 59,
-    name: 'Hy-M для батьківського стада птиці',
-    manufacturer: ['ANKONA', 'FUTTERGUT - надійна годівля'],
-    description: 'Підвищення рівня вітаміну D3 у сироватці крові',
+    name: {
+      ua: 'Hy-M для батьківського стада птиці',
+      en: 'Hy-M for the parent flock of poultry',
+    },
+    manufacturer: {
+      ua: ['ANKONA', 'FUTTERGUT - надійна годівля'],
+      en: ['ANKONA', 'FUTTERGUT - reliable feeding'],
+    },
+    description: {
+      ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
+      en: 'Increasing the level of vitamin D3 in the blood serum',
+    },
     category: ['Птиця'],
     image: imgProductDetailsId38,
     imageDesktop: imageToChicken,
@@ -2597,9 +2693,18 @@ export const products = [
   },
   {
     id: 60,
-    name: 'Hy-M для бройлерів',
-    manufacturer: ['ANKONA', 'FUTTERGUT - надійна годівля'],
-    description: 'Підвищення рівня вітаміну D3 у сироватці крові',
+    name: {
+      ua: 'Hy-M для бройлерів',
+      en: 'Hy-M for broilers',
+    },
+    manufacturer: {
+      ua: ['ANKONA', 'FUTTERGUT - надійна годівля'],
+      en: ['ANKONA', 'FUTTERGUT - reliable feeding'],
+    },
+    description: {
+      ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
+      en: 'Increasing the level of vitamin D3 in the blood serum',
+    },
     category: ['Птиця'],
     image: imgProductDetailsId38,
     imageDesktop: imageToChicken2,
@@ -2635,9 +2740,18 @@ export const products = [
   },
   {
     id: 61,
-    name: 'Hy-M для несучки',
-    manufacturer: ['ANKONA', 'FUTTERGUT - надійна годівля'],
-    description: 'Підвищення рівня вітаміну D3 у сироватці крові',
+    name: {
+      ua: 'Hy-M для несучки',
+      en: 'Hy-M for the laying hen',
+    },
+    manufacturer: {
+      ua: ['ANKONA', 'FUTTERGUT - надійна годівля'],
+      en: ['ANKONA', 'FUTTERGUT - reliable feeding'],
+    },
+    description: {
+      ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
+      en: 'Additional feed mixture',
+    },
     category: ['Птиця'],
     image: imgProductDetailsId38,
     imageDesktop: imageToChicken,
@@ -2671,9 +2785,18 @@ export const products = [
   },
   {
     id: 62,
-    name: 'Мультіцид Форте',
-    manufacturer: ['ETOS'],
-    description: 'Додаткова кормова суміш',
+    name: {
+      ua: 'Мультіцид Форте',
+      en: 'Multicide Forte',
+    },
+    manufacturer: {
+      ua: 'ETOS',
+      en: 'ETOS',
+    },
+    description: {
+      ua: 'Додаткова кормова суміш',
+      en: 'Additional feed mixture',
+    },
     descriptionText: [
       `Продукт являє собою суміш відібраних органічних кислот і їх новітньої активної хімічної форми валеріанової, мурашиної та пропіонової кислоти - моногліцеридного ефіру*, з сильними консервуючими властивостями, як у середовищі корму, кормових матеріалів (включаючи воду), що покращує гігієнічний (мікробіологічний) стан кормових продуктів і питної води. `,
       `Водночас вищезазначена суміш стимулює метаболічні та ферментативні функції травної системи шляхом зниження pH і контролю буферної ємності.`,
@@ -2708,10 +2831,18 @@ export const products = [
   },
   {
     id: 63,
-    name: 'Цітро',
-    manufacturer: ['AGRO-BIZEK'],
-    description:
-      'Ультрабіотик, що пригнічує розвиток патогенних мікрооганізмів (вірусів, бактерій, грибків) в широкому спектрі',
+    name: {
+      ua: 'Цітро',
+      en: 'Citro',
+    },
+    manufacturer: {
+      ua: 'AGRO-BIZEK',
+      en: 'AGRO-BIZEK',
+    },
+   description: {
+      ua: 'Ультрабіотик, що пригнічує розвиток патогенних мікрооганізмів (вірусів, бактерій, грибків) в широкому спектрі',
+      en: 'Ultrabiotic',
+    },
     category: ['Підходе для всіх'],
     image: imgProductDetailsId63,
     imageDesktop: imageToAll,
@@ -2741,9 +2872,18 @@ export const products = [
   },
   {
     id: 64,
-    name: 'Арбоцель',
-    manufacturer: ['JRS'],
-    description: 'Концентрат сирої клітковини для свиней',
+    name: {
+      ua: 'Арбоцель',
+      en: 'Arbocel',
+    },
+    manufacturer: {
+      ua: 'JRS',
+      en: 'JRS',
+    },
+    description: {
+      ua: 'Концентрат сирої клітковини для свиней',
+      en: 'Crude fiber concentrate for pigs',
+    },
     category: ['Свині'],
     image: imgProductDetailsId64,
     imageDesktop: imageToPig2,

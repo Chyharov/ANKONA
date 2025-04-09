@@ -561,17 +561,3 @@ const SectionGoods = ({ language }) => {
 };
 
 export default SectionGoods;
-
-
-// const name: {
-//       ua: 'VitaloMix',
-//       en: 'VitaloMix',
-//     },
-//     manufacturer: {
-//       ua: 'VILOFOSS',
-//       en: 'VILOFOSS',
-//     },
-//     description: {
-//       ua: 'Престартер у вигляді мюсли',
-//       en: 'Pre-starter in the form of muesli',
-//     },
