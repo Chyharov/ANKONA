@@ -26,7 +26,7 @@ const categoryIcons = {
   'Pigs': iconPig,
 };
 
-const allIcons = Object.values(categoryIcons);
+const allIcons = [...new Set(Object.values(categoryIcons))];
 
 const ProductDetails = ({ language }) => {
   const [isMobileWidth, setIsMobileWidth] = useState(window.innerWidth <= 1440);
@@ -49,17 +49,19 @@ const ProductDetails = ({ language }) => {
   }
 
   const categoryIconsList =
-    product.category[language] === 'Підходе для всіх' ||
-    (Array.isArray(product.category[language]) &&
-      product.category[language].includes('Підходе для всіх'))
-      ? allIcons
-      : Array.isArray(product.category[language])
-      ? product.category[language]
-          .map(cat => categoryIcons[cat])
-          .filter(Boolean)
-      : categoryIcons[product.category[language]]
-      ? [categoryIcons[product.category[language]]]
-      : [];
+  product.category[language] === 'Підходе для всіх' ||
+  product.category[language] === 'Suitable for all' ||
+  (Array.isArray(product.category[language]) &&
+    (product.category[language].includes('Підходе для всіх') ||
+     product.category[language].includes('Suitable for all')))
+    ? allIcons
+    : Array.isArray(product.category[language])
+    ? product.category[language]
+        .map(cat => categoryIcons[cat])
+        .filter(Boolean)
+    : categoryIcons[product.category[language]]
+    ? [categoryIcons[product.category[language]]]
+    : [];
 
   return (
     <>
@@ -122,8 +124,8 @@ const ProductDetails = ({ language }) => {
               >
                 {product.description[language]}
               </p>
-              {Array.isArray(product.descriptionText)
-                ? product.descriptionText.map((text, index) => (
+              {Array.isArray(product.descriptionText[language])
+                ? product.descriptionText[language].map((text, index) => (
                     <p
                       key={index}
                       className={s.productDetailsDescriptionSecond}
@@ -132,12 +134,12 @@ const ProductDetails = ({ language }) => {
                       {text}
                     </p>
                   ))
-                : product.descriptionText && (
+                : product.descriptionText[language] && (
                     <p
-                      className={s.productDetailsDescription}
+                      className={s.productDetailsDescriptionText}
                       style={{ marginBottom: '8px' }}
                     >
-                      {product.descriptionText}
+                      {product.descriptionText[language]}
                     </p>
                   )}
 
