@@ -16,14 +16,14 @@ const categoryIcons = {
   'Adult Cattle': iconCow,
   'ВРХ молодняк': iconCalf,
   'Young Cattle': iconCalf,
-  'ДРХ': iconGoat,
+  ДРХ: iconGoat,
   'Small Cattle': iconGoat,
-  'Коні': iconHorse,
-  'Horses': iconHorse,
-  'Птиця': iconHen,
-  'Birds': iconHen,
-  'Свині': iconPig,
-  'Pigs': iconPig,
+  Коні: iconHorse,
+  Horses: iconHorse,
+  Птиця: iconHen,
+  Birds: iconHen,
+  Свині: iconPig,
+  Pigs: iconPig,
 };
 
 const allIcons = [...new Set(Object.values(categoryIcons))];
@@ -49,19 +49,19 @@ const ProductDetails = ({ language }) => {
   }
 
   const categoryIconsList =
-  product.category[language] === 'Підходе для всіх' ||
-  product.category[language] === 'Suitable for all' ||
-  (Array.isArray(product.category[language]) &&
-    (product.category[language].includes('Підходе для всіх') ||
-     product.category[language].includes('Suitable for all')))
-    ? allIcons
-    : Array.isArray(product.category[language])
-    ? product.category[language]
-        .map(cat => categoryIcons[cat])
-        .filter(Boolean)
-    : categoryIcons[product.category[language]]
-    ? [categoryIcons[product.category[language]]]
-    : [];
+    product.category[language] === 'Підходе для всіх' ||
+    product.category[language] === 'Suitable for all' ||
+    (Array.isArray(product.category[language]) &&
+      (product.category[language].includes('Підходе для всіх') ||
+        product.category[language].includes('Suitable for all')))
+      ? allIcons
+      : Array.isArray(product.category[language])
+      ? product.category[language]
+          .map(cat => categoryIcons[cat])
+          .filter(Boolean)
+      : categoryIcons[product.category[language]]
+      ? [categoryIcons[product.category[language]]]
+      : [];
 
   return (
     <>
@@ -116,7 +116,9 @@ const ProductDetails = ({ language }) => {
             <div className={s.productDescriptionContainer}>
               <h3 className={s.productDetailsName}>{product.name[language]}</h3>
               <p className={s.productDetailsManufacturer}>
-                {product.manufacturer[language]}
+                {Array.isArray(product.manufacturer?.[language])
+                  ? product.manufacturer[language].join(' / ')
+                  : product.manufacturer?.[language] || ''}
               </p>
               <p
                 className={s.productDetailsDescription}

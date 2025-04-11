@@ -502,9 +502,9 @@ const SectionGoods = ({ language }) => {
                       {product.name[language]}
                     </h4>
                     <p className={s.productListItemManufacturer}>
-                      {Array.isArray(product.manufacturer)
-                        ? product.manufacturer[language].join(', ')
-                        : product.manufacturer[language]}
+                      {Array.isArray(product.manufacturer?.[language])
+                        ? product.manufacturer[language].join(' / ')
+                        : product.manufacturer?.[language] || ''}
                     </p>
                     <p className={s.productListItemCategoryNone}>
                       {categories.join(', ')}
