@@ -296,8 +296,8 @@ export const products = [
       en: '',
     },
     category: {
-      ua: 'Птиця',
-      en: 'Birds',
+      ua: ['Птиця'],
+      en: ['Birds'],
     },
     image: imgProductDetailsId4,
     imageDesktop: imageToChicken,
@@ -434,8 +434,8 @@ export const products = [
       en: '',
     },
     category: {
-      ua: 'ВРХ дорослі',
-      en: 'Adult Cattle',
+      ua: ['ВРХ дорослі'],
+      en: ['Adult Cattle'],
     },
     image: imgProductDetailsId6,
     imageDesktop: imageToVRHD,
@@ -3853,8 +3853,8 @@ export const products = [
     image: imgProductDetailsId54,
     imageDesktop: imageToPig2,
     category: {
-      ua: 'Свині',
-      en: 'Pigs',
+      ua: ['Свині'],
+      en: ['Pigs'],
     },
     sections: [
       {
@@ -4003,8 +4003,8 @@ export const products = [
       en: '',
     },
     category: {
-      ua: 'Птиця',
-      en: 'Birds',
+      ua: ['Птиця'],
+      en: ['Birds'],
     },
     image: imgProductDetailsId56,
     imageDesktop: imageToChicken2,
@@ -4223,8 +4223,8 @@ export const products = [
       en: '',
     },
     category: {
-      ua: 'Птиця',
-      en: 'Birds',
+      ua: ['Птиця'],
+      en: ['Birds'],
     },
     image: imgProductDetailsId38,
     imageDesktop: imageToChicken,
@@ -4301,8 +4301,8 @@ export const products = [
       en: '',
     },
     category: {
-      ua: 'Птиця',
-      en: 'Birds',
+      ua: ['Птиця'],
+      en: ['Birds'],
     },
     image: imgProductDetailsId38,
     imageDesktop: imageToChicken2,
@@ -4379,8 +4379,8 @@ export const products = [
       en: '',
     },
     category: {
-      ua: 'Птиця',
-      en: 'Birds',
+      ua: ['Птиця'],
+      en: ['Birds'],
     },
     image: imgProductDetailsId38,
     imageDesktop: imageToChicken,

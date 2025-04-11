@@ -188,8 +188,13 @@ const SectionGoods = ({ language }) => {
           .includes(lowerQuery);
 
         const categoryMatch = Array.isArray(product.category)
-          ? product.category.some(cat => cat.toLowerCase().includes(lowerQuery))
-          : product.category?.toLowerCase().includes(lowerQuery);
+          ? product.category.some(
+              cat =>
+                typeof cat === 'string' &&
+                cat.toLowerCase().includes(lowerQuery)
+            )
+          : typeof product.category === 'string' &&
+            product.category.toLowerCase().includes(lowerQuery);
 
         const manufacturer = product.manufacturer;
         const manufacturerMatch =
