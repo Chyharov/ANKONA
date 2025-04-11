@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.1b04080b.css",
-    "main.js": "/ANKONA/static/js/main.2d983e57.js",
+    "main.js": "/ANKONA/static/js/main.b63f10dd.js",
     "static/css/667.6055931c.chunk.css": "/ANKONA/static/css/667.6055931c.chunk.css",
     "static/js/667.0a702e4c.chunk.js": "/ANKONA/static/js/667.0a702e4c.chunk.js",
     "static/css/313.240cb7fd.chunk.css": "/ANKONA/static/css/313.240cb7fd.chunk.css",
@@ -14,7 +14,7 @@
     "static/js/520.5fc1b0b6.chunk.js": "/ANKONA/static/js/520.5fc1b0b6.chunk.js",
     "static/js/793.837022e9.chunk.js": "/ANKONA/static/js/793.837022e9.chunk.js",
     "static/js/665.bf8a3aeb.chunk.js": "/ANKONA/static/js/665.bf8a3aeb.chunk.js",
-    "static/js/175.b721e67a.chunk.js": "/ANKONA/static/js/175.b721e67a.chunk.js",
+    "static/js/175.b8c00b48.chunk.js": "/ANKONA/static/js/175.b8c00b48.chunk.js",
     "static/media/imageToAll.jpg": "/ANKONA/static/media/imageToAll.928a354736397911131a.jpg",
     "static/media/horseHeroImageDesktop.jpg": "/ANKONA/static/media/horseHeroImageDesktop.e7c655759ea03ee917b5.jpg",
     "static/media/blogImageId1Desktop.jpg": "/ANKONA/static/media/blogImageId1Desktop.5d34445e9739f4231f70.jpg",
@@ -142,7 +142,7 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.1b04080b.css.map": "/ANKONA/static/css/main.1b04080b.css.map",
-    "main.2d983e57.js.map": "/ANKONA/static/js/main.2d983e57.js.map",
+    "main.b63f10dd.js.map": "/ANKONA/static/js/main.b63f10dd.js.map",
     "667.6055931c.chunk.css.map": "/ANKONA/static/css/667.6055931c.chunk.css.map",
     "667.0a702e4c.chunk.js.map": "/ANKONA/static/js/667.0a702e4c.chunk.js.map",
     "313.240cb7fd.chunk.css.map": "/ANKONA/static/css/313.240cb7fd.chunk.css.map",
@@ -155,10 +155,10 @@
     "520.5fc1b0b6.chunk.js.map": "/ANKONA/static/js/520.5fc1b0b6.chunk.js.map",
     "793.837022e9.chunk.js.map": "/ANKONA/static/js/793.837022e9.chunk.js.map",
     "665.bf8a3aeb.chunk.js.map": "/ANKONA/static/js/665.bf8a3aeb.chunk.js.map",
-    "175.b721e67a.chunk.js.map": "/ANKONA/static/js/175.b721e67a.chunk.js.map"
+    "175.b8c00b48.chunk.js.map": "/ANKONA/static/js/175.b8c00b48.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b04080b.css",
-    "static/js/main.2d983e57.js"
+    "static/js/main.b63f10dd.js"
   ]
 }
