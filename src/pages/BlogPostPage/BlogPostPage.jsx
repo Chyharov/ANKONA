@@ -26,7 +26,7 @@ const BlogPostPage = () => {
 
   return (
     <>
-      <Header navSearchStyle={{ display: 'none' }} style={{ width: '130px' }} language={language} onLanguageChange={handleLanguageChange}/>
+      <Header navSearchStyle={{ display: 'none' }} languageSelectStyle={{ display: 'none' }} style={{ width: '130px' }} language={language} onLanguageChange={handleLanguageChange}/>
       <main>
         <SectionBlogCard post={post} language={language}/>
       </main>

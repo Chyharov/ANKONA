@@ -17,7 +17,7 @@ const PrivacyPage = () => {
     );
   return (
     <>
-      <Header language={language} onLanguageChange={handleLanguageChange}/>
+      <Header language={language} onLanguageChange={handleLanguageChange} navSearchStyle={{ display: 'none' }} languageSelectStyle={{ display: 'none' }}/>
       <main>
         <SectionPrivacy language={language}/>
       </main>
