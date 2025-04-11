@@ -15,7 +15,7 @@ const MainPage = () => {
     langCode => {
       if (langCode !== language) {
         setLanguage(langCode);
-        console.log('Мова змінена на:', langCode);
+        
       }
     },
     [language]

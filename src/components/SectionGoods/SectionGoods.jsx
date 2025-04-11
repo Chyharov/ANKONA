@@ -68,6 +68,7 @@ const categoryIcons = [
 ];
 
 const SectionGoods = ({ language }) => {
+  const { searchQuery } = useContext(SearchContext);
   const t = translations.goods[language];
   const initialCategories = t.categories;
   const initialManufacturers = t.manufacturers;
@@ -173,8 +174,6 @@ const SectionGoods = ({ language }) => {
   const handlePageChange = page => {
     setCurrentPage(page);
   };
-
-  const { searchQuery } = useContext(SearchContext);
 
   useEffect(() => {
     let filtered = filterProducts(products, filters);
