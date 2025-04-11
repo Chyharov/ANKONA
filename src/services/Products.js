@@ -2242,7 +2242,7 @@ export const products = [
     },
     manufacturer: {
       ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT – reliable feed',
+      en: 'FUTTERGUT - reliable feeding',
     },
     description: {
       ua: 'Рідкий пероральний пробіотик в шприці',
@@ -4135,8 +4135,8 @@ export const products = [
       en: 'Hy-M for pigs',
     },
     manufacturer: {
-      ua: ['ANKONA', 'FUTTERGUT - надійна годівля'],
-      en: ['ANKONA', 'FUTTERGUT - reliable feeding'],
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
     },
     description: {
       ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
@@ -4211,8 +4211,8 @@ export const products = [
       en: 'Hy-M for the parent flock of poultry',
     },
     manufacturer: {
-      ua: ['ANKONA', 'FUTTERGUT - надійна годівля'],
-      en: ['ANKONA', 'FUTTERGUT - reliable feeding'],
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
     },
     description: {
       ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
@@ -4289,8 +4289,8 @@ export const products = [
       en: 'Hy-M for broilers',
     },
     manufacturer: {
-      ua: ['ANKONA', 'FUTTERGUT - надійна годівля'],
-      en: ['ANKONA', 'FUTTERGUT - reliable feeding'],
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
     },
     description: {
       ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
@@ -4367,8 +4367,8 @@ export const products = [
       en: 'Hy-M for the laying hen',
     },
     manufacturer: {
-      ua: ['ANKONA', 'FUTTERGUT - надійна годівля'],
-      en: ['ANKONA', 'FUTTERGUT - reliable feeding'],
+      ua: 'FUTTERGUT - надійна годівля',
+      en: 'FUTTERGUT - reliable feeding',
     },
     description: {
       ua: 'Підвищення рівня вітаміну D3 у сироватці крові',

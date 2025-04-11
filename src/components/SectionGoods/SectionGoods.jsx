@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { SearchContext } from 'components/SearchContext';
@@ -53,7 +53,7 @@ const categoryIcons = [
     id: 5,
     name: {
       ua: 'Птиця',
-      en: 'Bird',
+      en: 'Birds',
     },
     icon: iconHen,
   },
@@ -88,31 +88,30 @@ const SectionGoods = ({ language }) => {
   );
   const [itemsPerPage, setItemsPerPage] = useState(5);
 
-  const filterProducts = (products, filters) => {
-    let filtered = products;
+  const filterProducts = useCallback((products, filters) => {
+  let filtered = products;
 
-    const hasAllCategories = filters.category.has('Підходе для всіх');
+  const hasAllCategories = filters.category.has('Підходе для всіх');
 
-    if (!hasAllCategories && filters.category.size) {
-      filtered = filtered.filter(p => {
-        const productCategories = Array.isArray(p.category)
-          ? p.category
-          : [p.category];
-        return productCategories.some(
-          cat => filters.category.has(cat) || cat === 'Підходе для всіх'
-        );
-      });
-    }
+  if (!hasAllCategories && filters.category.size) {
+    filtered = filtered.filter(p => {
+      const productCategories = Array.isArray(p.category?.[language])
+        ? p.category[language]
+        : [p.category[language]];
 
-    if (filters.manufacturer.size) {
-      filtered = filtered.filter(p =>
-        Array.isArray(p.manufacturer)
-          ? p.manufacturer.some(m => filters.manufacturer.has(m))
-          : filters.manufacturer.has(p.manufacturer)
+      return productCategories.some(
+        cat => filters.category.has(cat) || cat === 'Підходе для всіх'
       );
-    }
-    return filtered;
-  };
+    });
+  }
+
+  if (filters.manufacturer.size) {
+    filtered = filtered.filter(p =>
+      filters.manufacturer.has(p.manufacturer?.[language])
+    );
+  }
+  return filtered;
+}, [language]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -127,9 +126,9 @@ const SectionGoods = ({ language }) => {
   }, []);
 
   useEffect(() => {
-    setFilteredProducts(filterProducts(products, filters));
-    setCurrentPage(1);
-  }, [filters]);
+  setFilteredProducts(filterProducts(products, filters));
+  setCurrentPage(1);
+}, [filters, filterProducts]);
 
   useEffect(() => {
     const updateItemsPerPage = () => {
@@ -148,11 +147,6 @@ const SectionGoods = ({ language }) => {
       window.removeEventListener('resize', updateItemsPerPage);
     };
   }, []);
-
-  useEffect(() => {
-    setFilteredProducts(filterProducts(products, filters));
-    setCurrentPage(1);
-  }, [filters]);
 
   const handleFilterChange = (type, value) => {
     setFilters(prevFilters => {
@@ -176,47 +170,47 @@ const SectionGoods = ({ language }) => {
   };
 
   useEffect(() => {
-    let filtered = filterProducts(products, filters);
+  let filtered = filterProducts(products, filters);
 
-    if (searchQuery) {
-      const lowerQuery = searchQuery.toLowerCase();
+  if (searchQuery) {
+    const lowerQuery = searchQuery.toLowerCase();
 
-      filtered = filtered.filter(product => {
-        const nameMatch = product.name[language]
-          ?.toLowerCase()
-          .includes(lowerQuery);
+    filtered = filtered.filter(product => {
+      const nameMatch = product.name[language]
+        ?.toLowerCase()
+        .includes(lowerQuery);
 
-        const categoryMatch = Array.isArray(product.category)
-          ? product.category.some(
-              cat =>
-                typeof cat === 'string' &&
-                cat.toLowerCase().includes(lowerQuery)
+      const categoryMatch = Array.isArray(product.category)
+        ? product.category.some(
+            cat =>
+              typeof cat === 'string' &&
+              cat.toLowerCase().includes(lowerQuery)
+          )
+        : typeof product.category === 'string' &&
+          product.category.toLowerCase().includes(lowerQuery);
+
+      const manufacturer = product.manufacturer;
+      const manufacturerMatch =
+        typeof manufacturer === 'string'
+          ? manufacturer.toLowerCase().includes(lowerQuery)
+          : Array.isArray(manufacturer[language])
+          ? manufacturer[language].some(m =>
+              m.toLowerCase().includes(lowerQuery)
             )
-          : typeof product.category === 'string' &&
-            product.category.toLowerCase().includes(lowerQuery);
+          : manufacturer[language]?.toLowerCase().includes(lowerQuery);
 
-        const manufacturer = product.manufacturer;
-        const manufacturerMatch =
-          typeof manufacturer === 'string'
-            ? manufacturer.toLowerCase().includes(lowerQuery)
-            : Array.isArray(manufacturer[language])
-            ? manufacturer[language].some(m =>
-                m.toLowerCase().includes(lowerQuery)
-              )
-            : manufacturer[language]?.toLowerCase().includes(lowerQuery);
+      const descriptionMatch = product.description[language]
+        ?.toLowerCase()
+        .includes(lowerQuery);
 
-        const descriptionMatch = product.description[language]
-          ?.toLowerCase()
-          .includes(lowerQuery);
+      return (
+        nameMatch || categoryMatch || manufacturerMatch || descriptionMatch
+      );
+    });
+  }
 
-        return (
-          nameMatch || categoryMatch || manufacturerMatch || descriptionMatch
-        );
-      });
-    }
-
-    setFilteredProducts(filtered);
-  }, [filters, searchQuery, language]);
+  setFilteredProducts(filtered);
+}, [filters, searchQuery, language, filterProducts]);
 
   const getCategoryIcon = (categoryName, lang) => {
     const found = categoryIcons.find(
@@ -435,7 +429,10 @@ const SectionGoods = ({ language }) => {
                           <span
                             className={s.sectionGoodsCategoryList__itemNameSpan}
                           >
-                            — надійна годівля
+                            —{' '}
+                            {language === 'en'
+                              ? 'reliable feeding'
+                              : 'надійна годівля'}
                           </span>
                         </>
                       ) : (
@@ -462,11 +459,11 @@ const SectionGoods = ({ language }) => {
         <ul className={s.productList}>
           {filteredProducts.length > 0 ? (
             currentProducts.map(product => {
-              let categories = Array.isArray(product.category)
-                ? product.category
-                : [product.category];
-              if (categories.includes('Підходе для всіх')) {
-                categories = Object.keys(categoryIcons);
+              const categories = Array.isArray(product.category?.[language])
+                ? product.category[language]
+                : [product.category[language]];
+              if (categories.includes('Підходе для всіх', 'Suitable for all')) {
+                categories[language] = Object.keys(categoryIcons);
               }
 
               const hasAllCategories =
