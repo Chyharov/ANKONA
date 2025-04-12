@@ -29,7 +29,15 @@ const categoryIcons = {
 const allIcons = [...new Set(Object.values(categoryIcons))];
 
 const ProductDetails = ({ language }) => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const product = products.find(p => p.id === Number(id));
+  const t = translations.goods[language];
   const [isMobileWidth, setIsMobileWidth] = useState(window.innerWidth <= 1440);
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, [id]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -39,10 +47,6 @@ const ProductDetails = ({ language }) => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  const { id } = useParams();
-  const navigate = useNavigate();
-  const product = products.find(p => p.id === Number(id));
-  const t = translations.goods[language];
 
   if (!product) {
     return <p className={s.notFound}>Товар не знайдено</p>;
