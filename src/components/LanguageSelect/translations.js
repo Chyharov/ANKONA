@@ -202,6 +202,9 @@ const translations = {
       contactwithteam:
         '*Для контакту з безпосереднім спеціалістом розгляньте розділ',
       contactwithteamspan: '"Наша команда"',
+      btnsend: 'Відправка...',
+      responsok: '✔ Повідомлення надіслано!',
+      responsbad: '✖ Сталася помилка. Спробуйте пізніше.',
     },
     en: {
       title: 'For a consultation',
@@ -219,6 +222,9 @@ const translations = {
       privacymessagelink: 'Privacy Policy',
       contactwithteam: 'To contact a direct specialist, please see the',
       contactwithteamspan: '«Our team»',
+      btnsend: 'Sending...',
+      responsok: '✔ Message sent!',
+      responsbad: '✖ An error occurred. Please try again later.',
     },
   },
 };
