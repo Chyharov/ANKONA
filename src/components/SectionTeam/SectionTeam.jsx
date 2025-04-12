@@ -23,14 +23,14 @@ const SectionTeam = ({language}) => {
   };
 
   const handleShowContact = (id, type, value) => {
-    setContactInfo(prev => ({
-      ...prev,
-      [id]: {
-        ...prev[id],
-        [type]: prev[id]?.[type] === value ? null : value,
-      },
-    }));
-  };
+  const current = contactInfo[id]?.[type];
+  setContactInfo({
+    [id]: {
+      email: type === 'email' ? (current === value ? null : value) : null,
+      phone: type === 'phone' ? (current === value ? null : value) : null,
+    },
+  });
+};
 
   const truncateText = (text, maxLength) => {
     return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
