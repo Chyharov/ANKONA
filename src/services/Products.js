@@ -35,7 +35,6 @@ import imgProductDetailsId34 from 'images/productDetails/imgProductDetailsId34.j
 import imgProductDetailsId35 from 'images/productDetails/imgProductDetailsId35.jpg';
 import imgProductDetailsId36 from 'images/productDetails/imgProductDetailsId36.jpg';
 import imgProductDetailsId37 from 'images/productDetails/imgProductDetailsId37.jpg';
-import imgProductDetailsId38 from 'images/productDetails/imgProductDetailsId38.jpg';
 import imgProductDetailsId48 from 'images/productDetails/imgProductDetailsId48.jpg';
 import imgProductDetailsId49 from 'images/productDetails/imgProductDetailsId49.jpg';
 import imgProductDetailsId50 from 'images/productDetails/imgProductDetailsId50.jpg';
@@ -2694,7 +2693,7 @@ export const products = [
       ua: ['ВРХ молодняк'],
       en: ['Young Cattle'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToVRHM2,
     sections: [
       {
@@ -2746,7 +2745,7 @@ export const products = [
       ua: ['Підходе для всіх'],
       en: ['Suitable for all'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToAll,
     sections: [
       {
@@ -2820,7 +2819,7 @@ export const products = [
       ua: ['ВРХ дорослі'],
       en: ['Adult Cattle'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToVRHD2,
     sections: [
       {
@@ -2883,7 +2882,7 @@ export const products = [
       ua: ['ВРХ дорослі'],
       en: ['Adult Cattle'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToVRHD,
     sections: [
       {
@@ -2944,7 +2943,7 @@ export const products = [
       ua: ['ВРХ дорослі'],
       en: ['Adult Cattle'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToVRHD2,
     sections: [
       {
@@ -3021,7 +3020,7 @@ export const products = [
       ua: ['ВРХ дорослі'],
       en: ['Adult Cattle'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToVRHD,
     sections: [
       {
@@ -3100,7 +3099,7 @@ export const products = [
       ua: ['ВРХ дорослі'],
       en: ['Adult Cattle'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToVRHD2,
     sections: [
       {
@@ -3150,7 +3149,7 @@ export const products = [
       ua: ['ВРХ дорослі'],
       en: ['Adult Cattle'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToVRHD,
     sections: [
       {
@@ -3201,7 +3200,7 @@ export const products = [
       ua: ['ВРХ дорослі'],
       en: ['Adult Cattle'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToVRHD2,
     sections: [
       {
@@ -3275,7 +3274,7 @@ export const products = [
       ua: ['Свині'],
       en: ['Pigs'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToPig,
     sections: [
       {
@@ -4150,7 +4149,7 @@ export const products = [
       ua: ['Свині'],
       en: ['Pigs'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToPig,
     sections: [
       {
@@ -4226,7 +4225,7 @@ export const products = [
       ua: ['Птиця'],
       en: ['Birds'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToChicken,
     sections: [
       {
@@ -4304,7 +4303,7 @@ export const products = [
       ua: ['Птиця'],
       en: ['Birds'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToChicken2,
     sections: [
       {
@@ -4382,7 +4381,7 @@ export const products = [
       ua: ['Птиця'],
       en: ['Birds'],
     },
-    image: imgProductDetailsId38,
+    image: imgProductDetailsId37,
     imageDesktop: imageToChicken,
     sections: [
       {
