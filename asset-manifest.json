@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.1b04080b.css",
-    "main.js": "/ANKONA/static/js/main.f7ed62df.js",
-    "static/css/667.25b729a4.chunk.css": "/ANKONA/static/css/667.25b729a4.chunk.css",
-    "static/js/667.472b928d.chunk.js": "/ANKONA/static/js/667.472b928d.chunk.js",
+    "main.js": "/ANKONA/static/js/main.cbfce69a.js",
+    "static/css/548.e9d4a431.chunk.css": "/ANKONA/static/css/548.e9d4a431.chunk.css",
+    "static/js/548.f776591f.chunk.js": "/ANKONA/static/js/548.f776591f.chunk.js",
     "static/css/313.57260cf7.chunk.css": "/ANKONA/static/css/313.57260cf7.chunk.css",
     "static/js/313.f03dd47f.chunk.js": "/ANKONA/static/js/313.f03dd47f.chunk.js",
     "static/css/543.a296df38.chunk.css": "/ANKONA/static/css/543.a296df38.chunk.css",
@@ -101,7 +101,6 @@
     "static/media/imgProductDetailsId56.jpg": "/ANKONA/static/media/imgProductDetailsId56.3e7989951552740f1283.jpg",
     "static/media/imgProductDetailsId63.jpg": "/ANKONA/static/media/imgProductDetailsId63.95dc0fb831816bf66c36.jpg",
     "static/media/imgProductDetailsId13.jpg": "/ANKONA/static/media/imgProductDetailsId13.d978a5d648df5d385f98.jpg",
-    "static/media/futtergut.svg": "/ANKONA/static/media/futtergut.5d719433aa328d563555432e7bb604ed.svg",
     "static/media/vilifoss.svg": "/ANKONA/static/media/vilifoss.2d8dd43bc38314fc4f66f7eb350de1d9.svg",
     "static/media/polykovAndriy.jpg": "/ANKONA/static/media/polykovAndriy.d88e7056f1a52569961e.jpg",
     "static/media/etos.svg": "/ANKONA/static/media/etos.c30210cc7b64400852dbcd799b994fc0.svg",
@@ -113,6 +112,7 @@
     "static/media/BackgroundHorseRightDesktop.png": "/ANKONA/static/media/BackgroundHorseRightDesktop.880493a8634f9049718c.png",
     "static/media/soloshenkoAndrii.jpg": "/ANKONA/static/media/soloshenkoAndrii.8ce7e40fa35fd2f520f3.jpg",
     "static/media/BackgroundHorseLeftDesktop.png": "/ANKONA/static/media/BackgroundHorseLeftDesktop.eebba22d6b17a039a118.png",
+    "static/media/Ankona.svg": "/ANKONA/static/media/Ankona.ef5fdcf28c5178c3bfe5f12d34ec1d4a.svg",
     "static/media/logoDesk.svg": "/ANKONA/static/media/logoDesk.7161c29b0df79cc305171964042dd8c3.svg",
     "static/media/logoFooter.svg": "/ANKONA/static/media/logoFooter.b884909a2e103ff6c431188e00c708d1.svg",
     "static/media/BackgroundHorse.png": "/ANKONA/static/media/BackgroundHorse.cbb13a65d05e036dd765.png",
@@ -141,9 +141,9 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.1b04080b.css.map": "/ANKONA/static/css/main.1b04080b.css.map",
-    "main.f7ed62df.js.map": "/ANKONA/static/js/main.f7ed62df.js.map",
-    "667.25b729a4.chunk.css.map": "/ANKONA/static/css/667.25b729a4.chunk.css.map",
-    "667.472b928d.chunk.js.map": "/ANKONA/static/js/667.472b928d.chunk.js.map",
+    "main.cbfce69a.js.map": "/ANKONA/static/js/main.cbfce69a.js.map",
+    "548.e9d4a431.chunk.css.map": "/ANKONA/static/css/548.e9d4a431.chunk.css.map",
+    "548.f776591f.chunk.js.map": "/ANKONA/static/js/548.f776591f.chunk.js.map",
     "313.57260cf7.chunk.css.map": "/ANKONA/static/css/313.57260cf7.chunk.css.map",
     "313.f03dd47f.chunk.js.map": "/ANKONA/static/js/313.f03dd47f.chunk.js.map",
     "543.a296df38.chunk.css.map": "/ANKONA/static/css/543.a296df38.chunk.css.map",
@@ -158,6 +158,6 @@
   },
   "entrypoints": [
     "static/css/main.1b04080b.css",
-    "static/js/main.f7ed62df.js"
+    "static/js/main.cbfce69a.js"
   ]
 }
