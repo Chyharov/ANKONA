@@ -22,8 +22,8 @@ export const teamMembers = [
     {
     id: 1,
     name: {
-      ua: 'Поляков Андрій Юрійович',
-      en: 'Polyakov Andriy Yuriyovych',
+      ua: 'Поляков Андрій',
+      en: 'Polyakov Andriy',
     },
     role: {
       ua: 'Директор',
@@ -39,8 +39,8 @@ export const teamMembers = [
   {
     id: 2,
     name: {
-      ua: 'Ходирєв Сергій Вікторович',
-      en: 'Hodyrev Sergiy Viktorovych'
+      ua: 'Ходирєв Сергій',
+      en: 'Hodyrev Sergiy'
     },
 
     role: {
@@ -56,8 +56,8 @@ export const teamMembers = [
   {
     id: 3,
     name: {
-      ua: 'Ходирєва Наталія Вікторівна',
-      en: 'Hodyreva Natalia Viktorivna'
+      ua: 'Ходирєва Наталія',
+      en: 'Hodyreva Natalia'
     },
     role: {
       ua: 'Керівник відділу з продажів напрямку ВРХ',
@@ -76,7 +76,7 @@ export const teamMembers = [
       en: 'Soloshenko Andriy'
     },
     role: {
-      ua: 'Консультант з годівлі свиней',
+      ua: 'Консультант напрямку свинарство',
       en: 'Pig feeding consultant'
     },
     photo: soloshenkoAndrii,
@@ -93,7 +93,7 @@ export const teamMembers = [
       en: 'Komar Volodymyr'
     },
     role: {
-      ua: 'Консультант з годівлі свиней',
+      ua: 'Консультант напрямку свинарство',
       en: 'Pig feeding consultant'
     },
     photo: komarVolodymyr,
