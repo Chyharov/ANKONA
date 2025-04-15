@@ -1,4 +1,4 @@
-import futtergutLogo from 'images/tradeMarks/futtergut.svg';
+import ankonaLogo from 'images/tradeMarks/Ankona.svg';
 import ahrhoffLogo from 'images/tradeMarks/ahrhoff.svg';
 import vilifossLogo from 'images/tradeMarks/vilifoss.svg';
 import etosLogo from 'images/tradeMarks/etos.svg';
@@ -17,9 +17,9 @@ const SectionTradeMarks = ({language}) => {
         <ul className={s.tradeMarkList}>
           <li className={s.tradeMarkList__item}>
             <img
-              className={s.tradeMarkLogofuttergutLogo}
-              src={futtergutLogo}
-              alt="futtergutLogo"
+              className={s.tradeMarkLogoankonaLogo}
+              src={ankonaLogo}
+              alt="ankonaLogo"
             />
           </li>
           <li className={s.tradeMarkList__item}>
