@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.1b04080b.css",
-    "main.js": "/ANKONA/static/js/main.afaa5eff.js",
+    "main.js": "/ANKONA/static/js/main.f7ed62df.js",
     "static/css/667.25b729a4.chunk.css": "/ANKONA/static/css/667.25b729a4.chunk.css",
     "static/js/667.472b928d.chunk.js": "/ANKONA/static/js/667.472b928d.chunk.js",
     "static/css/313.57260cf7.chunk.css": "/ANKONA/static/css/313.57260cf7.chunk.css",
@@ -14,7 +14,8 @@
     "static/js/520.8a2f3601.chunk.js": "/ANKONA/static/js/520.8a2f3601.chunk.js",
     "static/js/793.837022e9.chunk.js": "/ANKONA/static/js/793.837022e9.chunk.js",
     "static/js/665.19f8823d.chunk.js": "/ANKONA/static/js/665.19f8823d.chunk.js",
-    "static/js/6.9a409e02.chunk.js": "/ANKONA/static/js/6.9a409e02.chunk.js",
+    "static/js/6.2ad9d32b.chunk.js": "/ANKONA/static/js/6.2ad9d32b.chunk.js",
+    "static/media/imgProductDetailsId37.jpg": "/ANKONA/static/media/imgProductDetailsId37.638497b4dffb81f037f6.jpg",
     "static/media/imageToAll.jpg": "/ANKONA/static/media/imageToAll.928a354736397911131a.jpg",
     "static/media/horseHeroImageDesktop.jpg": "/ANKONA/static/media/horseHeroImageDesktop.e7c655759ea03ee917b5.jpg",
     "static/media/blogImageId1Desktop.jpg": "/ANKONA/static/media/blogImageId1Desktop.5d34445e9739f4231f70.jpg",
@@ -89,8 +90,6 @@
     "static/media/imgProductDetailsId28.jpg": "/ANKONA/static/media/imgProductDetailsId28.8219a0c5b3d1a328a22c.jpg",
     "static/media/komarVolodymyrIsActive.jpg": "/ANKONA/static/media/komarVolodymyrIsActive.e38cb803651e3646acdd.jpg",
     "static/media/yanenkoYanaIsActive.jpg": "/ANKONA/static/media/yanenkoYanaIsActive.ddf1a6c9259f40234b41.jpg",
-    "static/media/imgProductDetailsId37.jpg": "/ANKONA/static/media/imgProductDetailsId37.840d92118532939d2c5d.jpg",
-    "static/media/imgProductDetailsId38.jpg": "/ANKONA/static/media/imgProductDetailsId38.840d92118532939d2c5d.jpg",
     "static/media/soloshenkoAndriiIsActive.jpg": "/ANKONA/static/media/soloshenkoAndriiIsActive.b2a54a140b086fcbab97.jpg",
     "static/media/imgProductDetailsId15.jpg": "/ANKONA/static/media/imgProductDetailsId15.386f6914793100a756d2.jpg",
     "static/media/hodirevaNataliaIsActive.jpg": "/ANKONA/static/media/hodirevaNataliaIsActive.03f5d78f521dea5a3f3a.jpg",
@@ -142,7 +141,7 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.1b04080b.css.map": "/ANKONA/static/css/main.1b04080b.css.map",
-    "main.afaa5eff.js.map": "/ANKONA/static/js/main.afaa5eff.js.map",
+    "main.f7ed62df.js.map": "/ANKONA/static/js/main.f7ed62df.js.map",
     "667.25b729a4.chunk.css.map": "/ANKONA/static/css/667.25b729a4.chunk.css.map",
     "667.472b928d.chunk.js.map": "/ANKONA/static/js/667.472b928d.chunk.js.map",
     "313.57260cf7.chunk.css.map": "/ANKONA/static/css/313.57260cf7.chunk.css.map",
@@ -155,10 +154,10 @@
     "520.8a2f3601.chunk.js.map": "/ANKONA/static/js/520.8a2f3601.chunk.js.map",
     "793.837022e9.chunk.js.map": "/ANKONA/static/js/793.837022e9.chunk.js.map",
     "665.19f8823d.chunk.js.map": "/ANKONA/static/js/665.19f8823d.chunk.js.map",
-    "6.9a409e02.chunk.js.map": "/ANKONA/static/js/6.9a409e02.chunk.js.map"
+    "6.2ad9d32b.chunk.js.map": "/ANKONA/static/js/6.2ad9d32b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b04080b.css",
-    "static/js/main.afaa5eff.js"
+    "static/js/main.f7ed62df.js"
   ]
 }
