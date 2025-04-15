@@ -33,33 +33,34 @@ const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu, language }) => {
     if (isMobile) closeMobileMenu();
   };
 
-  const handleSubmit = (e) => {
-  e.preventDefault();
-  setIsSending(true);
+  const handleSubmit = e => {
+    e.preventDefault();
+    setIsSending(true);
 
-  emailjs.send(
-    'service_rtxywbs',
-    'template_453b3xq',
-    {
-      name,
-      phone,
-      message,
-    },
-    'MRWYPXTAvu1TTfQkk'
-  )
-    .then(() => {
-      setStatus('success');
-      setName('');
-      setPhone('');
-      setMessage('');
-    })
-    .catch(() => {
-      setStatus('error');
-    })
-    .finally(() => {
-      setIsSending(false);
-    });
-};
+    emailjs
+      .send(
+        'service_ieq508t',
+        'template_s8hk2um',
+        {
+          name,
+          phone,
+          message,
+        },
+        '2o-9qTjArOmik1Uyz'
+      )
+      .then(() => {
+        setStatus('success');
+        setName('');
+        setPhone('');
+        setMessage('');
+      })
+      .catch(() => {
+        setStatus('error');
+      })
+      .finally(() => {
+        setIsSending(false);
+      });
+  };
 
   const t = translations.popup[language];
   if (!isOpen) return null;
@@ -68,7 +69,12 @@ const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu, language }) => {
     <div className={s.popUpOverlay} onClick={onClose}>
       <div className={s.popUpContent} onClick={e => e.stopPropagation()}>
         <button className={s.closeButton} onClick={onClose}>
-          <img className={s.closeIcon} src={closeIcon} alt="closeIcon" aria-label="закрити заявку" />
+          <img
+            className={s.closeIcon}
+            src={closeIcon}
+            alt="closeIcon"
+            aria-label="закрити заявку"
+          />
         </button>
 
         <h2 className={s.popUpTitle}>{t.title}</h2>
@@ -83,7 +89,7 @@ const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu, language }) => {
               type="text"
               placeholder={t.phname}
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={e => setName(e.target.value)}
               required
             />
           </label>
@@ -92,10 +98,16 @@ const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu, language }) => {
             <p className={s.labelTitle}>{t.phphonetitle}</p>
             <input
               className={s.popUplabel}
-              type="number"
+              type="tel"
               placeholder="+38 (000) 000 00 00"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={e => {
+                let value = e.target.value;
+                if (!value.startsWith('+')) {
+                  value = '+' + value.replace(/[^0-9]/g, '');
+                }
+                setPhone(value);
+              }}
               required
             />
           </label>
@@ -107,17 +119,13 @@ const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu, language }) => {
               style={{ minHeight: '96px', marginBottom: '16px' }}
               placeholder={t.phmessage}
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={e => setMessage(e.target.value)}
             ></textarea>
           </label>
 
-          <button
-  className={s.submitButton}
-  type="submit"
-  disabled={isSending}
->
-  {isSending ? t.btnsend : t.btnsubmit}
-</button>
+          <button className={s.submitButton} type="submit" disabled={isSending}>
+            {isSending ? t.btnsend : t.btnsubmit}
+          </button>
 
           {status === 'success' && <p className={s.success}>{t.responsok}</p>}
           {status === 'error' && <p className={s.error}>{t.responsbad}</p>}
@@ -126,7 +134,12 @@ const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu, language }) => {
         <div className={s.privacyContainer}>
           <p className={s.privacyText} style={{ marginBottom: '8px' }}>
             {t.privacymessage}{' '}
-            <RouterLink to="/privacy" target="_blank" rel="noopener noreferrer" className={s.privacyLink}>
+            <RouterLink
+              to="/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={s.privacyLink}
+            >
               {t.privacymessagelink}
             </RouterLink>
           </p>
