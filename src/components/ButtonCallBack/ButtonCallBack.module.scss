@@ -16,8 +16,14 @@
     background-color: var(--copperYellow);
     color: var(--eggShellWhite);
 
+    @include mq(tab) {
+        width: 300px;
+        margin-left: auto;
+        margin-right: 0px;
+    }
+
     @include mq(desk) {
-        width: 23.34%;
+        width: 37.84%;
         margin-left: 0px;
             margin-right: 0px;
     }
