@@ -99,6 +99,13 @@
   }
 
   .navBar .mobileNavigation {
+    display: block;
+  }
+}
+
+@media (min-width: 1439px) {
+
+  .navBar .mobileNavigation {
     display: none;
   }
 }
