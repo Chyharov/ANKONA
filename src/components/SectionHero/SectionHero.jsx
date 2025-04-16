@@ -74,10 +74,13 @@ const SectionHero = ({ language }) => {
           <div className={s.heroBorderDot}></div>
         </div>
         <p className={s.heroDescription}>{t.title}</p>
+        <div className={s.containerForTablet}>
+
         <div className={s.heroBorderDesk}>
           <div className={s.heroBorderDotDesk}></div>
         </div>
-        <ButtonCallBack language={language} />
+        <ButtonCallBack style={{ width: '32.66%' }} language={language} />
+        </div>
       </div>
     </section>
   );
