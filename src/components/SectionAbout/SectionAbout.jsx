@@ -8,13 +8,13 @@ const SectionAbout = ({ language }) => {
   const t = translations.about[language];
   const [isBlockVisible, setIsBlockVisible] = useState(false);
   const [imageSrc, setImageSrc] = useState(
-    window.innerWidth >= 1440 ? aboutListImgDesk : aboutListImg
+    window.innerWidth >= 768 ? aboutListImgDesk : aboutListImg
   );
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1440);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
   useEffect(() => {
     const handleResize = () => {
-      const isLargeScreen = window.innerWidth >= 1440;
+      const isLargeScreen = window.innerWidth >= 768;
       setIsDesktop(isLargeScreen);
       setImageSrc(isLargeScreen ? aboutListImgDesk : aboutListImg);
       setIsBlockVisible(isLargeScreen);
@@ -97,7 +97,7 @@ const SectionAbout = ({ language }) => {
                   {t.ReliabilityDescription}
                 </p>
               </li>
-              <li className={s.aboutBlockWhyUsList__Item}>
+              <li className={s.aboutBlockWhyUsList__ItemTabletRight}>
                 <h4 className={s.aboutBlockWhyUsList__ItemTitle}>
                   {t.Farsightedness}
                 </h4>
@@ -105,7 +105,7 @@ const SectionAbout = ({ language }) => {
                   {t.FarsightednessDescription}
                 </p>
               </li>
-              <li className={s.aboutBlockWhyUsList__Item}>
+              <li className={s.aboutBlockWhyUsList__ItemTabletLeft}>
                 <h4 className={s.aboutBlockWhyUsList__ItemTitle}>
                   {t.Flexibility}
                 </h4>
@@ -115,7 +115,7 @@ const SectionAbout = ({ language }) => {
               </li>
             </ul>
             <ul className={s.aboutBlockWhyUsList}>
-              <li className={s.aboutBlockWhyUsList__Item}>
+                <li className={`${s.aboutBlockWhyUsList__Item} ${s.aboutBlockWhyUsList__ItemInnovationTablet}`}>
                 <h4 className={s.aboutBlockWhyUsList__ItemTitle}>
                   {t.Innovativeness}
                 </h4>
@@ -131,7 +131,7 @@ const SectionAbout = ({ language }) => {
                   {t.BalanceDescription}
                 </p>
               </li>
-              <li className={s.aboutBlockWhyUsList__Item}>
+                <li className={`${s.aboutBlockWhyUsList__Item} ${s.aboutBlockWhyUsList__ItemResultTablet}`}>
                 <h4 className={s.aboutBlockWhyUsList__ItemTitle}>
                   {t.Performance}
                 </h4>

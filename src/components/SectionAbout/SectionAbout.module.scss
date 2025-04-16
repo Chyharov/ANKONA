@@ -25,6 +25,10 @@
   padding: 8px 16px;
   margin-bottom: 8px;
 
+  @include mq(tab) {
+    text-align: start;
+  }
+
   @include mq(desk) {
     font-size: 48px;
     line-height: 1.17;
@@ -37,6 +41,11 @@
   margin-left: -16px;
   border-top: 1px solid var(--copperYellow);
   margin-bottom: 16px;
+
+  @include mq(tab) {
+    margin-left: -80px;
+  }
+
 
   @include mq(desk) {
     width: 991px;
@@ -56,6 +65,10 @@
   color: var(--eggShellWhite);
   padding: 8px 4px;
   margin-bottom: 16px;
+
+  @include mq(tab) {
+    text-align: center;
+  }
 
   @include mq(desk) {
     font-family: 'Montserrat Medium';
@@ -242,6 +255,11 @@
 
 .aboutBlockWhyUsListLeft {
   margin-bottom: 8px;
+  position: relative;
+
+  @include mq(tab) {
+    margin-bottom: 112px;
+  }
 
   @include mq(desk) {
     margin-top: 16px;
@@ -253,6 +271,11 @@
 
 .aboutBlockWhyUsList {
   margin-bottom: 24px;
+  position: relative;
+
+@include mq(tab) {
+  margin-bottom: 0px;
+}
 
   @include mq(desk) {
     display: flex;
@@ -261,14 +284,66 @@
   }
 }
 
-.aboutBlockWhyUsList__Item {
+.aboutBlockWhyUsList__Item,
+.aboutBlockWhyUsList__ItemTabletLeft,
+.aboutBlockWhyUsList__ItemTabletRight {
   padding: 8px;
+
+  @include mq(tab) {
+    width: 300px;
+  }
 
   @include mq(desk) {
     width: 320px;
     margin-bottom: 0px;
     padding: 16px;
   }
+}
+
+.aboutBlockWhyUsList__ItemTabletRight {
+  @include mq(tab) {
+    position: absolute;
+    top: 0;
+    right: 32px;
+  }
+  @include mq(desk) {
+    position: static;
+  }
+}
+
+.aboutBlockWhyUsList__ItemTabletLeft {
+  @include mq(tab) {
+    position: absolute;
+    top: 104px;
+    left: 34px;
+  }
+    @include mq(desk) {
+      position: static;
+    }
+}
+
+.aboutBlockWhyUsList__ItemInnovationTablet {
+  @include mq(tab) {
+      position: absolute;
+      top: -104px;
+      right: 0px;
+    }
+  
+    @include mq(desk) {
+      position: static;
+    }
+  }
+
+.aboutBlockWhyUsList__ItemResultTablet {
+  @include mq(tab) {
+      position: absolute;
+      top: 0px;
+      right: 34px;
+    }
+  
+    @include mq(desk) {
+      position: static;
+    }
 }
 
 .aboutBlockWhyUsList__Item:not(:last-child) {
