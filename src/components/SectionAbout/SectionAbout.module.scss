@@ -308,6 +308,7 @@
   }
   @include mq(desk) {
     position: static;
+    margin-right: 80px;
   }
 }
 
