@@ -12,7 +12,7 @@ const SectionBlog = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
   const [itemsPerPage, setItemsPerPage] = useState(3);
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1439);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 767);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -20,8 +20,8 @@ const SectionBlog = () => {
 
   useEffect(() => {
     const updateItemsPerPage = () => {
-      setIsDesktop(window.innerWidth > 1439);
-      if (window.innerWidth <= 1439) {
+      setIsDesktop(window.innerWidth > 767);
+      if (window.innerWidth <= 767) {
         setItemsPerPage(3);
       } else {
         setItemsPerPage(5);

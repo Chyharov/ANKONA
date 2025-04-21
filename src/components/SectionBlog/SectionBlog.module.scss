@@ -18,6 +18,10 @@
   color: var(--richSoilBrown);
   padding: 8px;
 
+  @include mq(tab) {
+    margin-bottom: 4px;
+  }
+
   @include mq(desk) {
     font-size: 48px;
     line-height: 1.17;
@@ -29,10 +33,21 @@
   border-bottom: 2px solid var(--copperYellow);
   margin-bottom: 24px;
 
+  @include mq(tab) {
+    margin-left: -60px;
+  }
+
   @include mq(desk) {
     width: 1040px;
     margin-left: -80px;
     margin-bottom: 44px;
+  }
+}
+
+.blogList {
+  @include mq(tab) {
+    padding-left: 11px;
+    padding-right: 11px;
   }
 }
 
@@ -63,6 +78,11 @@
 }
 
 .blogList__item {
+
+  @include mq(tab) {
+    display: flex;
+  }
+
   @include mq(desk) {
     width: 626px;
     height: 396px;
@@ -86,6 +106,14 @@
   margin-bottom: 16px;
 }
 
+.blogList__itemImg {
+  @include mq(tab) {
+    height: 320px;
+    margin-bottom: 0px;
+    margin-right: 34px;
+  }
+}
+
 .blogListSecond__itemImg {
   @include mq(desk) {
     width: 368px;
@@ -104,6 +132,14 @@
 }
 
 .blogListContainer {
+
+  @include mq(tab) {
+    height: 320px;
+    display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+  }
+
   @include mq(desk) {
     display: flex;
     flex-direction: column;
@@ -125,6 +161,12 @@
     padding: 16px 8px 8px 8px;
     margin-bottom: 24px;
     border-bottom: 1px solid var(--copperYellow);
+  }
+}
+
+.blogList__itemTitle {
+  @include mq(tab) {
+    padding: 12px 8px 8px 8px;
   }
 }
 
@@ -172,6 +214,10 @@
   border-radius: 4px;
   color: var(--eggShellWhite);
   background-color: var(--copperYellow);
+
+  @include mq(tab) {
+    margin-top: auto;
+  }
 }
 
 .blogList {
