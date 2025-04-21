@@ -131,22 +131,24 @@ const SectionGoods = ({ language }) => {
 }, [filters, filterProducts]);
 
   useEffect(() => {
-    const updateItemsPerPage = () => {
-      if (window.innerWidth <= 1439) {
-        setItemsPerPage(5);
-      } else {
-        setItemsPerPage(12);
-      }
-    };
+  const updateItemsPerPage = () => {
+    const width = window.innerWidth;
 
-    updateItemsPerPage();
+    if (width <= 767) {
+      setItemsPerPage(5);
+    } else if (width >= 768 && width <= 1439) {
+      setItemsPerPage(6);
+    } else {
+      setItemsPerPage(12);
+    }
+  };
 
-    window.addEventListener('resize', updateItemsPerPage);
+  updateItemsPerPage(); // викликаємо при завантаженні
+  window.addEventListener('resize', updateItemsPerPage); // і при зміні розміру
 
-    return () => {
-      window.removeEventListener('resize', updateItemsPerPage);
-    };
-  }, []);
+  return () => window.removeEventListener('resize', updateItemsPerPage); // при демонтажі
+}, []);
+
 
   const handleFilterChange = (type, value) => {
     setFilters(prevFilters => {
@@ -338,7 +340,7 @@ const SectionGoods = ({ language }) => {
 
         <button
           onClick={() => setShowManufacturers(!showManufacturers)}
-          className={s.sectionGoodsCategoryBtn}
+          className={s.sectionGoodsManufacturesBtn}
           type="button"
         >
           {t.titleFilterByVendor}{' '}

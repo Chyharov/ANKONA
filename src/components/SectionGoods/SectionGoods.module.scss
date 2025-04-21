@@ -49,7 +49,8 @@
   }
 }
 
-.sectionGoodsCategoryBtn {
+.sectionGoodsCategoryBtn,
+.sectionGoodsManufacturesBtn {
   font-family: 'Montserrat Bold';
   font-size: 16px;
   line-height: 1.5;
@@ -70,11 +71,17 @@
     width: 61.73%;
     margin: 0 auto 8px auto;
     min-height: 64px;
-    padding: 20px 40px 20px 12px;
+    padding: 12px 8px;
   }
 
   @include mq(desk) {
     display: none;
+  }
+}
+
+.sectionGoodsManufacturesBtn {
+  @include mq(tab) {
+    margin-bottom: 16px;
   }
 }
 
@@ -89,11 +96,14 @@
   margin-bottom: 16px;
 
   @include mq(tab) {
-    width: 61.3%;
+    width: 58.65%;
     margin: 0 auto 16px auto;
+    padding-left: 0px;
+      padding-right: 0px;
   }
 
   @include mq(desk) {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding-left: 0px;
@@ -204,6 +214,16 @@
 .productList {
   padding-top: 32px;
 
+  @include mq(tab) {
+    padding-bottom: 24px;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      justify-items: center;
+      gap: 24px;
+  }
+
   @include mq(desk) {
     padding-top: 40px;
     padding-bottom: 24px;
@@ -295,6 +315,10 @@
   box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
   width: 100%;
   min-height: 136px;
+
+  @include mq(tab) {
+    margin-bottom: 0px;
+  }
 
   @include mq(desk) {
     width: 306px;
