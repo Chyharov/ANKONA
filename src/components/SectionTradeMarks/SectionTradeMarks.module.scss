@@ -107,7 +107,7 @@
 
   @include mq(desk) {
     width: 50%;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin-bottom: 0px;
   }
 }
