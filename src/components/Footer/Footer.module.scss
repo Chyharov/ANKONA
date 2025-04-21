@@ -12,7 +12,7 @@
 
   @include mq(desk) {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 42px;
   }
 }
 
@@ -56,10 +56,11 @@
   }
 
   @include mq(desk) {
-    display: block;
+    display: flex;
     margin-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
+    width: 100%;
   }
 }
 
@@ -179,7 +180,9 @@
   }
 
   @include mq(desk) {
+    text-align: left;
     width: 528px;
+    padding: 8px;
   }
 }
 
