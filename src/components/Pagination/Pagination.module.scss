@@ -96,6 +96,7 @@
 
   @include mq(desk) {
     margin-left: auto;
+    margin-right: 0px;
     width: 330px;
   }
 }
