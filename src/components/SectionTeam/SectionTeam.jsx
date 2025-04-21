@@ -52,7 +52,7 @@ const SectionTeam = ({language}) => {
             {firstGroup.map(member => (
               <li
                 key={member.id}
-                className={`${s.teamList__item} ${
+                className={`${s.teamList__item} ${s[`teamList__item${member.id}`]} ${
                   selectedMember === member.id ? s.active : ''
                 }`}
                 onClick={() => handleSelectMember(member.id)}
@@ -148,7 +148,7 @@ const SectionTeam = ({language}) => {
             {secondGroup.map(member => (
               <li
                 key={member.id}
-                className={`${s.teamList__item} ${
+                className={`${s.teamList__item} ${s[`teamList__item${member.id}`]} ${
                   selectedMember === member.id ? s.active : ''
                 }`}
                 onClick={() => handleSelectMember(member.id)}

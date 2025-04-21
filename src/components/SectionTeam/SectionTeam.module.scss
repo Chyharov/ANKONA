@@ -5,6 +5,10 @@
   padding-bottom: 80px;
   background-color: var(--brownBG);
 
+  @include mq(tab) {
+    height: 832px;
+  }
+
   @include mq(desk) {
     padding-top: 40px;
     padding-bottom: 120px;
@@ -268,7 +272,9 @@
 
   @include mq(tab) {
     position: relative;
+    margin-bottom: 16px;
   }
+
   @include mq(desk) {
     display: flex;
     justify-content: flex-start;
@@ -278,19 +284,71 @@
 }
 
 .teamListSecond {
+  @include mq(tab) {
+    position: relative;
+  }
   @include mq(desk) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    height: 416px;
   }
 }
 
-.teamList__itemSecond {
+.teamList__item2 {
   @include mq(tab) {
     left: 316px;
-      top: 0;
-      position: absolute;
+    top: 0;
+    position: absolute;
   }
+  @include mq(desk) {
+    position: relative;
+  }
+}
+
+.teamList__item3 {
+  @include mq(tab) {
+    position: absolute;
+    top: 216px;
+    right: 316px;
+  }
+
+  @include mq(desk) {
+    position: relative;
+  }
+}
+
+.teamList__item4 {
+  @include mq(tab) {
+    position: absolute;
+    top: 0px;
+    right: 0;
+  }
+
+  @include mq(desk) {
+    position: relative;
+  }
+}
+
+.teamList__item5 {
+  @include mq(tab) {
+    position: absolute;
+    top: 216px;
+    left: 0px;
+  }
+
+    @include mq(desk) {
+      position: relative;
+    }
+}
+
+.teamList__item6 {
+  @include mq(tab) {
+    position: absolute;
+    top: 216px;
+    left: 316px;
+  }
+
   @include mq(desk) {
     position: relative;
   }
