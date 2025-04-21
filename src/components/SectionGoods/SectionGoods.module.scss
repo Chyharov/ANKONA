@@ -280,7 +280,7 @@
 .productListItemImg {
   display: none;
 
-  @include mq(desk) {
+  @include mq(tab) {
     display: block;
     width: 308px;
     height: 260px;
