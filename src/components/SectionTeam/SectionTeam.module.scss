@@ -10,6 +10,7 @@
   }
 
   @include mq(desk) {
+    height: 1096px;
     padding-top: 40px;
     padding-bottom: 120px;
   }
@@ -303,6 +304,7 @@
   }
   @include mq(desk) {
     position: relative;
+    left: 0px;
   }
 }
 
@@ -315,6 +317,8 @@
 
   @include mq(desk) {
     position: relative;
+    top: 0px;
+    right: 0px;
   }
 }
 
@@ -322,11 +326,13 @@
   @include mq(tab) {
     position: absolute;
     top: 0px;
-    right: 0;
+    right: 0px;
   }
 
   @include mq(desk) {
     position: relative;
+    top: 0px;
+    right: 0px;
   }
 }
 
@@ -339,6 +345,8 @@
 
     @include mq(desk) {
       position: relative;
+      top: 0px;
+      left: 0px;
     }
 }
 
@@ -351,5 +359,7 @@
 
   @include mq(desk) {
     position: relative;
+    top: 0px;
+    left: 0px;
   }
 }
