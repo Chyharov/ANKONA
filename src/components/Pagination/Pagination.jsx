@@ -90,7 +90,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange, onLoadMore, hasMore
   };
 
   return (
-    <div className={s.paginationContainer}>
+    <>
       {hasMoreItems && (
         <button type="button" className={s.loadMoreButton} onClick={onLoadMore}>
           Переглянути ще
@@ -115,7 +115,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange, onLoadMore, hasMore
           <img src={arrowRight} alt="arrowRight" />
         </button>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -17,6 +17,10 @@
   text-align: center;
   width: 91.5%;
 
+  @include mq(tab) {
+    width: 46.3%;
+  }
+
   @include mq(desk) {
     display: none;
   }
@@ -84,6 +88,11 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+
+  @include mq(tab) {
+    width: 50.62%;
+    margin: 0 auto;
+  }
 
   @include mq(desk) {
     margin-left: auto;
