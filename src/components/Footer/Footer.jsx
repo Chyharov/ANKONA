@@ -18,7 +18,8 @@ const Footer = ({ language, ...props }) => {
     <footer className={s.footer}>
       <div className={`container ${s.footerContainer}`}>
         <div className={s.footerContainerDesktop}>
-          <RouterLink to="/" className={s.linkLogo}>
+          <div className={s.footerContainerForTablet}>
+<RouterLink to="/" className={s.linkLogo}>
             <img className={s.logoFooter} src={logoFooter} alt="logoFooter" />
           </RouterLink>
 
@@ -40,7 +41,7 @@ const Footer = ({ language, ...props }) => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/share/15F5iGRTb5/?mibextid=wwXIfr"
               >
                 <img
                   className={s.footerSocailMediaList__itemLogo}
@@ -53,7 +54,7 @@ const Footer = ({ language, ...props }) => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/ankona.com.ua?igsh=Zms0Mm5tN3E2ejJy"
               >
                 <img
                   className={s.footerSocailMediaList__itemLogo}
@@ -66,7 +67,7 @@ const Footer = ({ language, ...props }) => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.tiktok.com/"
+                href="https://www.tiktok.com/@ankona.com.ua?_t=ZM-8vd96jTVLyZ&_r=1"
               >
                 <AiFillTikTok className={s.footerSocailMediaList__itemLogoTikTok} alt="tikTokLogo" />
               </a>
@@ -75,13 +76,15 @@ const Footer = ({ language, ...props }) => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.YouTube.com/"
+                href="https://youtube.com/@ankona-com-ua?si=hAdfgIWRssDhmvht"
               >
                 <FaYoutube className={s.footerSocailMediaList__itemLogoYouTube} alt="tikTokLogo" />
               </a>
             </li>
             
           </ul>
+          </div>
+          
 
           <nav className={s.footerNavBarList}>
             <ul className={s.footerBarList}>

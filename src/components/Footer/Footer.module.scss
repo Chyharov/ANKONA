@@ -5,6 +5,11 @@
   padding-bottom: 80px;
   background-color: var(--richSoilBrown);
 
+  @include mq(tab) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
   @include mq(desk) {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -22,6 +27,10 @@
   align-items: center;
   margin-bottom: 24px;
 
+  @include mq(tab) {
+    margin-bottom: 0px;
+  }
+
   @include mq(desk) {
     margin-bottom: 0px;
   }
@@ -36,9 +45,26 @@
   height: 40px;
 }
 
+.footerContainerForTablet {
+  @include mq(tab) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 24px;
+  }
+
+  @include mq(desk) {
+    display: block;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 
 .footerSocailMediaList__itemTikTok {
-display: flex;
+  display: flex;
   height: 34px;
   width: 34px;
   align-items: center;
@@ -51,30 +77,30 @@ display: flex;
 
 .footerSocailMediaList__itemYouTube {
   display: flex;
-    height: 35px;
-    width: 35px;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--richSoilBrown);
-    color: var(--copperYellow);
-    border-radius: 8px;
-    border: 3px solid rgba(191, 119, 66, 1);
+  height: 35px;
+  width: 35px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--richSoilBrown);
+  color: var(--copperYellow);
+  border-radius: 8px;
+  border: 3px solid rgba(191, 119, 66, 1);
 }
 
 .footerSocailMediaList__itemLogoYouTube {
   display: flex;
-    height: 25px;
-    width: 25px;
-    align-items: center;
-    justify-content: center;
+  height: 25px;
+  width: 25px;
+  align-items: center;
+  justify-content: center;
 }
 
 .footerSocailMediaList__itemLogoTikTok {
   display: flex;
-    height: 35px;
-    width: 35px;
-    align-items: center;
-    justify-content: center;
+  height: 35px;
+  width: 35px;
+  align-items: center;
+  justify-content: center;
 }
 
 .footerBarList {
@@ -83,9 +109,15 @@ display: flex;
   align-items: center;
   margin-bottom: 24px;
 
+  @include mq(tab) {
+    display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+
   @include mq(desk) {
     display: flex;
-    margin-bottom: 24px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-direction: row;
@@ -95,6 +127,11 @@ display: flex;
 
 .footerBarList__item:not(:last-child) {
   margin-bottom: 16px;
+
+  @include mq(tab) {
+    margin-bottom: 0px;
+  }
+
   @include mq(desk) {
     margin-bottom: 0px;
     margin-right: 32px;
@@ -117,6 +154,10 @@ display: flex;
   padding: 8px;
   margin-bottom: 16px;
 
+  @include mq(tab) {
+    text-align: center;
+  }
+
   @include mq(desk) {
     font-family: 'Montserrat Regular';
     font-size: 14px;
@@ -131,6 +172,11 @@ display: flex;
   line-height: 1.43;
   color: var(--eggShellWhite);
   padding: 8px;
+
+  @include mq(tab) {
+    text-align: center;
+    padding: 8px 16px;
+  }
 
   @include mq(desk) {
     width: 528px;
