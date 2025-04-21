@@ -8,13 +8,13 @@ const SectionAbout = ({ language }) => {
   const t = translations.about[language];
   const [isBlockVisible, setIsBlockVisible] = useState(false);
   const [imageSrc, setImageSrc] = useState(
-    window.innerWidth >= 1440 ? aboutListImgDesk : aboutListImg
+    window.innerWidth >= 768 ? aboutListImgDesk : aboutListImg
   );
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1440);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
   useEffect(() => {
     const handleResize = () => {
-      const isLargeScreen = window.innerWidth >= 1440;
+      const isLargeScreen = window.innerWidth >= 768;
       setIsDesktop(isLargeScreen);
       setImageSrc(isLargeScreen ? aboutListImgDesk : aboutListImg);
       setIsBlockVisible(isLargeScreen);

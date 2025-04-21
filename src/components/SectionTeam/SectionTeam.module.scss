@@ -31,6 +31,11 @@
   margin-left: -16px;
   margin-bottom: 16px;
 
+  @include mq(tab) {
+    margin-left: -60px;
+    margin-bottom: 24px;
+  }
+
   @include mq(desk) {
     margin-left: -80px;
     width: 1040px;
@@ -48,6 +53,13 @@
   border: 2px solid var(--eggShellWhite);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+
+  @include mq(tab) {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 16px;
+    border: none;
+  }
 
   @include mq(desk) {
     width: 400px;
@@ -125,6 +137,11 @@
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   transition: all 0.3s ease-in-out;
+
+  @include mq(tab) {
+    width: 160px;
+    height: 200px;
+  }
 
   @include mq(desk) {
     width: 400px;
@@ -248,6 +265,10 @@
 
 .teamList {
   margin-bottom: 7px;
+
+  @include mq(tab) {
+    position: relative;
+  }
   @include mq(desk) {
     display: flex;
     justify-content: flex-start;
@@ -261,5 +282,16 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+  }
+}
+
+.teamList__itemSecond {
+  @include mq(tab) {
+    left: 316px;
+      top: 0;
+      position: absolute;
+  }
+  @include mq(desk) {
+    position: relative;
   }
 }
