@@ -43,12 +43,12 @@
 
   @include mq(tab) {
     display: flex;
-      flex-direction: column;
+    flex-direction: column;
   }
 
   @include mq(desk) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: row;
   }
 }
@@ -67,6 +67,7 @@
   @include mq(desk) {
     width: auto;
     margin-bottom: 0px;
+    margin-right: 17.6px;
   }
 }
 
@@ -101,12 +102,11 @@
 .tradeMarkList__itemContainer {
   @include mq(tab) {
     display: flex;
-            justify-content: space-between;
-            margin-bottom: 16px;
+    justify-content: space-between;
+    margin-bottom: 16px;
   }
 
   @include mq(desk) {
-    width: 50%;
     justify-content: flex-start;
     margin-bottom: 0px;
   }
