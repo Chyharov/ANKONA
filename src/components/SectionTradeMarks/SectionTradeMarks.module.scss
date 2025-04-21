@@ -41,9 +41,15 @@
 .tradeMarkList {
   width: 100%;
 
+  @include mq(tab) {
+    display: flex;
+      flex-direction: column;
+  }
+
   @include mq(desk) {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
   }
 }
 
@@ -53,6 +59,10 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
+
+  @include mq(tab) {
+    margin-bottom: 0px;
+  }
 
   @include mq(desk) {
     width: auto;
@@ -86,4 +96,18 @@
 
 .tradeMarkLogojrsLogo {
   width: 248px;
+}
+
+.tradeMarkList__itemContainer {
+  @include mq(tab) {
+    display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+  }
+
+  @include mq(desk) {
+    width: 50%;
+    justify-content: space-around;
+    margin-bottom: 0px;
+  }
 }

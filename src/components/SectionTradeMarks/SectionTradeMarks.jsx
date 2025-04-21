@@ -15,6 +15,7 @@ const SectionTradeMarks = ({language}) => {
         <h2 className={s.tradeMarksTitle}>{t.title}</h2>
         <div className={s.tradeMarksBorder}></div>
         <ul className={s.tradeMarkList}>
+          <div className={s.tradeMarkList__itemContainer}>
           <li className={s.tradeMarkList__item}>
             <img
               className={s.tradeMarkLogoankonaLogo}
@@ -36,6 +37,8 @@ const SectionTradeMarks = ({language}) => {
               alt="vilifossLogo"
             />
           </li>
+          </div>
+          <div className={s.tradeMarkList__itemContainer}>
           <li className={s.tradeMarkList__item}>
             <img
               className={s.tradeMarkLogoetosLogo}
@@ -57,6 +60,7 @@ const SectionTradeMarks = ({language}) => {
               alt="jrsLogo"
             />
           </li>
+          </div>
         </ul>
       </div>
     </section>
