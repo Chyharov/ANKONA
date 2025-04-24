@@ -44,7 +44,8 @@
   }
 }
 
-.blogList {
+.blogList,
+.blogListSecond {
   @include mq(tab) {
     padding-left: 11px;
     padding-right: 11px;
@@ -78,9 +79,10 @@
 }
 
 .blogList__item {
-
   @include mq(tab) {
+    width: 626px;
     display: flex;
+    justify-content: flex-start;
   }
 
   @include mq(desk) {
@@ -108,6 +110,7 @@
 
 .blogList__itemImg {
   @include mq(tab) {
+    width: 240px;
     height: 320px;
     margin-bottom: 0px;
     margin-right: 34px;
@@ -132,12 +135,12 @@
 }
 
 .blogListContainer {
-
   @include mq(tab) {
+    width: 320px;
     height: 320px;
     display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   @include mq(desk) {
@@ -231,6 +234,10 @@
 
 .blogListSecond {
   margin-bottom: 24px;
+
+  @include mq(tab) {
+    display: none;
+  }
   @include mq(desk) {
     display: flex;
     align-items: center;

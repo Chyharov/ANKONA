@@ -13,6 +13,25 @@ const SectionBlog = () => {
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
   const [itemsPerPage, setItemsPerPage] = useState(3);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 767);
+  const [isTablet, setIsTablet] = useState(window.innerWidth >= 768 && window.innerWidth <= 1439);
+
+  useEffect(() => {
+  const updateResponsiveFlags = () => {
+    const width = window.innerWidth;
+    setIsDesktop(width > 1439);
+    setIsTablet(width >= 768 && width <= 1439);
+
+    if (width <= 767) {
+      setItemsPerPage(3);
+    } else {
+      setItemsPerPage(5);
+    }
+  };
+
+  updateResponsiveFlags();
+  window.addEventListener('resize', updateResponsiveFlags);
+  return () => window.removeEventListener('resize', updateResponsiveFlags);
+}, []);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -69,30 +88,30 @@ const SectionBlog = () => {
         <div className={s.blogBorder}></div>
 
         <ul className={s.blogList}>
-          {firstList.map(post => (
-            <li key={post.id} className={s.blogList__item}>
-              <img
-                className={s.blogList__itemImg}
-                src={
-                  isDesktop
-                    ? post.imageDesktop || noImage
-                    : post.image || noImage
-                }
-                alt={post.title}
-              />
-              <div className={s.blogListContainer}>
-                <h4 className={s.blogList__itemTitle}>{post.title}</h4>
-                <div className={s.blogList__itemTitleBorder}></div>
-                <p className={s.blogList__itemDescription}>
-                  {truncateText(post.description, MAX_DESCRIPTION_LENGTH)}
-                </p>
-                <Link to={`/blog/${post.id}`} className={s.blogBtn}>
-                  Читати
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ul>
+  {(isTablet ? filteredPosts : firstList).map(post => (
+    <li key={post.id} className={s.blogList__item}>
+      <img
+        className={s.blogList__itemImg}
+        src={
+          isDesktop || isTablet
+            ? post.imageDesktop || noImage
+            : post.image || noImage
+        }
+        alt={post.title}
+      />
+      <div className={s.blogListContainer}>
+        <h4 className={s.blogList__itemTitle}>{post.title}</h4>
+        <div className={s.blogList__itemTitleBorder}></div>
+        <p className={s.blogList__itemDescription}>
+          {truncateText(post.description, MAX_DESCRIPTION_LENGTH)}
+        </p>
+        <Link to={`/blog/${post.id}`} className={s.blogBtn}>
+          Читати
+        </Link>
+      </div>
+    </li>
+  ))}
+</ul>
 
         <ul className={s.blogListSecond}>
           {secondList.map(post => (
