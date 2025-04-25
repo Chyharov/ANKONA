@@ -116,8 +116,37 @@
 }
 
 .imageContainer {
+  @include mq(tab) {
+    display: none;
+  }
   @include mq(desk) {
     display: flex;
+  }
+}
+
+.imageContainerTablet {
+  display: none;
+
+  @include mq(tab) {
+    display: block;
+  }
+
+  @include mq(desk) {
+    display: none;
+  }
+}
+
+.imageContainerDescriptionTablet {
+  @include mq(tab) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.imageContainerTitleTablet {
+  @include mq(tab) {
+    margin-right: 16px;
+    margin-bottom: 16px;
   }
 }
 
@@ -127,6 +156,12 @@
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 16px;
+
+  @include mq(tab) {
+    width: 320px;
+    height: 280px;
+    margin-bottom: 0px;
+  }
 
   @include mq(desk) {
     width: 560px;

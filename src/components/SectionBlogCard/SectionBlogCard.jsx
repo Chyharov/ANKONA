@@ -57,6 +57,36 @@ const SectionBlogCard = ({ post }) => {
             <img className={s.blogImage} src={post.image} alt="blogImage" />
           )}
         </div>
+        <div className={s.imageContainerTablet}>
+
+          {post.content && (
+            <p className={s.blogDescription}>
+              {post.content}
+              {post.contentspan && (
+                <span className={s.blogDescriptionSpan}>
+                  {post.contentspan}
+                </span>
+              )}
+              {post.contentafter && ` ${post.contentafter}`}
+            </p>
+          )}
+
+          <div className={s.imageContainerDescriptionTablet}>
+            <div className={s.imageContainerTitleTablet}>
+              
+          {post.metodoligi && (
+            <>
+              <h3 className={s.blogTitleMetodoligi}>Методологія:</h3>
+              <p className={s.blogDescriptionMetodoligi}>{post.metodoligi}</p>
+            </>
+          )}
+          </div>
+          
+          {post.image && (
+            <img className={s.blogImage} src={post.image} alt="blogImage" />
+          )}
+          </div>
+        </div>
 
         {post.result && (
           <h3 className={s.blogTitleResult}>
