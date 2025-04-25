@@ -273,7 +273,7 @@ const SectionGoods = ({ language }) => {
                   <p
                     className={`${s.sectionGoodsCategoryList__itemName} ${
                       s.selectedCategoryText
-                    } ${cat === 'Підходе для всіх' ? s.centeredText : ''}`}
+                    } ${cat === 'Підходить для всіх' && 'Suitable for all' ? s.centeredText : ''}`}
                   >
                     {cat}
                   </p>
@@ -325,7 +325,7 @@ const SectionGoods = ({ language }) => {
                     <p
                       className={`${s.sectionGoodsCategoryList__itemName} ${
                         isChecked ? s.selectedCategoryText : ''
-                      } ${cat === 'Підходе для всіх' ? s.centeredText : ''}`}
+                      } ${cat === 'Підходить для всіх' && 'Suitable for all' ? s.centeredText : ''}`}
                     >
                       {cat}
                     </p>
