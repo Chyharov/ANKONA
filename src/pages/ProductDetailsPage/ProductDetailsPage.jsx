@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import Header from 'components/Header/Header';
 import ProductDetails from 'components/ProductDetails/ProductDetails';
 import Footer from 'components/Footer/Footer';
+import translations from 'components/LanguageSelect/translations';
 
 const ProductDetailsPage = () => {
   const [language, setLanguage] = useState('ua');
@@ -15,6 +16,15 @@ const ProductDetailsPage = () => {
     },
     [language]
   );
+  const t = translations.navlink[language];
+  const navItems = [
+    {
+      type: 'route',
+      to: '/',
+      label: t.main,
+      delay: 0.05,
+    },
+  ];
   return (
     <>
       <Header
@@ -22,6 +32,7 @@ const ProductDetailsPage = () => {
         style={{ width: '130px' }}
         language={language}
         onLanguageChange={handleLanguageChange}
+        navItems={navItems}
       />
       <main>
         <ProductDetails language={language} />
