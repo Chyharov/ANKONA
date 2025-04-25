@@ -5,6 +5,11 @@
   padding-bottom: 120px;
   background-color: var(--eggShellWhite);
 
+  @include mq(tab) {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+
   @include mq(desk) {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -63,6 +68,16 @@
   }
 }
 
+.imgProductDetailsTablet {
+  @include mq(tab) {
+    width: 300px;
+    height: 240px;
+    margin-right: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
+  }
+}
+
 .categoryGoods,
 .categoryGoodsDescription {
   font-family: 'Montserrat Bold';
@@ -74,8 +89,13 @@
 }
 
 .categoryGoods {
+
+  @include mq(tab) {
+    margin-top: auto;
+  }
   @include mq(desk) {
       padding: 8px;
+      margin-top: 0px;
       margin-bottom: 16px;
     }
 }
@@ -224,9 +244,40 @@
 }
 
 .productDetailsContainer {
+
+  @include mq(tab) {
+    display: none;
+  }
   @include mq(desk) {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.productDetailsContainerTablet {
+
+  display: none;
+
+  @include mq(tab) {
+    display: block;
+  }
+
+  @include mq(desk) {
+    display: none;
+  }
+}
+
+.productNameAndManufacturerContainer {
+  @include mq(tab) {
+    display: flex;
+      flex-direction: column;
+  }
+}
+
+.imageContainerTab {
+  @include mq(tab) {
+    display: flex;
+    margin-bottom: 16px;
   }
 }
 

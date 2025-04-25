@@ -33,20 +33,24 @@ const ProductDetails = ({ language }) => {
   const navigate = useNavigate();
   const product = products.find(p => p.id === Number(id));
   const t = translations.goods[language];
-  const [isMobileWidth, setIsMobileWidth] = useState(window.innerWidth <= 1440);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-  window.scrollTo(0, 0);
-}, [id]);
+    window.scrollTo(0, 0);
+  }, [id]);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileWidth(window.innerWidth <= 1440);
+      setWindowWidth(window.innerWidth);
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const isMobile = windowWidth <= 768;
+  const isTablet = windowWidth > 768 && windowWidth <= 1440;
+  // const isDesktop = windowWidth > 1440;
 
   if (!product) {
     return <p className={s.notFound}>Товар не знайдено</p>;
@@ -194,9 +198,129 @@ const ProductDetails = ({ language }) => {
 
               <ButtonCallBack
                 style={{
-                  marginTop: isMobileWidth ? '8px' : '32px',
+                  marginTop: isMobile ? '8px' : '32px',
                   marginLeft: 'auto',
-                  width: isMobileWidth ? '91.47%' : '41.67%',
+                  width: isMobile ? '91.47%' : '41.67%',
+                }}
+                language={language}
+              />
+            </div>
+          </div>
+
+          <div className={s.productDetailsContainerTablet}>
+            <div className={s.imageContainerTab}>
+              <img
+                className={s.imgProductDetailsTablet}
+                src={product.image}
+                alt={product.name[language]}
+              />
+
+              <div className={s.productNameAndManufacturerContainer}>
+                <h3 className={s.productDetailsName}>
+                  {product.name[language]}
+                </h3>
+                <p className={s.productDetailsManufacturer}>
+                  {Array.isArray(product.manufacturer?.[language])
+                    ? product.manufacturer[language].join(' / ')
+                    : product.manufacturer?.[language] || ''}
+                </p>
+
+                <h3 className={s.categoryGoods}>{t.categoryGoods}</h3>
+                <ul className={s.iconManufacturerList}>
+                  {categoryIconsList.length > 0 &&
+                    categoryIconsList.map((icon, index) => (
+                      <li key={index} className={s.iconManufacturerList__item}>
+                        <img
+                          className={s.iconManufacturer}
+                          src={icon}
+                          alt="category icon"
+                        />
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className={s.productDescriptionContainer}>
+              <p
+                className={s.productDetailsDescription}
+                style={{ padding: '8px', marginBottom: '4px' }}
+              >
+                {product.description[language]}
+              </p>
+              {Array.isArray(product.descriptionText[language])
+                ? product.descriptionText[language].map((text, index) => (
+                    <p
+                      key={index}
+                      className={s.productDetailsDescriptionSecond}
+                      style={{ marginBottom: '8px' }}
+                    >
+                      {text}
+                    </p>
+                  ))
+                : product.descriptionText[language] && (
+                    <p
+                      className={s.productDetailsDescriptionText}
+                      style={{ marginBottom: '8px' }}
+                    >
+                      {product.descriptionText[language]}
+                    </p>
+                  )}
+
+              {product.sections &&
+                product.sections.map((section, index) => (
+                  <div key={index} className={s.productDetailsBorder}>
+                    {(section.title[language] ||
+                      (language === 'ua' && section.title.ua)) && (
+                      <h3
+                        className={s.categoryGoodsDescription}
+                        style={{
+                          marginBottom: '0px',
+                          padding: '12px 8px 8px 8px',
+                        }}
+                      >
+                        {section.title[language] || section.title.ua}
+                      </h3>
+                    )}
+
+                    {Array.isArray(section.items[language]) &&
+                    section.items[language].length > 0 ? (
+                      <ul className={s.categoryGoodsList}>
+                        {section.items[language].map((item, i) => (
+                          <li key={i} className={s.categoryGoodsList__item}>
+                            <p className={s.productDetailsDescriptionThird}>
+                              {item}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : language === 'ua' &&
+                      Array.isArray(section.items.ua) &&
+                      section.items.ua.length > 0 ? (
+                      <ul className={s.categoryGoodsList}>
+                        {section.items.ua.map((item, i) => (
+                          <li key={i} className={s.categoryGoodsList__item}>
+                            <p className={s.productDetailsDescriptionThird}>
+                              {item}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+                ))}
+
+              <ButtonCallBack
+                style={{
+                  marginTop: isMobile ? '8px' : '32px',
+                  marginLeft: 'auto',
+                  marginRight: isTablet ? 'auto' : 'auto',
+                  width:
+                    isMobile && isTablet
+                      ? '91.47%'
+                      : isTablet
+                      ? '46%'
+                      : '41.67%',
                 }}
                 language={language}
               />
