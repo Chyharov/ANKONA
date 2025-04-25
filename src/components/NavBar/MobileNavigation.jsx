@@ -4,7 +4,7 @@ import BurgerMenu from 'images/header/burgerMenu.svg'
 import CloseBtn from 'images/header/burgerMenuClose.svg'
 import { useState } from 'react';
 
-const MobileNavigation = ({language}) => {
+const MobileNavigation = ({language, navItems}) => {
 
     const [open, setOpen] = useState(false);
     const hamburgerIcon = (
@@ -32,7 +32,7 @@ const MobileNavigation = ({language}) => {
     return ( 
         <nav className={s.mobileNavigation}>
             {open ? hamburgerCloseIcon : hamburgerIcon}
-            {open && <NavLinks isMobile={true} closeMobileMenu={closeMobileMenu} language={language}/> }
+            {open && <NavLinks isMobile={true} closeMobileMenu={closeMobileMenu} language={language} navItems={navItems} /> }
         </nav>
         
      );
