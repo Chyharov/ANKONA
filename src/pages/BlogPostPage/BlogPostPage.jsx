@@ -4,6 +4,7 @@ import SectionBlogCard from 'components/SectionBlogCard/SectionBlogCard';
 import Footer from 'components/Footer/Footer';
 import { useParams } from 'react-router-dom';
 import { blogPosts } from 'services/blogPosts';
+import translations from 'components/LanguageSelect/translations';
 
 const BlogPostPage = () => {
    const [language, setLanguage] = useState('ua');
@@ -16,9 +17,19 @@ const BlogPostPage = () => {
         }
       },
       [language]
-    );
+  );
+  
   const { id } = useParams();
   const post = blogPosts.find(post => post.id === Number(id));
+  const t = translations.navlink[language];
+  const navItems = [
+    {
+      type: 'route',
+      to: '/',
+      label: t.main,
+      delay: 0.05,
+    },
+  ];
 
   if (!post) {
     return <h2>Стаття не знайдена</h2>;
@@ -26,7 +37,7 @@ const BlogPostPage = () => {
 
   return (
     <>
-      <Header navSearchStyle={{ display: 'none' }} languageSelectStyle={{ display: 'none' }} style={{ width: '130px' }} language={language} onLanguageChange={handleLanguageChange}/>
+      <Header navSearchStyle={{ display: 'none' }} languageSelectStyle={{ display: 'none' }} style={{ width: '130px' }} language={language} onLanguageChange={handleLanguageChange} navItems={navItems} />
       <main>
         <SectionBlogCard post={post} language={language}/>
       </main>
