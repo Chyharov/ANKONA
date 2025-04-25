@@ -6,6 +6,7 @@ const translations = {
       tradeMarks: 'Торгові марки',
       team: 'Команда',
       blog: 'Блог',
+      main: 'Головна',
       reserved: 'Всі права захищені © ANKONA 2025',
       reservedDescription:
         'Використання матеріалів сайту можливе лише з письмового дозволу правовласника та із зазначенням активного посилання на джерело',
@@ -16,6 +17,7 @@ const translations = {
       tradeMarks: 'TM',
       team: 'Team',
       blog: 'Blog',
+      main: 'Main',
       reserved: 'All rights reserved © ANKONA 2025',
       reservedDescription:
         'The materials of this site may be used only with the written permission of the copyright holder and with an active link to the source',
