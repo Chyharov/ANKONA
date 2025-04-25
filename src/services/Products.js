@@ -3,7 +3,6 @@ import imgProductDetailsId2 from 'images/productDetails/imgProductDetailsId2.jpg
 import imgProductDetailsId3 from 'images/productDetails/imgProductDetailsId3.jpg';
 import imgProductDetailsId4 from 'images/productDetails/imgProductDetailsId4.jpg';
 import imgProductDetailsId5 from 'images/productDetails/imgProductDetailsId5.jpg';
-import imgProductDetailsId6 from 'images/productDetails/imgProductDetailsId6.jpg';
 import imgProductDetailsId7 from 'images/productDetails/imgProductDetailsId7.jpg';
 import imgProductDetailsId8 from 'images/productDetails/imgProductDetailsId8.jpg';
 import imgProductDetailsId9 from 'images/productDetails/imgProductDetailsId9.jpg';
@@ -436,7 +435,7 @@ export const products = [
       ua: ['ВРХ дорослі'],
       en: ['Adult Cattle'],
     },
-    image: imgProductDetailsId6,
+    image: imgProductDetailsId37,
     imageDesktop: imageToVRHD,
     sections: [
       {
