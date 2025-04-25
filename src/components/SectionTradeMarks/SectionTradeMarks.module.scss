@@ -66,14 +66,10 @@
 
   @include mq(desk) {
     width: auto;
-    margin-bottom: 0px;
     margin-right: 17.6px;
   }
 }
 
-.tradeMarkList__item:last-child {
-  margin-bottom: 0px;
-}
 
 .tradeMarkLogofuttergutLogo {
   width: 162px;
