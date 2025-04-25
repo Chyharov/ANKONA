@@ -5,6 +5,10 @@
     padding-bottom: 80px;
     background-color: var(--whiteBG);
 
+    @include mq(tab) {
+        padding-top: 110px;
+    }
+
     @include mq(desk) {
         padding-top: 120px;
         padding-bottom: 120px;

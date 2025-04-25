@@ -421,8 +421,8 @@ export const products = [
       en: 'Futtergut Rumi-Farm',
     },
     manufacturer: {
-      ua: 'VILOFOSS',
-      en: 'VILOFOSS',
+      ua: 'Футергут Нуадійна годівля',
+      en: 'Футергут Нуадійна годівля',
     },
     description: {
       ua: 'Оптимізація крохмальної годівлі',
@@ -749,7 +749,7 @@ export const products = [
       en: '',
     },
     category: {
-      ua: ['Підходе для всіх'],
+      ua: ['Підходить для всіх'],
       en: ['Suitable for all'],
     },
     image: imgProductDetailsId10,
@@ -837,7 +837,7 @@ export const products = [
       en: '',
     },
     category: {
-      ua: ['Підходе для всіх'],
+      ua: ['Підходить для всіх'],
       en: ['Suitable for all'],
     },
     image: imgProductDetailsId11,
@@ -1006,7 +1006,7 @@ export const products = [
       en: '',
     },
     category: {
-      ua: ['Підходе для всіх'],
+      ua: ['Підходить для всіх'],
       en: ['Suitable for all'],
     },
     image: imgProductDetailsId13,
@@ -1097,7 +1097,7 @@ export const products = [
       en: '',
     },
     category: {
-      ua: ['Підходе для всіх'],
+      ua: ['Підходить для всіх'],
       en: ['Suitable for all'],
     },
     image: imgProductDetailsId14,
@@ -1186,7 +1186,7 @@ export const products = [
       en: '',
     },
     category: {
-      ua: ['Підходе для всіх'],
+      ua: ['Підходить для всіх'],
       en: ['Suitable for all'],
     },
     image: imgProductDetailsId15,
@@ -2240,8 +2240,8 @@ export const products = [
       en: 'ProbioBona',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Рідкий пероральний пробіотик в шприці',
@@ -2252,7 +2252,7 @@ export const products = [
       en: '',
     },
     category: {
-      ua: ['Підходе для всіх'],
+      ua: ['Підходить для всіх'],
       en: ['Suitable for all'],
     },
     image: imgProductDetailsId32,
@@ -2404,7 +2404,7 @@ export const products = [
       en: '',
     },
     category: {
-      ua: ['Підходе для всіх'],
+      ua: ['Підходить для всіх'],
       en: ['Suitable for all'],
     },
     image: imgProductDetailsId34,
@@ -2584,8 +2584,8 @@ export const products = [
       en: 'FUTTERGUT™',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Кормові концентрати та премікси для свиней, птиці, ВРХ',
@@ -2596,7 +2596,7 @@ export const products = [
       en: '',
     },
     category: {
-      ua: ['Підходе для всіх'],
+      ua: ['Підходить для всіх'],
       en: ['Suitable for all'],
     },
     image: imgProductDetailsId37,
@@ -2678,8 +2678,8 @@ export const products = [
       en: 'Pre-starter for calves',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Престартер для телят. Гранула',
@@ -2730,8 +2730,8 @@ export const products = [
       en: 'PVMS (universal)',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'БМВД. Гранула',
@@ -2742,7 +2742,7 @@ export const products = [
       en: '',
     },
     category: {
-      ua: ['Підходе для всіх'],
+      ua: ['Підходить для всіх'],
       en: ['Suitable for all'],
     },
     image: imgProductDetailsId37,
@@ -2804,8 +2804,8 @@ export const products = [
       en: 'PVMS for cows',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Для лактуючих корів, 4 - 5 кг. Розсипна',
@@ -2867,8 +2867,8 @@ export const products = [
       en: 'Pellets for cows',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Годівля на роботах, 28% протеїн',
@@ -2928,8 +2928,8 @@ export const products = [
       en: 'Premix for dairy cows 1%',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Вітаміно-мінеральний Премікс для дійних корів П 60-1_Л',
@@ -3005,8 +3005,8 @@ export const products = [
       en: 'Futtergut-Levusell for cattle',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Добавка з живими дріжджами',
@@ -3084,8 +3084,8 @@ export const products = [
       en: 'Premix for dairy cows 3%',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Вітаміно-мінеральний Премікс',
@@ -3134,8 +3134,8 @@ export const products = [
       en: 'Premix for dry cows',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Вітаміно-мінеральний Премікс для сухостійних корів.',
@@ -3185,8 +3185,8 @@ export const products = [
       en: 'AnkonaF/buffer/150',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Буферна добавка',
@@ -3256,8 +3256,8 @@ export const products = [
       en: 'Futtergut Hy-М',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Регулює кальцій-фосфорний метаболізм + іммунітет',
@@ -4134,8 +4134,8 @@ export const products = [
       en: 'Hy-M for pigs',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
@@ -4210,8 +4210,8 @@ export const products = [
       en: 'Hy-M for the parent flock of poultry',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
@@ -4288,8 +4288,8 @@ export const products = [
       en: 'Hy-M for broilers',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
@@ -4366,8 +4366,8 @@ export const products = [
       en: 'Hy-M for the laying hen',
     },
     manufacturer: {
-      ua: 'FUTTERGUT - надійна годівля',
-      en: 'FUTTERGUT - reliable feeding',
+      ua: 'АНКОНА нова стратегія годівлі',
+      en: 'АНКОНА нова стратегія годівлі',
     },
     description: {
       ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
@@ -4458,7 +4458,7 @@ export const products = [
       en: '',
     },
     category: {
-      ua: ['Підходе для всіх'],
+      ua: ['Підходить для всіх'],
       en: ['Suitable for all'],
     },
     image: imgProductDetailsId56,
@@ -4530,7 +4530,7 @@ export const products = [
       en: '',
     },
     category: {
-      ua: ['Підходе для всіх'],
+      ua: ['Підходить для всіх'],
       en: ['Suitable for all'],
     },
     image: imgProductDetailsId63,
