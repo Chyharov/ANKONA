@@ -66,7 +66,7 @@ const MainPage = () => {
         <SectionTradeMarks language={language} />
         <SectionTeam language={language} />
       </main>
-      <Footer language={language} />
+      <Footer language={language} navItems={navItems}/>
     </SearchProvider>
   );
 };

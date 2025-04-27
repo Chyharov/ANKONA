@@ -39,7 +39,7 @@ const EditProductDetailsPage = () => {
       <main>
         <SectionEditGoods language={language} />
       </main>
-      <Footer language={language} />
+      <Footer language={language} navItems={navItems} />
     </>
   );
 };

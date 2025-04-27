@@ -29,6 +29,12 @@ const BlogPostPage = () => {
       label: t.main,
       delay: 0.05,
     },
+    {
+      type: 'route',
+      to: '/blog',
+      label: t.blog,
+      delay: 0.4,
+    }
   ];
 
   if (!post) {
@@ -41,7 +47,7 @@ const BlogPostPage = () => {
       <main>
         <SectionBlogCard post={post} language={language}/>
       </main>
-      <Footer language={language}/>
+      <Footer language={language} navItems={navItems}/>
     </>
   );
 };
