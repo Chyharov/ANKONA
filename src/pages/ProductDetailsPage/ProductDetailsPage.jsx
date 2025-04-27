@@ -37,7 +37,7 @@ const ProductDetailsPage = () => {
       <main>
         <ProductDetails language={language} />
       </main>
-      <Footer language={language} />
+      <Footer language={language} navItems={navItems} />
     </>
   );
 };
