@@ -50,7 +50,6 @@ const ProductDetails = ({ language }) => {
 
   const isMobile = windowWidth <= 768;
   const isTablet = windowWidth > 768 && windowWidth <= 1440;
-  // const isDesktop = windowWidth > 1440;
 
   if (!product) {
     return <p className={s.notFound}>Товар не знайдено</p>;

@@ -13,11 +13,16 @@ const Pagination = ({ currentPage, totalPages, onPageChange, onLoadMore, hasMore
   }, []);
 
   const renderPaginationButtonsMobile = () => {
-    const pages = [];
-    const firstPage = 1;
-    const lastPage = totalPages;
-    const middlePage = Math.ceil(totalPages / 2);
+  const pages = [];
+  const firstPage = 1;
+  const lastPage = totalPages;
+  const middlePage = Math.ceil(totalPages / 2);
 
+  if (totalPages <= 2) {
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push(i);
+    }
+  } else {
     pages.push(firstPage);
 
     if (currentPage > 2 && currentPage < middlePage) {
@@ -36,58 +41,66 @@ const Pagination = ({ currentPage, totalPages, onPageChange, onLoadMore, hasMore
 
     pages.push("...");
     pages.push(lastPage);
+  }
 
-    return pages.map((page, index) => (
-      <button
-        key={index}
-        className={
-          page === "..." ? s.ellipsis : page === currentPage ? s.numerPaginationBtn : s.numerPaginationBtnInactive
-        }
-        onClick={() => typeof page === "number" && onPageChange(page)}
-        disabled={page === "..."}
-      >
-        {page}
-      </button>
-    ));
-  };
+  return pages.map((page, index) => (
+    <button
+      key={index}
+      className={
+        page === "..." ? s.ellipsis : page === currentPage ? s.numerPaginationBtn : s.numerPaginationBtnInactive
+      }
+      onClick={() => typeof page === "number" && onPageChange(page)}
+      disabled={page === "..."}
+    >
+      {page}
+    </button>
+  ));
+};
 
   const renderPaginationButtonsDesktop = () => {
-    const pages = [];
-    const firstPage = 1;
-    const lastPage = totalPages;
-    let secondPage = 2;
+  const pages = [];
 
-    if (currentPage > 2 && currentPage < totalPages - 1) {
-      secondPage = currentPage;
+  if (totalPages <= 4) {
+    // Якщо сторінок <=4 — показати всі
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push(i);
     }
+  } else {
+    pages.push(1);
 
-    pages.push(firstPage);
-    if (secondPage !== firstPage && secondPage !== lastPage) {
-      pages.push(secondPage);
-    }
-
-    if (secondPage <= totalPages - 2) {
+    if (currentPage > 3) {
       pages.push('...');
     }
 
-    if (totalPages > 3) {
-      pages.push(lastPage - 1);
-      pages.push(lastPage);
+    const startPage = Math.max(2, currentPage - 1);
+    const endPage = Math.min(totalPages - 2, currentPage + 1);
+
+    for (let i = startPage; i <= endPage; i++) {
+      pages.push(i);
     }
 
-    return pages.map((page, index) => (
-      <button
-        key={index}
-        className={
-          page === '...' ? s.ellipsis : page === currentPage ? s.numerPaginationBtn : s.numerPaginationBtnInactive
-        }
-        onClick={() => typeof page === 'number' && onPageChange(page)}
-        disabled={page === '...'}
-      >
-        {page}
-      </button>
-    ));
-  };
+    if (currentPage < totalPages - 3) {
+      pages.push('...');
+    }
+
+    // Обов'язково додати передостанню і останню
+    pages.push(totalPages - 1);
+    pages.push(totalPages);
+  }
+
+  return pages.map((page, index) => (
+    <button
+      key={index}
+      className={
+        page === '...' ? s.ellipsis : page === currentPage ? s.numerPaginationBtn : s.numerPaginationBtnInactive
+      }
+      onClick={() => typeof page === 'number' && onPageChange(page)}
+      disabled={page === '...'}
+    >
+      {page}
+    </button>
+  ));
+};
 
   return (
     <>
