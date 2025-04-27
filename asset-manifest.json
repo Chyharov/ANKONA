@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.4e372d72.css",
-    "main.js": "/ANKONA/static/js/main.1ef7d264.js",
+    "main.js": "/ANKONA/static/js/main.74057a4a.js",
     "static/css/955.c7ef207d.chunk.css": "/ANKONA/static/css/955.c7ef207d.chunk.css",
     "static/js/955.f28f031d.chunk.js": "/ANKONA/static/js/955.f28f031d.chunk.js",
     "static/css/313.0e9c2b70.chunk.css": "/ANKONA/static/css/313.0e9c2b70.chunk.css",
     "static/js/313.ca1f563d.chunk.js": "/ANKONA/static/js/313.ca1f563d.chunk.js",
     "static/css/543.6703596e.chunk.css": "/ANKONA/static/css/543.6703596e.chunk.css",
-    "static/js/543.d96e9bf5.chunk.js": "/ANKONA/static/js/543.d96e9bf5.chunk.js",
+    "static/js/543.c7c79bdc.chunk.js": "/ANKONA/static/js/543.c7c79bdc.chunk.js",
     "static/css/800.2366548d.chunk.css": "/ANKONA/static/css/800.2366548d.chunk.css",
     "static/js/800.adb4e134.chunk.js": "/ANKONA/static/js/800.adb4e134.chunk.js",
     "static/css/520.9906f11f.chunk.css": "/ANKONA/static/css/520.9906f11f.chunk.css",
@@ -148,13 +148,13 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.4e372d72.css.map": "/ANKONA/static/css/main.4e372d72.css.map",
-    "main.1ef7d264.js.map": "/ANKONA/static/js/main.1ef7d264.js.map",
+    "main.74057a4a.js.map": "/ANKONA/static/js/main.74057a4a.js.map",
     "955.c7ef207d.chunk.css.map": "/ANKONA/static/css/955.c7ef207d.chunk.css.map",
     "955.f28f031d.chunk.js.map": "/ANKONA/static/js/955.f28f031d.chunk.js.map",
     "313.0e9c2b70.chunk.css.map": "/ANKONA/static/css/313.0e9c2b70.chunk.css.map",
     "313.ca1f563d.chunk.js.map": "/ANKONA/static/js/313.ca1f563d.chunk.js.map",
     "543.6703596e.chunk.css.map": "/ANKONA/static/css/543.6703596e.chunk.css.map",
-    "543.d96e9bf5.chunk.js.map": "/ANKONA/static/js/543.d96e9bf5.chunk.js.map",
+    "543.c7c79bdc.chunk.js.map": "/ANKONA/static/js/543.c7c79bdc.chunk.js.map",
     "800.2366548d.chunk.css.map": "/ANKONA/static/css/800.2366548d.chunk.css.map",
     "800.adb4e134.chunk.js.map": "/ANKONA/static/js/800.adb4e134.chunk.js.map",
     "520.9906f11f.chunk.css.map": "/ANKONA/static/css/520.9906f11f.chunk.css.map",
@@ -171,6 +171,6 @@
   },
   "entrypoints": [
     "static/css/main.4e372d72.css",
-    "static/js/main.1ef7d264.js"
+    "static/js/main.74057a4a.js"
   ]
 }
