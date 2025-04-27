@@ -198,7 +198,7 @@
 }
 
 .productDetailsDescription {
-  @include mq(desk) {
+  @include mq(tab) {
     font-family: 'Montserrat Medium';
     font-size: 24px;
     line-height: 1.34;

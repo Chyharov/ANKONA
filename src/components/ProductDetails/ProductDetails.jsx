@@ -28,8 +28,6 @@ const categoryIcons = {
   'Suitable for all': [iconCow, iconCalf, iconGoat, iconHorse, iconHen, iconPig],
 };
 
-const allIcons = [...new Set(Object.values(categoryIcons))];
-
 const ProductDetails = ({ language }) => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -57,20 +55,22 @@ const ProductDetails = ({ language }) => {
     return <p className={s.notFound}>Товар не знайдено</p>;
   }
 
-  const categoryIconsList =
-    product.category[language] === 'Підходе для всіх' ||
-    product.category[language] === 'Suitable for all' ||
-    (Array.isArray(product.category[language]) &&
-      (product.category[language].includes('Підходе для всіх') ||
-        product.category[language].includes('Suitable for all')))
-      ? allIcons
-      : Array.isArray(product.category[language])
-      ? product.category[language]
-          .map(cat => categoryIcons[cat])
-          .filter(Boolean)
-      : categoryIcons[product.category[language]]
-      ? [categoryIcons[product.category[language]]]
-      : [];
+const iconsToRender = Array.isArray(product.category[language])
+  ? product.category[language].flatMap(cat =>
+      categoryIcons[cat]
+        ? (Array.isArray(categoryIcons[cat]) ? categoryIcons[cat] : [categoryIcons[cat]])
+        : []
+    )
+  : categoryIcons[product.category[language]]
+    ? (Array.isArray(categoryIcons[product.category[language]])
+        ? categoryIcons[product.category[language]]
+        : [categoryIcons[product.category[language]]]
+      )
+    : [];
+
+const finalIcons = iconsToRender.length > 0
+  ? iconsToRender
+  : [iconCow, iconCalf, iconGoat, iconHorse, iconHen, iconPig];
 
   return (
     <>
@@ -94,18 +94,17 @@ const ProductDetails = ({ language }) => {
               />
 
               <h3 className={s.categoryGoods}>{t.categoryGoods}</h3>
-              <ul className={s.iconManufacturerList}>
-                {categoryIconsList.length > 0 &&
-                  categoryIconsList.map((icon, index) => (
-                    <li key={index} className={s.iconManufacturerList__item}>
-                      <img
-                        className={s.iconManufacturer}
-                        src={icon}
-                        alt="category icon"
-                      />
-                    </li>
-                  ))}
-              </ul>
+             <ul className={s.iconManufacturerList}>
+  {finalIcons.map((icon, index) => (
+    <li key={index} className={s.iconManufacturerList__item}>
+      <img
+        className={s.iconManufacturer}
+        src={icon}
+        alt="category icon"
+      />
+    </li>
+  ))}
+</ul>
               <ul className={s.categoryList}>
                 {Array.isArray(product.category[language]) ? (
                   product.category[language].map((cat, index) => (
@@ -228,10 +227,7 @@ const ProductDetails = ({ language }) => {
 
                 <h3 className={s.categoryGoods}>{t.categoryGoods}</h3>
                 <ul className={s.iconManufacturerList}>
-  {(Array.isArray(categoryIcons[product.category[language]])
-    ? categoryIcons[product.category[language]] // Якщо масив іконок (для всіх)
-    : [categoryIcons[product.category[language]]] // Якщо одна іконка
-  ).map((icon, index) => (
+  {finalIcons.map((icon, index) => (
     <li key={index} className={s.iconManufacturerList__item}>
       <img
         className={s.iconManufacturer}

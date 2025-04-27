@@ -735,7 +735,7 @@ export const products = [
       en: 'Liquid mineral and vitamin acidifier (suitable for all)',
     },
     descriptionText: {
-      ua: 'Рідкий мінерально–вітамінний підкислювач для поліпшення якості води та кормів.',
+      ua: '',
       en: '',
     },
     category: {
