@@ -7,6 +7,7 @@ const ProductDetails = lazy(() => import("pages/ProductDetailsPage/ProductDetail
 const BlogPage = lazy(() => import("pages/BlogPage/BlogPage"));
 const BlogPostPage = lazy(() => import("pages/BlogPostPage/BlogPostPage"));
 const PrivacyPage = lazy(() => import("pages/PrivacyPage/PrivacyPage"));
+const EditProductDetailsPage = lazy(() => import("pages/EditProductDetailsPage/EditProductDetailsPage"));
 
 export const App = () => {
   return (
@@ -18,6 +19,7 @@ export const App = () => {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogPostPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/editproductdetailspage" element={<EditProductDetailsPage />} />
         </Routes>
       </Suspense>
     </SearchProvider>
