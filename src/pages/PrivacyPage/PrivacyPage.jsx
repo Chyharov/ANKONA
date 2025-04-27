@@ -32,7 +32,7 @@ const PrivacyPage = () => {
       <main>
         <SectionPrivacy language={language}/>
       </main>
-      <Footer language={language}/>
+      <Footer language={language} navItems={navItems}/>
     </>
   );
 };
