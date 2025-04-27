@@ -62,7 +62,7 @@
   @include mq(tab) {
     width: 300px;
     height: 200px;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
     border: none;
   }
 
@@ -101,6 +101,10 @@
   height: 360px;
   flex-direction: column;
 
+  @include mq(tab) {
+    height: 0px;
+  }
+
   @include mq(desk) {
     width: 400px;
     height: 400px;
@@ -128,11 +132,22 @@
   flex-direction: column;
   align-items: center;
 
+  @include mq(tab) {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(39, 18, 12, 0.8);
+    height: 200px;
+    padding: 16px 0px;
+  }
+
   @include mq(desk) {
+    position: relative;
+    background-color: transparent;
     padding-top: 16px;
     padding-bottom: 16px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
 
@@ -161,6 +176,13 @@
   border-bottom-left-radius: 0px;
   margin-bottom: 8px;
 
+  @include mq(tab) {
+    min-height: 200px;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 0px;
+  }
+
   @include mq(desk) {
     width: 400px;
     height: 224px;
@@ -183,7 +205,16 @@
 }
 
 .teamList__itemTitle.active {
-  margin-bottom: 16px;
+    margin-bottom: 16px;
+  @include mq(tab) {
+    color: var(--eggShellWhite);
+    margin-top: 8px;
+  }
+
+  @include mq(desk) {
+    margin-top: 0px;
+    color: var(--richSoilBrown);
+  }
 }
 
 .teamList__itemDescription {
@@ -296,6 +327,19 @@
   }
 }
 
+.teamList__item1 {
+  @include mq(tab) {
+    left: 0px;
+    top: 0;
+    position: absolute;
+  }
+
+  @include mq(desk) {
+    position: relative;
+    left: 0px;
+  }
+}
+
 .teamList__item2 {
   @include mq(tab) {
     left: 316px;
@@ -325,7 +369,7 @@
 .teamList__item4 {
   @include mq(tab) {
     position: absolute;
-    top: 0px;
+    top: 216px;
     right: 0px;
   }
 
@@ -339,7 +383,7 @@
 .teamList__item5 {
   @include mq(tab) {
     position: absolute;
-    top: 216px;
+    top: 432px;
     left: 0px;
   }
 
@@ -353,7 +397,7 @@
 .teamList__item6 {
   @include mq(tab) {
     position: absolute;
-    top: 216px;
+    top: 432px;
     left: 316px;
   }
 
