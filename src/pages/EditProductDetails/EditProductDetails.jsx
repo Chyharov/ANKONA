@@ -1,21 +1,21 @@
 import { useState, useCallback } from 'react';
 import Header from 'components/Header/Header';
-import SectionEditGoods from 'components/SectionEditGoods/SectionEditGoods';
+import ProductDetails from 'components/ProductDetails/ProductDetails';
 import Footer from 'components/Footer/Footer';
 import translations from 'components/LanguageSelect/translations';
 
-const EditProductDetailsPage = () => {
+const ProductDetailsPage = () => {
   const [language, setLanguage] = useState('ua');
 
   const handleLanguageChange = useCallback(
     langCode => {
       if (langCode !== language) {
         setLanguage(langCode);
+        
       }
     },
     [language]
   );
-
   const t = translations.navlink[language];
   const navItems = [
     {
@@ -25,23 +25,21 @@ const EditProductDetailsPage = () => {
       delay: 0.05,
     },
   ];
-
   return (
     <>
       <Header
         navSearchStyle={{ display: 'none' }}
-        languageSelectStyle={{ display: 'none' }}
         style={{ width: '130px' }}
         language={language}
         onLanguageChange={handleLanguageChange}
         navItems={navItems}
       />
       <main>
-        <SectionEditGoods language={language} />
+        <ProductDetails language={language} />
       </main>
       <Footer language={language} />
     </>
   );
 };
 
-export default EditProductDetailsPage;
+export default ProductDetailsPage;

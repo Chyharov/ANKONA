@@ -1,0 +1,507 @@
+@import '../../sass/utils/mixin';
+
+.sectionGoods {
+    padding-top: 80px;
+    padding-bottom: 64px;
+    background-color: var(--whiteBG);
+
+    @include mq(tab) {
+        padding-top: 100px;
+        padding-bottom: 32px;
+    }
+
+    @include mq(desk) {
+        padding-top: 144px;
+        padding-bottom: 40px;
+        background-color: var(--whiteBG);
+    }
+}
+
+.sectionGoodsTitle {
+    font-family: 'Montserrat SemiBold';
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: start;
+    color: var(--richSoilBrown);
+    padding: 8px;
+    margin-bottom: 8px;
+
+    @include mq(desk) {
+        font-size: 48px;
+        line-height: 1.17;
+        margin-bottom: 4px;
+    }
+}
+
+.sectionGoodsBorder {
+    border-bottom: 1px solid var(--copperYellow);
+    margin-left: -16px;
+    margin-bottom: 16px;
+
+    @include mq(tab) {
+        margin-left: -60px;
+    }
+
+    @include mq(desk) {
+        margin-left: -80px;
+        width: 1040px;
+        margin-bottom: 40px;
+    }
+}
+
+.sectionGoodsCategoryBtn,
+.sectionGoodsManufacturesBtn {
+    font-family: 'Montserrat Bold';
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--eggShellWhite);
+    background-color: var(--richSoilBrown);
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-bottom: 8px;
+    min-height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: start;
+
+    @include mq(tab) {
+        width: 61.73%;
+        margin: 0 auto 8px auto;
+        min-height: 64px;
+        padding: 12px 8px;
+    }
+
+    @include mq(desk) {
+        display: none;
+    }
+}
+
+.sectionGoodsManufacturesBtn {
+    @include mq(tab) {
+        margin-bottom: 16px;
+    }
+}
+
+.toggleBtnImg {
+    width: 40px;
+    height: 40px;
+}
+
+.sectionGoodsCategoryList {
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-bottom: 16px;
+
+    @include mq(tab) {
+        width: 58.65%;
+        margin: 0 auto 16px auto;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    @include mq(desk) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.sectionGoodsCategoryList__item {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background-color: var(--brownBG);
+    box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
+    margin-bottom: 4px;
+    min-height: 48px;
+    width: 100%;
+
+    @include mq(tab) {
+        min-height: 64px;
+        padding: 16px 15px;
+    }
+
+    @include mq(desk) {
+        width: 150px;
+        height: 150px;
+        padding: 15px 5px 22px 5px;
+        margin-bottom: 0px;
+    }
+}
+
+.sectionGoodsCategoryList__item:last-child {
+    margin-bottom: 0px;
+}
+
+.sectionGoodsCategoryList__itemName,
+.sectionGoodsCategoryList__itemNameCategoryList {
+    font-family: 'Montserrat Regular';
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--eggShellWhite);
+    width: 100%;
+}
+
+.sectionGoodsCategoryList__itemName {
+    @include mq(desk) {
+        font-family: 'Montserrat Bold';
+        text-align: center;
+    }
+}
+
+.sectionGoodsCategoryList__itemNameCategoryList {
+    @include mq(desk) {
+        font-family: 'Montserrat Bold';
+        text-align: center;
+    }
+}
+
+.findCountContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    @include mq(desk) {
+        margin-bottom: 40px;
+    }
+}
+
+.findTitle {
+    font-family: 'Montserrat Regular';
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--grayColor);
+    padding: 8px;
+
+    @include mq(desk) {
+        font-family: 'Montserrat Medium';
+        font-size: 24px;
+        line-height: 1.33;
+    }
+}
+
+.borderforGoodsCategoryList {
+    border-bottom: 1px solid var(--grayColor);
+    margin-bottom: 16px;
+}
+
+.findNumerCount {
+    font-family: 'Montserrat Bold';
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--copperYellow);
+    padding: 8px;
+
+    @include mq(desk) {
+        font-family: 'Montserrat Medium';
+        font-size: 24px;
+        line-height: 1.33;
+    }
+}
+
+.findNumerContainer {
+    display: flex;
+    align-items: center;
+}
+
+.productList {
+    padding-top: 32px;
+
+    @include mq(tab) {
+        padding-bottom: 24px;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        justify-items: center;
+        gap: 24px;
+    }
+
+    @include mq(desk) {
+        padding-top: 40px;
+        padding-bottom: 24px;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        justify-items: center;
+        gap: 16px;
+    }
+}
+
+.productListItemTitle {
+    font-family: 'Montserrat Bold';
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--richSoilBrown);
+}
+
+.productListItemCategoryNone {
+    display: none;
+}
+
+.productListItemDescription {
+    font-family: 'Montserrat Regular';
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--richSoilBrown);
+    margin-bottom: 4px;
+
+    @include mq(desk) {
+        margin-bottom: 0px;
+    }
+}
+
+.productListItemManufacturer {
+    font-family: 'Montserrat Regular';
+    font-size: 14px;
+    line-height: 1.44;
+    color: var(--richSoilBrown);
+    margin-bottom: 4px;
+
+    @include mq(desk) {
+        margin-bottom: 12px;
+    }
+}
+
+.productCard {
+    @include mq(tab) {
+        padding: 8px 12px;
+    }
+}
+
+.productListItemImg {
+    display: none;
+
+    @include mq(tab) {
+        display: block;
+        width: 308px;
+        height: 260px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+}
+
+.findDescription {
+    font-family: 'Montserrat Regular';
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--richSoilBrown);
+    padding: 8px 8px 8px 0px;
+
+    @include mq(desk) {
+        font-family: 'Montserrat Medium';
+        font-size: 24px;
+        line-height: 1.33;
+    }
+}
+
+.productListItem {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    background-color: var(--eggShellWhite);
+    flex-direction: column;
+    padding: 4px 8px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
+    width: 100%;
+    min-height: 136px;
+
+    @include mq(tab) {
+        width: 306px;
+        justify-content: flex-start;
+        margin-bottom: 0px;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0px;
+        border-radius: 4px;
+        position: relative;
+    }
+}
+
+.selectedCategory,
+.selectedCategoryText {
+    color: var(--richSoilBrown) !important;
+    background-color: var(--copperYellow);
+    font-family: 'Montserrat Bold';
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.sectionGoodsCategoryList__itemImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 32px;
+    margin-right: 4px;
+
+    @include mq(desk) {
+        width: 76px;
+        height: 56px;
+        margin-right: 0px;
+    }
+}
+
+.categoryIcon {
+    color: var(--brownBG);
+
+    @include mq(desk) {
+        width: 100%;
+    }
+}
+
+.selectedIcon,
+.iconManufacturer {
+    filter: brightness(0) invert(0);
+}
+
+.noResults {
+    font-family: 'Montserrat Bold';
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--richSoilBrown);
+    text-align: center;
+}
+
+.customCheckbox,
+.customCheckboxCategoryList {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+
+    .checkmark,
+    .checkmarkCategoryList {
+        width: 21px;
+        height: 18px;
+        border-radius: 2px;
+        border: 2px solid var(--eggShellWhite);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        background-color: var(--grayColor);
+    }
+
+    .checkmark {
+        @include mq(desk) {
+            margin-left: 10px;
+            width: 18px;
+            margin-right: auto;
+            margin-bottom: 6px;
+        }
+    }
+
+    .checkmarkCategoryList {
+        @include mq(desk) {
+            width: 18px;
+            left: 10px;
+            top: 0px;
+            position: absolute;
+        }
+    }
+
+    .checkIcon {
+        width: 12px;
+        height: 9.4px;
+    }
+
+    input:checked+.checkmark,
+    input:checked+.checkmarkCategoryList {
+        background-color: var(--richSoilBrown);
+        border-color: var(--richSoilBrown);
+        border: none;
+    }
+}
+
+.customCheckboxCategoryList {
+    @include mq(desk) {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.customCheckbox {
+    @include mq(desk) {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.selectedCategory {
+    background-color: var(--copperYellow) !important;
+}
+
+.sectionGoodsCategoryList__itemNameSpan {
+    font-family: 'Montserrat Regular';
+    font-size: 14px;
+    line-height: 1.43;
+}
+
+.iconManufacturerContainerBorder {
+    border-right: 1px solid var(--copperYellow);
+    margin-right: 4px;
+}
+
+.iconManufacturerContainerBorder:last-child {
+    margin-right: 0px;
+}
+
+.iconManufacturerContainer {
+    display: flex;
+    align-items: center;
+
+    @include mq(tab) {
+        width: 100%;
+        height: 44px;
+        position: absolute;
+        top: 216px;
+        background-color: var(--eggShellWhite);
+        opacity: 80%;
+    }
+}
+
+.centeredText {
+    text-align: center;
+    padding-right: 34px;
+
+    @include mq(desk) {
+        padding-right: 0px;
+        width: 105px;
+        margin-bottom: 29px;
+    }
+}
+
+.titleFilterbyCategorie,
+.titleFilterbyVendor {
+    display: none;
+
+    @include mq(desk) {
+        display: block;
+        font-family: 'Montserrat Medium';
+        font-size: 24px;
+        line-height: 1.34;
+        color: var(--richSoilBrown);
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+}
