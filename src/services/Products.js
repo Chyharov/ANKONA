@@ -1758,7 +1758,7 @@ export const products = [
       en: 'VILOFOSS',
     },
     description: {
-      ua: '10% ядро для кормів телятам',
+      ua: 'Престартер у вигляді мюсли',
       en: 'Pre-starter in the form of muesli',
     },
     descriptionText: {
@@ -1792,7 +1792,7 @@ export const products = [
           en: '',
         },
         items: {
-          ua: 'свіжий щодня, з 2-го дня життя для безперешкодного споживання',
+          ua: ['свіжий щодня, з 2-го дня життя для безперешкодного споживання'],
           en: '',
         },
       },
@@ -1814,7 +1814,7 @@ export const products = [
           en: '',
         },
         items: {
-          ua: 'пропонуйте також свіжу воду!',
+          ua: ['пропонуйте також свіжу воду!'],
           en: '',
         },
       },
@@ -1824,7 +1824,7 @@ export const products = [
           en: '',
         },
         items: {
-          ua: 'мішок 20 кг',
+          ua: ['мішок 20 кг'],
           en: '',
         },
       },
