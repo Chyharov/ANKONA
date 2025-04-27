@@ -1697,7 +1697,7 @@ export const products = [
       en: 'Energy liquid supplement',
     },
     descriptionText: {
-      ua: `Це чиста рослинна жирна кислота, вироблена шляхом фракціонування з харчової рафінованої пальмової олії.`,
+      ua: '',
       en: '',
     },
     category: {
