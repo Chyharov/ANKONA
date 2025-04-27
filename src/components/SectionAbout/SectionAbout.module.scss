@@ -141,6 +141,10 @@
   border-radius: 4px;
   box-shadow: 2px 2px 15px 4px rgba(107, 103, 102, 0.15);
 
+  @include mq(tab) {
+    padding: 22px 54px;
+  }
+
   @include mq(desk) {
     width: 400px;
     height: 528px;
@@ -193,6 +197,7 @@
 
   @include mq(tab) {
     width: 100%;
+    max-height: 528px;
   }
 
   @include mq(desk) {

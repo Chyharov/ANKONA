@@ -2239,8 +2239,8 @@ export const products = [
       en: 'ProbioBona',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Рідкий пероральний пробіотик в шприці',
@@ -2583,8 +2583,8 @@ export const products = [
       en: 'FUTTERGUT™',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Кормові концентрати та премікси для свиней, птиці, ВРХ',
@@ -2677,8 +2677,8 @@ export const products = [
       en: 'Pre-starter for calves',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Престартер для телят. Гранула',
@@ -2729,8 +2729,8 @@ export const products = [
       en: 'PVMS (universal)',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'БМВД. Гранула',
@@ -2803,8 +2803,8 @@ export const products = [
       en: 'PVMS for cows',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Для лактуючих корів, 4 - 5 кг. Розсипна',
@@ -2866,8 +2866,8 @@ export const products = [
       en: 'Pellets for cows',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Годівля на роботах, 28% протеїн',
@@ -2927,8 +2927,8 @@ export const products = [
       en: 'Premix for dairy cows 1%',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Вітаміно-мінеральний Премікс для дійних корів П 60-1_Л',
@@ -3004,8 +3004,8 @@ export const products = [
       en: 'Futtergut-Levusell for cattle',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Добавка з живими дріжджами',
@@ -3083,8 +3083,8 @@ export const products = [
       en: 'Premix for dairy cows 3%',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Вітаміно-мінеральний Премікс',
@@ -3133,8 +3133,8 @@ export const products = [
       en: 'Premix for dry cows',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Вітаміно-мінеральний Премікс для сухостійних корів.',
@@ -3184,8 +3184,8 @@ export const products = [
       en: 'AnkonaF/buffer/150',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Буферна добавка',
@@ -3255,8 +3255,8 @@ export const products = [
       en: 'Futtergut Hy-М',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Регулює кальцій-фосфорний метаболізм + іммунітет',
@@ -4133,8 +4133,8 @@ export const products = [
       en: 'Hy-M for pigs',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
@@ -4209,8 +4209,8 @@ export const products = [
       en: 'Hy-M for the parent flock of poultry',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
@@ -4287,8 +4287,8 @@ export const products = [
       en: 'Hy-M for broilers',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Підвищення рівня вітаміну D3 у сироватці крові',
@@ -4365,8 +4365,8 @@ export const products = [
       en: 'Hy-M for the laying hen',
     },
     manufacturer: {
-      ua: 'АНКОНА нова стратегія годівлі',
-      en: 'АНКОНА нова стратегія годівлі',
+      ua: 'ANKONA',
+      en: 'ANKONA',
     },
     description: {
       ua: 'Підвищення рівня вітаміну D3 у сироватці крові',

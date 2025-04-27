@@ -117,7 +117,7 @@ const translations = {
         'Підходить для всіх',
       ],
       manufacturers: [
-        'АНКОНА нова стратегія годівлі',
+        'ANKONA',
         'AGRO-BIZEK',
         'Ahrhoff FUTTERGUT',
         'ETOS',
@@ -145,7 +145,7 @@ const translations = {
         'Suitable for all',
       ],
       manufacturers: [
-        'АНКОНА нова стратегія годівлі',
+        'ANKONA',
         'AGRO-BIZEK',
         'Ahrhoff FUTTERGUT',
         'ETOS',

@@ -6,23 +6,33 @@ import s from './SectionAbout.module.scss';
 
 const SectionAbout = ({ language }) => {
   const t = translations.about[language];
-  const [isBlockVisible, setIsBlockVisible] = useState(false);
-  const [imageSrc, setImageSrc] = useState(
-    window.innerWidth >= 768 ? aboutListImgDesk : aboutListImg
-  );
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
+
+  const [isLargeScreen, setIsLargeScreen] = useState(window.matchMedia('(min-width: 1440px)').matches);
+  const [isTabletOrLarger, setIsTabletOrLarger] = useState(window.matchMedia('(min-width: 768px)').matches);
+  const [isBlockVisible, setIsBlockVisible] = useState(window.matchMedia('(min-width: 1440px)').matches);
+  const [imageSrc, setImageSrc] = useState(window.matchMedia('(min-width: 1440px)').matches ? aboutListImgDesk : aboutListImg);
 
   useEffect(() => {
-    const handleResize = () => {
-      const isLargeScreen = window.innerWidth >= 768;
-      setIsDesktop(isLargeScreen);
-      setImageSrc(isLargeScreen ? aboutListImgDesk : aboutListImg);
-      setIsBlockVisible(isLargeScreen);
+    const largeScreenQuery = window.matchMedia('(min-width: 1440px)');
+    const tabletQuery = window.matchMedia('(min-width: 768px)');
+
+    const handleLargeScreenChange = (e) => {
+      setIsLargeScreen(e.matches);
+      setImageSrc(e.matches ? aboutListImgDesk : aboutListImg);
+      setIsBlockVisible(e.matches);
     };
 
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    return () => window.removeEventListener('resize', handleResize);
+    const handleTabletChange = (e) => {
+      setIsTabletOrLarger(e.matches);
+    };
+
+    largeScreenQuery.addEventListener('change', handleLargeScreenChange);
+    tabletQuery.addEventListener('change', handleTabletChange);
+
+    return () => {
+      largeScreenQuery.removeEventListener('change', handleLargeScreenChange);
+      tabletQuery.removeEventListener('change', handleTabletChange);
+    };
   }, []);
 
   const toggleBlock = () => {
@@ -79,14 +89,14 @@ const SectionAbout = ({ language }) => {
           </li>
         </ul>
 
-        {!isDesktop && !isBlockVisible && (
+        {!isTabletOrLarger && !isBlockVisible && (
           <button className={s.sectionAboutBtn} onClick={toggleBlock}>
             {t.button}
           </button>
         )}
 
-        {(isDesktop || isBlockVisible) && (
-          <div className={s.sectionAboutBlockWhyUs}>
+        {(isTabletOrLarger || isBlockVisible) && (
+          <div className={s.sectionAboutBlockWhyUs} isLargeScreen={isLargeScreen}>
             <h3 className={s.aboutBlockWhyUsTitle}>{t.blockWhyUsTitle}</h3>
             <ul className={s.aboutBlockWhyUsListLeft}>
               <li className={s.aboutBlockWhyUsList__Item}>
@@ -140,7 +150,7 @@ const SectionAbout = ({ language }) => {
                 </p>
               </li>
             </ul>
-            {!isDesktop && (
+            {!isTabletOrLarger && (
               <button
                 className={s.aboutBlockWhyUsBtnClose}
                 onClick={toggleBlock}
