@@ -60,8 +60,8 @@ const Pagination = ({ currentPage, totalPages, onPageChange, onLoadMore, hasMore
   const renderPaginationButtonsDesktop = () => {
   const pages = [];
 
-  if (totalPages <= 4) {
-    // Якщо сторінок <=4 — показати всі
+    if (totalPages <= 4) {
+    
     for (let i = 1; i <= totalPages; i++) {
       pages.push(i);
     }
@@ -83,7 +83,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange, onLoadMore, hasMore
       pages.push('...');
     }
 
-    // Обов'язково додати передостанню і останню
     pages.push(totalPages - 1);
     pages.push(totalPages);
   }
