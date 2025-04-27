@@ -24,6 +24,8 @@ const categoryIcons = {
   Birds: iconHen,
   Свині: iconPig,
   Pigs: iconPig,
+  'Підходить для всіх': [iconCow, iconCalf, iconGoat, iconHorse, iconHen, iconPig],
+  'Suitable for all': [iconCow, iconCalf, iconGoat, iconHorse, iconHen, iconPig],
 };
 
 const allIcons = [...new Set(Object.values(categoryIcons))];
@@ -226,17 +228,20 @@ const ProductDetails = ({ language }) => {
 
                 <h3 className={s.categoryGoods}>{t.categoryGoods}</h3>
                 <ul className={s.iconManufacturerList}>
-                  {categoryIconsList.length > 0 &&
-                    categoryIconsList.map((icon, index) => (
-                      <li key={index} className={s.iconManufacturerList__item}>
-                        <img
-                          className={s.iconManufacturer}
-                          src={icon}
-                          alt="category icon"
-                        />
-                      </li>
-                    ))}
-                </ul>
+  {(Array.isArray(categoryIcons[product.category[language]])
+    ? categoryIcons[product.category[language]] // Якщо масив іконок (для всіх)
+    : [categoryIcons[product.category[language]]] // Якщо одна іконка
+  ).map((icon, index) => (
+    <li key={index} className={s.iconManufacturerList__item}>
+      <img
+        className={s.iconManufacturer}
+        src={icon}
+        alt="category icon"
+      />
+    </li>
+  ))}
+</ul>
+                
               </div>
             </div>
 
