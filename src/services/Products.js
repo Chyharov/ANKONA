@@ -3421,8 +3421,8 @@ export const products = [
   {
     id: 49,
     name: {
-      ua: 'NutriBos VN 75 і COMPLETE',
-      en: 'NutriBos VN 75 і COMPLETE',
+      ua: ['NutriBos VN 75 NutriBos COMPLETE'],
+      en: 'NutriBos VN 75 NutriBos COMPLETE',
     },
     manufacturer: {
       ua: 'NUTRIBOS',

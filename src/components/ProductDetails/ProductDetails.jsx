@@ -24,8 +24,22 @@ const categoryIcons = {
   Birds: iconHen,
   Свині: iconPig,
   Pigs: iconPig,
-  'Підходить для всіх': [iconCow, iconCalf, iconGoat, iconHorse, iconHen, iconPig],
-  'Suitable for all': [iconCow, iconCalf, iconGoat, iconHorse, iconHen, iconPig],
+  'Підходить для всіх': [
+    iconCow,
+    iconCalf,
+    iconGoat,
+    iconHorse,
+    iconHen,
+    iconPig,
+  ],
+  'Suitable for all': [
+    iconCow,
+    iconCalf,
+    iconGoat,
+    iconHorse,
+    iconHen,
+    iconPig,
+  ],
 };
 
 const ProductDetails = ({ language }) => {
@@ -55,22 +69,24 @@ const ProductDetails = ({ language }) => {
     return <p className={s.notFound}>Товар не знайдено</p>;
   }
 
-const iconsToRender = Array.isArray(product.category[language])
-  ? product.category[language].flatMap(cat =>
-      categoryIcons[cat]
-        ? (Array.isArray(categoryIcons[cat]) ? categoryIcons[cat] : [categoryIcons[cat]])
-        : []
-    )
-  : categoryIcons[product.category[language]]
-    ? (Array.isArray(categoryIcons[product.category[language]])
-        ? categoryIcons[product.category[language]]
-        : [categoryIcons[product.category[language]]]
+  const iconsToRender = Array.isArray(product.category[language])
+    ? product.category[language].flatMap(cat =>
+        categoryIcons[cat]
+          ? Array.isArray(categoryIcons[cat])
+            ? categoryIcons[cat]
+            : [categoryIcons[cat]]
+          : []
       )
+    : categoryIcons[product.category[language]]
+    ? Array.isArray(categoryIcons[product.category[language]])
+      ? categoryIcons[product.category[language]]
+      : [categoryIcons[product.category[language]]]
     : [];
 
-const finalIcons = iconsToRender.length > 0
-  ? iconsToRender
-  : [iconCow, iconCalf, iconGoat, iconHorse, iconHen, iconPig];
+  const finalIcons =
+    iconsToRender.length > 0
+      ? iconsToRender
+      : [iconCow, iconCalf, iconGoat, iconHorse, iconHen, iconPig];
 
   return (
     <>
@@ -94,17 +110,17 @@ const finalIcons = iconsToRender.length > 0
               />
 
               <h3 className={s.categoryGoods}>{t.categoryGoods}</h3>
-             <ul className={s.iconManufacturerList}>
-  {finalIcons.map((icon, index) => (
-    <li key={index} className={s.iconManufacturerList__item}>
-      <img
-        className={s.iconManufacturer}
-        src={icon}
-        alt="category icon"
-      />
-    </li>
-  ))}
-</ul>
+              <ul className={s.iconManufacturerList}>
+                {finalIcons.map((icon, index) => (
+                  <li key={index} className={s.iconManufacturerList__item}>
+                    <img
+                      className={s.iconManufacturer}
+                      src={icon}
+                      alt="category icon"
+                    />
+                  </li>
+                ))}
+              </ul>
               <ul className={s.categoryList}>
                 {Array.isArray(product.category[language]) ? (
                   product.category[language].map((cat, index) => (
@@ -227,17 +243,16 @@ const finalIcons = iconsToRender.length > 0
 
                 <h3 className={s.categoryGoods}>{t.categoryGoods}</h3>
                 <ul className={s.iconManufacturerList}>
-  {finalIcons.map((icon, index) => (
-    <li key={index} className={s.iconManufacturerList__item}>
-      <img
-        className={s.iconManufacturer}
-        src={icon}
-        alt="category icon"
-      />
-    </li>
-  ))}
-</ul>
-                
+                  {finalIcons.map((icon, index) => (
+                    <li key={index} className={s.iconManufacturerList__item}>
+                      <img
+                        className={s.iconManufacturer}
+                        src={icon}
+                        alt="category icon"
+                      />
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
