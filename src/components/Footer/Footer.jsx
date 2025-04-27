@@ -9,7 +9,7 @@ import logoFooter from 'images/footer/logoFooter.svg';
 import translations from 'components/LanguageSelect/translations';
 import s from './Footer.module.scss';
 
-const Footer = ({ language, ...props }) => {
+const Footer = ({ language, navItems = [], ...props }) => {
   const t = translations.navlink[language];
   const animateFrom = { opacity: 0, y: -40 };
   const animateTo = { opacity: 1, y: 0 };
@@ -88,87 +88,49 @@ const Footer = ({ language, ...props }) => {
 
           <nav className={s.footerNavBarList}>
             <ul className={s.footerBarList}>
-              <Link
-                onClick={() => props.isMobile && props.closeMobileMenu()}
-                className={s.footerBarList__item}
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
+              {navItems.map((item, index) => {
+            const content = (
+              <li
+                key={index}
+                initial={animateFrom}
+                animate={animateTo}
+                transition={{ delay: item.delay || 0 }}
+                 className={s.footerBarList__itemDescription}
               >
-                <li
-                  initial={animateFrom}
-                  animate={animateTo}
-                  transition={{ delay: 0.05 }}
-                  className={s.footerBarList__itemDescription}
-                >
-                  {t.about}
-                </li>
-              </Link>
-              <Link
-                onClick={() => props.isMobile && props.closeMobileMenu()}
-                className={s.footerBarList__item}
-                to="goods"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <li
-                  initial={animateFrom}
-                  animate={animateTo}
-                  transition={{ delay: 0.05 }}
-                  className={s.footerBarList__itemDescription}
-                >
-                  {t.goods}
-                </li>
-              </Link>
-              <Link
-                onClick={() => props.isMobile && props.closeMobileMenu()}
-                className={s.footerBarList__item}
-                to="tradeMarks"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <li
-                  initial={animateFrom}
-                  animate={animateTo}
-                  transition={{ delay: 0.05 }}
-                  className={s.footerBarList__itemDescription}
-                >
-                  {t.tradeMarks}
-                </li>
-              </Link>
-              <Link
-                onClick={() => props.isMobile && props.closeMobileMenu()}
-                className={s.footerBarList__item}
-                to="team"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                <li
-                  initial={animateFrom}
-                  animate={animateTo}
-                  transition={{ delay: 0.05 }}
-                  className={s.footerBarList__itemDescription}
-                >
-                  {t.team}
-                </li>
-              </Link>
-              <li className={s.footerBarList__item}>
-                <RouterLink
-                  onClick={() => props.isMobile && props.closeMobileMenu()}
-                  className={s.footerBarList__itemDescription}
-                  to="/blog"
-                >
-                 {t.blog}
-                </RouterLink>
+                {item.label}
               </li>
+            );
+
+          
+
+            return item.type === 'scroll' ? (
+              <Link
+                key={index}
+                className={s.footerBarList__item}
+                to={item.to}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                {content}
+              </Link>
+            ) : (
+              <RouterLink
+                key={index}
+                className={s.menu__list_link}
+                to={item.to}
+              >
+                {content}
+              </RouterLink>
+            );
+          })}
+
+
+
+
+
+             
             </ul>
           </nav>
         </div>

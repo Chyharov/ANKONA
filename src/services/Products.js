@@ -58,7 +58,7 @@ import imageToPig3 from 'images/goods/imageToPig3.jpg';
 import imageToDRH from 'images/goods/imageToDRH.jpg';
 import imageToVRHM2 from 'images/goods/imageToVRHM2.jpg';
 
-export const products = [
+export const defaultProducts  = [
   {
     id: 1,
     name: {
@@ -4658,6 +4658,5 @@ export const products = [
   },
 ];
 
-export function addNewEvent(newEvent) {
-  products.push(newEvent);
-}
+const storedProducts = JSON.parse(localStorage.getItem('products'));
+export const products = storedProducts || defaultProducts;

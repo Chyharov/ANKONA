@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import Header from 'components/Header/Header';
-import ProductDetails from 'components/ProductDetails/ProductDetails';
+import ProductEditor from 'components/ProductEditor/ProductEditor';
 import Footer from 'components/Footer/Footer';
 import translations from 'components/LanguageSelect/translations';
 
@@ -24,20 +24,29 @@ const ProductDetailsPage = () => {
       label: t.main,
       delay: 0.05,
     },
+    {
+      type: 'route',
+      to: '/editproductdetailspage',
+      label: t.list,
+      delay: 0.05,
+    },
   ];
+
+  
   return (
     <>
       <Header
         navSearchStyle={{ display: 'none' }}
+        languageSelectStyle={{ display: 'none' }}
         style={{ width: '130px' }}
         language={language}
         onLanguageChange={handleLanguageChange}
         navItems={navItems}
       />
       <main>
-        <ProductDetails language={language} />
+        <ProductEditor language={language} />
       </main>
-      <Footer language={language} />
+      <Footer language={language} navItems={navItems}/>
     </>
   );
 };
