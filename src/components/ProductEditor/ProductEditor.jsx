@@ -49,7 +49,7 @@ const ProductEditor = ({ language }) => {
     }));
   };
 
-  const addItemToSection = (sectionIndex) => {
+  const addItemToSection = sectionIndex => {
     const updatedSections = [...product.sections];
     updatedSections[sectionIndex].items[language].push('');
     setProduct(prev => ({ ...prev, sections: updatedSections }));
@@ -62,75 +62,92 @@ const ProductEditor = ({ language }) => {
 
     setAllProducts(updatedProducts);
     localStorage.setItem('products', JSON.stringify(updatedProducts));
-    
+
     alert('Зміни збережено!');
     navigate(-1);
   };
 
   return (
     <section className={s.sectionProductEditor}>
-      <div className='container'>
+      <div className="container">
+        <h2>Редагування продукту</h2>
 
-      <h2>Редагування продукту</h2>
+        <label>
+          Назва:
+          <input
+            type="text"
+            value={product.name[language] || ''}
+            onChange={e => handleChange('name', e.target.value)}
+            style={{ display: 'block', width: '100%', marginBottom: '10px' }}
+          />
+        </label>
 
-      <label>
-        Назва:
-        <input
-          type="text"
-          value={product.name[language] || ''}
-          onChange={e => handleChange('name', e.target.value)}
-          style={{ display: 'block', width: '100%', marginBottom: '10px' }}
-        />
-      </label>
+        <label>
+          Опис:
+          <textarea
+            value={product.description[language] || ''}
+            onChange={e => handleChange('description', e.target.value)}
+            rows={4}
+            style={{ display: 'block', width: '100%', marginBottom: '10px' }}
+          />
+        </label>
 
-      <label>
-        Опис:
-        <textarea
-          value={product.description[language] || ''}
-          onChange={e => handleChange('description', e.target.value)}
-          rows={4}
-          style={{ display: 'block', width: '100%', marginBottom: '10px' }}
-        />
-      </label>
+        <h3>Секції</h3>
+        {product.sections.map((section, sectionIndex) => (
+          <div
+            key={sectionIndex}
+            style={{
+              border: '1px solid #ccc',
+              padding: '10px',
+              marginBottom: '10px',
+            }}
+          >
+            <label>
+              Назва секції:
+              <input
+                type="text"
+                value={section.title[language] || ''}
+                onChange={e =>
+                  handleSectionChange(sectionIndex, 'title', e.target.value)
+                }
+                style={{ display: 'block', width: '100%', marginBottom: '8px' }}
+              />
+            </label>
 
-      <h3>Секції</h3>
-      {product.sections.map((section, sectionIndex) => (
-        <div key={sectionIndex} style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '10px' }}>
-          <label>
-            Назва секції:
-            <input
-              type="text"
-              value={section.title[language] || ''}
-              onChange={e => handleSectionChange(sectionIndex, 'title', e.target.value)}
-              style={{ display: 'block', width: '100%', marginBottom: '8px' }}
-            />
-          </label>
+            <h4>Пункти</h4>
+            {section.items[language]?.map((item, itemIndex) => (
+              <input
+                key={itemIndex}
+                type="text"
+                value={item}
+                onChange={e =>
+                  handleSectionItemChange(
+                    sectionIndex,
+                    itemIndex,
+                    e.target.value
+                  )
+                }
+                style={{ display: 'block', width: '100%', marginBottom: '6px' }}
+              />
+            ))}
 
-          <h4>Пункти</h4>
-          {section.items[language]?.map((item, itemIndex) => (
-            <input
-              key={itemIndex}
-              type="text"
-              value={item}
-              onChange={e => handleSectionItemChange(sectionIndex, itemIndex, e.target.value)}
-              style={{ display: 'block', width: '100%', marginBottom: '6px' }}
-            />
-          ))}
+            <button
+              onClick={() => addItemToSection(sectionIndex)}
+              style={{ marginTop: '5px' }}
+            >
+              Додати пункт
+            </button>
+          </div>
+        ))}
 
-          <button onClick={() => addItemToSection(sectionIndex)} style={{ marginTop: '5px' }}>
-            Додати пункт
-          </button>
-        </div>
-      ))}
-
-      <button onClick={addSection} style={{ marginBottom: '20px' }}>
-        Додати секцію
-      </button>
-      <br />
-      <button onClick={saveChanges} style={{ padding: '10px 20px' }}>
-        Зберегти зміни
+        <button onClick={addSection} style={{ marginBottom: '20px' }}>
+          Додати секцію
         </button>
-              </div>
+        <br />
+        <button onClick={saveChanges} style={{ padding: '10px 20px' }}>
+          Зберегти зміни
+        </button>
+      </div>
     </section>
   );
 };
