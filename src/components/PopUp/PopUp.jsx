@@ -39,7 +39,7 @@ const PopUp = ({ isOpen, onClose, isMobile, closeMobileMenu, language }) => {
 
     emailjs
       .send(
-        'service_ieq508t',
+        'service_j2j72nq',
         'template_s8hk2um',
         {
           name,
