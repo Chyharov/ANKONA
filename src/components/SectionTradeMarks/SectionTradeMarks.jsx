@@ -1,9 +1,9 @@
 import ankonaLogo from 'images/tradeMarks/Ankona.svg';
 import ahrhoffLogo from 'images/tradeMarks/ahrhoff.svg';
 import vilifossLogo from 'images/tradeMarks/vilifoss.svg';
-import etosLogo from 'images/tradeMarks/etos.svg';
+import aditechLogo from 'images/tradeMarks/aditech.avif';
 import agrobizekLogo from 'images/tradeMarks/agro-bizek.svg';
-import jrsLogo from 'images/tradeMarks/jrs.svg';
+import jrsLogo from 'images/tradeMarks/jrs.svg';  
 import translations from 'components/LanguageSelect/translations';
 import s from './SectionTradeMarks.module.scss';
 
@@ -41,9 +41,9 @@ const SectionTradeMarks = ({language}) => {
           <div className={s.tradeMarkList__itemContainer}>
           <li className={s.tradeMarkList__item}>
             <img
-              className={s.tradeMarkLogoetosLogo}
-              src={etosLogo}
-              alt="etosLogo"
+              className={s.tradeMarkLogoaditechLogo}
+              src={aditechLogo}
+              alt="aditechLogo"
             />
           </li>
           <li className={s.tradeMarkList__item}>
