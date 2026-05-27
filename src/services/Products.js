@@ -3983,8 +3983,8 @@ export const defaultProducts  = [
       en: 'Maxi-Cox Dry for poultry',
     },
     manufacturer: {
-      ua: 'ETOS',
-      en: 'ETOS',
+      ua: 'ADITECH',
+      en: 'ADITECH',
     },
     description: {
       ua: 'Модулятор мікробіому; Кокцидіостатик; Суміш органічних кислот',
@@ -4055,8 +4055,8 @@ export const defaultProducts  = [
       en: 'Maxi-Pi-Blok Dry - for pigs',
     },
     manufacturer: {
-      ua: 'ETOS',
-      en: 'ETOS',
+      ua: 'ADITECH',
+      en: 'ADITECH',
     },
     description: {
       ua: 'Модулятор мікробіому; Альтернатива антибіотику; Суміш органічних кислот',
@@ -4435,8 +4435,8 @@ export const defaultProducts  = [
       en: 'Multicide Forte',
     },
     manufacturer: {
-      ua: 'ETOS',
-      en: 'ETOS',
+      ua: 'ADITECH',
+      en: 'ADITECH',
     },
     description: {
       ua: 'Додаткова кормова суміш',
