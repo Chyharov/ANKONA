@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/ANKONA/static/css/main.10a98da9.css",
-    "main.js": "/ANKONA/static/js/main.32ed3d6e.js",
+    "main.js": "/ANKONA/static/js/main.d2ed2e02.js",
     "static/css/719.4bc35707.chunk.css": "/ANKONA/static/css/719.4bc35707.chunk.css",
-    "static/js/719.7fe35aa6.chunk.js": "/ANKONA/static/js/719.7fe35aa6.chunk.js",
+    "static/js/719.220645ca.chunk.js": "/ANKONA/static/js/719.220645ca.chunk.js",
     "static/css/313.0a5d3cd9.chunk.css": "/ANKONA/static/css/313.0a5d3cd9.chunk.css",
     "static/js/313.b947600c.chunk.js": "/ANKONA/static/js/313.b947600c.chunk.js",
     "static/css/543.4cd1db03.chunk.css": "/ANKONA/static/css/543.4cd1db03.chunk.css",
@@ -84,7 +84,6 @@
     "static/media/imageToChicken2.jpg": "/ANKONA/static/media/imageToChicken2.11dbc3e2b4f56f43482c.jpg",
     "static/media/soloshenkoAndriiDesktop.jpg": "/ANKONA/static/media/soloshenkoAndriiDesktop.62a5af4b4f545dba38dc.jpg",
     "static/media/imgProductDetailsId4.jpg": "/ANKONA/static/media/imgProductDetailsId4.45da2651ef883325f2b1.jpg",
-    "static/media/komarVolodymyrDesktop.jpg": "/ANKONA/static/media/komarVolodymyrDesktop.dfd990a9e5a779ffb0d6.jpg",
     "static/media/imgProductDetailsId24.jpg": "/ANKONA/static/media/imgProductDetailsId24.96b2f55089fa321b4114.jpg",
     "static/media/hodirevaNataliaDesktop.jpg": "/ANKONA/static/media/hodirevaNataliaDesktop.24be1e8cbacf4e1fad39.jpg",
     "static/media/imgProductDetailsId14.jpg": "/ANKONA/static/media/imgProductDetailsId14.182134e6428944bf720d.jpg",
@@ -95,7 +94,6 @@
     "static/media/hodirevSerhiyIsActive.jpg": "/ANKONA/static/media/hodirevSerhiyIsActive.6c28623cbde6c97d632f.jpg",
     "static/media/imgProductDetailsId35.jpg": "/ANKONA/static/media/imgProductDetailsId35.2517457d51396dad16e3.jpg",
     "static/media/imgProductDetailsId28.jpg": "/ANKONA/static/media/imgProductDetailsId28.8219a0c5b3d1a328a22c.jpg",
-    "static/media/komarVolodymyrIsActive.jpg": "/ANKONA/static/media/komarVolodymyrIsActive.e38cb803651e3646acdd.jpg",
     "static/media/yanenkoYanaIsActive.jpg": "/ANKONA/static/media/yanenkoYanaIsActive.ddf1a6c9259f40234b41.jpg",
     "static/media/soloshenkoAndriiIsActive.jpg": "/ANKONA/static/media/soloshenkoAndriiIsActive.b2a54a140b086fcbab97.jpg",
     "static/media/imgProductDetailsId15.jpg": "/ANKONA/static/media/imgProductDetailsId15.386f6914793100a756d2.jpg",
@@ -105,15 +103,16 @@
     "static/media/imgProductDetailsId34.jpg": "/ANKONA/static/media/imgProductDetailsId34.c63a0dc90c40607dc008.jpg",
     "static/media/horseHeroImage.jpg": "/ANKONA/static/media/horseHeroImage.6475d1fa3a43ddb543a6.jpg",
     "static/media/imgProductDetailsId9.jpg": "/ANKONA/static/media/imgProductDetailsId9.8112b11e8ff4cbaed41a.jpg",
+    "static/media/belyaevYuriiDesktop.jpg": "/ANKONA/static/media/belyaevYuriiDesktop.e9ec68a20ceb15dc3dca.jpg",
     "static/media/imgProductDetailsId63.jpg": "/ANKONA/static/media/imgProductDetailsId63.95dc0fb831816bf66c36.jpg",
     "static/media/imgProductDetailsId13.jpg": "/ANKONA/static/media/imgProductDetailsId13.d978a5d648df5d385f98.jpg",
     "static/media/vilifoss.svg": "/ANKONA/static/media/vilifoss.2d8dd43bc38314fc4f66f7eb350de1d9.svg",
     "static/media/polykovAndriy.jpg": "/ANKONA/static/media/polykovAndriy.d88e7056f1a52569961e.jpg",
     "static/media/ahrhoff.svg": "/ANKONA/static/media/ahrhoff.26975348e8e785193b85865fddbc98fd.svg",
     "static/media/hodirevSerhiy.jpg": "/ANKONA/static/media/hodirevSerhiy.0e365053dc34e1f3afd1.jpg",
+    "static/media/belyaevYuriiIsActive.jpg": "/ANKONA/static/media/belyaevYuriiIsActive.2baf84cef88c91edbdae.jpg",
     "static/media/yanenkoYana.jpg": "/ANKONA/static/media/yanenkoYana.ef2833f4d424d2938ce6.jpg",
     "static/media/hodirevaNatalia.jpg": "/ANKONA/static/media/hodirevaNatalia.5362fe84a82fe6841895.jpg",
-    "static/media/komarVolodymyr.jpg": "/ANKONA/static/media/komarVolodymyr.a4a0bb4561c2a9287352.jpg",
     "static/media/BackgroundHorseRightDesktop.png": "/ANKONA/static/media/BackgroundHorseRightDesktop.880493a8634f9049718c.png",
     "static/media/soloshenkoAndrii.jpg": "/ANKONA/static/media/soloshenkoAndrii.8ce7e40fa35fd2f520f3.jpg",
     "static/media/BackgroundHorseLeftDesktop.png": "/ANKONA/static/media/BackgroundHorseLeftDesktop.eebba22d6b17a039a118.png",
@@ -123,6 +122,7 @@
     "static/media/logoFooter.svg": "/ANKONA/static/media/logoFooter.b884909a2e103ff6c431188e00c708d1.svg",
     "static/media/BackgroundHorse.png": "/ANKONA/static/media/BackgroundHorse.cbb13a65d05e036dd765.png",
     "static/media/pict.jpg": "/ANKONA/static/media/pict.d45121cbc4dd96cd6816.jpg",
+    "static/media/belyaevYurii.jpg": "/ANKONA/static/media/belyaevYurii.1cfe3398ce94f81c3d66.jpg",
     "static/media/agro-bizek.svg": "/ANKONA/static/media/agro-bizek.0e2a3d9297a3dbb96559f06fbe6068dd.svg",
     "static/media/iconPig.svg": "/ANKONA/static/media/iconPig.537725057fbd3cdad259aaf61e5561c7.svg",
     "static/media/linkedinLogo.svg": "/ANKONA/static/media/linkedinLogo.9fea130932189f06626969cc8f2080ad.svg",
@@ -148,9 +148,9 @@
     "static/media/arrowRight.svg": "/ANKONA/static/media/arrowRight.fce0a78b4140db89e9423c6bb94b48af.svg",
     "static/media/iconCheckBox.svg": "/ANKONA/static/media/iconCheckBox.abc53d2cebf9b4be297cb6be968149bc.svg",
     "main.10a98da9.css.map": "/ANKONA/static/css/main.10a98da9.css.map",
-    "main.32ed3d6e.js.map": "/ANKONA/static/js/main.32ed3d6e.js.map",
+    "main.d2ed2e02.js.map": "/ANKONA/static/js/main.d2ed2e02.js.map",
     "719.4bc35707.chunk.css.map": "/ANKONA/static/css/719.4bc35707.chunk.css.map",
-    "719.7fe35aa6.chunk.js.map": "/ANKONA/static/js/719.7fe35aa6.chunk.js.map",
+    "719.220645ca.chunk.js.map": "/ANKONA/static/js/719.220645ca.chunk.js.map",
     "313.0a5d3cd9.chunk.css.map": "/ANKONA/static/css/313.0a5d3cd9.chunk.css.map",
     "313.b947600c.chunk.js.map": "/ANKONA/static/js/313.b947600c.chunk.js.map",
     "543.4cd1db03.chunk.css.map": "/ANKONA/static/css/543.4cd1db03.chunk.css.map",
@@ -171,6 +171,6 @@
   },
   "entrypoints": [
     "static/css/main.10a98da9.css",
-    "static/js/main.32ed3d6e.js"
+    "static/js/main.d2ed2e02.js"
   ]
 }
