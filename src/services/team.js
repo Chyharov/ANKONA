@@ -93,8 +93,8 @@ export const teamMembers = [
       en: 'Belyaev Yurii'
     },
     role: {
-      ua: 'Консультант напрямку кормових добавок для моногастричних.',
-      en: 'Feed Additives Consultant for Monogastric Animals.'
+      ua: 'Керівник напрямку кормових добавок для моногастричних.',
+      en: 'Head of Monogastric Feed Additives'
     },
     photo: belyaevYurii,
     activePhoto: belyaevYuriiIsActive,
