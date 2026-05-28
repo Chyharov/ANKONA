@@ -89,18 +89,18 @@ export const teamMembers = [
     id: 5,
     name:
     {
-      ua: 'Комар Володимир',
-      en: 'Komar Volodymyr'
+      ua: 'Беляєв Юрій',
+      en: 'Belyaev Yurii'
     },
     role: {
-      ua: 'Консультант напрямку свинарство',
-      en: 'Pig feeding consultant'
+      ua: 'Консультант напрямку кормових добавок для моногастричних.',
+      en: 'Feed Additives Consultant for Monogastric Animals.'
     },
     photo: komarVolodymyr,
     activePhoto: komarVolodymyrIsActive,
     photoDesktop: komarVolodymyrDesktop,
-    email: 'volodymyr.komar@ankona.com.ua',
-    phone: '+38 (095) 408 95 25',
+    email: 'Y.beliaiev@ankona.com.ua',
+    phone: '+38 (095) 143 11 51',
   },
   {
     id: 6,
