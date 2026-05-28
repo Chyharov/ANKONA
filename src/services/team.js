@@ -11,9 +11,9 @@ import hodirevaNataliaDesktop from 'images/team/hodirevaNataliaDesktop.jpg';
 import soloshenkoAndrii from 'images/team/soloshenkoAndrii.jpg';
 import soloshenkoAndriiIsActive from 'images/team/soloshenkoAndriiIsActive.jpg';
 import soloshenkoAndriiDesktop from 'images/team/soloshenkoAndriiDesktop.jpg';
-import komarVolodymyr from 'images/team/komarVolodymyr.jpg';
-import komarVolodymyrIsActive from 'images/team/komarVolodymyrIsActive.jpg';
-import komarVolodymyrDesktop from 'images/team/komarVolodymyrDesktop.jpg';
+import belyaevYurii from 'images/team/belyaevYurii.jpg';
+import belyaevYuriiIsActive from 'images/team/belyaevYuriiIsActive.jpg';
+import belyaevYuriiDesktop from 'images/team/belyaevYuriiDesktop.jpg';
 import yanenkoYana from 'images/team/yanenkoYana.jpg';
 import yanenkoYanaIsActive from 'images/team/yanenkoYanaIsActive.jpg';
 import yanenkoYanaDesktop from 'images/team/yanenkoYanaDesktop.jpg';
@@ -96,9 +96,9 @@ export const teamMembers = [
       ua: 'Консультант напрямку кормових добавок для моногастричних.',
       en: 'Feed Additives Consultant for Monogastric Animals.'
     },
-    photo: komarVolodymyr,
-    activePhoto: komarVolodymyrIsActive,
-    photoDesktop: komarVolodymyrDesktop,
+    photo: belyaevYurii,
+    activePhoto: belyaevYuriiIsActive,
+    photoDesktop: belyaevYuriiDesktop,
     email: 'Y.beliaiev@ankona.com.ua',
     phone: '+38 (095) 143 11 51',
   },
