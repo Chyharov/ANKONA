@@ -34,8 +34,6 @@ import imgProductDetailsId34 from 'images/productDetails/imgProductDetailsId34.j
 import imgProductDetailsId35 from 'images/productDetails/imgProductDetailsId35.jpg';
 import imgProductDetailsId36 from 'images/productDetails/imgProductDetailsId36.jpg';
 import imgProductDetailsId37 from 'images/productDetails/imgProductDetailsId37.jpg';
-import imgProductDetailsId48 from 'images/productDetails/imgProductDetailsId48.jpg';
-import imgProductDetailsId49 from 'images/productDetails/imgProductDetailsId49.jpg';
 import imgProductDetailsId50 from 'images/productDetails/imgProductDetailsId50.jpg';
 import imgProductDetailsId51 from 'images/productDetails/imgProductDetailsId51.jpg';
 import imgProductDetailsId52 from 'images/productDetails/imgProductDetailsId52.jpg';
