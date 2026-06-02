@@ -4296,8 +4296,8 @@ export const defaultProducts  = [
   {
     id: 63,
     name: {
-      ua: 'Цітро',
-      en: 'Citro',
+      ua: 'Екофлорин',
+      en: 'Ecoflorin',
     },
     manufacturer: {
       ua: 'AGRO-BIZEK',
