@@ -28,7 +28,7 @@ const Footer = ({ language, navItems = [], ...props }) => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/andriypolyakovua/"
               >
                 <img
                   className={s.footerSocailMediaList__itemLogo}
